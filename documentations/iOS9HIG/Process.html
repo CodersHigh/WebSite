@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: From Concept to Product</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class='jazz'>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+    <section id="valence">
+  <div class="content-wrapper">
+	<p id="hierarchial_navigation">
+		<a href="../../../../design/index.html#/apple_ref/doc/uid/TP40013289" id="design_resources_link">iOS 7 Design Resources</a>
+		<img id="carat" src="./Images/carat_2x.png" height="10px" width="6px" aria-hidden="true" /></span>
+		<span id="book_title">iOS Human Interface Guidelines</span>
+	</p>
+	<form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+            <input type='search' id='ssi_SearchField' placeholder="Search all documents" name='q' accesskey='s' />
+        </form>
+    	<a href="MobileHIG.pdf" class="download-text hideInXcode">Download PDF</a>
+    <img id="shortstack" src="./Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="index.html#/apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS 7을 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#/apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작하고 종료하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#/apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#/apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#/apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#/apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#/apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#/apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#/apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#/apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#/apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="RunningiPhone5.html#/apple_ref/doc/uid/TP40006556-CH49-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH49-SW1">iPhone 5에서 구동하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS Technologies
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Passbook.html#/apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#/apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#/apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#/apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#/apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">노티피케이션 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#/apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#/apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#/apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#/apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#/apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#/apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI Elements
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#/apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#/apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#/apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#/apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#/apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH6"></a>
+  <h2 class='chapter-name'>컨셉트에서 프러덕트까지</h2>
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW2"></a>
+  <h3 class="section-name" tabindex="0">앱 정의하기</h3>
+  <p class="para">
+  <strong>app definition statement</strong> 는 앱의 주요 목적과 의도하는 대상에 대한 간결하고, 구체적인 선언이다.
+
+</p><p class="para">
+  아이디어와 기능의 나열으로부터 사람들이 원하는 손에 붙는 제품으로 만들기 위해 app definition statement를 개발작업의 이른 단계에 만들어라. 개발 중에 app definition statement를 기능과 반응이 의미에 맞도록 결정하는 데 사용하라. 단단한 app definition statement를 만들기 위해 다음 단계를 따르라.
+
+</p>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW5"></a>
+  <h3 class="section-name" tabindex="0">1. 사용자가 좋아할 것 같다고 생각하는 모든 기능들을 나열하라</h3>
+  <p class="para">
+  여기서 바로 브레인 스토밍을 하라. 이 시점에서, 당신은 주요한 제품의 아이디어와 관련된
+  모든 테스크들을 잡아내려 할 것이다. 리스트가 길어진다고 걱정하지 마라; 나중에 좁힐 것이다.
+</p><p class="para">
+  식료품을 쇼핑하는 사람들을 돕는 앱을 개발하는 것이 초기 아이디어라고 상상해 보자. 이 활동에 대해 생각하면, 사람들이 관심을 가지는 관련작업- 잠재적인 기능들- 들의 리스트를 생각할 수 있다. 예를 들어 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  리스트를 만든다
+</p>
+</li><li class="item"><p class="para">
+  레시피를 구한다
+</p>
+</li><li class="item"><p class="para">
+  가격을 비교한다
+</p>
+</li><li class="item"><p class="para">
+  상점 위치를 찾는다
+</p>
+</li><li class="item"><p class="para">
+  레시피에 주석을 단다
+</p>
+</li><li class="item"><p class="para">
+  쿠폰을 얻고 사용한다
+</p>
+</li><li class="item"><p class="para">
+  요리 데모를 본다
+</p>
+</li><li class="item"><p class="para">
+  다른 요리스타일들을 탐색한다
+</p>
+</li><li class="item"><p class="para">
+  대체 재료를 찾는다
+</p>
+</li>
+</ul>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW6"></a>
+  <h3 class="section-name" tabindex="0">2. 사용자를 결정하라</h3>
+  <p class="para">
+  이제 당신 앱의 사용자와 다른 모든 iOS 사용자를 구별하는 것이 무엇인지를 알아내야 한다. 메인 아이디어의 컨텍스트에서 가장 중요한 것이 무엇인가? 식료품 쇼핑 예를 들어보면, 당신의 사용자들이 다음과 같은지 물어볼 수 있다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  집에서 요리를 자주 하는가? 만들어진 음식을 선호하는가?
+</p>
+</li><li class="item"><p class="para">
+  쿠폰을 좋아하는 사용자인가? 쿠폰따위는 가치가 없다고 생각하는가?
+</p>
+</li><li class="item"><p class="para">
+  특별한 재료를 찾아보는 것을 즐기는가? 기본을 넘는 모험을 거의 하지 않는가?
+</p>
+</li><li class="item"><p class="para">
+  레시피를 엄격하게 따르는가? 레시피는 그냥 영감을 위해서 사용하는가?
+</p>
+</li><li class="item"><p class="para">
+  조금씩 자주 구매하는가? 이따금씩 대령 구매를 하는가?
+</p>
+</li><li class="item"><p class="para">
+  다른목적의여러가지진행리스트를가지길원하는가?집에가는길에몇가지구매를
+  위해 기억하기 원하는가?
+</p>
+</li><li class="item"><p class="para">
+  특정 브랜드만 고집하는가? 가장 편리한 대체제를 이용하는가?
+</p>
+</li><li class="item"><p class="para">
+  매 쇼핑시 유사한 항목 세트를 구매하는 편인가? 레시피에 있는대 구매하는가?
+</p>
+</li>
+</ul><p class="para">
+
+</p><p class="para">
+  이러한 질문에 심사숙고한 뒤, 당신의 목표 사용자를 가장 잘 설명하는 세가지 특성을 결정한다고 상상해 보라; 레시피로 실험하는 것을 사랑하며, 주로 바쁘고, 큰 노력이 들지 않는다면 절약한다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW8"></a>
+  <h3 class="section-name" tabindex="0">3. 사용자 정의에 따라 기능을 필터하라</h3>
+  <p class="para">
+  몇 가지 사용자 특성을 결정한 이상, 몇 가지 앱 기능들로 마무리를 지어야 올바른 길을 가는 것이다 : 멋진 iOS 앱들은 사용자가 수행하려는 테스크에 대해 레이저 같이 초점을 맞춘다.
+</p><p class="para">
+  예를들어, Step 1에서 가져온 가능한 기능에 대한 긴 리스트를 생각해보라. 그 모든 것들이 유용한 기능이지만, Step 2에서 정의한 모든 사용자들에게 진가를 인정받지는 않을 것이다.
+</p><p class="para">
+  목표 사용자의 컨텍스트에서 기능 리스트를 검사하면, 당신의 앱은 세 가지 주요 기능에 초점을 맞춰야 한다는 결론을 내린다 : 리스트를 만들고, 쿠폰을 얻고 사용하고, 레시피를 얻는다.
+</p><p class="para">
+  이제 당신은 app definition statement를 정교하게 만들 수 있다. 누구를 위해서 어떤 일을 하는지를 실체적으로 정리할 수 있다. 식료품 쇼핑 앱을 위한 좋은 ads는 다음과 같을 것이다 :
+</p><p class="para">
+  “요리를 사랑하는 절약하는 사람들을 위한 쇼핑 리스트 제작 툴”
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW9"></a>
+  <h3 class="section-name" tabindex="0">4. 거기에서 멈추지 마라</h3>
+  <p class="para">
+  app definition statement를 개발 단계에 걸쳐서 기능, 컨트롤 그리고 용어의 적합성을 결정하는 데 사용하라. 예를 들어 :
+</p><p class="para">
+  <strong class="inline-head">새로운 기능을 더하려고 생각할때, 앱의 주요 목적과 목표 사용자에게 필수적인 것인지 스스로에게 물어보라.</strong> 그렇지 않다면, 내버려두라; 그건 다른 기반을 가진 앱에서 사용할 기능이다. 예를 들어, 당신의 사용자들이 모험적인 요리에 재미를 느낀다고 결정했다면, 상자에 담긴 케이크 믹스와 만들어진 식사를 강조하는 것은 그다지 환영받지 못할 것이다.
+</p><p class="para">
+  <strong class="inline-head">UI의 모양과 반응을 고려할 때</strong>, 당신의 사용자가 단순한 외곽선 스타일을 선호할지 명백한 테마를 가진 스타일을 좋아할지 스스로에게 물어보라. 심각한 테스크를 위한 능력, 빠른 대답을 얻기 위해서, 콘텐트를 깊이 파고들기 위해서, 또는 즐거움을 얻기 위해서 와 같이당신의 앱으로 이루고자 하는 것에 의해 가이드된다. 예를 들어, 당신의 식료품 앱이 쉬운 이해와 빠른 사용을 위한 앱이긴 하지만, 당신의 사용자들은 식사와 식재료에 대한 아름다운 사진을 가진 테마 UI를 좋아할 수도 있다.
+</p><p class="para">
+  <strong class="inline-head">용어를 사용하기 전에</strong>, 사용자들의 해당 주제에 대한 전문성에 맞추기 위해 노력하라. 예를 들어, 당신의 사용자들이 전문 쉐프가 아니더라도, 재료와 기술에 대한 적절한 용어를 보기 원한다는 것을 확신할 수 있다.
+</p>
+
+</section>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW3"></a>
+  <h3 class="section-name" tabindex="0">테스크에 맞춰서 커스터마이즈하라</h3>
+  <p class="para">
+
+</p><p class="para">
+  최고의 iOS 앱들은 목적을 명확히 하고 사용법을 쉽게 하는 것 사이의 UI 커스터마이제이션의 균형을 맞춘다. 당신의 앱에서도 이 균형을 이루기 위해, 디자인 단계의 이른 시기에 커스터마이제이션을 고려하라. 브랜딩, 오리지널리티 그리고 시장성에 대한 고려는 커스터마이제이션 결정에 종종 영향을 미치므로, 커스터마이제이션이 사용자 경험에 어떻게 영향을 미칠 것인지에 초점을 유지하는 것은 어려운 과제가 될 것이다.
+</p><p class="para">
+  당신 앱의 테스크에서부터 생각해보자: 사용자들은 어떤 환경에서 얼마나 자주 실행할 것인가?
+</p><p class="para">
+  예를 들어, 전화 걸기를 가능하게 하는 앱을 상상해 보자. 앱이 키 패드 대신에 아름답고 사실적인 회전 다이얼을 표시한다고 상상하자. 다이얼이 꼼꼼하게 렌더되어있기 때문에, 사용자들이 그 퀄리티에 만족한다.다이얼은 사실적으로 반응하므로, 사용자들은 옛날풍의 다이얼링 제스처를 하고 독특한 사운드를 듣는 것을 기뻐한다.
+  하지만 전화를 자주 거는 사용자들에게, 처음의 즐거운 경험은 당황스러움으로 바뀌는데, 전화 다이얼을 사용하는 것은 키패드보다 훨씬 비효율적이기 때문이다. 사람들이 전화 거는 것을 돕기 위한 앱에서, 이 아름다운 커스텀 UI는 걸림돌이 되고 있다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/fancy_calculator_2x.png" alt="image: ../Art/fancy_calculator_2x.png" width="240" height="400" />
+</figure><p class="para">
+  그 반면에, 목수들이 사용하는 level(수평기)의 사실적인 연출을 하는, BubbleLevel이라는 샘플 앱을 보자. 사람들은 그 물리적인 도구의 사용법을 알고 있기 때문에 즉각적으로 그 앱의 사용법을 안다. 앱은 기포가 있는 유리병의 표현 없이도 정보를 표시할 수 있었지만, 그렇게 하면 앱을 덜 직관적으로 만들고 사용하기도 더 어려울 것이다. 이 경우, 커스텀 UI는 사람들에게 사용법을 알려줄 뿐만 아니라, 테스크를 보다 쉽게 이루도록 한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/completely_custom_garageband_2x.png" alt="image: ../Art/completely_custom_garageband_2x.png" width="440" height="270" />
+</figure><p class="para">
+
+</p><p class="para">
+  커스터마이제이션이 어떻게 당신 앱의 테스크를 개선하거나 분산시키는 지에 대해 고민할때,
+  아래 가이드라인들을 명심하라.
+</p><p class="para">
+  <strong class="inline-head">항상 커스터마이제이션에 대한 이유를 가지고 있으라.</strong> 이상적으로, UI커스터마이제이션은 사람들이 실행하길 원하는 테스크를 촉진하고 경험을 개선한다. 가능한, 앱의 테스크가 커스터마이즈 결정을 드라이브 하도록 할 필요가 있다.
+</p><p class="para">
+
+</p><p class="para">
+
+</p><p class="para">
+
+</p><p class="para">
+  <strong class="inline-head">가능한, 사용자의 인지 부담을 늘이는 방향을 피하라.</strong> 사용자들은 표준 UI요소들의 모양과 반응에 익숙해져 있으므로, 그것들을 어떻게 사용해야 하는지 멈춰 생각할 필요가 없다. 표준 과 전혀 다른 모양과 반응을 보이는 요소를 만나면, 사용자들은 그들의 이전 경험으로부터의 이익을 잃어버린다. 당신의 독특한 UI 요소가 테스크를 쉽게 하지 않는다면, 사용자들은 다른 앱에서는 사용하지 않는 것을 강제로 배우도록 강요받는 것을 싫어할 것이다.
+</p><p class="para">
+  <strong class="inline-head">내부적으로 일관성을 갖추라.</strong> 당신의 UI가 커스텀이 돨수록, 당신의 앱 내에서 외관과 반응에 있어서 일관성을 가지는 것이 중요해진다.만약 사용자가 당신이 만든 낯선 컨트롤의 사용법을 익히느라 시간을 사용하면, 그들은 당신의 앱 전체에 걸쳐서 그 지식에 의지하길 원한다.
+</p><p class="para">
+  <strong class="inline-head">항상 콘텐트를 존중하라.</strong> 표준 요소들은 매우 친숙하기 때문에, 그들은 사람들의 관심을 끌기 위해 콘텐트와 경쟁하지 않는다. UI를 커스터마이즈함에 따라, 사람들이 중요시하는 콘텐트를 가리지 않는지를 확인해야 한다. 예를 들어, 만약 당신의 앱이 비디오를 시청하게 한다면, 커스텀 재생 컨트롤을 디자인하고 싶을 것이다. 하지만 당신이 표준 이나 커스텀 재생 컨트롤을 사용하는지는, 사용자들이 비디오 시청을 시작하면 컨트롤이 사라지고 탭을 하면 다시 나타나는지 보다 덜 중요하다.
+</p><p class="para">
+  <strong class="inline-head">표준 컨트롤을 재디자인 할 때는 한번 더 생각하라.</strong> 표준 컨트롤을 커스터마이징하는 것보다 많은 것을 계획 중이라면, 커스터마이즈한 결과물도 표준 컨트롤 정도의 정보를 제공해야 한다. 얘를 들어, 반대 값의 존재를 표시하지 않는 스위치 컨트롤을 만든다면 , 사람들은 그것이 두가지 상태를 가지는 컨트롤인지를 알 수가 없을 것이다.
+</p><p class="para">
+
+</p><p class="para">
+  <strong class="inline-head">커스텀 UI요소에 대해 전체적으로 사용자 테스트를 하라.</strong> 테스트 동안, 당신의 요소들의 움직임에 대해 사용자들이 예측을 하는지와 쉽게 인터렉트 하는지를 가까이서 관찰하라. 예를 들어, 만약 44*44 포인트 이하의 힛트 타겟을 가지는 컨트롤을 만든다면, 사람들은 그것을 동작시키는 데 곤란을 겪을 것이다. 또는 만약 탭과 스와이프에 다르게 동작하는 뷰를 만들었다면, 그 뷰가 제공하는 기능이 그 뷰와 인터렉트 할 때 추가적으로 주의를 기울일 만큼 충분히 가치 있어야 한다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH6-SW4"></a>
+  <h3 class="section-name" tabindex="0">프로토타입 &amp; 반복</h3>
+  <p class="para">
+  당신의 디자인을 구현하기 위해 엄청난 엔지니어링 리소스들을 투자하기 전에, 테스트를 위해 프로토타입을 만들어 보는 것은 정말 좋은 아이디어이다. 프로토타입을 테스트 할 소수의 동료밖에 없다하더라도, 당신 앱의 기능과 사용자 경험에 대한 그들의 신선한 시각에서 얻을 것이 많다.
+</p><p class="para">
+  디자인의 매우 초기 단계에서 메인 뷰와 콘트롤 레이아웃을 잡기 위해 종이 프로토타입이나 와이어프레임을 사용해서 스크린 간의 흐름을 맵으로 만들 수 있다. 와이어프레임 테스트를 통해서도 유용한 피드백을 얻을 수 있지만 너무 성글기 때문에 테스터를 잘 못 이끌 수도 있다. 이것은 와이어프레임이 실제 콘텐트로 채워졌을 때 앱 사용경험의 변화에 대해 사람들이 상상하기 어렵기 때문이다.
+</p><p class="para">
+  장치에서 돌아가는 살을 붙인 프로토타입을 만들 수 있다면 보다 가치있는 피드백을 받을 수 있을 것이다. 사람들이 장치에서 당신의 프로토타입을 본다면, 예상한 대로 동작하지 않는 부분이나 사용자 경험이 너무 복잡한 부분을 드러낼 수 있을 것이다.
+</p><p class="para">
+  신뢰할 수 있는 프로토타입을 만드는 가장 신뢰할 수 있는 방법은 스토리보드-기반의 Xcode 템플리트를 만들어서 기본 앱을 만들고 적당한 플레이스 홀더 콘텐트를 와 함께 배포하는 것이다. (<strong>스토리보드</strong>파일은 앱의 전체 UI를 화면들간의 장면전환을 포함해서 가지고 있다.) 그 후, 테스터들이 가능한 실제같은 경험을 할 수 있도록 프로토타입을 장치에 설치한다
+</p><p class="para">
+  프로토타입 앱에서 많은 양의 콘텐트를 제공하거나 모든 콘트롤들을 사용가능하게 할 필요는 없지만, 현실적인 경험을 제안하기 위해 충분한 콘텍스트를 제공할 필요는 있다. 전형적인 사용자 경험과 남다른 독특한 케이스사이의 균형을 잘 잡아서 준비한다. 예를들어, 당신의 앱이 긴 아이템 리스트를 가지게 될 것 같으면, 당신은 한 두개의 리스트를 표시하는 프로토타입을 만들면 안된다. 사용자 인터렉션을 테스트 하기 위해서, 스크린의 일부 영역을 탭해서 메인 테스크를 수행하거나 다음 번 뷰로 진행한다면, 보다 건설적인 피드백을 받을 수 있을 것이다.
+</p><p class="para">
+  Xcode 앱 템플리트를 기반으로 해서 프로토타입 할 때는, 많은 기능들을 공짜로 제공받을 수 있으며 피드백에 대응해 디자인 조정을 하기도 상대적으로 쉽다. 짧은 소요시간 덕분에, 디자인을 정하고 구현을 위해 리소스를 커밋하기 전에 몇 회의 프로토타입 테스트를 거칠 수 있다. Xcode 사용법을 배우기 위해서는 <em class="u-book"><a href="../../../ToolsLanguages/Conceptual/Xcode_Overview/About_Xcode/about.html#/apple_ref/doc/uid/TP40010215" target="_self">Xcode Overview</a></em>를 보라.
+</p>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="Principles.html#/apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">Design Principles</a></p>
+  			<p class="next-link"><a href="DesktopToiOS.html#/apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">Case Study: From Desktop to iOS</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

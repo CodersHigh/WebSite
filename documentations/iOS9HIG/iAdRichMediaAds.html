@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH41-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH41"></a>
+  <h2 class='chapter-name'>iAd Rich Media Ads</h2>
+
+  	<section class="section">
+  		<p class="para">
+  당신 앱에서 광고가 나타나도록 허락하면, 사용자가 그것을 보거나 인터렉트 하면 보상을 받게 된다. (아래는 샘플 프로젝트의 iAd 배너의 플레이스 홀더이다)
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/iad_intro_2x.png" alt="image: ../Art/iad_intro_2x.png" width="256" height="438" />
+</figure><p class="para">
+  iAd 네트워크에 의해 제공되는 광고를 당신의 UI내의 특정 뷰에 호스트할 수 있다. 처음에는, 이 뷰는 광고의 배너를 포함하며 이는 전체 iAd 경험으로의 입구와 같은 역할을 한다. 사람들이 그 배너를 탭하면, 광고는 미리 프로그램된 무비를 재생한다거나, 인터렉티브한 콘텐트를 디스플레이 하거나, 웹 페이지를 열기 위해 Safari를 실행하는 등의 액션을 수행한다. 그 액션은 당신 UI를 덮는 콘텐트를 디스플레이 하거나 당신 앱을 백그라운드로 보내버릴 수도 있다.
+</p>
+<p class="para">
+  앱에서 표시할 수 있는 배너에는 세가지 타입이 있다. 표준, 중간 사각형, 전체 화면이다. 모든 타입의 배너는 동일한 목적- 사용자들을 광고로 안내하는 것-을 가지지만 모양과 기능이 다르다.
+</p>
+<p class="para">
+  <strong>표준 배너</strong> 는 화면의 작은 영역을 차지하고 주로 화면이 보이는 한 노출된다. 표준 배너를 디스플레이 할 수 있는 앱 스크린을 만들어야 하며 뷰 레이아웃에 매너 뷰를 위한 공간을 만들어야 한다.
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/standard_iad_banner_2x.png" alt="image: ../Art/standard_iad_banner_2x.png" width="256" height="438" />
+</figure><p class="para">
+  모든 iOS 앱은 표준 배너를 디스플레이 할 수 있다. <code class="code-voice u-api"><a href="../../Reference/ADBannerView_Ref/Reference/Reference.html#/apple_ref/occ/cl/ADBannerView">ADBannerView</a></code>클래스가 제공하는 뷰를 이용해 앱에서 표준 배너를 포함할 수 있다.
+</p>
+<p class="para">
+  <strong>중간 사각형 배너</strong> 는 동작방식에서 표준 배너와 비슷하며 - 표준배너 처럼 - 중간 사각형 배너가 디스플레이 될 위치를 선택할 수 있다.
+
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/med_rect_iad_banner_2x.png" alt="image: ../Art/med_rect_iad_banner_2x.png" width="384" height="426" />
+</figure><p class="para">
+  중간 사각형 배너는 iOS 6.0 이상이 동작하는 아이패드 앱에서만 사용가능하다. <code class="code-voice u-api"><a href="../../Reference/ADBannerView_Ref/Reference/Reference.html#/apple_ref/occ/cl/ADBannerView">ADBannerView</a></code> 클래스가 제공하는 뷰를 이용해 앱에 중간 사각형 배너를 넣을 수 있다.
+</p>
+<p class="para">
+  <strong>전체 화면 배너</strong> 는 전체 또는 대부분의 화면을 점유하며, 주로 앱 흐름의 특정한 시간동안 또는 특정 위치에서 볼 수 있다. 배너를 모달하게 , 또는 스크롤 가능한 콘텐트 내부에 분리된 페이지로 디스플레이 할 수 있다.(In the example shown here, the app provides a magazine-reading experience and lets users turn the page away from or back to the full screen banner.)
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/fullscreen_iad_portrait_2x.png" alt="image: ../Art/fullscreen_iad_portrait_2x.png" width="384" height="426" />
+</figure><p class="para">
+  <code class="code-voice u-api"><a href="../../../iAd/Reference/ADInterstitialAd_Ref/Introduction/Introduction.html#/apple_ref/occ/cl/ADInterstitialAd">ADInterstitialAd</a></code> 클래스가 제공하는 뷰를 사용해 전체 화면 배너를 앱에 포함할 수 있다.
+</p>
+<p class="para">
+  모든 배너 타입들은 우 하단 모서리에 iAd 마크가 있는 iAd 프레임 안에서 나타난다. iAd 프레임은 앱 화면의 아래쪽 모서리에 자리잡을 때 가장 보기 좋게 디자인 되었다.
+</p>
+<p class="para">
+  배너 광고와 이음새 없는 통합을 하고 최고의 사용자 경험을 제공하기 위해, 다음 가이드 라인을 따르라.
+</p>
+<p class="para">
+  <strong class="inline-head">표준 배너 뷰를 화면의 아래 모서리 또는 그 근처에 배치하라.</strong> 이 위치는 화면 아래 모서리에 바가 있는지와 어떤 바이냐에 따라 미세하게 다르다
+
+</p>
+<div class="tableholder">
+
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"></caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  바
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  표준 배너 뷰 위치
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  화면 아래 영역에 바가 없다
+</p></td>
+            <td><p class="para">
+  화면 아래 영역
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  화면 어디에도 바가 없다
+</p></td>
+            <td><p class="para">
+  화면 아래 영역
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  툴바 또는 탭 바
+</p></td>
+            <td><p class="para">
+  아래쪽 바 바로 위
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<p class="para">
+  <strong class="inline-head">중간 사각형 배너 뷰는 사용자의 콘텐트를 간섭하지 않는 곳에 위치 시켜라.</strong> 표준 배너 뷰와 같이, 중간 사각형 배너 뷰는 화면의 아래 모서리나 그 근처에 있는게 가장 보기 좋다. 배너를 화면 아래 모서리 근처에 놓는 것은 사람들의 길을 가로막지 않을 확률을 높인다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자 경험상에 끊어짐이 있으면 전체 화면 배너를 모달하게 제공하라.</strong> 아이패드 앱의 흐름에서 자연스러운 끊어짐이나 컨텍스트 변화가 있으면, 모달을 제공하는 스타일이 적당할 것이다. 전체 화면 배너를 모달하게 제공하면 (<code class="code-voice u-api"><a href="../../../iAd/Reference/ADInterstitialAd_Ref/DeprecationAppendix/AppendixADeprecatedAPI.html#/apple_ref/occ/instm/ADInterstitialAd/presentFromViewController:">presentFromViewController:</a></code>를 사용해서), 사용자는 광고로 들어가거나 디스미스 해야만 한다. 이런 이유로, 테스크가 완료된 이후와 같이 사용자 경험상의 변화가 있을 때 모달 프레젠테입션 스타일을 사용하는 것이 좋은 생각이다.
+</p>
+<p class="para">
+  <strong class="inline-head">앱 뷰들간에 장면전환이 있다면 전체화면 배너를 모달하지 않게 제공하라.</strong> 사용자가 당신 앱의 , 잡지의 페이징이라던지 갤러리 아이템들의 넘기기와 같은, 화면 전환을 자주 겪었다면 모달 방식이 아닌 것이 적당하다. 전체 화면 배너를 모달하지 않게 제공할때는 (<code class="code-voice u-api"><a href="../../../iAd/Reference/ADInterstitialAd_Ref/Introduction/Introduction.html#/apple_ref/occ/instm/ADInterstitialAd/presentInView:">presentInView:</a></code>사용),당신 UI의 바(bar)들을 유지함으로서 사용자가 앱의 컨트롤을 사용해 뒤로 가거나 광고로 돌아올 수 있게 한다. 모든 배너들처럼, 전체 화면 배너들 역시 사용자가 탭하면 iAd 경험을 런치하지만, 가능한 경우, 당신의 앱은 배너 영역 내의 (드래그나 스와이프같은)다른 제스처들에 응답할 수 있다.
+</p>
+<p class="para">
+  모달이 아닌 전체화면 배너 뷰를 드러내고 숨길때는 적당한 애니메이션을 사용하라. 예를 들어, 잡지 읽기 앱은 아마 배너를 다른 페이지 콘텐트를 드러낼 때와 동일한 페이지 넘기기 애니메이션을 이용해 제공할 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">앱의 모든 배너들이 나타나는 시점과 위치가 의미가 통하게 하라.</strong> 사람들은 자신의 작업흐름이 방해받지 않는 느낌을 받을 때 iAd 경험으로 들어가고 싶어할 것이다. 이것은 게임처럼 몰입형 앱인 경우 특히 중요하다: 게임을 플레이 하는 것과 충돌이 발생하는 곳에 배너 뷰를 위치시키지 마라.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자가 잠깐만 볼 화면에 배너를 디스플레이하는 것을 삼가라.</strong> 만약 앱이 사용자가 괌심을 가지는 정보를 파고 들어가거나 콘텐트를 네비게이션하는 것 처럼 빠르게 움직이는 뷰를 가지고 있다면, 그 화면들에는 배너를 디스플레이하지 않는 것이 좋다. 사용자들은 화면상에 일 이초 이상 머물러 있을 때 배너를 탭 하는 경향이 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">가능한, 양 방향에서 광고 배너를 표시하라.</strong> 앱 사용중 광고를 보기 위해 장치의 방향을 변경하는 일이 없도록 한다. 또한, 양방향을 지원하는 것은 광고를 보다 넓은 영역으로 수용할 수 있다는 것을 의미한다. 배너 뷰가 방향 변화에 반응하도록 하려면 <em class="u-book"><a href="../iAd_Guide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009881" target="_self">iAd Programming Guide</a></em>를 보라.
+</p>
+<p class="para">
+  <strong class="inline-head">표준 또는 중간 사각형 배너가 화면에서 스크롤되어 사라지지 않도록 하라.</strong> 앱이 화면에서 스크롤되는 콘텐트를 지원한다면, 배너 뷰가 그 위치에 그대로 남아있도록 하라.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자가 광고를 보고 인터렉트하는 동안, 그들의 주의를 요하거나 인터렉션을 필요로 하는 활동을 멈춰라.</strong> 사람들이 광고를 보기로 선택했다면, 당신 앱에서 뭔가 놓치는 이벤트가 있다고 느끼지 않길 원하며, 당신의 앱이 광고 경험을 인터럽트하는 것도 원하지 않는다. 으뜸가는 원칙은 당신의 앱이 백그라운드 모드에 들어가는 것처럼 활동들을 멈추는 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">드문 경우를 제와하고는 광고를 멈추지 마라.</strong> 일반적으로, 당신 앱은 사용자가 광고를 보고 인터렉트 하는 동안 동작을 계속하고 이벤트를 받으므로, 사용자의 즉각적인 주의가 필요한 긴급한 이벤트가 발생할 수도 있다. 하지만, 진행 중인 광고를 디스미스해도 될 정도의 시나리오는 매우 적다. 하나의 가능한 경우는 VoIP 서비스를 제공하는 경우이다. 이런 앱의 경우, 전화가 걸려오면 동작중인 광고를 취소하는 것이 이해가 된다.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH41-SW30"></a>
+  <aside class="aside">
+    <p class="aside-title">노트
+    </p>
+    <p class="para">광고를 취소하는 것은 당신 앱이 받는 광고의 종류와 받을 수 있는 수익배분에 안 좋은 영향을 미칠 수 있다.
+    </p>
+
+  </aside>
+</div>
+<p class="para">
+
+</p>
+
+		</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="NotificationCenter.html#/apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">통지 센터</a></p>
+  			<p class="next-link"><a href="Printing.html#/apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

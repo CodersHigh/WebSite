@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+<link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="icon" href="../../favicon.ico" />
+<link rel="mask-icon" href="../../apple-logo.svg" color="#333333">
+
+<link rel="stylesheet" href="../../assets/styles/globalnav.css" type="text/css" />
+<link rel="stylesheet" href="../../assets/styles/global.css" type="text/css" />
+
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/assets/styles/oldie.css" type="text/css" />
+	<script src="/assets/scripts/html5.js"></script>
+<![endif]-->
+<script src="../../assets/scripts/lg-search.js"></script>
+<script src="../../assets/scripts/global.js"></script>
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&v=2" type="text/css" />
+
+	<title>3D Touch - iOS - Apple Developer</title>
+	<meta name="omni_page" content="3D Touch - iOS - (English)" />
+	<meta name="Description" content="Find documentation and development resources for supporting 3D Touch-enabled actions in your apps.">
+	<meta name="robots" content="noodp" />
+	<link rel="stylesheet" href="../styles/ios.css" type="text/css" />
+	<link rel="stylesheet" href="styles/3d-touch.css" type="text/css" />
+</head>
+<body>
+	<input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+<nav id="ac-globalnav" class="no-js" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US">
+	<div class="ac-gn-content">
+		<ul class="ac-gn-header">
+			<li class="ac-gn-item ac-gn-menuicon"> <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					</span>
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					</span>
+				</label>
+				<a href="index.html#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open"> <span class="ac-gn-menuanchor-label">Open Menu</span> </a>
+				<a href="index.html#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close"> <span class="ac-gn-menuanchor-label">Close Menu</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../index.html" id="ac-gn-firstfocus-small"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+				<a class="ac-gn-link ac-gn-link-bag" href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span class="ac-gn-link-text">Account</span> <span class="ac-gn-bag-badge"></span> </a> <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span> </li>
+		</ul>
+		<ul class="ac-gn-list">
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../index.html" id="ac-gn-firstfocus"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-discover">
+				<a class="ac-gn-link" href="../../discover/index.html"> <span>Discover</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-design">
+				<a class="ac-gn-link" href="../../design/index.html"> <span>Design</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-develop">
+				<a class="ac-gn-link" href="../../develop/index.html"> <span>Develop</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-distribute">
+				<a class="ac-gn-link" href="../../distribute/index.html"> <span>Distribute</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+				<a class="ac-gn-link" href="../../support/index.html"> <span>Support</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-account">
+				<a class="ac-gn-link" href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span>Account</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+				<a id="ac-gn-search-button" class="ac-gn-link ac-gn-link-search" href="../../search/index.html" aria-label="Search developer.apple.com"> <span class="ac-gn-search-placeholder" aria-hidden="true">Search</span> </a>
+			</li>
+		</ul>
+		<aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
+			<div class="ac-gn-searchview-content">
+				<form id="ac-gn-searchform" class="ac-gn-searchform" action="../../search/index.html" method="get">
+					<div class="ac-gn-searchform-wrapper"> <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" name="q" placeholder="Search" data-placeholder-long="Search for documentation, videos, and more" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" /> <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled aria-label="Submit"></button> <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled aria-label="Clear Search"></button> </div>
+				</form>
+				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults="Hit enter to search.">
+
+				</aside>
+			</div> <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					<span class="ac-gn-searchview-close-wrapper">
+						<span class="ac-gn-searchview-close-left"></span>
+						<span class="ac-gn-searchview-close-right"></span>
+					</span>
+				</button> </aside>
+	</div>
+</nav>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="../../assets/scripts/ac-globalnav.built.js"></script>
+
+	<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+	<input type="checkbox" id="ac-ln-menustate" class="ac-ln-menustate" />
+<nav id="ac-localnav" class="no-js ac-localnav-scrim" lang="en-US" role="navigation" data-analytics-region="local nav" data-sticky>
+	<div class="ac-ln-wrapper">
+		<div class="ac-ln-background"></div>
+		<div class="ac-ln-content">
+			<h2 class="ac-ln-title">
+				<a class="ac-ln-title-logo" href="../index.html" data-analytics-title="product index"><span class="visuallyhidden">iOS</span></a>
+			</h2>
+
+			<div class="ac-ln-menu">
+				<div class="ac-ln-menu-tray">
+					<a href="index.html#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">
+						<span class="ac-ln-menucta-anchor-label">Open Menu</span>
+					</a>
+					<a href="index.html#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">
+						<span class="ac-ln-menucta-anchor-label">Close Menu</span>
+					</a>
+
+					<ul class="ac-ln-menu-items">
+					<li class="ac-ln-menu-item">
+							<a href="../../sirikit/index.html" class="ac-ln-menu-link link-sirikit">SiriKit</a>
+						</li>
+
+						<li class="ac-ln-menu-item">
+							<a href="../../imessage/index.html" class="ac-ln-menu-link link-imessage">iMessage</a>
+						</li>
+
+						<li class="ac-ln-menu-item">
+							<a href="../../stickers/index.html" class="ac-ln-menu-link link-stickers">Stickers</a>
+						</li>
+
+						<li class="ac-ln-menu-item">
+							<a href="../resources/index.html" class="ac-ln-menu-link link-documentation">Resources</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="ac-ln-actions ac-ln-actions-center">
+					<div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+						<label for="ac-ln-menustate" class="ac-ln-menucta">
+							<span class="ac-ln-menucta-chevron"></span>
+						</label>
+					</div>
+					<div class="ac-ln-action ac-ln-action-button">
+						<a href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Fdownload%252F&amp;rv=1" class="ac-ln-button link-download">Download</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<label id="ac-ln-curtain" for="ac-ln-menustate"></label>
+<script type="text/javascript" src="../../assets/scripts/ac-localnav.built.js"></script>
+
+
+
+	<main id="main" class="main" role="main" data-hires="true">
+
+		<div class="grid">
+
+			<header class="row">
+				<section class="col-100 text-center no-padding-top no-padding-bottom">
+					<h1>Take Advantage of <span class="nowrap nowrap-small">3D Touch</span></h1>
+					<p class="intro width-80 center">iPhone 6s and iPhone 6s Plus bring a powerful new dimension to the Multi-Touch interface with <span class="nowrap">3D Touch</span>. This new technology senses how deeply users press the display, letting them do more than ever with your apps&nbsp;and&nbsp;games.</p>
+					<figure class="figure-hero"></figure>
+				</section>
+			</header>
+
+			<div class="row">
+				<section class="col-100 no-padding-top">
+					<h4 class="text-center">Apps and games will never feel the same&nbsp;again.</h4>
+					<p class="center text-center width-75 lighter">In addition to familiar Multi–Touch gestures like Tap, Swipe, and Pinch, <span class="nowrap">3D Touch</span> enabled actions will let users complete essential tasks more quickly and simply or engage in enhanced gameplay.</p>
+				</section>
+			</div>
+
+			<div class="row padding-bottom">
+				<section class="col-33">
+					<div class="feature-p">
+						<h4>Quick Actions</h4>
+						<p>Quick Actions let users do the things they do most often, faster and in fewer steps. Many of these actions can even be done with a single press, right from the Home screen.</p>
+					</div>
+					<img class="scale medium-scale center" width="276" height="564" alt="Example of Quick Actions" src="https://devimages.apple.com.edgekey.net/ios/3d-touch/images/quick-actions.jpg">
+				</section>
+				<section class="col-33">
+					<div class="feature-p">
+						<h4>Peek and Pop</h4>
+						<p>Let your users preview all kinds of content and even act on it — without having to actually open it. Users can then press a little deeper to Pop into content in your app.</p>
+					</div>
+					<img class="scale medium-scale center" width="276" height="564" alt="Example of Peek and Pop" src="https://devimages.apple.com.edgekey.net/ios/3d-touch/images/peek-and-pop.jpg">
+				</section>
+				<section class="col-33">
+					<div class="feature-p">
+						<h4>Pressure Sensitivity</h4>
+						<p>Creative apps can take advantage of the pressure-sensing display of <span class="nowrap">iPhone 6s</span> and  <span class="nowrap">iPhone 6s Plus</span> in many ways. For example, they can vary line thickness or give a brush a changing style.</p>
+					</div>
+					<img class="scale medium-scale center" width="276" height="564" alt="Example of Pressure Sensitivity" src="https://devimages.apple.com.edgekey.net/ios/3d-touch/images/pressure-sensitivity.jpg">
+				</section>
+			</div>
+
+		</div><!--/grid-->
+
+		<div class="bg-light">
+			<div class="grid">
+				<div class="router no-padding">
+					<a href="http://www.apple.com/iphone-6s/3d-touch/" class="block row">
+						<span class="col-40 no-padding-left">
+							<img class="center scale" src="https://devimages.apple.com.edgekey.net/ios/3d-touch/images/video-thumbnail.jpg" width="390" height="183" alt="" />
+						</span>
+						<span class="col-60">
+							<span class="router-copy text-center">
+								<h4>The innovation behind <span class="nowrap nowrap-small">3D Touch</span>.</h4>
+								<p class="block-link more">Watch the film</p>
+							</span>
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="grid">
+
+			<div class="row padding-top">
+				<section id="resources" class="col-100 no-padding-bottom">
+					<h3 class="text-center">Development Resources</h3>
+					<p class="center text-center width-75">Download the latest version of Xcode and use the development resources below to learn more about enabling support <span class="nowrap">3D Touch</span> in your apps.</p>
+				</section>
+			</div>
+
+			<div class="row compact smaller">
+
+				<section class="col-50 padding-top">
+
+					<img src="https://devimages.apple.com.edgekey.net/assets/elements/icons/xcode-project/xcode-project-64x64.png" width="64" height="64" alt="" />
+					<h5>Resources</h5>
+					<p class="lighter width-90">Get details on how to design and build <span class="nowrap">3D Touch</span> enabled actions in your iPhone app on iOS 9 or later.</p>
+					<ul class="links small">
+						<li class="video"><a href="../../videos/play/wwdc2016/228/index.html">A Peek at 3D Touch<span class="violator violator-inline violator-alt">New</span></a></li>
+						<li class="reference"><a href="../../library/content/documentation/UserExperience/Conceptual/Adopting3DTouchOniPhone/index.html">Adopting 3D Touch on iPhone</a></li>
+						<li class="reference"><a href="https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/3DTouch.html#//apple_ref/doc/uid/TP40006556-CH71-SW1">iOS Human Interface Guidelines: 3D Touch</a></li>
+					</ul>
+					<p class="no-margin">Quick Actions</p>
+					<ul class="links small">
+						<li class="sample-code"><a href="../../library/content/samplecode/ApplicationShortcuts/index.html">ApplicationShortcuts: Using UIApplicationShortcutItem</a></li>
+						<li class="reference"><a href="../../reference/uikit/uiapplicationshortcutitem">UIApplicationShortcutItem Class Reference</a></li>
+						<li class="reference"><a href="../../reference/uikit/uimutableapplicationshortcutitem">UIMutableApplicationShortcutItem Class Reference</a></li>
+						<li class="reference"><a href="../../reference/uikit/uiapplicationshortcuticon">UIApplicationShortcutIcon Class Reference</a></li>
+					</ul>
+
+					<p class="no-margin">Peek and Pop</p>
+					<ul class="links small">
+						<li class="sample-code"><a href="../../library/content/samplecode/ViewControllerPreviews/index.html">ViewControllerPreviews: Using the UIViewController&hellip;</a></li>
+						<li class="reference"><a href="../../reference/uikit/uipreviewaction">UIPreviewAction Class Reference</a></li>
+						<li class="reference"><a href="../../reference/uikit/uipreviewactiongroup">UIPreviewActionGroup Class Reference</a></li>
+						<li class="reference"><a href="../../reference/uikit/uipreviewactionitem">UIPreviewActionItem Protocol Reference</a></li>
+					</ul>
+
+					<p class="no-margin">Pressure Sensitivity</p>
+					<ul class="links small">
+						<li class="sample-code"><a href="../../library/content/samplecode/TouchCanvas/index.html">TouchCanvas: Using UITouch efficiently and effectively</a></li>
+						<li class="reference"><a href="../../reference/uikit/uitouch">UITouch Class Reference</a></li>
+					</ul>
+
+				</section>
+
+				<section class="col-50 padding-top">
+
+					<img src="https://devimages.apple.com.edgekey.net/assets/elements/icons/xcode/xcode-64x64.png" width="64" height="64" alt="" />
+					<h5>Xcode and iOS SDK</h5>
+					<p class="lighter width-90">Xcode 7 or later includes the APIs for building apps that support <span class="nowrap">3D Touch</span> on iOS 9 or later.</p>
+					<ul class="links small">
+						<li class="download"><a href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Fdownload%252F&amp;rv=1">Download Xcode 7</a></li>
+					</ul>
+
+					<h5>Developer Forum</h5>
+					<p class="lighter width-90">Discuss and ask questions about 3D Touch with Apple engineers and other developers.</p>
+					<ul class="links small">
+						<li class="forums-topic"><a href="https://forums.developer.apple.com/community/app-frameworks/cocoa-touch">Cocoa Touch Forum</a></li>
+					</ul>
+
+				</section>
+
+			</div>
+
+		<div class="row divider-top padding-top">
+				<section class="col-100 text-center">
+					<img class="center margin-bottom-small" src="https://devimages.apple.com.edgekey.net/assets/elements/icons/download-on-the-app-store/download-on-the-app-store.svg" alt="Download on the App Store" width="170">
+					<h4>Enhanced with 3D Touch</h4>
+					<p class="width-60 center">Explore iPhone apps that use 3D Touch for intuitive navigation, indispensable <span class="nowrap">Quick Actions</span>, and fantastic gaming. <span class="nowrap"><a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewFeature?id=1051123013&amp;mt=8&amp;ls=1&amp;app=itunes" class="more">View 3D Touch apps on the App Store</a></span></p>
+				</section>
+			</div>
+		</div><!--/grid-->
+	</main>
+
+	<section id="globalfooter-wrapper">
+		<footer id="globalfooter" role="contentinfo">
+			<nav class="footer-breadory">
+				<a href="../../index.html" class="home breadcrumbs-home"><span aria-hidden="true"></span><span class="breadcrumbs-home-label">Developer</span></a>
+				<section class="breadcrumbs">
+					<ol class="breadcrumbs-list">
+						<li><a href="../index.html">iOS</a></li>
+						<li>3D Touch</li>
+					</ol>
+				</section>
+				<div id="directorynav" class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3><a href="../../discover/index.html">Discover</a></h3>
+		<ul>
+			<li><a href="../../macos/index.html">macOS</a></li>
+			<li><a href="../index.html">iOS</a></li>
+			<li><a href="../../watchos/index.html">watchOS</a></li>
+			<li><a href="../../tvos/index.html">tvOS</a></li>
+			<li><a href="../../programs/index.html">Developer Program</a></li>
+			<li><a href="../../enterprise/index.html">Enterprise</a></li>
+			<li><a href="../../education/index.html">Education</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-colb" class="column">
+		<h3><a href="../../design/index.html">Design</a></h3>
+		<ul>
+			<li><a href="../../accessibility/index.html">Accessibility</a></li>
+			<li><a href="../../cases/index.html">Accessories</a></li>
+			<li><a href="../../design/adaptivity/index.html">Adaptivity</a></li>
+			<li><a href="../../design/awards/index.html">Apple Design Awards</a></li>
+			<li><a href="../../fonts/index.html">Fonts</a></li>
+			<li><a href="../../videos/design/index.html">Design Videos</a></li>
+			<li><a href="../../app-store/marketing/guidelines/index.html">Marketing Guidelines</a></li>
+		</ul>
+	</div>
+	<div id="dn-colc" class="column">
+		<h3><a href="../../develop/index.html">Develop</a></h3>
+		<ul>
+			<li><a href="../../xcode/index.html">Xcode</a></li>
+			<li><a href="../../swift/index.html">Swift</a></li>
+			<li><a href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Fdownload%252F&amp;rv=1">Downloads</a></li>
+			<li><a href="../../reference/index.html">API Reference</a></li>
+			<li><a href="../../library/prerelease/content/navigation/index.html">Guides</a></li>
+			<li><a href="../../library/prerelease/content/navigation/index.html#section=Resource%20Types&topic=Sample%20Code">Sample Code</a></li>
+			<li><a href="../../videos/index.html">Videos</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cold" class="column">
+		<h3><a href="../../distribute/index.html">Distribute</a></h3>
+		<ul>
+			<li><a href="../../app-store/index.html">App Store</a></li>
+			<li><a href="../../app-store/review/index.html">App Review</a></li>
+			<li><a href="https://itunesconnect.apple.com/">iTunes Connect</a></li>
+			<li><a href="../../testflight/index.html">TestFlight</a></li>
+			<li><a href="../../enterprise/index.html">Enterprise</a></li>
+			<li><a href="../../safari/extensions/index.html">Safari Extensions</a></li>
+		</ul>
+	</div>
+	<div id="dn-cole" class="column">
+		<h3><a href="../../support/index.html">Support</a></h3>
+		<ul>
+			<li><a href="https://forums.developer.apple.com">Developer Forums</a></li>
+			<li><a href="../../contact/index.html">Contact Us</a></li>
+			<li><a href="../../bug-reporting/index.html">Bug Reporting</a></li>
+			<li><a href="../../terms/index.html">License Agreements</a></li>
+			<li><a href="../../system-status/index.html">System Status</a></li>
+		</ul>
+	</div>
+</div>
+
+			</nav>
+			<div class="ac-gf-footer-legal">
+  <div class="ac-gf-footer-news"> To receive the latest developer news, visit and subscribe to our <a href="../../news/index.html">News and Updates</a>. </div>
+  <div class="ac-gf-footer-legal-copyright">Copyright © 2016 Apple Inc. All rights reserved.</div>
+  <div class="ac-gf-footer-legal-links">
+    <a href="https://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a>
+    <a href="https://www.apple.com/privacy/privacy-policy/">Privacy Policy</a>
+    <a href="../../bug-reporting/index.html">Report Bugs</a>
+    <a href="../../../idmsa.apple.com/IDMSWebAuth/login.html?path=%252F%252Fcontact%252Fsubmit%252F?subject=website-feedback&amp;appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757">Feedback</a>
+  </div>
+</div>
+
+		</footer>
+	</section>
+
+</body>
+</html>

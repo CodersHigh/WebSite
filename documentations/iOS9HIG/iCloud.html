@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH35-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH35"></a>
+  <h2 class='chapter-name'>iCloud</h2>
+
+  	<section class="section">
+  		<p class="para">
+  iCloud는 지금 어떤 장치를 사용하고 있든 중요하게 생각하는 콘텐트에 엑세스 할 수 있도록 한다. 앱에 아이클라우드를 융합하면, 사용자들은 다른 장치에 설치된 앱에서 개인적인 콘텐트를 직접 싱크 시키지 않고도 보고 편집할 수 있다.
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/iCloud_intro_2x.png" alt="image: ../Art/iCloud_intro_2x.png" width="394" height="342" />
+</figure><p class="para">
+  이 사용자 경험을 제공하기 위해, 당신의 앱에서 현재 정보-특히 사용자가 만든 콘텐트-에 저장하고
+접근하고 제공하는 방식을 재점검할 필요가 있다. 보다 자세한 정보는 <em class="u-book"><a href="../../../General/Conceptual/iCloudDesignGuide/Chapters/Introduction.html#/apple_ref/doc/uid/TP40012094" target="_self">iCloud Design Guide</a></em>를 보라.
+</p>
+<p class="para">
+  iCloud 사용자 경험의 기반이 되는 면은 투명함이다 : 이상적으로, 사용자들은 자신의 콘텐트가 어디에 저장되는지 알 필요가 없고,지금 현재 보고 있는 콘텐트의 버전이 무엇인지에 대해 거의 생각할 필요가 없어야 한다. 다음의 가이드라인은 사용자들이 기대하는 iCloud 경험을 제공하도록 도와줄 것이다.
+</p>
+<p class="para">
+
+</p>
+<p class="para">
+  <strong class="inline-head">가능하다면, 앱에서 iCloud를 사용가능하게 하는 걸 쉽게 하라.</strong> 사용자들의 iOS 장치에서, 사용자들은 iCloud Settings에서 그들의 iCloud로 로긴을 했으며, 대부분의 경우, 앱이 자동적으로 iCloud와 동작하길 기대한다. 하지만 만약 사용자가 iCloud를 사용할 지 선택하길 원할 것 같으면, 앱을 처음 열 때 설정할 수 있도록 간단한 옵션을 제공할 수 있다. 대부분의 경우, 이 옵션은 앱에서 사용자가 접근하는 모든 콘텐트를 iCloud를 사용할 것인지, 아니면 아예 사용하지 않을지에 대한 선택이어야 한다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자의 iCloud 공간을 존중하라.</strong> iCloud는 사용자가 돈을 내는 유한자원이라는 것을 기억하는 것이 중요하다. iCloud를 사용자가 만든 콘텐트를 저장하는 데에만 사용하고 다시 생산할 수 있는 앱 리소스나 콘텐트 저장에 사용하지 마라. 또한, 사용자의 iCloud 계정이 활성화 되어 있으면, iCloud는 자동적으로 앱의 도큐멘트 폴더를 백업한다. 사용자의 공간을 너무 많이 써 버리는 것을 막기 위해, Documents 폴더에 위치시키는 콘텐트에 대해서는 까다롭게 구는 게 좋다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자에게 iCloud에 저장할 문서를 선택하도록 요구하지 마라.</strong> 전형적으로, 사용자들은 모든 콘텐트가 iCloud를 통해 이용가능하다고 예상한다. 대부분의 사용자들은 개별 문서들의 저장공간을 관리할 필요가 없으므로, 당신의 앱도 이런 경험을 지원하는 것을 가정할 필요가 없다. 좋은 사용자 경험을 위해, 당신의 앱이 콘텐트를 다루고 노출하는 방식을 다시 설계해서 사용자를 위한 파일 관리 테스크를 더 수행하도록 할 수 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">iCloud에 어떤 종류의 정보를 저장할지 결정하라.</strong> 사용자가 만든 문서와 다른 콘텐트들을 저장하는 것 외에, 앱에서 사용자의 현재 상태 또는 환경설정 같은 조그만 양의 데이터를 저장할 수도 있다. 이런 종류의 정보를 저장하기 위해서는 iCloud의 키-값 저장소를 사용한다. 예를 들어, 사람들이 앱을 이용해 잡지를 읽는다면, 사용자가 마지막 본 페이지를 키-값 저장소에 저장해서, 다른 장치에서 해당 발행물을 열더라도, 떠났던 그 페이지부터 다시 읽을 수 있도록 할 수 있다.
+</p>
+<p class="para">
+  iCloud 키-값 저장소를 환경설정 저장에 사용한다면, 환경설정은 사용자가 모든 장치에 동일하게 가지길 원하는 경향이 있다는 것을 염두에 둬라. 예를 들어, 어떤 환경설정은 집에 환경보다 작업 환경에 적당하다. 어떤 경우, 사용자의 iCloud 계정에 저장하는 것 보다 앱의 서버에 저장함으로서, 환경설정이 iCloud 사용여부에 상관없이 사용가능하도록 하는 것이 좋을 때도 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">iCloud를 사용할 수 없을 때는 앱이 합리적으로 동작해야 한다.</strong> 예를 들어, 사용자가 iCloud 계정에서 로그아웃하면, 앱의 iCloud 사용을 끈다. 또는 에어플레인 모드로 진입하면, iCloud는 사용불가가 된다. 이런 경우, 사용자가 iCloud 접근을 끄는 액션을 취했기 때문에, 앱은 여기에 대해 이야기 할 필요가 없다. 그러나, 다시 iCloud에 접근을 회복하기 전까지는 수정하는 내용이 다른 장치에서는 보이지 않을 것임을 보여주는 게 적당하다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자에게 &quot;로컬" 문서를 만드는 옵션을 주지 마라.</strong>앱 에서 iCloud를 지원하는 것과 별개로, 사용자가 장비에 특정한 파일 시스템을 생각하도록 하면 안된다. 대신, 사용자들이 iCloud를 통해 그들의 콘텐트가 여기저기 나타나는 기능에 초점을 맞추도록 하라.
+</p>
+<p class="para">
+  <strong class="inline-head">가능하다면, 콘텐트를 자동으로 업데이트 하라.</strong> 사용자들이 앱의 콘텐트가 최신-업데이트인지를 보장하는 어더한 액션도 취할 필요가 없는 게 가장 좋다. 그러나, 이 경험은 사용자의 장치 공간과 대역폭 제한을 고려하며 균형을 잡아야 한다. 만약 사용자가 굉장히 큰 문서를 작업한다면, 사용자에게 iCloud로부터 업데이트를 다운로드 할 것인지를 결정하도록 하는 게 좋을 것이다. 이렇게 해야 한다면, iCloud에 보다 이 문서의 보다 최신 버전이 있다는 것을 알리는 방법을 디자인해야 한다. 사용자가 문서의 업데이트를 선택하면, 다운로드가 몇 초 이상 걸릴 것 같으면 잔잔한 피드백을 제공하라.
+<p class="para">
+
+</p>
+<p class="para">
+
+</p>
+<p class="para">
+
+</p>
+<p class="para">
+
+</p>
+<p class="para">
+  <strong class="inline-head">문서 삭제의 결과에 대해 사용자에게 경고하라.</strong> iCloud를 사용하는 앱에서 문서를 삭제하면, 그 문서는 사용자의 iCloud 계정을 비롯한 모든 장치들에서 제거된다.삭제를 실행하기 전에 얼러트를 디스플레이해서 이 결과를 설명하고 확인을 받는 것이 적당하다.
+</p>
+<p class="para">
+  <strong class="inline-head">충돌에 대해 최대한 빨리 설명하되, 꼭 필요한 경우에만 하라.</strong> iCloud 프로그래밍 인터페이스를 사용하다보면, 사용자의 개입없이 문서의 다른 버전간 충돌의 대부분을 해결할 수 있을 것이다. 이것이 불가능한 경우, 최대한 빨리 충돌을 감지해서 사용자가 잘못된 버전의 콘텐트로 시간을 낭비하는 일이 없도록 도와야 한다. 충돌이 있다는 걸 거추장스럽지 않게 알리는 방식을 디자인 해야 한다; 그러면 사용자가 버전을 다르게 가져가는 것과 결정을 내리는 것이 편하다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자의 iCloud 콘텐트가 검색에 포함되게 하라.</strong> iCloud 계정을 가진 사용자들은 그들의 콘텐트가 어디에서나 가능하다고 생각하며, 검색 결과 또한 이런 관점을 반영할 것으로 예상한다. 앱이 콘텐트를 검색하도록 한다면, 적당한 API를 사용해 iCloud 계정으로 검색을 확장한다.
+</p>
+
+		</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="SocialMedia.html#/apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">Social Media</a></p>
+  			<p class="next-link"><a href="InAppPurchase.html#/apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">In-App Purchase</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH44"></a>
+  <h2 class='chapter-name'>사운드</h2>
+
+  	<section class="section">
+  		<p class="para">
+  사운드가 앱의 중요한 UX 이거나 부수적인 개선일 뿐이라도, 사용자가 사운드에 있어서 어떤 예상을 하는지와 그 예상에 맞추는 방법은 알고 있어야 한다.
+</p>
+
+		</section>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW15"></a>
+  <h3 class="section-name" tabindex="0">사용자의 예상을 이해하기</h3>
+  <p class="para">
+  사람들은 사운드에 영향을 끼치기 위해서 디바이스 컨트롤들을 사용할 수 있으며, 유 무선 헤드셋과 헤드폰을 사용한다. 사람들은 또한 그들의 액션이 그들이 듣는 사운드에 어떤 영향을 줄 지 다양한 예상을 한다. 그 예상들 중 몇 가지는 놀라울 수 있겠지만, 그 모든 것들은 사용자 콘트롤의 원칙을 따르고 있다. 즉, 장치가 아니라 사용자가 사운드를 듣는 적당한 시기를 결정한다는 것이다.
+</p><p class="para">
+  <strong class="inline-head">사용자들은 다음과 같은 경우 장치를 묵음으로 둔다</strong>:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  전화 벨 소리나 메세지 수신 사운드와 같은 예상치 못한 사운드에 의해 방해받고 싶지 않을 때
+</p>
+</li><li class="item"><p class="para">
+  키보드 또는 다른 피드백 사운드, 부차적인 사운드들이나 앱 시동 사운드등 사용자 액션에 의한 부산물로서의 사운드를 듣기 싫을 때
+</p>
+</li><li class="item"><p class="para">
+  부차적인 사운드들과 사운드 트랙 게임에 필수적이지 않은 게임 사운드를 듣기 싫을 때
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">노트
+    </p>
+    <p class="para">사람들은 벨/무음 스위치(아이폰) 또는 무음 스위치(아이패드)를 사용해서도 장치를 무음으로 만든다.
+    </p>
+
+  </aside>
+</div><p class="para">
+  예를 들어, 극장에서는 다른 사람들을 방해하지 않기 위해 장치를 무음으로 스위치 한다. 이런 상황에서, 여전히 앱을 사용하기를 원하지만, 예상치 못한 사운드나 명백히 원하지 않은 벨 소리나 메세지 사운드와 같은 것에 의해 놀라고 싶지 않다.
+</p><p class="para">
+  벨/무음(또는 무음) 스위치는 다음과 같이 명백히 의도적으로 사운드를 재생하기 위한 사용자 액션에 의한 결과 사운드를 무음으로 만들지는 <em>않는다</em> :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  미디어만 있는 앱에서 미디어 재생은 무음이 되지 않는다. 왜냐하면 미디어 재생은 명백히 사용자에 의해 요청되었기 때문이다.
+</p>
+</li><li class="item"><p class="para">
+  클락 알람은 무음이 되지 않는다. 왜냐하면 알람은 명백히 사용자에 의해 설정되었기 때문이다.
+</p>
+</li><li class="item"><p class="para">
+  어학용 앱에서 사운드 클립은 무음이 되지 않는다. 왜내하면 사용자가 명백히 그것을 듣기 위한 액션을 취했기 때문이다.
+</li><li class="item"><p class="para">
+  오디오 챗 앱의 대화는 무음이 되지 않는다. 왜냐하면 사용자가 오디오 챗을 할 단일한 목적으로 앱을 시작했기 때문이다.
+
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">사용자들은 장치의 볼륨 버튼을 이용해 장치가 재생할 수 있는 모든 사운드의 볼륨을 조정할 수 있다.</strong> 노래, 앱 사운드, 그리고 디바이스 사운드를 포함해서. 사용자들은 링/무음 스위치의 위치에 상관없이 볼륨 버튼을 이용해 모든 사운드를 끌 수 있다. 볼륨 버튼을 이용해 앱의 현재 재생중인 오디오의 볼륨을 조정하는 것은 시스템 전체의 볼륨을 조정하는 것과 같다. 벨소리 볼륨을 제외하고.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW3"></a>
+  <aside class="aside">
+    <p class="aside-title">iPhone
+    </p>
+    <p class="para">현재 재생중인 오디오가 없는 상황에서 볼륨 버튼을 이용하면 벨 소리 볼륨을 조정하는 것이다.
+    </p>
+
+  </aside>
+</div><p class="para">
+  <strong class="inline-head">사용자들은 소리를 혼자 듣고 손을 자유롭게 하기 위해 헤드폰과 헤드셋을 사용한다.</strong> 유선이든 무선이든, 사용자들은 경험에 대한 특정한 예상을 가지고 있다.
+</p><p class="para">
+  사용자가 헤드셋이나 헤드폰을 꽂거나 무선 오디오 장치에 연결하면, 그들은 현재의 오디오를 계속, 개인적으로 듣기 원한다. 이런 이유 때문에, 현재 오디오를 재생하는 앱이 멈춤없이 계속 재생하길 원한다.
+</p><p class="para">
+  사용자가 헤드셋이나 헤드폰을 뽑꺼나 무선 장치로부터 연결 해제하면 (또는 장치가 범위 바깥으로 나가거나 꺼지면), 그들은 듣고 있던 것을 다른 사람들과 자동으로 공유되길 원하지 않는다. 이런 이유로, 그들은 현재 오디오를 재생하고 있는 앱이 멈추기를 바라고, 준비가 되면 명백히 재생을 다시 시작하도록 한다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW4"></a>
+  <h3 class="section-name" tabindex="0">앱의 오디오 동작을 정의하기</h3>
+  <p class="para">
+  <strong class="inline-head">필요하다면, 상대적이거나 독립적으로 볼륨 레벨을 조정해서 당신 앱의 오디오 출력과 최상의 믹스를 만들어 낼 수 있다.</strong> 볼륨 버튼이나 볼륨 슬라이더로 조정을 했다 하더라도, 최종 오디오 출력 볼륨은 항상 시스템 볼륨에 의해 통제된다. 앱의 오디오 출력을 통제하는 것은 여전히 그것이 속해 있는 사용자의 손에 달려있다는 것을 의미한다.
+</p><p class="para">
+  <strong class="inline-head">가능하다면, 당신의 앱이 오디오 경로 선택을 할 수 있도록 보장하라. </strong> ( <strong>오디오 루트</strong>는 장치에서 헤드폰 또는 장치에서 스피커 와 같이, 오디오 신호를 위한 전자적인 경로이다.) 사람들이 유선 오디오 장치를 꽂꺼나 뽑은 게 아니라 할지라도, 그들은 여전히 다른 오디오 루트를 선택할 수 있기를 기대한다. 이것을 다루기 위해, iOS는 자동적으로 출력 오디오 경로를 사용자가 선택하도록 하는 컨트롤을 디스플레이 한다(앱에서 컨트롤을 디스플레이 하기 위해서는 <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 사용하라). 다른 오디오 경로를 선택하는 것은 사용자로부터 시작되는 액션이며, 사용자는 현재 재생중인 오디오를 멈춤없이 계속 듣기를 원한다.
+</p><p class="para">
+  <strong class="inline-head">볼륨 슬라이더를 디스플레이 할 필요가 있다면,</strong> 시스템 제공 볼륨 슬라이더를 <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 통해 사용할 수 있다는 것을 알고 있어라. 현재 동작중인 오디오 출력 장치가 볼륨 컨트롤을 제공하지 않는다면, 볼륨 슬라이더는 적당한 장치 이름으로 대체될 것이다.
+</p><p class="para">
+  <strong class="inline-head">앱이 그 기능에 부차적인 UI 효과음만 만든다면, System Sound Services를 이용하라.</strong> 시스템 사운드 서비스는 얼러트와 UI 사운드를 만들고 진동을 일으키는 iOS 기술이다; 그 외의 다른 목적에는 적당하지 않다. 사운드를 만들기 위해 시스템 사운드 서비스를 이용하면, 장치의 오디오와 당신의 오디오가 어떻게 인터렉트 할 것인지 또는 장치 설정 변화와 인터럽션에 어떻게 응답해야 할지에 영향을 받지 않을 수 있다. 이 기술을 사용하는 방법을 시연한 샘플 프로젝트는 <em class="u-book"><a href="../../../../samplecode/SysSound/Introduction/Intro.html#/apple_ref/doc/uid/DTS40008018" target="_self">Audio UI Sounds (SysSound)</a></em> 를 보라.
+</p><p class="para">
+  <strong class="inline-head">만약 사운드 재생이 당신 앱에서 중요한 역할을 차지한다면</strong>, Audio Session Services 또는 <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/occ/cl/AVAudioSession">AVAudioSession</a></code> class를 이용하라. 이 프로그래밍 인터페이스들은 사운드를 만들어내지는 않는다; 대신, 그들은 당신의 오디오가 어떻게 장치의 오디오와 인터렉트 해야 하는지 그리고 장치 설정 변화와 인터럽션에 어떻게 응답해야 할지를 표현하는 데 도움을 준다.
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW5"></a>
+  <aside class="aside">
+    <p class="aside-title">iPhone
+    </p>
+    <p class="para">어떤 기술을 이용하거나 그 동작을 어떤게 정의하는 지에 무관하게, 전화기능은 항상 현재 동작중인 앱을 인터럽트 한다.왜냐하면, 어떤 앱도 걸려오는 전화를 받는 것을 막을 수 없기 때문이다.
+    </p>
+
+  </aside>
+</div><p class="para">
+  오디오 세션 서비스에서, <strong>오디오 세션</strong>은 당신 앱의 오디오와 시스템 사이에서 중개 역할을 한다. 오디오 세션의 가장 중요한 일면은 <strong>카테고리</strong>로서, 당신 앱의 오디오 동작을 정의한다.
+</p><p class="para">
+  오디오 세션 서비스의 이점을 이용하고 사용자가 예상하는 오디오 경험을 제공하기 위해, 당신 앱의 오디오 동작을 가장 잘 설명하는 카테고리를 선택해야 한다.이것은 당신의 앱이 전면에서만 오디오를 재생할 것인지 또는 배경에서도 오디오를 재생할 것이지에 대한 경우의 문제이다. 다음 가이드라인을 따라 이 선택을 하라 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">동작의 세밀한 세트가 아니라, 단어의 의미에 기초해서 오디오 세션 카테고리를 선택하라. </strong> clear를 목적으로 카테고리를 선택할 때, 앱이 사용자의 예상에 따라 동작하도록 확인하라. 뿐만아니라, 이렇게 하면 미래에 그 동작의 세트가 다듬어 졌을때 정확하게 동작할 수 있는 기회를 얻는다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">드문 경우, 카테고리의 표준 동작을 수정하기 위해 오디오 세션에 프라퍼티를 더하라.</strong> 카테고리의 표준 동작은 사용자가 가장 예상할만한 것들을 나타내므로, 그것을 변경할 때는 조심스럽게 생각해야 한다. 예를 들어, 사용자가 당신 앱에서 예상하는 동작이라면, ducking 프라퍼티를 더해서 당신의 앱이 다른 모든 오디오보다 소리가 크게(전화 소리를 제외하고) 만들 수 있다. (오디오 세션 프라퍼티에 대해 더 알고 싶으면 <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="">Audio Session Programming Guide</a></em>의 <a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/AudioSessionBasics/AudioSessionBasics.html#/apple_ref/doc/uid/TP40007875-CH3-SW2" target="_self">“Fine-Tuning the Category”</a>를 보라.)
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">장치의 현재 오디오 환경에 기반해서 카테고리 선택을 하라.</strong> 이것은, 예를들어, 사용자가 당신 앱의 사운드 트랙이 아니라 다른 오디오를 들으면서 앱을 사용할 수 있도록 해 준다. 이렇게 하면, 사용자에게 강제로 듣던 음악을 중단시키거나 앱이 시작할 때 명백하게 사운드 트랙을 선택하도록 하는 것을 방지한다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">일반적으로, 앱이 동작중일때는 카테고리를 변경하지 마라.</strong> 카테고리를 변경하는 주된 이유는 앱이 레코딩과 재생을 따로 지원할 필요가 있는 경우이다. 이 경우, 필요에 따라 Record 카테고리와 Playback 카테고리를 스위치 하는 게 Play and Record 카테고리를 선택하는 것 보다 낫다. 왜냐하면, Record 카테고리는 녹음 중에는 얼러트-문자 수신 얼러트 같은-가 없도록 보장하기 때문이다.
+</p>
+</li>
+</ul><p class="para">
+  <span class="x-name-no-link">표 30-1</span>은 사용가능한 오디오 세션 카테고리를 보여준다. 서로 다른 카테고리들은 벨/무음 스위치에 의해 무음이 될 수 있고, 다른 오디오와 믹스가 되고, 또는 앱이 백그라운드에 있을 때 재생하도록 한다. (프로그래밍 인터페이스에서 나타나는 실제 카데고리 이름과 프라퍼티들은 <em class="u-book"><a href="../../../Audio/Conceptual/AudioSessionProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007875" target="_self">Audio Session Programming Guide</a></em>를 보라.)
+</p><div class="tableholder">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW6"></a>
+  <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+    <caption class="tablecaption"><strong class="caption-number">표 30-1</strong>오디오 세션 카테고리와 연관 동작들</caption>
+    <thead>
+        <tr>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  카테고리
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  의미
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  무음
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  믹스
+</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p class="para">
+  백그라운드
+</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td scope="row"><p class="para">
+  Solo Ambient
+</p></td>
+            <td><p class="para">
+  사운드가 앱의 기능을 향상시킨다. 다른 오디오는 무음이 된다
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Ambient
+</p></td>
+            <td><p class="para">
+  사운드가 앱의 기능을 향상시킨다. 다른 오디오는 무음이 되지는 않는다.
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Playback
+</p></td>
+            <td><p class="para">
+  사운드는 앱의 기능에 필수적이다. 다른 오디오와 믹스된다
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No (기본)
+</p><p class="para">
+  Yes (Mix With Others 프라퍼티가 더해지면)
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Record
+</p></td>
+            <td><p class="para">
+  사용자-레코딩 오디오
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Play and Record
+</p></td>
+            <td><p class="para">
+  사운드는 오디오 입력과 출력을 동시에 또는 연속적으로 한다.
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  No (기본)
+</p><p class="para">
+  Yes (Mix With Others 프라퍼티가 더해지면)
+</p></td>
+            <td><p class="para">
+  Yes
+</p></td>
+        </tr>
+        <tr>
+            <td scope="row"><p class="para">
+  Audio Processing
+</p></td>
+            <td><p class="para">
+  앱은 하드웨어-지원하에 인코딩을 수행함 (재생이나 레코드를 하지 않음).
+</p></td>
+            <td><p class="para">
+  N/A
+</p></td>
+            <td><p class="para">
+  No
+</p></td>
+            <td><p class="para">
+  Yes *
+</p></td>
+        </tr>
+    </tbody>
+  </table>
+</div><p class="para">
+  *오디오 프로세싱 카테고리를 선택하고 백그라운드에서 오디오 처리를 하기 원한다면, 오디오 처리가 끝날때까지 앱이 서스펜드 되지 않도록 해야 한다. 이렇게 하는 방법은 <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/ManagingYourApplicationsFlow/ManagingYourApplicationsFlow.html#/apple_ref/doc/uid/TP40007072-CH4-SW24" target="_self">“장시간-동작하는 백그라운드 테스크를 수행하기”</a> 를 보라.
+
+</p><p class="para">
+  사용자가 좋아할 만한 오디오 경험을 제공하기 위해 오디오 세션 카테고리를 선택하는 방법을 묘사한 시나리오 몇 가지가 있다.
+</p><p class="para">
+  <strong class="inline-head">시나리오 1 : 사람들이 새로운 언어를 배우는 것을 돕는 교육용 앱. </strong> 다음을 제공한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  사용자가 특정 컨트롤을 탭하면 피드백 사운드를 재생한다.
+</p>
+</li><li class="item"><p class="para">
+  사용자가 정확한 발음의 예를 듣고 싶을 때 재생하는 단어와 문장의 녹음들.
+</p>
+</li>
+</ul><p class="para">
+  이 앱에서, 사운드는 주요 기능에 필수적이다. 사람들은 공부하는 언어의 단어와 문장을 듣기 위해 이 앱을 사용하므로, 사운드는 장치가 잠겨져 있거나 무음으로 스위치 되어 있어도 재생 가능해야 한다. 사용자들은 사운드를 깨끗하게 듣기 원하기 때문에, 재생중에 있을 수도 있는 다른 오디오들은 무음이 되어야 한다고 예상한다.
+</p><p class="para">
+  사용자들이 이 앱에 대해 예상하는 동작을 만들기 위해서, Playback 카데고리를 이용하는 게 좋다. 이 카테고리가 개선되면서 다른 오디오와 믹싱을 허락하도록 바뀔 수는 있지만, 이 앱은 사용자가 명백히 선택한 교육적인 콘텐트가 다른 오디오와 경쟁하지 않도록 보장하는 동작을 기본으로 해야 한다.
+</p><p class="para">
+  <strong class="inline-head">시나리오 2 : VoIP 앱.</strong> 다음을 제공한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  오디오 입력을 받아들이는 능력.
+</p>
+</li><li class="item"><p class="para">
+  오디오를 재생하는 능력.
+</p>
+</li>
+</ul><p class="para">
+  이 앱에서, 사운드는 주요 기능에 필수적이다. 사람들은 주로 다른 앱을 사용하는 도중에,  다른 사람들과 대화하기 위해서 이 앱을 사용한다. 사용자들은 장치가 무음이거나 잠기더라도 전화를 받을 수 있을 것으로 예상하며, 다른 오디오들은 통화중에는 무음이 될 것으로 예상한다. 또한 앱이 백그라운드에 들어가도 계속 통화를 할 수 있을 것으로 예상한다.
+</p><p class="para">
+  이 앱을 위해 예상되는 사용자 경험을 만들기 위해서, Play and Record 카테고리를 사용하는 게 좋으며, 필요할 때에만 오디오 세션을 활성화 해서 사용자가 통화중에 다른 오디오를 사용할 수 있도록 한다.
+</p><p class="para">
+  <strong class="inline-head">시나리오 3 : 다른 테스크들 사이에 사용자의 캐릭터를 안내하기.</strong> 다음을 제공한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  다양한 게임플레이 사운드 효과
+</p>
+</li><li class="item"><p class="para">
+  음악 사운드 트랙
+</p>
+</li>
+</ul><p class="para">
+  이 앱에서, 사운드는 사용자 경험에 크게 영향을 미치지만, 메인 테스크에 핵심적인 것은 아니다. 또한, 사용자들은 조용히 게임을 플레이하거나, 게임 사운드 트랙말고 자신의 음악 라이브러리에서 노래를 듣는 것을 좋아할 수도 있다.
+</p><p class="para">
+  가장 좋은 전략은 당신의 앱이 시작할 때 사용자가 다른 음악을 듣고 있는지를 알아내는 것이다. 사용자에게 사운드 트랙을 들을 지 다른 오디오를 들을지 직접 선택하도록 요구하지 마라. 대신, 오디오 세션 서비스의 <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/func/AudioSessionGetProperty">AudioSessionGetProperty</a></code>  함수를 이용해 <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OtherAudioIsPlaying">kAudioSessionProperty_OtherAudioIsPlaying</a></code> 프라퍼티의 상태를 질의한다. 이 질의의 응답에 기반해서, Ambient 또는 Solo Ambient 카테고리를 선택할 수 있다. ( 두 카테고리 모두 사용자가 조용히 게임을 플레이 할 수 있도록 지원한다) :
+
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  만약 사용자가 다른 오디오를 듣고 있다면, 강제로 게임의 사운드 트랙을 듣는 것을 좋아하지 않고, 듣던 음악을 계속 듣기 원하는 것이라고 가정할 수 있다. 이 상황에서, Ambient 카테고리를 사용하는 것이 좋다.
+</p>
+</li><li class="item"><p class="para">
+  사용자가 당신의 앱을 시작할 때 다른 오디오를 듣고 있지 않다면, Solo Ambient 카테고리를 선택하는 것이 좋다.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">시나리오 4 : 사용자의 목적지까지 정교한, 실시간 네비게이션을 제공하는 앱.</strong>은 다음을 제공한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  여정의 각 단계별로 음성 방향지시.
+</p>
+</li><li class="item"><p class="para">
+  몇 몇 피드백 사운드
+</p>
+</li><li class="item"><p class="para">
+  사용자가 자신의 오디오를 계속 들을 수 있도록 하는 능력
+</p>
+</li>
+</ul><p class="para">
+  이 앱에서, 앱이 백그라운드인 것에 상관없이, 말하는 네비게이션 지시가 주요 테스크를 나타낸다. 이런 이유로, 장치가 잠기거나 무음으로 스위치 되더라도 또는 앱이 백그라운드에 있더라도 오디오를 재생할 수 있도록 하는, Playback 카테고리를 이용하는 것이 좋다.
+</p><p class="para">
+  사람들이 당신의 앱을 사용하면서 다른 오디오를 들을 수 있도록 하려면, <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OverrideCategoryMixWithOthers">kAudioSessionProperty_OverrideCategoryMixWithOthers</a></code>  프라퍼티를 더하면 된다. 하지만, 사용자는 현재 재생중인 오디오 위에서 말하는 지시사항을 들을 수 있도록 하길 원한다. 이렇게 하기 위해, <code class="code-voice u-api"><a href="../../../AudioToolbox/Reference/AudioSessionServicesReference/Reference/reference.html#/apple_ref/c/econst/kAudioSessionProperty_OtherMixableAudioShouldDuck">kAudioSessionProperty_OtherMixableAudioShouldDuck</a></code> 프라퍼티를 오디오 세션에 적용해서 당신의 오디오가 , 아이폰의 전화 오디오를 제외한 현재 재생중인 모든 오디오보다 크도록 보장할 수 있다. 그 세팅들은 앱이 백그라운드에 있더라도, 그 오디오 세션을 재활성화하도록 해서, 사용자들이 네비게이션 업데이트를 실시간으로 얻을 수 있도록 한다.
+
+</p><p class="para">
+  <strong class="inline-head">시나리오 5 : 사용자의 텍스트와 그래픽을 웹 사이트에 업로드 할 수 있도록 하는 블로깅 앱.</strong>은 다음을 제공한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  짧은 시동음
+</p>
+</li><li class="item"><p class="para">
+ 사용자의 액션에 동반하는 짧은 사운드 효과 (포스트가 업로드 되면 재생되는 사운드)
+</p>
+</li><li class="item"><p class="para">
+  포스팅이 실패했을 때 재생되는 경고음
+</p>
+</li>
+</ul><p class="para">
+  이 앱에서, 사운드는 사용자의 경험을 좋게 하지만, 핵심적인 것은 아니다. 메인 테스크는 오디오와 상관없으며 사용자들은 앱을 성공적으로 사용하기 위해 어떤 소리도 들을 필요가 없다. 이 시나리오에서, 사운드를 만들기 위해 System Sound Services 를 사용해야 한다. 앱의 모든 사운드의 오디오 콘텍스트는 이 기술이 의도하는 목적에 부합하기 때문이다. 그것은 사용자가 예상하는 대로 장치의 잠금과 벨/무음 스위치를 따르는 UI 사운드 효과와 경고 사운드를 만들어 내는 것이다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW7"></a>
+  <h3 class="section-name" tabindex="0">오디오 인터럽션을 관리하기</h3>
+  <p class="para">
+  이따금씩, 현재 재생중인 오디오는 다른 앱으로부터 오는 오디오에 의해 인터럽트 된다. 예를 들어, 아이폰에서 수신 전화는 현재 앱의 오디오를 통화 하는 동안 인터럽트 한다. 멀티테스킹 환경에서, 이러한 오디오 인터럽션의 빈도는 높아진다.
+</p><p class="para">
+  사용자가 좋아할만한 오디오 경험을 제공하기 위해, iOS는 다음과 같이 당신에게 의지한다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  당신의 앱이 발생시킬 수 있는 오디오 인터럽션의 종류를 구분하라
+</p>
+</li><li class="item"><p class="para">
+  오디오 인터럽션이 끝나고 나서 당신의 앱이 계속 할 때 적당하게 반응하라
+</p>
+</li>
+</ul><p class="para">
+  모든 앱은 발생시키는 오디오 인터럽션의 타입을 구분할 필요가 있지만, 모든 앱이 오디오 인터럽션이 끝났을 때 어떻게 응답할지를 결정할 필요는 없다. 왜냐하면 대부분의 앱들은 오디오 인터럽션의 끝에는 오디오를 다시 시작하는 것으로 응대할 수 있기 때문이다. 주요하게 또는 부분적으로 미디어 재생을 하는- 그리고 미디어 재생 콘트롤을 제공하는 -  앱들은 적당한 대응을 결정하기 위해 추가적인 단계를 밟아야 한다.
+</p><p class="para">
+  개념적으로, 인터럽션을 하는 오디오의 타입과 인터럽션이 끝났을 때 특정 앱이 응답할 것이라 사용자가 예상하는 방식에 기반해서 발생할 수 있는 두 가지 종류의 오디오 인터럽션이 있다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong>재시작 가능한 인터럽션</strong>은 사용자가 보기에는 주된 청취 경험에서 임시적으로 끼어드는 오디오에 의한 것이다.
+</p>
+<p class="para">
+  재시작 가능한 인터럽션이 끝나면, 인터럽션 동안 미디어 플래이백을 위한 컨트롤을 디스플레이하는 앱은 , 오디오를 재생하든 일시정지 상태로 남아있든, 하던 것을 계속한다. 미디어 플레이백 컨트롤을 가지고 있지 않은 앱은 오디오 재생을 resume한다.
+</p>
+<p class="para">
+  예를 들어, 아이폰에서 음악을 재생하는 앱을 듣고 있는 중에 곡의 중간에 VoIP 전화가 왔다고 생각해 보자. 사용자는 전화를 받고, 통화를 하는 중에 음악재생앱은 조용히 하고 있을 것이다. 통화가 끝나면, 사용자는 음악재생 앱이 자동적으로 노래를 재생할 것으로 예상한다.왜냐하면 음악 - 전화가 아닌 - 주요한 듣기 경험을 구성하고 있으며 또한, 전화가 오기 전에 음악을 멈추지 않았기 때문이다. 그 반면에, 만약 사용자가 전화가 오기 전에 음악 재생을 멈추었다면, 통화가 끝난 뒤에 음악은 멈춘채로 있어야 한다고 예상한다.
+</p>
+<p class="para">
+  유사한 재시작 가능한 인터럽션을 일으키는 다른 예로  알람, 오디오 프롬프트(말하는 운전 지시처럼)  또는 다른 간헐적인 오디오 앱이 있다.
+</li><li class="item"><p class="para">
+  <strong>재시작 불가능한 인터럽션</strong>은 미디어 재생 앱에서의 오디오와 같은 , 사용자가 주된 리스닝 경험으로 보는 오디오에 의해 발생한다.
+</p>
+<p class="para">
+  재시작 불가능한 인터럽션이 끝나면, 미디어 플레이백 컨트롤을 디스플레이 하는 앱은 오디오 재생을 재개하면 안된다. 미디어 플레이백 컨트롤을 가지지 않은 앱은 오디오 재생을 재개해야 한다.
+</p>
+<p class="para">
+  예를 들어, 사용자가 음악 재생 앱(음악 앱 1)을 듣고 있을 때, 다른 음악재생 앱(음악 앱 2)이 인터럽트를 한 경우를 가정해 보자. 사용자는 음악 앱 2를 일정 기간 듣기로 결정했다. 음악 앱 2를 종료한 뒤에, 사용자는 음악 앱 1이 자동으로 재생을 재개하길 예상하지 않는다. 왜냐하면 그들은 일부러 음악 앱 2가 그들의 주요 리스닝 경험으로 만들었기 때문이다.
+</p>
+</li>
+</ul><p class="para">
+  다음의 가이드라인은 오디오 인터럽션이 끝났을 때, 어떤 정보를 제공하고 어떻게 계속해야 하는지를 결정하는 데 도움을 준다.
+</p><p class="para">
+  <strong class="inline-head">Identify the type of audio interruption your app caused.</strong> You do this by deactivating your audio session in one of the following two ways when your audio is finished:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  당신 앱이 재시작 가능한 인터럽션을 발생시킨다면, <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/c/econst/AVAudioSessionSetActiveFlags_NotifyOthersOnDeactivation">AVAudioSessionSetActivateFlags_NotifyOthersOnDeactivation</a></code> 플래그를 이용해 당신의 오디오 세션을 비활성화 하라.
+
+</li><li class="item"><p class="para">
+  당신 앱이 재시작 가능한 인터럽션을 발생시킨다면, 플래그 없이 오디오 세션을 비활성화 하라.
+</p>
+</li>
+</ul><p class="para">
+  제공하든 안하든, 플래그는 적당한 상황이라면, iOS가 인터럽트된 앱들에게 재생하는 것을 자동적으로 재개할 수 있는 능력을 준다.
+
+</p><p class="para">
+  <strong class="inline-head">터럽션이 끝나면 오디오를 재개할 수 있는지 결정하라..</strong> 이것은 당신이 앱에 제공한 오디오 사용자 경험에 의해 결정된다.
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  만약 앱이 사람들이 오디오 재생과 일시정시에 사용하는 미디어 재생 컨트롤을 디스플레이 한다면, 인터럽션이 끝났을 때
+  <code class="code-voice u-api"><a href="../../../AVFoundation/Reference/AVAudioSession_ClassReference/Reference/Reference.html#/apple_ref/c/econst/AVAudioSessionInterruptionFlags_ShouldResume">AVAudioSessionInterruptionFlags_ShouldResume</a></code>플래그를 체크할 필요가 있다.
+</p>
+<p class="para">
+  만약 앱이 Should Resume 플래그를 받으면, 당신의 앱은 다음과 같이 동작해야 한다:
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  인터럽트 되었을 때 오디오 재생이 활성화 되어 있었다면, 오디오 재생을 재개 한다.
+</p>
+</li><li class="item"><p class="para">
+  인터럽트 되었을 때 오디오 재생이 활성화 되어 있지 않았다면, 오디오 재생을 재개 하지 않는다.
+</p>
+</li>
+</ul>
+</li><li class="item"><p class="para">
+  당신 앱이 사람들이 사람들이 오디오 재생과 일시정시에 사용하는 미디어 플레이백 컨트롤을 전혀 표시하지 않는다면 , Should Resume 플래그의 존재와 상관없이 앱은 인터럽션이 끝났을 때 항상 예전에 재생하던 오디오 재생을 재개해야 한다.
+</p>
+<p class="para">
+  예를 들어, 사운드 트랙을 재생하는 게임은 인터럽션이 끝나면 사운드 트랙 재생을 재개해야 한다.
+</p>
+</li>
+</ul>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH44-SW8"></a>
+  <h3 class="section-name" tabindex="0">가능하다면, 미디어 리모트 컨트롤 이벤트를 다루어라.</h3>
+  <p class="para">
+ 앱들은 사람들이 iOS 미디어 컨트롤을 사용할 때나 헤드셋의 컨트롤들 처럼 엑세서리 컨트롤을 사용하는 경우,  리모트 컨트롤 이벤트를 받을 수 있다. 이는 당신 앱이 현재 포어그라운드 또는 백그라운드에서 오디오 재생을 하고 있더라도 UI를 통하지 않은 사용자 입력을 받도록 해 준다.
+</p><p class="para">
+ 앱들은 AirPlay 가능한 하드웨어 - Apple TV 같은- 로 비디오를 보낼 수 있고, 재생이 계속되는 동안 백그라운드로 전환할 수 있다. 이런 앱은 리모트 콘트롤 이벤트를 통해 사용자 입력을 받을 수 있으므로, 앱이 백그라운드에 있는 동안에도 비디오 재생을 컨트롤 할 수 있다.게다가, 이런 타입의 앱은 백그라운드에 있는 동안에도 인터럽션이 끝나면 오디오 세션을 재활성화할 수 있다.
+</p><p class="para">
+  특히, 미디어 재생 앱들은 특히 백그라운드에서 오디오나 비디오를 재생한다면 미디어 리모트 컨트롤 이벤트에 적절히 대응할 필요가 있다.
+</p><p class="para">
+  앱이 백그라운드일 때 미디어를 재생할 권한과 관련한 책임을 다하기 위해서, 다음 가이드라인을 따르라.
+</p><p class="para">
+  <strong class="inline-head">앱이 리모트 컨트롤 이벤트를 받기 적합한 기간을 의미가 있는 시간들로 제한하라.</strong> 를 들어, 만약 당신 앱이 사용자가 콘텐트를 읽고, 정보를 검색하도록 하고, 오디오를 듣도록 도와준다면, 사용자가 오디오 콘텍스트에 있을 때만 리모트 컨트롤 이벤트를 수신하도록 해야 한다. 사용자가 오디오 콘텍스트를 떠난다면, 이벤트를 수신하는 기능을 그만둬야 한다. 앱이 AirPlay 가능한 장치에 오디오나 비디오를 재생한다면, 미디어가 재생하는 동안 리모트 컨트롤 이벤트를 수신해야 한다. 이 가이드라인들을 지키면 사용자들은 당신 앱의 미디어가 아닌 콘텍스트에 있을 때 다른 앱의 미디어를 소비할 수 - 그리고 헤드셋 컨트롤로 조절할 수 -  있다.
+</p><p class="para">
+  <strong class="inline-head">최대한, AirPlay 지원을 제공하기 위해 시스템이 제공하는 컨트롤들을 사용하라</strong>AirPlay 재생을 가능하게 하기 위해 <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPMoviePlayerController_Class/Reference/Reference.html#/apple_ref/occ/cl/MPMoviePlayerController">MPMoviePlayerController</a></code>  클래스를 사용한다면, 현재 범위 안에 있는 AirPlay 가능한 장치를 사용자가 선택할 수 있도록 표준 컨트롤의 이점을 얻을 수 있다. 또는, <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 이용해 AirPlay 가능한 오디오 또는 비디오 장치들을 사용자가 선택할 수 있도록 디스플레이 할 수 있다. 사용자들은 표준 컨트롤들의 모양과 동작에 익숙해져 있으므로, 그것을 당신 앱 안에서 사용하는 방법도 알고 있을 것이다.
+
+</p><p class="para">
+  <strong class="inline-head">당신 앱에서 아무런 의미를 가지지 않는 이벤트라 할지라도, 이벤트를 용도변경하지 마라. </strong> 사용자들은 iOS 미디어 컨트롤들과 엑세서리 컨트롤들이 모든 앱에서 일관되게 기능하길 기대한다. 당신 앱에서 필요없는 이벤트를 다룰 필요는 없지만, 다루는 이벤트는 사용자가 예상하는 결과를 만들어야 한다. 만약 당신이 이벤트의 의미를 재정의 한다면, 사용자들을 혼란스럽게 하고 당신의 앱을 종료시키는 것 외에는 빠져나올 수 없는 알 수 없는 상태로 이끄는 위험이 있다.
+</p>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="QuickLook.html#/apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">Quick Look</a></p>
+  			<p class="next-link"><a href="VoiceOverAccessibility.html#/apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">VoiceOver</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

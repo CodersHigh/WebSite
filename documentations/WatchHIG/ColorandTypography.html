@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>애플 와치 휴면 인터페이스 가이드라인: 컬러와 타이포그라피</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.2.1.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.2.1.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="789fd41c" />
+<meta id="j-version" name="j-version" content="1.2.0" />
+<meta id="build" name="build" content="7f54c7f8d1cac93ebbe55b6cbd5aec1a" />
+<meta id="document-version" name="document-version" content="2.0.11" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/WatchKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014992" />
+<meta id="chapterId" name="chapterId" content="TP40014992-CH9">
+<meta id="book-title" name="book-title" content="Apple Watch Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2015-02-09" />
+<meta id="description" name="description" content="Provides guidelines for designing a Watch app." />
+<meta id="IndexTitle" name="IndexTitle" content="Apple Watch Human Interface Guidelines" />
+<meta id="resources-uri" name="resources-uri" content="./">
+<link id="book-index-page" rel="Start" title="Apple Watch Human Interface Guidelines" type="text/html" href="index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+            &mdash; Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">애플 와치 휴면 인터페이스 가이드라인</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+    <img id="shortstack" src="./Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+          <ul class="nav-parts">
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH2-SW1" class="part-name">UI 디자인 기본들
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./index.html" data-id="//apple_ref/doc/uid/TP40014992-CH3-SW1">애플 와치를 위해 디자인하기</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./WatchOSAppAnatomy.html" data-id="//apple_ref/doc/uid/TP40014992-CH4-SW1">앱 해부</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Glances.html" data-id="//apple_ref/doc/uid/TP40014992-CH21-SW1">글렌스</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Notifications.html" data-id="//apple_ref/doc/uid/TP40014992-CH20-SW1">통지</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./ModalContexts.html" data-id="//apple_ref/doc/uid/TP40014992-CH6-SW1">모달 시트</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Layout.html" data-id="//apple_ref/doc/uid/TP40014992-CH22-SW1">레이아웃</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./ColorandTypography.html" data-id="//apple_ref/doc/uid/TP40014992-CH9-SW1">컬러와 타이포그라피</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Animation.html" data-id="//apple_ref/doc/uid/TP40014992-CH7-SW1">애니메이션</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Branding.html" data-id="//apple_ref/doc/uid/TP40014992-CH8-SW1">브랜딩</a>
+                    </li>
+                </ul>
+              </li>
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH11-SW1" class="part-name">UI 요소들
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./Labels.html" data-id="//apple_ref/doc/uid/TP40014992-CH31-SW1">레이블</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Images.html" data-id="//apple_ref/doc/uid/TP40014992-CH25-SW1">이미지</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Groups.html" data-id="//apple_ref/doc/uid/TP40014992-CH23-SW1">그룹스</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Tables.html" data-id="//apple_ref/doc/uid/TP40014992-CH24-SW1">테이블</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Buttons.html" data-id="//apple_ref/doc/uid/TP40014992-CH28-SW1">버튼</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Switches.html" data-id="//apple_ref/doc/uid/TP40014992-CH29-SW1">스위치</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Sliders.html" data-id="//apple_ref/doc/uid/TP40014992-CH30-SW1">슬라이더</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Maps.html" data-id="//apple_ref/doc/uid/TP40014992-CH26-SW1">지도</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./DatesandTimers.html" data-id="//apple_ref/doc/uid/TP40014992-CH32-SW1">날짜와 시간</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Menus.html" data-id="//apple_ref/doc/uid/TP40014992-CH14-SW1">메뉴</a>
+                    </li>
+                </ul>
+              </li>
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH15-SW1" class="part-name">아이콘과 이미지 디자인
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./IconandImageSizes.html" data-id="//apple_ref/doc/uid/TP40014992-CH16-SW1">아이콘과 이미지 크기</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./MenuImages.html" data-id="//apple_ref/doc/uid/TP40014992-CH18-SW1">메뉴 이미지</a>
+                    </li>
+                </ul>
+              </li>
+            <li data-id="revision-history" class="part-name">개정 기록
+              <ul class="nav-chapters">
+                <li class="nav-chapter"><a href="./RevisionHistory.html" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">문서 개정 기록</a></li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="ColorandTypography.html#/apple_ref/doc/uid/TP40014992-CH9-SW2">Color</a>
+          </li>
+          <li class="item">
+            <a href="ColorandTypography.html#/apple_ref/doc/uid/TP40014992-CH9-SW3">Typography</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014992-CH9"></a><a name="//apple_ref/doc/uid/TP40014992-CH9-SW1"></a>
+
+  <h2 class='chapter-name'>컬러와 타이포그라피</h2>
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH9-SW2"></a>
+  <h3 class="section-name" tabindex="0">컬러</h3>
+  <p class="para">
+  컬러는 당신의 앱에서 시각적인 연속성과 브랜딩을 돕는다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/colors_calendar_list_2x.png" alt="image: ../Art/colors_calendar_list_2x.png" width="272" height="666" />
+</figure><p class="para">
+  <strong class="inline-head">앱의 배경색으로 검은색을 사용하라.</strong> 검은색 배경색은 장치의 베젤에 어색함 없이 융화되어 화면 모서리가 없는 듯한 착각을 불러 일으킨다. 인터페이스에서 밝은 배경색 사용을 피하라.
+</p><p class="para">
+  <strong class="inline-head">앱의 키 컬러를 사용해 브랜딩을 하거나 상태를 나타내라.</strong> 모든 앱은 키 컬러를 설정한다. 시스템은 이 키 컬러를 이용해 화면 좌상단 모서리의 타이틀 문자열과 통지 인터페이스에서 앱 이름이나 다른 중요 정보를 두드러지게 하는 데 사용한다. 당신은 유사하게 키 컬러를 이용해 앱의 브랜딩의 일부로 사용할 수 있다.
+</p><p class="para">
+  <strong class="inline-head">문자열에는 높은 콘트라스트를 가진 컬러를 사용하라.</strong> 높은 콘트라스트 색상은 글자를 보다 읽기 좋게 한다.
+</p><p class="para">
+  <strong class="inline-head">컬러를 인터렉티비티를 나타내는 유일한 수단으로 사용하지 마라.</strong> 컬러를 이용해 브랜딩을 적절히 하는 것은 좋지만, 버튼이나 다른 콘트롤들에서 컬러 하나만을 사용해 인터렉티비티를 나타내지는 마라.
+</p><p class="para">
+  <strong class="inline-head">색맥을 염두에 둬라.</strong> 색맹을 가진 대부분의 사람들은 녹색과 적색을 구별하지 못한다. 두가지 상태나 값을 구별하는 유일한 방법으로 녹색과 적색을 사용한 곳이 없는지 확인하라. (몇 몇 이미지 편집 소프트웨어는 색맹을 위해 점검할 수 있는 도구를 가지고 있다).
+</p><p class="para">
+  <strong class="inline-head">컬러는 소통하지만, 항상 의도한 대로는 아니다.</strong> 모든 사람들이 컬러를 서로 다르게 인식하며, 많은 문화권에서 컬러에 서로 다른 의미를 부여한다. 당신이 선택한 컬러가 다른 나라와 문화권에서 어떻게 받아들여지는지에 대해 시간을 들여서 조사하라. 가능한한, 당신 앱의 컬러가 적당한 메시지를 전달하도록 하라.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH9-SW3"></a>
+  <h3 class="section-name" tabindex="0">타이포그라피</h3>
+  <p class="para">
+  무엇보다, 텍스트는 읽을 수 있어여 한다. 사용자가 당신의 앱의 단어를 읽을 수 없다면, 타이포그라피가 아름다운 것은 아무 의미가 없다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/typography_mail_2x.png" alt="image: ../Art/typography_mail_2x.png" width="272" height="337" />
+</figure><p class="para">
+  시스템 폰트는 애플 와치에서의 가독성을 위해 특별히 디자인 되었다. 큰 사이즈에서, 수평 방향의 공간을 덜 차지하기 위해 약간 폭이 좁은 글자가 설정된다. 하지만 작은 사이즈에서는 좀 더 느슨하게 여백이 더 생기며 'a'나 'e' 같은 문자의 경우 구멍이 커져서 한 눈에 읽기 쉬워진다. 구두점들도 폰트가 작아질수록 점점 커진다. 텍스트 크기가 변하면, 애플 와치는 다이나믹하게 폰트를 변경해서 항상 명료함과 가독성을 유지하도록 한다.
+</p><p class="para">
+  앱들은 다이나믹 타입을 항상 적용해야 한다. 다이나믹 타입을 적용하면 다음을 얻을 수 있다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  모든 서체 크기에서 자간과 행 높이의 자동 조절
+</p>
+</li><li class="item"><p class="para">
+  문자열 블럭에 의미로 구분되는 텍스트 스타일을 줄 수 있다. 예를 들면, <code class="code-voice">Body</code>, <code class="code-voice">Footnote</code>, 또는 <code class="code-voice">Headline</code> 처럼.
+</p>
+</li><li class="item"><p class="para">
+  사용자의 서체-크기 설정 변경에 적절히 반응하는 텍스트 (손쉬운 사용 텍스트 크기 포함)
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40014992-CH9-SW4"></a>
+  <aside class="aside">
+    <p class="aside-title">노트
+    </p>
+    	<p class="para">커스텀 서체를 사용한다 하더라도 여전히 텍스트 크기에 대한 시스템 세팅에 따라 크기 조절을 할 수 있다. 사용자가 설정을 변경하면 당신의 앱이 적절히 대응 해야 한다.
+    	</p>
+
+  </aside>
+</div><p class="para">
+  내장 텍스트 스타일을 사용한다면, 다이나믹 타입을 자동으로 지원받는다. 커스텀 서체를 사용한다면, 기능을 적용하기 위해 추가적인 일을 좀 해야 한다. 텍스트 스타일을 사용하는 방법과 사용자가 텍스트 사이즈 설정을 변경했을 때 통보를 받는 것에 대한 자세한 정보는, <span class='z-span'><em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">iOS 텍스트 프로그래밍 가이드</a></em>의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">텍스트 스타일</a></span>을 보라.
+</p><p class="para">
+  <strong class="inline-head">가능한 내장 텍스트 스타일을 사용하라. </strong> 내장 스타일은 자동으로 다이나믹 타입을 지원받으며 애플 와치에서 예쁘게 보이도록 디자인 되었다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/text_styles_2x.png" alt="image: ../Art/text_styles_2x.png" width="312" height="387" />
+</figure><p class="para">
+  <strong class="inline-head">앱 전체를 통해 하나의 서체를 사용하는 것이 낫다.</strong> 많은 서체를 섞어쓰는 것은 앱이 난잡하고 날림으로 보일 수 있다.
+</p><p class="para">
+  <strong class="inline-head">수동으로 시스템 서체 크기를 설정할 때, 포인트 크기는 사용할 정확한 크기를 결정한다.</strong> 19포인트 이하의 텍스트에는 샌 프란시스코 텍스트 서체를 선택해라. 20포인트 이상의 텍스트에는 샌 프란시스코 디스플레이 서체를 선택해라.
+</p>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="./Layout.html" data-id="//apple_ref/doc/uid/TP40014992-CH22-SW1">레이아웃</a></p>
+  			<p class="next-link"><a href="./Animation.html" data-id="//apple_ref/doc/uid/TP40014992-CH7-SW1">애니메이션</a></p>
+  <p class="copyright">Copyright &#x00a9; 2015 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  <a href="RevisionHistory.html#/apple_ref/doc/uid/TP40014992-CH99-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">Updated: 2015-02-09</a>
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

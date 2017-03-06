@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH19"></a>
+  <h2 class='chapter-name chapter-name-short'>App Icon</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW3">
+	  				Document Icons
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="AppIcons.html#/apple_ref/doc/uid/TP40006556-CH19-SW4">
+	  				Spotlight and Settings Icons
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+
+  	<section class="section">
+  		<p class="para">
+  모든 앱은 아름답고 기억에 남는 앱 아이콘으로 앱 스토어에서 사람들을 끌어당기고 홈 화면에서 두드러져야 한다. iOS는 여러 버전의 앱 아이콘을 게임 센터, 검색 결과, Settings, 그리고 앱이 만든 문서를 나타내는 데 사용할 수 있다.
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/app_icons_home_screen_2x.png" alt="image: ../Art/app_icons_home_screen_2x.png" width="224" height="383" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW5"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">앱은 지원하는 모든 iOS에 대해 같은 앱 아이콘을 사용한다. 만약 iOS 7을 위해 앱의 아이콘을 재디자인 하려면, 다른 버전의 iOS에서 다른 UI를 디스플레이 한다 하더라도, 새로운 아이콘이 예전 것을 대체해야 한다.
+    </p>
+
+  </aside>
+</div>
+<p class="para">
+  <strong class="inline-head">최상의 결과를 위해, 전문 그래픽 디자이너의 도움을 받아라. </strong> 경험이 있는 그래픽 디자이너는 당신 앱의 전체적인 시각적 개발을 도울 수 있으며 그 스타일을 모든 아이콘과 이미지에 적용할 수 있다.
+</p>
+<p class="para">
+  <strong class="inline-head">유니버설한 표상을 사용해 누구나 쉽게 알아볼 수 있도록 하라. </strong> 일반적으로, 요소의 부차적이고 희미한 면에 초점을 맞추지 마라. 예를 들어, Mail 앱 아이콘은 봉투를 사용하지, 시골의 우편함이나 우편 배달부의 가방 또는 우체국의 심볼을 사용하지 않는다.
+</p>
+<p class="para">
+  <strong class="inline-head">단순함을 끌어안아라. </strong> 특히, 앱 아이콘에 다른 여러 이미지들을 추가해 넣지 마라. 앱의 핵심을 잡아내는 단 하나의 요소를 찾은 뒤 그 요소를 단순하고, 특이한 모양으로 표현하라.  디테일은 조심스럽게 추가하라. 아이콘의 콘텐트 또는 모양이 과하게 복잡하다면, 작은 사이즈에서 그 세부적인 사항들은 헷깔리고 지저분해 보일 것이다.
+</p>
+<div class="tip clear">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-DontLinkElementID_1"></a>
+  <aside class="aside">
+    <p class="aside-title">Tip
+    </p>
+    <p class="para">작은 크기에서 앱 아이콘을 테스트 해 보기 위해, 홈 화면의 폴더에 넣어보라. 더 나아가, 몇 몇 앱 아이콘들을 폴더에 넣은 뒤 당신 앱의 아이콘이 보기에 좋고 여전히 인식가능한지를 보라.
+    </p>
+
+  </aside>
+</div>
+<p class="para">
+  <strong class="inline-head">당신 앱의 주요 아이디어에 대한 추상적인 해석을 만들어라. </strong> 사진이나 앱의 스크린 샷을 앱 아이콘에 사용하는 것이 잘 되는 경우가 거의 없다. 사진의 디테일은 작은 사이즈에서 보기에 아주 힘들기 때문이다. 전형적으로, 사실성을 예술적인 방식으로 해석하는 게 낫다. 이렇게 하면 사용자가 알아주길 바라는 주제의 측면을 강조할 수 있기 때문이다.
+</p>
+<p class="para">
+  <strong class="inline-head">실물을 묘사하길 원한다면, 정확하게 하라. </strong> 실제 오브젝트를 그림그리는 아이콘은 천, 유리, 종이 그리고 쇠와 같은 물질의 특징을 정확하게 복제해야 하며, 오브젝트의 무게와 느낌을 전달해야 한다.
+</p>
+<p class="para">
+  <strong class="inline-head">앱 아이콘이 다양한 백그라운드에서 잘 보이는 지 확인하라. </strong> 사용자가 어떤 월페이퍼를 사용할지 예상할 수 없기 때문에 밝거나 어두운 백그라운드 한 곳에서만 테스트 하면 안된다.
+</p>
+<p class="para">
+  <strong class="inline-head">투명도를 피하라. </strong> 앱 아이콘은 불투명해야 한다. 아이콘의 경계가 권장 사이즈보다 작으면, - 또는 투명도를 이용해 “씨-쓰루” 영역을 만들면 - 결과 아이콘은 검은 배경에 떠 있는 것 처럼 보이는, 사용자가 선택한 아름다운 월 페이퍼위에서 완전 매력적이지 않은 모습이 될 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">아트워크 안에 iOS 인터페이스 요소를 사용하지 마라. </strong> 사용자들이 당신의 아이콘 또는 이미지와 iOS UI를 혼동하는 것을 원하지 않을 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">아트워크에서 애플 하드웨어 제품의 복제품을 사용하지 마라. </strong> 애플 제품을 나타내는 심볼은 카피라이트가 있으며 당신의 아이콘이나 이미지에서 재 생산될 수 없다. 일반적으로, 아트워크 안에서는 어떠한 특정 장치의 복제도 피하는 게 좋은데, 디자인이 빠르게 바뀌기 때문에 거기에 기초한 아이콘들은 빠르게 오래되어 보이기 때문이다.
+</p>
+<p class="para">
+  <strong class="inline-head">인터페이스에서 iOS 앱 아이콘을 재사용하지 마라. </strong> 시스템 전체에 걸쳐서 동일한 아이콘이 조금식 다른 것을 의미하면 사용자에게 혼란을 가져올 수 있다.
+</p>
+<p class="para">
+  앱 스토어 아이콘의 예외 - <code class="code-voice">iTunesArtwork</code> 으로 이름지어야 하는 - 만 지켜주면, 앱 아이콘은 어떤 이름으로 지어도 된다. <code class="code-voice">CFBundleIcons</code> 키에 아이콘 파일의 이름을 지정하고, <code class="code-voice">@2x</code> 를 붙여서 고해상도 이미지를 제공하기만 하면, iOS가 용도에 적합한 사이즈를 선택한다. 아이콘 이름짓기에 대해 더 알고 싶으면, <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="_self">iOS App Programming Guide</a></em>의 <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a>를 보라.
+</p>
+<p class="para">
+  <strong class="inline-head">다른 장치에 대해서는 다른 사이즈의 앱 아이콘을 만들어라. </strong> 유니버설 앱을 만든다면, 4 사이즈의 앱 아이콘을 공급해야 한다.
+</p>
+<p class="para">
+  아이폰과 아이팟 터치를 위해서, 다음 두가지 사이즈가 모두 필요하다
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  120 x 120 픽셀
+</p>
+</li><li class="item"><p class="para">
+  60 x 60 픽셀 (표준 해상도)
+</p>
+</li>
+</ul>
+<p class="para">
+  아이패드를 위해서는 다음 두가지 사이즈가 모두 필요하다
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  152 x 152 픽셀
+</p>
+</li><li class="item"><p class="para">
+  76 x 76 픽셀 (표준 해상도)
+</p>
+</li>
+</ul>
+<p class="para">
+  iOS가 앱 아이콘을 장치의 홈 화면에 디스플레이하면, 모서리를 둥글게 하는 마스크를 자동으로 적용한다. 아이콘의 모서리가 90도를 가지고 있어야 마스크가 적용된 뒤 보기에 좋다. 예를 들어:
+</p>
+<section class="rec-container">
+	<div class="blurb">
+
+	</div>
+
+	<section class="left-container">
+			<p class="container-label a-120-x-120-pixel-icon-before-the-mask-is-applied">A 120 x 120 pixel icon before the mask is applied</p>
+		<img class="inline-graphic" src="Art/star120_original_2x.png" alt="image: ../Art/star120_original.png" width="42" height="42" />
+	</section>
+		<section class="right-container">
+				<p class="container-label a-120-x-120-pixel-icon-after-the-mask-is-applied">A 120 x 120 pixel icon after the mask is applied</p>
+			<img class="inline-graphic" src="Art/star120_processed_2x.png" alt="image: ../Art/star120_processed.png" width="42" height="42" />
+		</section>
+</section><p class="para">
+  <strong class="inline-head">앱 스토어 디스플레이용으로 큰 버전의 앱 아이콘을 만들어라. </strong> 이 버전이 당신의 앱 아이콘이라는 것을 즉각적으로 알아차릴 수 있도록 하면서 미묘하게 풍부하고 더 세밀할 수 있다. 이 버전의 앱 아이콘에는 어떤 시각적인 효과도 더해지지 않는다.
+</p>
+<p class="para">
+  앱 스토어를 위해서, 모든 장치에 잘 보이도록 두 사이즈의 큰 버전의 앱 아이콘을 만들어라 :
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  1024 x 1024 픽셀
+</p>
+</li><li class="item"><p class="para">
+  512 x 512 픽셀 (표준 해상도)
+</p>
+</li>
+</ul>
+<p class="para">
+  이 버전의 앱 아이콘의 이름을 각각 <code class="code-voice">iTunesArtwork@2x</code>와 <code class="code-voice">iTunesArtwork</code>로 준다.
+</p>
+<div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW6"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">iOS는 큰 이미지를 다른 방식으로도 사용한다. 아이패드에서, iOS 는 큰 도큐먼트 이미지를 만들어내는 데 큰 이미지를 사용한다.
+    </p>
+
+  </aside>
+</div>
+<p class="para">
+  AdHoc 배포를 위해 앱을 개발 중이라도 (앱 스토어를 통한 게 아니라, 인-하우스 배포만 하는 경우), 큰 버전의 앱 아이콘을 제공해야 한다. 이 아이콘은 iTunes에서 앱을 인식하게 해 준다.
+</p>
+<p class="para">
+
+</p>
+
+		</section>
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW3"></a>
+  <h3 class="section-name" tabindex="0">문서 아이콘</h3>
+  <p class="para">
+  당신의 iOS 앱이 커스텀 타입의 문서를 만든다면, 사용자들이 그 문서들을 한 눈에 알아보길 원할 것이다. 이런 목적으로 커스텀 아이콘을 만들 필요는 없다. iOS가 앱 아이콘을 이용해 문서 아이콘을 만들어 줄 것이기 때문이다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW4"></a>
+  <h3 class="section-name" tabindex="0">스팟라이트와 Settings 아이콘</h3>
+  <p class="para">
+  모든 앱은 iOS가 스팟라이트 검색시에 앱 이름이 매칭되면 디스플레이할 수 있도록 작은 아이콘을 공급해야 한다. Settings를 공급하는 앱들 또한 빌트-인 Settings 앱에서 구별할 수 있도록 작은 아이콘을 공급해야 한다.
+</p><p class="para">
+  그 아이콘들은 검색 결과 리스트 또는 Settings 안에서 당신 앱을 명료하게 인식할 수 있게 해야 한다. 예를 들어, 빌트-인 앱들은 아이콘 크기가 작더라도 Settings에서 구별하기가 쉽다 :
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/app_icons_in_settings_2x.png" alt="image: ../Art/app_icons_in_settings_2x.png" width="224" height="383" />
+</figure><p class="para">
+  <code class="code-voice">CFBundleIcons</code> 키에 그 이름을 선언해두고 <code class="code-voice">@2x</code> 접미사를 붙여 고해상도 아이콘을 제공하기만 하면, 작은 아이콘의 이름을 무엇으로 해도 상관없다. iOS가 용도에 따라 적당한 사이즈의 아이콘을 선택해서 사용하기 때문에 커스텀한 이름을 사용할 수 있다.  <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의  <a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html#/apple_ref/doc/uid/TP40007072-CH6-SW1" target="_self">“App Icons”</a>를 보라.
+
+</p><p class="para">
+  모든 장치에 있어서, 스팟라이트 검색 결과와  Settings를 위한 별도의 아이콘들을 공급하라. 아이콘들을 제공하지 않으면, iOS가 당신의 앱 아이콘을 줄여서 그 위치에 디스플레이 할 것이다.
+</p><p class="para">
+  아이폰과 아이팟 터치 그리고 아이패드에서 스팟라이트 검색 결과를 위한 아이콘은 다음 두 사이즈이다 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  80 x 80 픽셀
+</p>
+</li><li class="item"><p class="para">
+  40 x 40 픽셀 (표준 해상도)
+</p>
+</li>
+</ul><p class="para">
+  For Settings on iPhone, iPod touch, and iPad create an icon in the following two sizes:
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  58 x 58 픽셀
+</p>
+</li><li class="item"><p class="para">
+  29 x 29 픽셀 (표준 해상도)
+</p>
+</li>
+</ul><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH19-SW2"></a>
+  <aside class="aside">
+    <p class="aside-title">Note
+    </p>
+    <p class="para">아이콘의 백그라운드가 흰색이라면, Settings에서 가시성을 위해 회색 오버레이를 더할 필요가 없다. iOS가 1-픽셀의 외곽선 스트로크를 더해서 Settings의 흰색 백그라운드에서 보기 좋게 만들어 준다.
+    </p>
+
+  </aside>
+</div>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="IconMatrix.html#/apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">Icon and Image Sizes</a></p>
+  			<p class="next-link"><a href="LaunchImages.html#/apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">Launch Images</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+<link rel="shortcut icon" href="../../../../favicon.ico" />
+<link rel="icon" href="../../../../favicon.ico" />
+<link rel="mask-icon" href="../../../../apple-logo.svg" color="#333333">
+
+<link rel="stylesheet" href="../../../../assets/styles/globalnav.css" type="text/css" />
+<link rel="stylesheet" href="../../../../assets/styles/global.css" type="text/css" />
+
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/assets/styles/oldie.css" type="text/css" />
+	<script src="/assets/scripts/html5.js"></script>
+<![endif]-->
+<script src="../../../../assets/scripts/lg-search.js"></script>
+<script src="../../../../assets/scripts/global.js"></script>
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&v=2" type="text/css" />
+
+	<link rel="stylesheet" href="../../styles/localnav.css" type="text/css" />
+	<link rel="stylesheet" href="../../styles/human-interface-guidelines.css" type="text/css" />
+	<link rel="stylesheet" href="../../styles/ios.css" type="text/css" />
+	<script src="../../scripts/app.js"></script>
+	<script type="text/javascript" src="../../../../assets/scripts/lib/jquery/jquery.bxslider.min.js"></script>
+
+	<title>Apple Pay - Technologies -  iOS Human Interface Guidelines</title>
+	<meta name="omni_page" content="Apple Pay - Technologies -  iOS Human Interface Guidelines" />
+	<meta name="Description" content="Learn about designing apps for iOS.">
+	<meta name="robots" content="noodp,noydir" />
+
+		<script src="https://developer.apple.com/ios/human-interface-guidelines/technologies/apple-pay/scripts/apple-pay.js" type='text/javascript'></script></head>
+<body id="technologies" class="apple-pay">
+
+	<input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+<nav id="ac-globalnav" class="no-js" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US">
+	<div class="ac-gn-content">
+		<ul class="ac-gn-header">
+			<li class="ac-gn-item ac-gn-menuicon"> <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					</span>
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					</span>
+				</label>
+				<a href="index.html#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open"> <span class="ac-gn-menuanchor-label">Open Menu</span> </a>
+				<a href="index.html#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close"> <span class="ac-gn-menuanchor-label">Close Menu</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../../../index.html" id="ac-gn-firstfocus-small"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+				<a class="ac-gn-link ac-gn-link-bag" href="../../../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span class="ac-gn-link-text">Account</span> <span class="ac-gn-bag-badge"></span> </a> <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span> </li>
+		</ul>
+		<ul class="ac-gn-list">
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../../../index.html" id="ac-gn-firstfocus"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-discover">
+				<a class="ac-gn-link" href="../../../../discover/index.html"> <span>Discover</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-design">
+				<a class="ac-gn-link" href="../../../../design/index.html"> <span>Design</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-develop">
+				<a class="ac-gn-link" href="../../../../develop/index.html"> <span>Develop</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-distribute">
+				<a class="ac-gn-link" href="../../../../distribute/index.html"> <span>Distribute</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+				<a class="ac-gn-link" href="../../../../support/index.html"> <span>Support</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-account">
+				<a class="ac-gn-link" href="../../../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span>Account</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+				<a id="ac-gn-search-button" class="ac-gn-link ac-gn-link-search" href="../../../../search/index.html" aria-label="Search developer.apple.com"> <span class="ac-gn-search-placeholder" aria-hidden="true">Search</span> </a>
+			</li>
+		</ul>
+		<aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
+			<div class="ac-gn-searchview-content">
+				<form id="ac-gn-searchform" class="ac-gn-searchform" action="../../../../search/index.html" method="get">
+					<div class="ac-gn-searchform-wrapper"> <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" name="q" placeholder="Search" data-placeholder-long="Search for documentation, videos, and more" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" /> <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled aria-label="Submit"></button> <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled aria-label="Clear Search"></button> </div>
+				</form>
+				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults="Hit enter to search.">
+
+				</aside>
+			</div> <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					<span class="ac-gn-searchview-close-wrapper">
+						<span class="ac-gn-searchview-close-left"></span>
+						<span class="ac-gn-searchview-close-right"></span>
+					</span>
+				</button> </aside>
+	</div>
+</nav>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="../../../../assets/scripts/ac-globalnav.built.js"></script>
+
+	<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+	<input type="checkbox" id="ac-ln-menustate" class="ac-ln-menustate" />
+	<nav id="ac-localnav" class="no-js ac-localnav-scrim" lang="en-US" role="navigation" data-analytics-region="local nav" data-sticky>
+		<div class="ac-ln-wrapper">
+			<div class="ac-ln-background"></div>
+			<div class="ac-ln-content">
+				<h2 class="ac-ln-title">
+					<a class="ac-ln-title-logo" href="../../index.html" data-analytics-title="product index"><span class="visuallyhidden">iOS Human Interface Guidelines</span></a>
+				</h2>
+
+				<div class="ac-ln-menu">
+					<div class="ac-ln-menu-tray">
+						<a href="index.html#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">
+							<span class="ac-ln-menucta-anchor-label">Open Menu</span>
+						</a>
+						<a href="index.html#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">
+							<span class="ac-ln-menucta-anchor-label">Close Menu</span>
+						</a>
+
+						<nav id="directorynav-menu" class="footer-breadory">
+						<div class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3>Overview</h3>
+		<ul>
+			<li><a href="../../index.html">Design Principles</a></li>
+			<li><a href="../../overview/whats-new/index.html">What's New in iOS 10</a></li>
+			<li><a href="../../overview/interface-essentials/index.html">Interface Essentials</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Interaction</a></h3>
+		<ul>
+			<li><a href="../../interaction/3d-touch/index.html">3D Touch</a></li>
+			<li><a href="../../interaction/accessibility/index.html">Accessibility</a></li>
+			<li><a href="../../interaction/audio/index.html">Audio</a></li>
+			<li><a href="../../interaction/authentication/index.html">Authentication</a></li>
+			<li><a href="../../interaction/data-entry/index.html">Data Entry</a></li>
+			<li><a href="../../interaction/feedback/index.html">Feedback</a></li>
+			<li><a href="../../interaction/file-handling/index.html">File Handling</a></li>
+			<li><a href="../../interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+			<li><a href="../../interaction/gestures/index.html">Gestures</a></li>
+			<li><a href="../../interaction/loading/index.html">Loading</a></li>
+			<li><a href="../../interaction/modality/index.html">Modality</a></li>
+			<li><a href="../../interaction/navigation/index.html">Navigation</a></li>
+			<li><a href="../../interaction/requesting-permission/index.html">Requesting Permission</a></li>
+			<li><a href="../../interaction/settings/index.html">Settings</a></li>
+			<li><a href="../../interaction/terminology/index.html">Terminology</a></li>
+			<li><a href="../../interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+
+		<h3>Features</h3>
+		<ul>
+			<li><a href="../../features/multitasking/index.html">Multitasking</a></li>
+			<li><a href="../../features/notifications/index.html">Notifications</a></li>
+			<li><a href="../../features/printing/index.html">Printing</a></li>
+			<li><a href="../../features/quick-look/index.html">Quick Look</a></li>
+			<li><a href="../../features/siri/index.html">Siri</a></li>
+		</ul>
+	</div>
+		<div id="dn-cola" class="column">
+
+		<h3>Visual Design</h3>
+		<ul>
+			<li><a href="../../visual-design/animation/index.html">Animation</a></li>
+			<li><a href="../../visual-design/branding/index.html">Branding</a></li>
+			<li><a href="../../visual-design/color/index.html">Color</a></li>
+			<li><a href="../../visual-design/layout/index.html">Layout</a></li>
+			<li><a href="../../visual-design/typography/index.html">Typography</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>Graphics</h3>
+		<ul>
+			<li><a href="../../graphics/app-icon/index.html">App Icon</a></li>
+			<li><a href="../../graphics/custom-icons/index.html">Custom Icons</a></li>
+			<li><a href="../../graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+			<li><a href="../../graphics/launch-screen/index.html">Launch Screen</a></li>
+			<li><a href="../../graphics/system-icons/index.html">System Icons</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-colc" class="column">
+
+
+		<h3>UI Bars</h3>
+		<ul>
+			<li><a href="../../ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+			<li><a href="../../ui-bars/search-bars/index.html">Search Bars</a></li>
+			<li><a href="../../ui-bars/status-bars/index.html">Status Bars</a></li>
+			<li><a href="../../ui-bars/tab-bars/index.html">Tab Bars</a></li>
+			<li><a href="../../ui-bars/toolbars/index.html">Toolbars</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>UI Views</h3>
+		<ul>
+			<li><a href="../../ui-views/action-sheets/index.html">Action Sheets</a></li>
+			<li><a href="../../ui-views/activity-views/index.html">Activity Views</a></li>
+			<li><a href="../../ui-views/alerts/index.html">Alerts</a></li>
+			<li><a href="../../ui-views/collections/index.html">Collections</a></li>
+			<li><a href="../../ui-views/image-views/index.html">Image Views</a></li>
+			<li><a href="../../ui-views/maps/index.html">Maps</a></li>
+			<li><a href="../../ui-views/pages/index.html">Pages</a></li>
+			<li><a href="../../ui-views/popovers/index.html">Popovers</a></li>
+			<li><a href="../../ui-views/scroll-views/index.html">Scroll Views</a></li>
+			<li><a href="../../ui-views/split-views/index.html">Split Views</a></li>
+			<li><a href="../../ui-views/tables/index.html">Tables</a></li>
+			<li><a href="../../ui-views/text-views/index.html">Text Views</a></li>
+			<li><a href="../../ui-views/web-views/index.html">Web Views</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cold" class="column">
+
+
+		<h3>UI Controls</h3>
+		<ul>
+			<li><a href="../../ui-controls/buttons/index.html">Buttons</a></li>
+			<li><a href="../../ui-controls/edit-menus/index.html">Edit Menus</a></li>
+			<li><a href="../../ui-controls/labels/index.html">Labels</a></li>
+			<li><a href="../../ui-controls/page-controls/index.html">Page Controls</a></li>
+			<li><a href="../../ui-controls/pickers/index.html">Pickers</a></li>
+			<li><a href="../../ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+			<li><a href="../../ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+			<li><a href="../../ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+			<li><a href="../../ui-controls/sliders/index.html">Sliders</a></li>
+			<li><a href="../../ui-controls/steppers/index.html">Steppers</a></li>
+			<li><a href="../../ui-controls/switches/index.html">Switches</a></li>
+			<li><a href="../../ui-controls/text-fields/index.html">Text Fields</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Extensions</h3>
+		<ul>
+			<li><a href="../../extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+			<li><a href="../../extensions/document-providers/index.html">Document Providers</a></li>
+			<li><a href="../../extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+			<li><a href="../../extensions/messaging/index.html">Messaging</a></li>
+			<li><a href="../../extensions/photo-editing/index.html">Photo Editing</a></li>
+			<li><a href="../../extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+			<li><a href="../../extensions/widgets/index.html">Widgets</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cole" class="column">
+
+
+		<h3>Technologies</h3>
+		<ul>
+			<li><a href="index.html">Apple Pay</a></li>
+			<li><a href="../gamekit/index.html">GameKit</a></li>
+			<li><a href="../healthkit/index.html">HealthKit</a></li>
+			<li><a href="../homekit/index.html">HomeKit</a></li>
+			<li><a href="../icloud/index.html">iCloud</a></li>
+			<li><a href="../in-app-purchase/index.html">In-App Purchase</a></li>
+			<li><a href="../live-photos/index.html">Live Photos</a></li>
+			<li><a href="../researchkit/index.html">ResearchKit</a></li>
+			<li><a href="../social-media/index.html">Social Media</a></li>
+			<li><a href="../wallet/index.html">Wallet</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3><a href="../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../resources/index.html#templates">Templates</a></li>
+			<li><a href="../../resources/index.html#typefaces">Typefaces</a></li>
+			<li><a href="../../resources/index.html#xcode-projects">Xcode Projects</a></li>
+		</ul>
+	</div>
+	
+	<div id="dn-cola" class="column">
+
+		<h3>Related Guidelines</h3>
+		<ul>
+			<li><a href="../../../../watchos/human-interface-guidelines/index.html">watchOS Human Interface Guidelines</a></li>
+			<li><a href="../../../../tvos/human-interface-guidelines/index.html">tvOS Human Interface Guidelines</a></li>
+			<li><a href="../../../../library/content/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html">macOS Human Interface Guidelines</a></li>
+		</ul>
+	</div>
+</div>
+
+						</nav>
+
+					</div>
+
+					<div class="ac-ln-actions ac-ln-actions">
+						<div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+							<label for="ac-ln-menustate" class="ac-ln-menucta">
+								<span class="ac-ln-menucta-chevron"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<label id="ac-ln-curtain" for="ac-ln-menustate"></label>
+	<script type="text/javascript" src="https://www.apple.com/ac/localnav/3.0/scripts/ac-localnav.built.js"></script>
+
+
+	<main id="main" class="main" role="main">
+
+		<!-- HIG content -->
+			<div class="grid" data-hires="true">
+				<section class="row">
+					<div class="col-20 doc-nav-container">
+						<nav id="doc-nav" class="doc-nav" role="navigation" aria-label="Local Navigation" data-hires="true">
+	<ul class="side">
+		<li class="nav-overview"><a href="../../index.html">Overview</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-design-principles"><a href="../../index.html">Design Principles</a></li>
+				<li class="nav-whats-new"><a href="../../overview/whats-new/index.html">What's New in iOS 10</a></li>
+				<li class="nav-interface-essentials"><a href="../../overview/interface-essentials/index.html">Interface Essentials</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-interaction"><a href="../../interaction/3d-touch/index.html">Interaction</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-3d-touch"><a href="../../interaction/3d-touch/index.html">3D Touch</a></li>
+				<li class="nav-accessibility"><a href="../../interaction/accessibility/index.html">Accessibility</a></li>
+				<li class="nav-audio"><a href="../../interaction/audio/index.html">Audio</a></li>
+				<li class="nav-authentication"><a href="../../interaction/authentication/index.html">Authentication</a></li>
+				<li class="nav-data-entry"><a href="../../interaction/data-entry/index.html">Data Entry</a></li>
+				<li class="nav-feedback"><a href="../../interaction/feedback/index.html">Feedback</a></li>
+				<li class="nav-file-handling"><a href="../../interaction/file-handling/index.html">File Handling</a></li>
+				<li class="nav-first-launch-experience"><a href="../../interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+				<li class="nav-gestures"><a href="../../interaction/gestures/index.html">Gestures</a></li>
+				<li class="nav-loading"><a href="../../interaction/loading/index.html">Loading</a></li>
+				<li class="nav-modality"><a href="../../interaction/modality/index.html">Modality</a></li>
+				<li class="nav-navigation"><a href="../../interaction/navigation/index.html">Navigation</a></li>
+				<li class="nav-requesting-permission"><a href="../../interaction/requesting-permission/index.html">Requesting Permission</a></li>
+				<li class="nav-settings"><a href="../../interaction/settings/index.html">Settings</a></li>
+				<li class="nav-terminology"><a href="../../interaction/terminology/index.html">Terminology</a></li>
+				<li class="nav-undo-and-redo"><a href="../../interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-features"><a href="../../features/multitasking/index.html">Features</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-multitasking"><a href="../../features/multitasking/index.html">Multitasking</a></li>
+				<li class="nav-notifications"><a href="../../features/notifications/index.html">Notifications</a></li>
+				<li class="nav-printing"><a href="../../features/printing/index.html">Printing</a></li>
+				<li class="nav-quick-look"><a href="../../features/quick-look/index.html">Quick Look</a></li>
+				<li class="nav-siri"><a href="../../features/siri/index.html">Siri</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-visual-design"><a href="../../visual-design/animation/index.html">Visual Design</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-animation"><a href="../../visual-design/animation/index.html">Animation</a></li>
+				<li class="nav-branding"><a href="../../visual-design/branding/index.html">Branding</a></li>
+				<li class="nav-color"><a href="../../visual-design/color/index.html">Color</a></li>
+				<li class="nav-layout"><a href="../../visual-design/layout/index.html">Layout</a></li>
+				<li class="nav-typography"><a href="../../visual-design/typography/index.html">Typography</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-graphics"><a href="../../graphics/app-icon/index.html">Graphics</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-app-icon"><a href="../../graphics/app-icon/index.html">App Icon</a></li>
+				<li class="nav-custom-icons"><a href="../../graphics/custom-icons/index.html">Custom Icons</a></li>
+				<li class="nav-image-size-and-resolution"><a href="../../graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+				<li class="nav-launch-screen"><a href="../../graphics/launch-screen/index.html">Launch Screen</a></li>
+				<li class="nav-system-icons"><a href="../../graphics/system-icons/index.html">System Icons</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-bars"><a href="../../ui-bars/navigation-bars/index.html">UI Bars</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-navigation-bars"><a href="../../ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+				<li class="nav-search-bars"><a href="../../ui-bars/search-bars/index.html">Search Bars</a></li>
+				<li class="nav-status-bars"><a href="../../ui-bars/status-bars/index.html">Status Bars</a></li>
+				<li class="nav-tab-bars"><a href="../../ui-bars/tab-bars/index.html">Tab Bars</a></li>
+				<li class="nav-toolbars"><a href="../../ui-bars/toolbars/index.html">Toolbars</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-views"><a href="../../ui-views/action-sheets/index.html">UI Views</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-action-sheets"><a href="../../ui-views/action-sheets/index.html">Action Sheets</a></li>
+				<li class="nav-activity-views"><a href="../../ui-views/activity-views/index.html">Activity Views</a></li>
+				<li class="nav-alerts"><a href="../../ui-views/alerts/index.html">Alerts</a></li>
+				<li class="nav-collections"><a href="../../ui-views/collections/index.html">Collections</a></li>
+				<li class="nav-image-views"><a href="../../ui-views/image-views/index.html">Image Views</a></li>
+				<li class="nav-maps"><a href="../../ui-views/maps/index.html">Maps</a></li>
+				<li class="nav-pages"><a href="../../ui-views/pages/index.html">Pages</a></li>
+				<li class="nav-popovers"><a href="../../ui-views/popovers/index.html">Popovers</a></li>
+				<li class="nav-scroll-views"><a href="../../ui-views/scroll-views/index.html">Scroll Views</a></li>
+				<li class="nav-split-views"><a href="../../ui-views/split-views/index.html">Split Views</a></li>
+				<li class="nav-tables"><a href="../../ui-views/tables/index.html">Tables</a></li>
+				<li class="nav-text-views"><a href="../../ui-views/text-views/index.html">Text Views</a></li>
+				<li class="nav-web-views"><a href="../../ui-views/web-views/index.html">Web Views</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-controls"><a href="../../ui-controls/buttons/index.html">UI Controls</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-buttons"><a href="../../ui-controls/buttons/index.html">Buttons</a></li>
+				<li class="nav-edit-menus"><a href="../../ui-controls/edit-menus/index.html">Edit Menus</a></li>
+				<li class="nav-labels"><a href="../../ui-controls/labels/index.html">Labels</a></li>
+				<li class="nav-page-controls"><a href="../../ui-controls/page-controls/index.html">Page Controls</a></li>
+				<li class="nav-pickers"><a href="../../ui-controls/pickers/index.html">Pickers</a></li>
+				<li class="nav-progress-indicators"><a href="../../ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+				<li class="nav-refresh-content-controls"><a href="../../ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+				<li class="nav-segmented-controls"><a href="../../ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+				<li class="nav-sliders"><a href="../../ui-controls/sliders/index.html">Sliders</a></li>
+				<li class="nav-steppers"><a href="../../ui-controls/steppers/index.html">Steppers</a></li>
+				<li class="nav-switches"><a href="../../ui-controls/switches/index.html">Switches</a></li>
+				<li class="nav-text-fields"><a href="../../ui-controls/text-fields/index.html">Text Fields</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-extensions"><a href="../../extensions/custom-keyboards/index.html">Extensions</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-custom-keyboards"><a href="../../extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+				<li class="nav-document-providers"><a href="../../extensions/document-providers/index.html">Document Providers</a></li>
+				<li class="nav-home-screen-actions"><a href="../../extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+				<li class="nav-messaging"><a href="../../extensions/messaging/index.html">Messaging</a></li>
+				<li class="nav-photo-editing"><a href="../../extensions/photo-editing/index.html">Photo Editing</a></li>
+				<li class="nav-sharing-and-actions"><a href="../../extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+				<li class="nav-widgets"><a href="../../extensions/widgets/index.html">Widgets</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-technologies"><a href="index.html">Technologies</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-apple-pay"><a href="index.html">Apple Pay</a></li>
+				<li class="nav-gamekit"><a href="../gamekit/index.html">GameKit</a></li>
+				<li class="nav-healthkit"><a href="../healthkit/index.html">HealthKit</a></li>
+				<li class="nav-homekit"><a href="../homekit/index.html">HomeKit</a></li>
+				<li class="nav-icloud"><a href="../icloud/index.html">iCloud</a></li>
+				<li class="nav-in-app-purchase"><a href="../in-app-purchase/index.html">In-App Purchase</a></li>
+				<li class="nav-live-photos"><a href="../live-photos/index.html">Live Photos</a></li>
+				<li class="nav-researchkit"><a href="../researchkit/index.html">ResearchKit</a></li>
+				<li class="nav-social-media"><a href="../social-media/index.html">Social Media</a></li>
+				<li class="nav-wallet"><a href="../wallet/index.html">Wallet</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-resources"><a href="../../resources/index.html">Resources</a>
+			<ul class="sub-side">
+				<li><a href="index.html#templates">Templates</a></li>
+				<li><a href="index.html#typefaces">Typefaces</a></li>
+				<li><a href="index.html#xcode-projects">Xcode Projects</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</nav>
+
+					</div>
+
+					<!-- Main content -->
+					<div class="col-80 hig-content" data-hires="true">
+						<div id="apple-pay" class="row">
+    <div class="col-50">
+
+<h2>Apple Pay</h2>
+
+<p>Apple Pay is a secure, private, hassle-free way to make payments for physical goods and services within iOS and watchOS apps, and on websites. People use Touch ID to quickly and easily authorize payments and provide shipping and contact information, using credentials that are securely stored on the device.</p>
+
+<p>The Apple Pay process is clear, streamlined, and unobtrusive. Apps and websites indicate when they accept Apple Pay. During checkout, a payment sheet shows the credit or debit card, purchase amount (including tax and fees), and possibly shipping options and contact information. Users make any necessary adjustments to this information and then use Touch ID to authorize payment and complete the purchase.</p>
+
+<div class="note">
+
+<p><strong>Tip</strong> It’s important to understand the difference between Apple Pay and In-App Purchase. Use Apple Pay in apps and on websites to sell physical goods such as groceries, clothing, and appliances, and for services such as club memberships, hotel reservations, and tickets for events. Use In-App Purchase in apps to sell virtual goods, such as premium content for your app, and subscriptions for digital content. See <a href="../in-app-purchase/index.html">In-App Purchase</a>.</p>
+
+</div>
+
+</div>
+    <div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePaySheet-Screen.png" alt="" title="" class="device-frame" /></p>
+
+</div>
+</div>
+
+<h3 id="present-apple-pay">Present Apple Pay as a Payment Option</h3>
+
+<p>Use the following elements if your app or website accepts Apple Pay.</p>
+
+<div class="row">
+<div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/PayorBuyWithApplePay-Button.png" alt="Apple Pay or Buy with Apple Pay button" title="" width="350" height="40" /></p>
+
+<p><strong>Apple Pay and Buy with Apple Pay buttons.</strong> Use one of these buttons in your app wherever payment is made, such as on a product or shopping cart page, to display the payment sheet and let people complete the checkout process.</p>
+
+</div>
+<div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePayMarkWithPaymentOptions.png" alt="A line of credit card logos containing the Apple Pay mark" title="" width="270" height="40" /></p>
+
+<p><strong>Apple Pay mark.</strong> Use this graphic to communicate that Apple Pay is an available payment option when showing other payment options in a similar manner. You can also use plain text to indicate that Apple Pay is a payment option.</p>
+
+</div>
+</div>
+
+<div class="row">
+<div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/SetUpApplePay-Button.png" alt="Set Up Apple Pay button" title="" width="170" height="40" /></p>
+
+<p><strong>Set up Apple Pay button.</strong> Show this button when the device supports Apple Pay, but Apple Pay hasn’t been set up yet. Use this button to take people directly to the Wallet app, so they can add a card.</p>
+
+</div>
+<div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/PayWithApplePay-Button.png" alt="Pay with Apple Pay button" title="" width="170" height="40" /></p>
+
+<p><strong>Pay with Apple Pay button.</strong> Card issuers can use this button to let people bring up their card when making a purchase in a physical store.</p>
+
+</div>
+</div>
+
+<p><br>
+<strong>Don’t advertise Apple Pay if it isn’t supported.</strong> If Apple Pay isn't supported on the device, don’t offer it as a payment option. If the the device supports Apple Pay, but Apple Pay hasn't been set up yet, present the Set up Apple Pay button.</p>
+
+<p><strong>Make Apple Pay buttons the same size or larger than other payment buttons.</strong> Always display the Apple Pay button prominently, so people can find it easily.</p>
+
+<p><strong>Don’t disable or hide an Apple Pay button.</strong> If an Apple Pay button can’t be used, such as because a product size or color hasn’t been selected, gracefully point out the problem after the button is tapped.</p>
+
+<p><strong>Use the Apple Pay mark only to communicate that Apple Pay is accepted.</strong> The mark doesn’t facilitate payment. Never use it as a button or position it as a button.</p>
+
+<p>For specific guidance regarding the use of Apple Pay buttons and the Apple Pay mark, including sizing requirements, see <a href="../../../../apple-pay/Apple-Pay-Identity-Guidelines.pdf">Apple Pay Identity Guidelines</a>. For implementation details, see <a href="https://developer.apple.com/library/content/ApplePay_Guide/index.html">Apple Pay Programming Guide</a>.</p>
+
+<h3 id="streamline-checkout">Streamline the Checkout Process</h3>
+
+<p>People appreciate using Apple Pay to make purchases quickly and easily, so the payment sheet should let people promptly authorize payment and complete the transaction.</p>
+
+<p><strong>Make Apple Pay the default payment option when possible.</strong> If Apple Pay is enabled, assume the person wants to use it when making a purchase. Consider presenting the Apple Pay button as the first payment option, displaying it larger than other options, or using a line to visually separate it from other choices.</p>
+
+<p><strong>Accelerate purchases with Apple Pay buttons on product detail pages and with express checkout.</strong> In addition to a shopping cart, consider putting Apple Pay buttons on product detail pages so people can quickly purchase individual items. Where a shopping cart is used to purchase multiple items with the same shipping options, consider providing an express checkout feature that shows the payment sheet immediately.</p>
+
+<p><strong>Don't interrupt checkout after the Apple Pay button is tapped.</strong> When a user taps the Apple Pay button, they should immediately see the payment sheet. Displaying alerts or views that force people to take additional steps after deciding to complete their purchase adds friction and frustration to the process. Gather the information you need before people reach the Apple Pay button. For example, let people choose options, such as color and size, on a product detail page. On a checkout page, use highlighting or an alert to identify missing information before showing the payment sheet.</p>
+
+<p><strong>Collect optional information before checkout begins.</strong> There’s no way to input data on the payment sheet, so collect any optional information such as promo codes, redemption codes, gift messages, and delivery instructions ahead of time.</p>
+
+<p><strong>If necessary, gather complex shipping information yourself before showing the payment sheet.</strong> The payment sheet lets people select a single shipping speed and destination for an entire order. If your customers can choose different shipping speeds and destinations for individual items in an order, collect those details before Apple Pay checkout begins.</p>
+
+<p><strong>Prefer information from Apple Pay.</strong> Assume that Apple Pay information is complete and up to date. Even if your app has existing contact, shipping, and payment information, consider fetching the latest from Apple Pay during checkout to increase the likelihood of accuracy and reduce potential corrections.</p>
+
+<p><strong>Display an order confirmation or thank you page.</strong> After checkout, use an order confirmation page to provide details about when the order will ship and how to check its status. Listing Apple Pay on the confirmation page isn’t necessary, but if you do list it, use one of the following formats: "Visa ••••1234 (Apple Pay)" or "Paid with Apple Pay."</p>
+
+<p><strong>Don't require account creation prior to purchase.</strong> If you want people to register for an account, ask them to do so on the order confirmation or thank you page. Prepopulate as many registration fields as possible using information provided by the payment sheet during checkout.</p>
+
+<h3 id="customize-payment">Customize the Payment Sheet</h3>
+
+<p>You can customize the contents of the payment sheet depending on the information needed to complete the transaction.</p>
+
+<p><strong>Only present and request essential information.</strong> People may get confused or concerned if the payment sheet includes extraneous information. For example, it makes sense to see a contact email address but not a shipping address if merchandise will be delivered electronically. Showing or asking for a shipping address in this scenario may give the false impression that something will be physically delivered.</p>
+
+<p><strong>Let people choose the shipping method in the payment sheet.</strong> To the extent space permits, show a clear description, a cost, and, optionally, an estimated delivery date for each available option.</p>
+
+<div class="row">
+    <div class="col-50">
+
+<p><strong>Keep line items short.</strong> Line items should be specific and easily understandable at a glance. Whenever possible, they should fit on a single line.</p>
+
+<p><strong>Use line items to explain additional charges, discounts, and pending costs.</strong> A line item includes a label and cost. Don’t use line items to show an itemized list of products that make up the purchase.</p>
+
+<p><strong>Provide a business name after the word <em>PAY</em> on the same line as the total.</strong> Use the same business name people will see when they look for the charge on their bank or credit card statement. This provides reassurance that payment is going to the right place. If your app acts as an intermediary and is not the end merchant for a payment, clearly indicate this in the following format: PAY [END_MERCHANT_NAME] (VIA [YOUR_APP_NAME]).</p>
+
+</div>
+    <div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePaySheet-giftwrap.png" alt="" title="" class="center screenshot-border" width="312" height="356" /></p>
+
+</div>
+</div>
+
+<div class="row">
+    <div class="col-50">
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePaySheet-timeDistance.png" alt="" title="" class="center screenshot-border" width="312" height="329" /></p>
+
+</div>
+    <div class="col-50">
+
+<p><strong>Clearly disclose when additional costs may be incurred after payment authorization.</strong> In some apps, the total cost may be unknown at checkout time. For example, the price of a car ride based on distance or time might change after checkout. Or, a customer might want to add a tip after a product has been delivered. In situations like these, provide a clear explanation in the payment sheet and a subtotal marked as "AMOUNT PENDING." If you are preauthorizing a specific amount, make sure the payment sheet accurately reflects this information too.</p>
+
+</div>
+</div>
+
+<div id="subscriptions" class="row">
+    <div class="col-50">
+
+<h4>Subscriptions</h4>
+
+<p>Your app can use Apple Pay to request authorization for a recurring fee. This may be a fixed amount such as a monthly movie ticket subscription, or a variable amount such as a weekly produce order. The initial authorization can also include discounts and additional fees.</p>
+
+<p><strong>Clarify subscription details before showing the payment sheet.</strong> Before asking the user to authorize a recurring payment, make sure they fully understand the billing frequency and any other terms of service.</p>
+
+<p><strong>Include line items that reiterate billing frequency, discounts, and additional up front fees.</strong> Use these line items to remind the user what they're authorizing.</p>
+
+<p><strong>Clarify the current payment amount in the total line.</strong> Make sure the user knows what they're being billed at the time of authorization.</p>
+
+<p><strong>Only show the payment sheet when a subscription change results in additional fees.</strong> When the user changes their subscription, authorization isn't necessary if the cost decreases or remains the same.</p>
+
+</div>
+    <div class="col-50">
+
+<nav class="tabnav">
+        <ul id="bxlabels-apple-pay-examples" class="tabnav-items">
+        <li class="tabnav-item">
+            <a data-slide-index="0" href="index.html#" class="tabnav-link active">Fixed subscription</a>
+        </li><!--
+     --><li class="tabnav-item">
+            <a data-slide-index="1" href="index.html#" class="tabnav-link">Variable subscription</a>
+        </li>
+            </ul>
+</nav>
+
+<ul class="bxslider apple-pay-examples-gallery no-margin">
+ <li>
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePaySheet-monthly.png" alt="" title="" class="center screenshot-border" width="312" height="343" /></p>
+
+</li>
+<li>
+
+<p><img src="https://developer.apple.com/ios/human-interface-guidelines/images/ApplePaySheet-weekly.png" alt="" title="" class="center screenshot-border" width="312" height="329" /></p>
+
+</li>
+</ul>
+
+</div>
+</div>
+
+					</div>
+				</section>
+			</div>
+
+	</main>
+
+		<aside class="grid">
+		<section id="router" class="router">
+			<a href="../gamekit/index.html" class="block row">
+								<span class="col-100 text-center">
+									<span class="router-copy two-lines">
+						<h4>
+							<small>Next</small>
+							GameKit
+						</h4>
+											</span>
+				</span>
+			</a>
+		</section>
+	</aside>
+	
+	<!-- Footer -->
+	<section id="globalfooter-wrapper">
+	<footer id="globalfooter" role="contentinfo">
+		<nav class="footer-breadory">
+			<a href="../../../../index.html" class="home breadcrumbs-home"><span aria-hidden="true"></span><span class="breadcrumbs-home-label">Developer</span></a>
+			<section class="breadcrumbs">
+				<ol class="breadcrumbs-list">
+					<li><a href="../../../index.html">iOS</a></li>
+					<li><a href="../../index.html">Human Interface Guidelines</a></li>
+					<li><a href="index.html">Technologies</a></li>					<li>Apple Pay</li>				</ol>
+			</section>
+			<div id="directorynav-footer">
+			<div class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3>Overview</h3>
+		<ul>
+			<li><a href="../../index.html">Design Principles</a></li>
+			<li><a href="../../overview/whats-new/index.html">What's New in iOS 10</a></li>
+			<li><a href="../../overview/interface-essentials/index.html">Interface Essentials</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Interaction</a></h3>
+		<ul>
+			<li><a href="../../interaction/3d-touch/index.html">3D Touch</a></li>
+			<li><a href="../../interaction/accessibility/index.html">Accessibility</a></li>
+			<li><a href="../../interaction/audio/index.html">Audio</a></li>
+			<li><a href="../../interaction/authentication/index.html">Authentication</a></li>
+			<li><a href="../../interaction/data-entry/index.html">Data Entry</a></li>
+			<li><a href="../../interaction/feedback/index.html">Feedback</a></li>
+			<li><a href="../../interaction/file-handling/index.html">File Handling</a></li>
+			<li><a href="../../interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+			<li><a href="../../interaction/gestures/index.html">Gestures</a></li>
+			<li><a href="../../interaction/loading/index.html">Loading</a></li>
+			<li><a href="../../interaction/modality/index.html">Modality</a></li>
+			<li><a href="../../interaction/navigation/index.html">Navigation</a></li>
+			<li><a href="../../interaction/requesting-permission/index.html">Requesting Permission</a></li>
+			<li><a href="../../interaction/settings/index.html">Settings</a></li>
+			<li><a href="../../interaction/terminology/index.html">Terminology</a></li>
+			<li><a href="../../interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+
+		<h3>Features</h3>
+		<ul>
+			<li><a href="../../features/multitasking/index.html">Multitasking</a></li>
+			<li><a href="../../features/notifications/index.html">Notifications</a></li>
+			<li><a href="../../features/printing/index.html">Printing</a></li>
+			<li><a href="../../features/quick-look/index.html">Quick Look</a></li>
+			<li><a href="../../features/siri/index.html">Siri</a></li>
+		</ul>
+	</div>
+		<div id="dn-cola" class="column">
+
+		<h3>Visual Design</h3>
+		<ul>
+			<li><a href="../../visual-design/animation/index.html">Animation</a></li>
+			<li><a href="../../visual-design/branding/index.html">Branding</a></li>
+			<li><a href="../../visual-design/color/index.html">Color</a></li>
+			<li><a href="../../visual-design/layout/index.html">Layout</a></li>
+			<li><a href="../../visual-design/typography/index.html">Typography</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>Graphics</h3>
+		<ul>
+			<li><a href="../../graphics/app-icon/index.html">App Icon</a></li>
+			<li><a href="../../graphics/custom-icons/index.html">Custom Icons</a></li>
+			<li><a href="../../graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+			<li><a href="../../graphics/launch-screen/index.html">Launch Screen</a></li>
+			<li><a href="../../graphics/system-icons/index.html">System Icons</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-colc" class="column">
+
+
+		<h3>UI Bars</h3>
+		<ul>
+			<li><a href="../../ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+			<li><a href="../../ui-bars/search-bars/index.html">Search Bars</a></li>
+			<li><a href="../../ui-bars/status-bars/index.html">Status Bars</a></li>
+			<li><a href="../../ui-bars/tab-bars/index.html">Tab Bars</a></li>
+			<li><a href="../../ui-bars/toolbars/index.html">Toolbars</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>UI Views</h3>
+		<ul>
+			<li><a href="../../ui-views/action-sheets/index.html">Action Sheets</a></li>
+			<li><a href="../../ui-views/activity-views/index.html">Activity Views</a></li>
+			<li><a href="../../ui-views/alerts/index.html">Alerts</a></li>
+			<li><a href="../../ui-views/collections/index.html">Collections</a></li>
+			<li><a href="../../ui-views/image-views/index.html">Image Views</a></li>
+			<li><a href="../../ui-views/maps/index.html">Maps</a></li>
+			<li><a href="../../ui-views/pages/index.html">Pages</a></li>
+			<li><a href="../../ui-views/popovers/index.html">Popovers</a></li>
+			<li><a href="../../ui-views/scroll-views/index.html">Scroll Views</a></li>
+			<li><a href="../../ui-views/split-views/index.html">Split Views</a></li>
+			<li><a href="../../ui-views/tables/index.html">Tables</a></li>
+			<li><a href="../../ui-views/text-views/index.html">Text Views</a></li>
+			<li><a href="../../ui-views/web-views/index.html">Web Views</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cold" class="column">
+
+
+		<h3>UI Controls</h3>
+		<ul>
+			<li><a href="../../ui-controls/buttons/index.html">Buttons</a></li>
+			<li><a href="../../ui-controls/edit-menus/index.html">Edit Menus</a></li>
+			<li><a href="../../ui-controls/labels/index.html">Labels</a></li>
+			<li><a href="../../ui-controls/page-controls/index.html">Page Controls</a></li>
+			<li><a href="../../ui-controls/pickers/index.html">Pickers</a></li>
+			<li><a href="../../ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+			<li><a href="../../ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+			<li><a href="../../ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+			<li><a href="../../ui-controls/sliders/index.html">Sliders</a></li>
+			<li><a href="../../ui-controls/steppers/index.html">Steppers</a></li>
+			<li><a href="../../ui-controls/switches/index.html">Switches</a></li>
+			<li><a href="../../ui-controls/text-fields/index.html">Text Fields</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Extensions</h3>
+		<ul>
+			<li><a href="../../extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+			<li><a href="../../extensions/document-providers/index.html">Document Providers</a></li>
+			<li><a href="../../extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+			<li><a href="../../extensions/messaging/index.html">Messaging</a></li>
+			<li><a href="../../extensions/photo-editing/index.html">Photo Editing</a></li>
+			<li><a href="../../extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+			<li><a href="../../extensions/widgets/index.html">Widgets</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cole" class="column">
+
+
+		<h3>Technologies</h3>
+		<ul>
+			<li><a href="index.html">Apple Pay</a></li>
+			<li><a href="../gamekit/index.html">GameKit</a></li>
+			<li><a href="../healthkit/index.html">HealthKit</a></li>
+			<li><a href="../homekit/index.html">HomeKit</a></li>
+			<li><a href="../icloud/index.html">iCloud</a></li>
+			<li><a href="../in-app-purchase/index.html">In-App Purchase</a></li>
+			<li><a href="../live-photos/index.html">Live Photos</a></li>
+			<li><a href="../researchkit/index.html">ResearchKit</a></li>
+			<li><a href="../social-media/index.html">Social Media</a></li>
+			<li><a href="../wallet/index.html">Wallet</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3><a href="../../resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="../../resources/index.html#templates">Templates</a></li>
+			<li><a href="../../resources/index.html#typefaces">Typefaces</a></li>
+			<li><a href="../../resources/index.html#xcode-projects">Xcode Projects</a></li>
+		</ul>
+	</div>
+	
+	<div id="dn-cola" class="column">
+
+		<h3>Related Guidelines</h3>
+		<ul>
+			<li><a href="../../../../watchos/human-interface-guidelines/index.html">watchOS Human Interface Guidelines</a></li>
+			<li><a href="../../../../tvos/human-interface-guidelines/index.html">tvOS Human Interface Guidelines</a></li>
+			<li><a href="../../../../library/content/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html">macOS Human Interface Guidelines</a></li>
+		</ul>
+	</div>
+</div>
+
+		</div>
+		</nav>
+		<div class="ac-gf-footer-legal">
+  <div class="ac-gf-footer-news"> To receive the latest developer news, visit and subscribe to our <a href="../../../../news/index.html">News and Updates</a>. </div>
+  <div class="ac-gf-footer-legal-copyright">Copyright © 2016 Apple Inc. All rights reserved.</div>
+  <div class="ac-gf-footer-legal-links">
+    <a href="https://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a>
+    <a href="https://www.apple.com/privacy/privacy-policy/">Privacy Policy</a>
+    <a href="../../../../bug-reporting/index.html">Report Bugs</a>
+    <a href="../../../../../idmsa.apple.com/IDMSWebAuth/login.html?path=%252F%252Fcontact%252Fsubmit%252F?subject=website-feedback&amp;appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757">Feedback</a>
+  </div>
+</div>
+
+	</footer><!-- globalfooter -->
+</section>
+</body>
+</html>

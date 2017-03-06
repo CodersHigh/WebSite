@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH54-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH54"></a>
+  <h2 class='chapter-name'>레이아웃</h2>
+
+  	<section class="section">
+  	<a name="//apple_ref/doc/uid/TP40006556-CH54-SW2"></a>
+  <h3 class="section-name" tabindex="0">가변성 구축</h3>
+  <p class="para">
+  사람들은 일반적으로 자신의 장치에 좋아하고 지향하는 앱을 사용하고 싶어한다. iOS 8부터는, 사이즈 클래스와 자동 레이아웃을 사용한다. 이것은 스크린의 레이아웃, 뷰 컨트롤러, 그리고 뷰가 디스플레이 환경이 변화할 때 적용되게 한다.(<strong>디스플레이 환경</strong>의 개념은 전체 장치스크린이나 혹은 팝오버 영역이나 분할 뷰 컨트롤러의 주요부분 같은 일부를 참조할 수 있다.)
+
+  </p><p class="para">iOS는 '레귤러'와 '컴팩트' 두개의 사이즈 클래스를 정의한다. <strong>레귤러</strong> 사이즈 클래스는 넓은 영역에서 사용되고, <strong>컴펙트</strong> 사이즈 클래스는 제약된 공간에서 사용된다. 디스플레이 환경에 맞추기위해서, 사용자는 수직 사이즈 클래스와 수평 사이즈 클래스를 명시한다. 예상한 대로 iOS장치는 눕혔을 때와 세웠을 때의 다른 다스플레이 환경을 한 세트로 사용될수 있다.
+
+  </p><p class="para">iOS는 디스플레이 환경의 사이즈 클래스가 바뀔 때, 자동적으로 다양하게 레이아웃 변화를 한다. 예를 들어, 수직 사이즈 클래스가 '컴펙트'에서 '레귤러' 로 바뀔때, 네비게이션바와 툴바는 자동적으로 길어진다.
+
+</p><p class="para">사이즈 클래스에 의존하여 레이아웃에 변화를 줄 때, 앱은 어떤 디스플레이 환경에서도 근사하게 보인다. <em class="u-book"><a href="../../../../recipes/xcode_help-IB_adaptive_sizes/_index.html#//apple_ref/doc/uid/TP40014436" target="_self">사이즈 클래스 디자인 도움말</a></em>을 보고 인터페이스 빌더에서 사이즈 클래스가 동작하는 법을 배워라
+
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH54-DontLinkElementID_22"></a>
+  <aside class="aside">
+    <p class="aside-title">중 요</p>
+      <p class="para">사이즈 클래스 안에서, 컨탠트 압축이나 늘어남같은 작은 레이아웃 수정을 위해 계속해서 자동 레이아웃을 사용한다.</p>
+  </aside>
+</div>
+<p class="para">
+  다음의 구체작인 예들은 어떻게 사이즈 클래스가 다양한 장치의 디스플레이 환경에 맞추어지는 지를 상상하는데 도움이 될 것이다. 예를 들어, iPad는 세로와 가로 모두 규정된 사이즈와 방향을 사용한다. 다시말해, iPad 디스플레이 환경은 항상 규정된 가로, 세로 길이이다.
+
+</p><section class="rec-container">
+  <div class="blurb">
+
+  </div>
+
+  <section class="left-container">
+      <p class="container-label the-size-classes-of-ipad-in-portrait">The size classes of iPad in portrait</p>
+    <img class="inline-graphic" src="Art/ipad_size_class_v_2x.png" alt="image: ../Art/ipad_size_class_v_2x.png" width="241" height="305" />
+  </section>
+    <section class="right-container">
+        <p class="container-label the-size-classes-of-ipad-in-landscape">The size classes of iPad in landscape</p>
+      <img class="inline-graphic" src="Art/ipad_size_class_h_2x.png" alt="image: ../Art/ipad_size_class_h_2x.png" width="317" height="230" />
+    </section>
+</section><p class="para">
+  iPhone의 디스플레이 환경은 장치와 장치의 방향에 따라 변할 수 있다..
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/iphone02_size_class_v_2x.png" alt="image: ../Art/iphone02_size_class_v_2x.png" width="157" height="255" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  portrait상태에서, iPhone 6 Plus는 컴팩트사이즈클래스의 너비와 레귤러사이즈클래스의 높이클 사용한다.
+</p>
+  </div>
+</div><div class="two-columns">
+  <div class="left-column">
+    <p class="para">
+  landscape상태에서, iPhone 6 Plus는 레귤러사이즈클래스의 너비와 컴펙트사이즈클래스의 높이를 사용한다.
+</p>
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/iphone02_size_class_h_2x.png" alt="image: ../Art/iphone02_size_class_h_2x.png" width="293" height="144" />
+  </div>
+</div><p class="para">
+  iPhone 6를 포함해서 모든 다른 iPhone 모델은 같은 사이즈 클래스 세트를 사용한다.
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/iphone01_size_class_v_2x.png" alt="image: ../Art/iphone01_size_class_v_2x.png" width="139" height="220" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  portrait 상태에서, iPhone 6, iPhone 5, 그리고 iPhone 4s는 컴팩트클래스사이즈의 너비와 레귤러컴펙트사이즈의 높이를 사용한다.
+</p>
+  </div>
+</div><div class="two-columns">
+  <div class="left-column">
+    <p class="para">
+  landscape 상태에서, 위의 장치들은 컴팩스사이즈클래스의 너비와 높이를 사용한다.
+</p>
+  </div>
+  <div class="right-column">
+    <img class="inline-graphic" src="Art/iphone01_size_class_h_2x.png" alt="image: ../Art/iphone01_size_class_h_2x.png" width="259" height="124" />
+  </div>
+</div><p class="para">
+
+</p><p class="para">
+
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH54-DontLinkElementID_5"></a>
+  <h3 class="section-name" tabindex="0">Provide a Great Experience in Each Environment</h3>
+  <p class="para">
+  적응성의 편리함을 이용할 때, 디스플레이 환경의 변화에 적절히 응답할수 있도록 당신의 UI를 확실히 할 수 있다. 모든 장치와 방향에서 멋진 경험을 하게 해주는 아래의 가이드라인들을 따라라.
+</p><p class="para">
+  <strong class="inline-head">모든 환경에서 주요 컨텐트로의 포커스를 유지해라</strong>
+    이것은 가장 중요하다. 사람들은 관심있는 컨텐츠를 보고, 상호작용 하기 위해서 당신의 앱을 사용한다. 환경이 변화할 때 포커스가 바뀌면 혼란을 줄 수 있고, 앱이 통제되지 않는 것 처럼 느껴지게 할 수 있다.
+</p><p class="para">
+  <strong class="inline-head">레이아웃의 불필요한 변화를 피해라.</strong>
+  모든 환경에서의 비슷한 경험은 사람들이 장치를 회전시키거나 당신의 앱을 다른 장치에서 실핼할 때 사람들이 사용패턴을 유지할수 있게 한다. 예를 들어, 가로의 레귤러 환경에서 이미지의 표시를 위해 격자를 사용하면, 격자의 치수를 조절 하더라도 가로의 컴팩트 환경에서 리스트에 동일한 정보를 표시하지 않아도 된다.
+</p><p class="para">
+  <strong class="inline-head">앱이 단 하나의 방향으로 수행된다면 간단하게해라.</strong> 사람들은 당신의 앱을 다른 방향으로 사용하기를 기대하고, 그 기대가 충족될 떄 가장 좋다. 그렇지만 당신의 앱이 단 하나의 방향으로 수행되는 것이 필수적일 때 아래의 것들을 따라야한다.
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">사용자들에게 장치를 회전시키라고 알려주는 UI요소를 표시하지 말아라.</strong> 지원되는 방향에서의 수행을 위해 분명히 필요하다면 불필요하게 첨가된 UI없이, 명백하게 장치의 회전하도록 알려야한다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">양방향을 지원해라.</strong>
+  예를 들어, 앱이
+  For example, if an app runs only in landscape, people should be able to use it whether they’re holding the device with the Home button on the right or on the left. And if people rotate the device 180 degrees while using the app, it’s best if the app responds by rotating its content 180 degrees.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">If your app interprets changes in device orientation as user input, handle rotation in app-specific ways.</strong> For example, a game that lets people move game pieces by rotating the device can’t respond to device rotation by rotating the screen. In a case like this, you should launch in both variants of the required orientation and allow people to switch between the variants until they start the main task of the app. As soon as people begin the main task, begin responding to device movement in app-specific ways.
+</p>
+
+</section>
+
+<p class="para">
+  ----------------------------------<br>
+  레이아웃은 UI 요소들이 앱의 화면에 어떻게 보일지에 대해 관심을 가지는 것 이상이다. 레이아웃을 이용해, 당신은 사용자에게 어떤게 가장 중요한지, 그들의 뭘 선택했는지, 그리고 콘텐트와의 관계를 보여줄 수 있다. 앱이 동작하는 장치에 따라 - 그리고 그 장치의 현재 방향에 따라 - 레이아웃은 변형될 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">충분한 여백을 제공함으로서 사용자들이 콘텐트와 콘트롤의 인터렉션을 쉽게 할 수 있게 하라.</strong> 탭 해야 하는 콘트롤은 44 x 44 포인트 정도의 터치 크기를 가져야 한다.
+</p>
+<section class="rec-container">
+	<div class="blurb">
+
+	</div>
+
+	<section class="left-container">
+			<p class="container-label recommended">권장</p>
+		<img class="inline-graphic" src="Art/interact_with_content_r_2x.png" alt="image: ../Art/interact_with_content_r_2x.png" width="236" height="396" />
+	</section>
+		<section class="right-container">
+				<p class="container-label not-recommended">권장하지 않음</p>
+			<img class="inline-graphic" src="Art/interact_with_content_nr_2x.png" alt="image: ../Art/interact_with_content_nr_2x.png" width="192" height="396" />
+		</section>
+</section><p class="para">
+  <strong class="inline-head">중요한 콘텐트나 기능을 위쪽으로 올려보냄으로서 중심이 되는 작업에 초점을 맞추기 쉽도록 하라.</strong> 이렇게 하는 좋은 방법 중 하나는 중요한 아이템들을 스크린의 위쪽과 - 왼쪽에서 오른쪽으로 쓰는 문화권인 경우 - 왼쪽 부근에 배치하는 것이다:
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/focus_on_main_task_2x.png" alt="image: ../Art/focus_on_main_task_2x.png" width="325" height="290" />
+</figure><p class="para">
+  <strong class="inline-head">사용자들에게 스크린 위의 요소들간의 연관된 중요성을 보여주기 위해 시각적인 무게와 균형을 사용하라.</strong> 큰 아이템은 시선을 끌기도 하고 작은 것들에 비해 중요해 보인다. Larger items are also easier for users to tap, which makes them especially useful in apps—such as Phone and Clock—that users often use in distracting surroundings.
+</p>
+<figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/phone_hangup_button_2x.png" alt="image: ../Art/phone_hangup_button_2x.png" width="256" height="438" />
+</figure><p class="para">
+  <strong class="inline-head">Use alignment to ease scanning and communicate groupings or hierarchy.</strong> Alignment tends to make an app look neat and organized and it gives users places to focus while they scroll through screenfuls of information. Indentation and alignment of different information groups indicate how the groups are related and make it easier for users to find specific items.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자가 기본 사이즈에서 보이는 것이 주 콘텐트라고 이해할 수 있게 하라.</strong> 예를 들어, 사용자는 글자를 읽기 위해 수평으로 스크롤하려하지 않을 것이며 주요 이미지를 보기 위해 확대하지 않을 것이다.
+</p>
+<p class="para">
+  <strong class="inline-head">Be prepared for changes in text size.</strong> Users expect most apps to respond appropriately when they choose a different text size in Settings. To accommodate some text-size changes, you might need to adjust the layout; for more information about displaying text in your app, see <span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW3">Text Should Always Be Legible</a></span>.
+</p>
+<p class="para">
+  <strong class="inline-head">일반적으로, UI 외형의 불일치를 피하라.</strong> 가능한 유사한 기능을 가진 요소들은 유사하게 보여야 한다. 사람들은 자기들이 인지한 불일치에 이유가 있다고 생각하고, 그것을 밝혀내려고 노력하는 데 시간을 쓰는 경향이 있다.
+</p>
+
+		</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="StartingStopping.html#/apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">Starting and Stopping</a></p>
+  			<p class="next-link"><a href="Navigation.html#/apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">Navigation</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

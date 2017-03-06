@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="Author" content="Apple Inc." />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7, IE=9">
+<link rel="shortcut icon" href="../../favicon.ico" />
+<link rel="icon" href="../../favicon.ico" />
+<link rel="mask-icon" href="../../apple-logo.svg" color="#333333">
+
+<link rel="stylesheet" href="../../assets/styles/globalnav.css" type="text/css" />
+<link rel="stylesheet" href="../../assets/styles/global.css" type="text/css" />
+
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery-1.11.0.min.js"></script>
+<script src="https://devimages.apple.com.edgekey.net/assets/scripts/lib/jquery/jquery.retinate.js" type="text/javascript" charset="utf-8"></script>
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="/assets/styles/oldie.css" type="text/css" />
+	<script src="/assets/scripts/html5.js"></script>
+<![endif]-->
+<script src="../../assets/scripts/lg-search.js"></script>
+<script src="../../assets/scripts/global.js"></script>
+
+	<link rel="stylesheet" href="https://www.apple.com/wss/fonts?family=Myriad+Set+Pro&v=2" type="text/css" />
+
+	<link rel="stylesheet" href="styles/localnav.css" type="text/css" />
+	<link rel="stylesheet" href="styles/human-interface-guidelines.css" type="text/css" />
+	<link rel="stylesheet" href="styles/ios.css" type="text/css" />
+	<script src="scripts/app.js"></script>
+	<script type="text/javascript" src="../../assets/scripts/lib/jquery/jquery.bxslider.min.js"></script>
+
+	<title> iOS Human Interface Guidelines</title>
+	<meta name="omni_page" content=" iOS Human Interface Guidelines" />
+	<meta name="Description" content="Learn about designing apps for iOS.">
+	<meta name="robots" content="noodp,noydir" />
+
+		</head>
+<body id="overview" class="design-principles">
+
+	<input type="checkbox" id="ac-gn-menustate" class="ac-gn-menustate">
+<nav id="ac-globalnav" class="no-js" role="navigation" aria-label="Global Navigation" data-hires="false" data-analytics-region="global nav" lang="en-US">
+	<div class="ac-gn-content">
+		<ul class="ac-gn-header">
+			<li class="ac-gn-item ac-gn-menuicon"> <label class="ac-gn-menuicon-label" for="ac-gn-menustate" aria-hidden="true">
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-top">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-top"></span>
+					</span>
+					<span class="ac-gn-menuicon-bread ac-gn-menuicon-bread-bottom">
+						<span class="ac-gn-menuicon-bread-crust ac-gn-menuicon-bread-crust-bottom"></span>
+					</span>
+				</label>
+				<a href="index.html#ac-gn-menustate" class="ac-gn-menuanchor ac-gn-menuanchor-open" id="ac-gn-menuanchor-open"> <span class="ac-gn-menuanchor-label">Open Menu</span> </a>
+				<a href="index.html#" class="ac-gn-menuanchor ac-gn-menuanchor-close" id="ac-gn-menuanchor-close"> <span class="ac-gn-menuanchor-label">Close Menu</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../index.html" id="ac-gn-firstfocus-small"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-bag ac-gn-bag-small" id="ac-gn-bag-small">
+				<a class="ac-gn-link ac-gn-link-bag" href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span class="ac-gn-link-text">Account</span> <span class="ac-gn-bag-badge"></span> </a> <span class="ac-gn-bagview-caret ac-gn-bagview-caret-large"></span> </li>
+		</ul>
+		<ul class="ac-gn-list">
+			<li class="ac-gn-item ac-gn-apple">
+				<a class="ac-gn-link ac-gn-link-apple" href="../../index.html" id="ac-gn-firstfocus"> <span class="ac-gn-link-text">Apple Developer</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-discover">
+				<a class="ac-gn-link" href="../../discover/index.html"> <span>Discover</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-design">
+				<a class="ac-gn-link" href="../../design/index.html"> <span>Design</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-develop">
+				<a class="ac-gn-link" href="../../develop/index.html"> <span>Develop</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-distribute">
+				<a class="ac-gn-link" href="../../distribute/index.html"> <span>Distribute</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-support">
+				<a class="ac-gn-link" href="../../support/index.html"> <span>Support</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-account">
+				<a class="ac-gn-link" href="../../../idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&amp;path=%252Faccount%252F&amp;rv=1"> <span>Account</span> </a>
+			</li>
+			<li class="ac-gn-item ac-gn-item-menu ac-gn-search" role="search">
+				<a id="ac-gn-search-button" class="ac-gn-link ac-gn-link-search" href="../../search/index.html" aria-label="Search developer.apple.com"> <span class="ac-gn-search-placeholder" aria-hidden="true">Search</span> </a>
+			</li>
+		</ul>
+		<aside id="ac-gn-searchview" class="ac-gn-searchview" role="search" data-analytics-region="search">
+			<div class="ac-gn-searchview-content">
+				<form id="ac-gn-searchform" class="ac-gn-searchform" action="../../search/index.html" method="get">
+					<div class="ac-gn-searchform-wrapper"> <input id="ac-gn-searchform-input" class="ac-gn-searchform-input" type="text" name="q" placeholder="Search" data-placeholder-long="Search for documentation, videos, and more" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" /> <button id="ac-gn-searchform-submit" class="ac-gn-searchform-submit" type="submit" disabled aria-label="Submit"></button> <button id="ac-gn-searchform-reset" class="ac-gn-searchform-reset" type="reset" disabled aria-label="Clear Search"></button> </div>
+				</form>
+				<aside id="ac-gn-searchresults" class="ac-gn-searchresults" data-string-quicklinks="Quick Links" data-string-suggestions="Suggested Searches" data-string-noresults="Hit enter to search.">
+
+				</aside>
+			</div> <button id="ac-gn-searchview-close" class="ac-gn-searchview-close" aria-label="Close Search">
+					<span class="ac-gn-searchview-close-wrapper">
+						<span class="ac-gn-searchview-close-left"></span>
+						<span class="ac-gn-searchview-close-right"></span>
+					</span>
+				</button> </aside>
+	</div>
+</nav>
+<div id="ac-gn-curtain" class="ac-gn-curtain"></div>
+<div id="ac-gn-placeholder" class="ac-nav-placeholder"></div>
+<script type="text/javascript" src="../../assets/scripts/ac-globalnav.built.js"></script>
+
+	<div id="top">
+<!-- SiteCatalyst code version: H.8. Copyright 1997-2006 Omniture, Inc. -->
+<script type="text/javascript">
+/* RSID: */
+var s_account="appleglobal,appleusdeveloper"
+</script>
+
+<script type="text/javascript" src="https://www.apple.com/metrics/scripts/s_code_h.js"></script>
+<script type="text/javascript">
+s.pageName= AC && AC.Tracking && AC.Tracking.pageName();
+s.channel="www.us.developer"
+
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)</script>
+<!-- End SiteCatalyst code version: H.8. -->
+</div>
+	<input type="checkbox" id="ac-ln-menustate" class="ac-ln-menustate" />
+	<nav id="ac-localnav" class="no-js ac-localnav-scrim" lang="en-US" role="navigation" data-analytics-region="local nav" data-sticky>
+		<div class="ac-ln-wrapper">
+			<div class="ac-ln-background"></div>
+			<div class="ac-ln-content">
+				<h2 class="ac-ln-title">
+					<a class="ac-ln-title-logo" href="index.html" data-analytics-title="product index"><span class="visuallyhidden">iOS Human Interface Guidelines</span></a>
+				</h2>
+
+				<div class="ac-ln-menu">
+					<div class="ac-ln-menu-tray">
+						<a href="index.html#ac-ln-menustate" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-open" id="ac-ln-menustate-open">
+							<span class="ac-ln-menucta-anchor-label">Open Menu</span>
+						</a>
+						<a href="index.html#" class="ac-ln-menucta-anchor ac-ln-menucta-anchor-close" id="ac-ln-menustate-close">
+							<span class="ac-ln-menucta-anchor-label">Close Menu</span>
+						</a>
+
+						<nav id="directorynav-menu" class="footer-breadory">
+						<div class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3>Overview</h3>
+		<ul>
+			<li><a href="index.html">Design Principles</a></li>
+			<li><a href="overview/whats-new/index.html">What's New in iOS 10</a></li>
+			<li><a href="overview/interface-essentials/index.html">Interface Essentials</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Interaction</a></h3>
+		<ul>
+			<li><a href="interaction/3d-touch/index.html">3D Touch</a></li>
+			<li><a href="interaction/accessibility/index.html">Accessibility</a></li>
+			<li><a href="interaction/audio/index.html">Audio</a></li>
+			<li><a href="interaction/authentication/index.html">Authentication</a></li>
+			<li><a href="interaction/data-entry/index.html">Data Entry</a></li>
+			<li><a href="interaction/feedback/index.html">Feedback</a></li>
+			<li><a href="interaction/file-handling/index.html">File Handling</a></li>
+			<li><a href="interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+			<li><a href="interaction/gestures/index.html">Gestures</a></li>
+			<li><a href="interaction/loading/index.html">Loading</a></li>
+			<li><a href="interaction/modality/index.html">Modality</a></li>
+			<li><a href="interaction/navigation/index.html">Navigation</a></li>
+			<li><a href="interaction/requesting-permission/index.html">Requesting Permission</a></li>
+			<li><a href="interaction/settings/index.html">Settings</a></li>
+			<li><a href="interaction/terminology/index.html">Terminology</a></li>
+			<li><a href="interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+
+		<h3>Features</h3>
+		<ul>
+			<li><a href="features/multitasking/index.html">Multitasking</a></li>
+			<li><a href="features/notifications/index.html">Notifications</a></li>
+			<li><a href="features/printing/index.html">Printing</a></li>
+			<li><a href="features/quick-look/index.html">Quick Look</a></li>
+			<li><a href="features/siri/index.html">Siri</a></li>
+		</ul>
+	</div>
+		<div id="dn-cola" class="column">
+
+		<h3>Visual Design</h3>
+		<ul>
+			<li><a href="visual-design/animation/index.html">Animation</a></li>
+			<li><a href="visual-design/branding/index.html">Branding</a></li>
+			<li><a href="visual-design/color/index.html">Color</a></li>
+			<li><a href="visual-design/layout/index.html">Layout</a></li>
+			<li><a href="visual-design/typography/index.html">Typography</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>Graphics</h3>
+		<ul>
+			<li><a href="graphics/app-icon/index.html">App Icon</a></li>
+			<li><a href="graphics/custom-icons/index.html">Custom Icons</a></li>
+			<li><a href="graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+			<li><a href="graphics/launch-screen/index.html">Launch Screen</a></li>
+			<li><a href="graphics/system-icons/index.html">System Icons</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-colc" class="column">
+
+
+		<h3>UI Bars</h3>
+		<ul>
+			<li><a href="ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+			<li><a href="ui-bars/search-bars/index.html">Search Bars</a></li>
+			<li><a href="ui-bars/status-bars/index.html">Status Bars</a></li>
+			<li><a href="ui-bars/tab-bars/index.html">Tab Bars</a></li>
+			<li><a href="ui-bars/toolbars/index.html">Toolbars</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>UI Views</h3>
+		<ul>
+			<li><a href="ui-views/action-sheets/index.html">Action Sheets</a></li>
+			<li><a href="ui-views/activity-views/index.html">Activity Views</a></li>
+			<li><a href="ui-views/alerts/index.html">Alerts</a></li>
+			<li><a href="ui-views/collections/index.html">Collections</a></li>
+			<li><a href="ui-views/image-views/index.html">Image Views</a></li>
+			<li><a href="ui-views/maps/index.html">Maps</a></li>
+			<li><a href="ui-views/pages/index.html">Pages</a></li>
+			<li><a href="ui-views/popovers/index.html">Popovers</a></li>
+			<li><a href="ui-views/scroll-views/index.html">Scroll Views</a></li>
+			<li><a href="ui-views/split-views/index.html">Split Views</a></li>
+			<li><a href="ui-views/tables/index.html">Tables</a></li>
+			<li><a href="ui-views/text-views/index.html">Text Views</a></li>
+			<li><a href="ui-views/web-views/index.html">Web Views</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cold" class="column">
+
+
+		<h3>UI Controls</h3>
+		<ul>
+			<li><a href="ui-controls/buttons/index.html">Buttons</a></li>
+			<li><a href="ui-controls/edit-menus/index.html">Edit Menus</a></li>
+			<li><a href="ui-controls/labels/index.html">Labels</a></li>
+			<li><a href="ui-controls/page-controls/index.html">Page Controls</a></li>
+			<li><a href="ui-controls/pickers/index.html">Pickers</a></li>
+			<li><a href="ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+			<li><a href="ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+			<li><a href="ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+			<li><a href="ui-controls/sliders/index.html">Sliders</a></li>
+			<li><a href="ui-controls/steppers/index.html">Steppers</a></li>
+			<li><a href="ui-controls/switches/index.html">Switches</a></li>
+			<li><a href="ui-controls/text-fields/index.html">Text Fields</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Extensions</h3>
+		<ul>
+			<li><a href="extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+			<li><a href="extensions/document-providers/index.html">Document Providers</a></li>
+			<li><a href="extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+			<li><a href="extensions/messaging/index.html">Messaging</a></li>
+			<li><a href="extensions/photo-editing/index.html">Photo Editing</a></li>
+			<li><a href="extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+			<li><a href="extensions/widgets/index.html">Widgets</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cole" class="column">
+
+
+		<h3>Technologies</h3>
+		<ul>
+			<li><a href="technologies/apple-pay/index.html">Apple Pay</a></li>
+			<li><a href="technologies/gamekit/index.html">GameKit</a></li>
+			<li><a href="technologies/healthkit/index.html">HealthKit</a></li>
+			<li><a href="technologies/homekit/index.html">HomeKit</a></li>
+			<li><a href="technologies/icloud/index.html">iCloud</a></li>
+			<li><a href="technologies/in-app-purchase/index.html">In-App Purchase</a></li>
+			<li><a href="technologies/live-photos/index.html">Live Photos</a></li>
+			<li><a href="technologies/researchkit/index.html">ResearchKit</a></li>
+			<li><a href="technologies/social-media/index.html">Social Media</a></li>
+			<li><a href="technologies/wallet/index.html">Wallet</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3><a href="resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="resources/index.html#templates">Templates</a></li>
+			<li><a href="resources/index.html#typefaces">Typefaces</a></li>
+			<li><a href="resources/index.html#xcode-projects">Xcode Projects</a></li>
+		</ul>
+	</div>
+
+	<div id="dn-cola" class="column">
+
+		<h3>Related Guidelines</h3>
+		<ul>
+			<li><a href="../../watchos/human-interface-guidelines/index.html">watchOS Human Interface Guidelines</a></li>
+			<li><a href="../../tvos/human-interface-guidelines/index.html">tvOS Human Interface Guidelines</a></li>
+			<li><a href="../../library/content/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html">macOS Human Interface Guidelines</a></li>
+		</ul>
+	</div>
+</div>
+
+						</nav>
+
+					</div>
+
+					<div class="ac-ln-actions ac-ln-actions">
+						<div class="ac-ln-action ac-ln-action-menucta" aria-hidden="true">
+							<label for="ac-ln-menustate" class="ac-ln-menucta">
+								<span class="ac-ln-menucta-chevron"></span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<label id="ac-ln-curtain" for="ac-ln-menustate"></label>
+	<script type="text/javascript" src="https://www.apple.com/ac/localnav/3.0/scripts/ac-localnav.built.js"></script>
+
+
+		<div class="grid">
+			<div id="introduction" class="row">
+				<header class="col-100 text-center">
+					<p class="intro width-80 center">가장 진보한 모바일OS, iOS는 강력하고 단순한 기능의 아름답고 매력적인 app을 디자인 할 수 있도록 모든 기능을 제공합니다.</p>
+				</header>
+			</div>
+		</div>
+
+	<main id="main" class="main" role="main">
+
+		<!-- HIG content -->
+			<div class="grid" data-hires="true">
+				<section class="row">
+					<div class="col-20 doc-nav-container">
+						<nav id="doc-nav" class="doc-nav" role="navigation" aria-label="Local Navigation" data-hires="true">
+	<ul class="side">
+		<li class="nav-overview"><a href="index.html">Overview</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-design-principles"><a href="index.html">Design Principles</a></li>
+				<li class="nav-whats-new"><a href="overview/whats-new/index.html">What's New in iOS 10</a></li>
+				<li class="nav-interface-essentials"><a href="overview/interface-essentials/index.html">Interface Essentials</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-interaction"><a href="interaction/3d-touch/index.html">Interaction</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-3d-touch"><a href="interaction/3d-touch/index.html">3D Touch</a></li>
+				<li class="nav-accessibility"><a href="interaction/accessibility/index.html">Accessibility</a></li>
+				<li class="nav-audio"><a href="interaction/audio/index.html">Audio</a></li>
+				<li class="nav-authentication"><a href="interaction/authentication/index.html">Authentication</a></li>
+				<li class="nav-data-entry"><a href="interaction/data-entry/index.html">Data Entry</a></li>
+				<li class="nav-feedback"><a href="interaction/feedback/index.html">Feedback</a></li>
+				<li class="nav-file-handling"><a href="interaction/file-handling/index.html">File Handling</a></li>
+				<li class="nav-first-launch-experience"><a href="interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+				<li class="nav-gestures"><a href="interaction/gestures/index.html">Gestures</a></li>
+				<li class="nav-loading"><a href="interaction/loading/index.html">Loading</a></li>
+				<li class="nav-modality"><a href="interaction/modality/index.html">Modality</a></li>
+				<li class="nav-navigation"><a href="interaction/navigation/index.html">Navigation</a></li>
+				<li class="nav-requesting-permission"><a href="interaction/requesting-permission/index.html">Requesting Permission</a></li>
+				<li class="nav-settings"><a href="interaction/settings/index.html">Settings</a></li>
+				<li class="nav-terminology"><a href="interaction/terminology/index.html">Terminology</a></li>
+				<li class="nav-undo-and-redo"><a href="interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-features"><a href="features/multitasking/index.html">Features</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-multitasking"><a href="features/multitasking/index.html">Multitasking</a></li>
+				<li class="nav-notifications"><a href="features/notifications/index.html">Notifications</a></li>
+				<li class="nav-printing"><a href="features/printing/index.html">Printing</a></li>
+				<li class="nav-quick-look"><a href="features/quick-look/index.html">Quick Look</a></li>
+				<li class="nav-siri"><a href="features/siri/index.html">Siri</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-visual-design"><a href="visual-design/animation/index.html">Visual Design</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-animation"><a href="visual-design/animation/index.html">Animation</a></li>
+				<li class="nav-branding"><a href="visual-design/branding/index.html">Branding</a></li>
+				<li class="nav-color"><a href="visual-design/color/index.html">Color</a></li>
+				<li class="nav-layout"><a href="visual-design/layout/index.html">Layout</a></li>
+				<li class="nav-typography"><a href="visual-design/typography/index.html">Typography</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-graphics"><a href="graphics/app-icon/index.html">Graphics</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-app-icon"><a href="graphics/app-icon/index.html">App Icon</a></li>
+				<li class="nav-custom-icons"><a href="graphics/custom-icons/index.html">Custom Icons</a></li>
+				<li class="nav-image-size-and-resolution"><a href="graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+				<li class="nav-launch-screen"><a href="graphics/launch-screen/index.html">Launch Screen</a></li>
+				<li class="nav-system-icons"><a href="graphics/system-icons/index.html">System Icons</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-bars"><a href="ui-bars/navigation-bars/index.html">UI Bars</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-navigation-bars"><a href="ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+				<li class="nav-search-bars"><a href="ui-bars/search-bars/index.html">Search Bars</a></li>
+				<li class="nav-status-bars"><a href="ui-bars/status-bars/index.html">Status Bars</a></li>
+				<li class="nav-tab-bars"><a href="ui-bars/tab-bars/index.html">Tab Bars</a></li>
+				<li class="nav-toolbars"><a href="ui-bars/toolbars/index.html">Toolbars</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-views"><a href="ui-views/action-sheets/index.html">UI Views</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-action-sheets"><a href="ui-views/action-sheets/index.html">Action Sheets</a></li>
+				<li class="nav-activity-views"><a href="ui-views/activity-views/index.html">Activity Views</a></li>
+				<li class="nav-alerts"><a href="ui-views/alerts/index.html">Alerts</a></li>
+				<li class="nav-collections"><a href="ui-views/collections/index.html">Collections</a></li>
+				<li class="nav-image-views"><a href="ui-views/image-views/index.html">Image Views</a></li>
+				<li class="nav-maps"><a href="ui-views/maps/index.html">Maps</a></li>
+				<li class="nav-pages"><a href="ui-views/pages/index.html">Pages</a></li>
+				<li class="nav-popovers"><a href="ui-views/popovers/index.html">Popovers</a></li>
+				<li class="nav-scroll-views"><a href="ui-views/scroll-views/index.html">Scroll Views</a></li>
+				<li class="nav-split-views"><a href="ui-views/split-views/index.html">Split Views</a></li>
+				<li class="nav-tables"><a href="ui-views/tables/index.html">Tables</a></li>
+				<li class="nav-text-views"><a href="ui-views/text-views/index.html">Text Views</a></li>
+				<li class="nav-web-views"><a href="ui-views/web-views/index.html">Web Views</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-ui-controls"><a href="ui-controls/buttons/index.html">UI Controls</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-buttons"><a href="ui-controls/buttons/index.html">Buttons</a></li>
+				<li class="nav-edit-menus"><a href="ui-controls/edit-menus/index.html">Edit Menus</a></li>
+				<li class="nav-labels"><a href="ui-controls/labels/index.html">Labels</a></li>
+				<li class="nav-page-controls"><a href="ui-controls/page-controls/index.html">Page Controls</a></li>
+				<li class="nav-pickers"><a href="ui-controls/pickers/index.html">Pickers</a></li>
+				<li class="nav-progress-indicators"><a href="ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+				<li class="nav-refresh-content-controls"><a href="ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+				<li class="nav-segmented-controls"><a href="ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+				<li class="nav-sliders"><a href="ui-controls/sliders/index.html">Sliders</a></li>
+				<li class="nav-steppers"><a href="ui-controls/steppers/index.html">Steppers</a></li>
+				<li class="nav-switches"><a href="ui-controls/switches/index.html">Switches</a></li>
+				<li class="nav-text-fields"><a href="ui-controls/text-fields/index.html">Text Fields</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-extensions"><a href="extensions/custom-keyboards/index.html">Extensions</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-custom-keyboards"><a href="extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+				<li class="nav-document-providers"><a href="extensions/document-providers/index.html">Document Providers</a></li>
+				<li class="nav-home-screen-actions"><a href="extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+				<li class="nav-messaging"><a href="extensions/messaging/index.html">Messaging</a></li>
+				<li class="nav-photo-editing"><a href="extensions/photo-editing/index.html">Photo Editing</a></li>
+				<li class="nav-sharing-and-actions"><a href="extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+				<li class="nav-widgets"><a href="extensions/widgets/index.html">Widgets</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-technologies"><a href="technologies/apple-pay/index.html">Technologies</a>
+			<ul class="sub-side-page-list">
+				<li class="nav-apple-pay"><a href="technologies/apple-pay/index.html">Apple Pay</a></li>
+				<li class="nav-gamekit"><a href="technologies/gamekit/index.html">GameKit</a></li>
+				<li class="nav-healthkit"><a href="technologies/healthkit/index.html">HealthKit</a></li>
+				<li class="nav-homekit"><a href="technologies/homekit/index.html">HomeKit</a></li>
+				<li class="nav-icloud"><a href="technologies/icloud/index.html">iCloud</a></li>
+				<li class="nav-in-app-purchase"><a href="technologies/in-app-purchase/index.html">In-App Purchase</a></li>
+				<li class="nav-live-photos"><a href="technologies/live-photos/index.html">Live Photos</a></li>
+				<li class="nav-researchkit"><a href="technologies/researchkit/index.html">ResearchKit</a></li>
+				<li class="nav-social-media"><a href="technologies/social-media/index.html">Social Media</a></li>
+				<li class="nav-wallet"><a href="technologies/wallet/index.html">Wallet</a></li>
+			</ul>
+		</li>
+
+		<li class="nav-resources"><a href="resources/index.html">Resources</a>
+			<ul class="sub-side">
+				<li><a href="index.html#templates">Templates</a></li>
+				<li><a href="index.html#typefaces">Typefaces</a></li>
+				<li><a href="index.html#xcode-projects">Xcode Projects</a></li>
+			</ul>
+		</li>
+
+	</ul>
+</nav>
+
+					</div>
+
+					<!-- Main content -->
+					<div class="col-80 hig-content" data-hires="true">
+						<div id="main-image" class="row">
+    <div class="col-100">
+        <div class="scroll-image">
+
+<p><img src="images/ios_overview.png" alt="" title="" class="center" width="680" height="498" /></p>
+
+</div>
+    </div>
+</div>
+
+<p>당신이 app 디자이너라면, 당신에겐 App Store 상위권 순위에 오를만한 멋진 제품을 만들어낼 기회가 있는 것입니다. 그러기 위해선, 당신은 품질과 기능성에 대한 높은 기대를 만족시켜야 합니다.</p>
+
+<p>다음 세 가지 주제는 iOS를 다른 플랫폼과 차별화하는 요소입니다:</p>
+
+<ul>
+<li><p><strong>명료함(Clarity).</strong> 시스템 전체에서 글자는 모든 크기에서 읽을 수 있어야 하고, 아이콘은 정확하고 명료해야 하고, 장식은 섬세하고 적절해야 하고, 디자인은 정확히 기능성을 중점으로 이루어져야 합니다. Negative space, 색깔, 폰트, 그래픽, 인터페이스 요소들은 섬세하게 중요한 내용을 강조하면서 상호작용을 이끌어내야 됩니다.</p></li>
+<li><p><strong>존중(Deference).</strong> 유려한 움직임, 또렷하고 아름다운 인터페이스는 사람들이 콘텐츠를 이해하고 상호작용할 수 있도록 도와줍니다. 콘텐츠와 경쟁하면 안됩니다. 콘텐츠는 화면 전체를 채우는 것이 일반적이지만, 흐릿하거나 반투명한 화면을 사용하는 것도 종종 더 나은 경우가 있습니다. bezel, gradient, drop shadows는 최소한으로 활용해야 콘텐츠를 가장 우선으로 하면서도 인터페이스를 가볍고 경쾌하게 만들어줍니다.</p></li>
+<li><p><strong>깊이(Depth).</strong> 선명한 시각 레이어와 현실적인 움직임은 계층성을 전달해주고, 활력을 불어넣어주고, 이해를 도와줍니다. 터치와 발견 가능성은 즐거움을 더해주고, 맥락을 잃지 않고 기능이나 추가적인 콘텐츠에 접근할 수 있게 합니다. 화면 전환을 통해 콘텐츠를 탐색할 때의 깊이를 느낄 수 있습니다.</p></li>
+</ul>
+
+<p> 효과와 영향을 최대화하기 위해, app의 identity를 구상할 때 다음과 같은 원칙들을 기억합시다.</p>
+
+<div id="row1" class="row">
+    <div class="col-50">
+
+<h3>미적 완결성</h3>
+
+<p>미적 완결성은 app의 생김새와 동작이 어떻게 기능과 잘 통합되는가를 의미합니다. 예를 들어, 중요한 업무를 도와주는 app이 있다면 그 app은 섬세하고 과하지 않은 그래픽, 표준화된 조작, 자주 사용하는 기능을 통해 그 업무에 집중할 수 있도록 도와줍니다. 반면에, 게임과 같이 몰입하는 app과 같은 경우에는 발견성을 높이면서도 재미와 흥미를 자아내는 매혹적인 표현을 할 수 있습니다.</p>
+
+</div>
+    <div class="col-50">
+
+<h3>일관성</h3>
+
+<p>일관성 있는 app은 시스템에서 제공하는 인터페이스 요소, 익숙한 아이콘, 표준 글씨체, 통일된 용어를 통해 우리에게 익숙한 표준과 패러다임을 제공합니다. 사람들이 기대하는 방식으로 app의 특징과 동작을 결합해야 합니다.</p>
+
+</div>
+</div>
+
+<div id="row2" class="row">
+    <div class="col-50">
+
+<h3>직접 조작</h3>
+
+<p>화면상의 콘텐츠를 직접 조작하는 것은 사용자가 몰입하고 이해할 수 있도록 돕습니다. 사용자는 기기를 화전시키거나 특정 제스처를 통해 화면상의 콘텐츠에 영향을 미칠 때 이러한 직접 조작을 경험합니다. 직접 조작을 통해서 사용자는 즉각적이고 눈에 보이는 결과를 볼 수 있습니다.</p>
+
+</div>
+    <div class="col-50">
+
+<h3>피드백</h3>
+
+<p>피드백은 동작을 인지하고 사용자에게 결과를 보여주어 지속적으로 알려줍니다. iOS에 기본 내장된 app은 사용자의 모든 동작마다 적당한 피드백을 제공하고 있습니다. 상호작용 요소들은 탭이 이루어지면 간단하게 강조되고, 진행상황을 나타내는 지표는 오래 걸리는 작업의 상태와 연결되고, 애니메이션과 사운드는 동작의 결과를 명확하게 알 수 있도록 도와줍니다.</p>
+
+</div>
+</div>
+
+<div id="row3" class="row">
+    <div class="col-50">
+
+<h3>은유</h3>
+
+<p>사람들은 app의 가상 오브젝트와 동작이 친숙한 경험(실제 혹은 디지털 세계에서의 경험)에 대한 은유로 되어 있을 때 더 빨리 배웁니다. 물리적으로 화면과 상호작용이 이루어지기 때문에 iOS 안에서의 은유는 효과적으로 작용합니다. 콘텐츠를 밑으로 드러내기 위해 뷰를 밖으로 옮기고, 콘텐츠를 드래그하거나 혹은 스와이프하고, 스위치를 변경하고, 슬라이더를 움직이고, picker value로 스크롤하고, 심지어 책이나 잡지의 페이지를 넘기기도 합니다.</p>
+
+</div>
+    <div class="col-50">
+
+<h3>사용자 조작</h3>
+
+<p>iOS를 통해 통제하는 주체는 app이 아니라 사람입니다. 어떤 app은 일련의 동작을 제안하거나 위험한 결과에 대해 경고할 수 있지만, 그것은 보통 app이 사람에게 의사결정을 떠넘기는 좋지 않은 실수입니다. 가장 좋은 app에서는 사용자에게 권한을 주는 것과 원치 않는 결과를 피하는 것 사이의 정확한 균형을 잡고 있습니다. app은 친숙하고 예측 가능한 상호작용 요소들을 보여주고, 삭제 동작에 대한 확인을 하고, 삭제가 진행중이더라도 취소하기 쉽게 만들어주어, 사람들에게 자신이 통제하고 있는 것처럼 느끼게 해줘야 합니다. </p>
+
+</div>
+</div>
+
+					</div>
+				</section>
+			</div>
+
+	</main>
+
+		<aside class="grid">
+		<section id="router" class="router">
+			<a href="overview/whats-new/index.html" class="block row">
+								<span class="col-100 text-center">
+
+					<span class="router-copy two-lines">
+						<h4>
+							<small>Next</small>
+							What's New in iOS 10
+						</h4>
+											</span>
+				</span>
+			</a>
+		</section>
+	</aside>
+
+	<!-- Footer -->
+	<section id="globalfooter-wrapper">
+		<footer id="globalfooter" role="contentinfo">
+			<nav class="footer-breadory">
+				<a href="../../index.html" class="home breadcrumbs-home"><span aria-hidden="true"></span><span class="breadcrumbs-home-label">Developer</span></a>
+				<section class="breadcrumbs">
+					<ol class="breadcrumbs-list">
+						<li><a href="../index.html">iOS</a></li>
+						<li>Human Interface Guidelines</li>
+
+					</ol>
+				</section>
+				<div id="directorynav-footer">
+				<div class="directorynav">
+	<div id="dn-cola" class="column">
+		<h3>Overview</h3>
+		<ul>
+			<li><a href="index.html">Design Principles</a></li>
+			<li><a href="overview/whats-new/index.html">What's New in iOS 10</a></li>
+			<li><a href="overview/interface-essentials/index.html">Interface Essentials</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Interaction</a></h3>
+		<ul>
+			<li><a href="interaction/3d-touch/index.html">3D Touch</a></li>
+			<li><a href="interaction/accessibility/index.html">Accessibility</a></li>
+			<li><a href="interaction/audio/index.html">Audio</a></li>
+			<li><a href="interaction/authentication/index.html">Authentication</a></li>
+			<li><a href="interaction/data-entry/index.html">Data Entry</a></li>
+			<li><a href="interaction/feedback/index.html">Feedback</a></li>
+			<li><a href="interaction/file-handling/index.html">File Handling</a></li>
+			<li><a href="interaction/first-launch-experience/index.html">First Launch Experience</a></li>
+			<li><a href="interaction/gestures/index.html">Gestures</a></li>
+			<li><a href="interaction/loading/index.html">Loading</a></li>
+			<li><a href="interaction/modality/index.html">Modality</a></li>
+			<li><a href="interaction/navigation/index.html">Navigation</a></li>
+			<li><a href="interaction/requesting-permission/index.html">Requesting Permission</a></li>
+			<li><a href="interaction/settings/index.html">Settings</a></li>
+			<li><a href="interaction/terminology/index.html">Terminology</a></li>
+			<li><a href="interaction/undo-and-redo/index.html">Undo and Redo</a></li>
+		</ul>
+	</div>
+	<div id="dn-colb" class="column">
+
+		<h3>Features</h3>
+		<ul>
+			<li><a href="features/multitasking/index.html">Multitasking</a></li>
+			<li><a href="features/notifications/index.html">Notifications</a></li>
+			<li><a href="features/printing/index.html">Printing</a></li>
+			<li><a href="features/quick-look/index.html">Quick Look</a></li>
+			<li><a href="features/siri/index.html">Siri</a></li>
+		</ul>
+	</div>
+		<div id="dn-cola" class="column">
+
+		<h3>Visual Design</h3>
+		<ul>
+			<li><a href="visual-design/animation/index.html">Animation</a></li>
+			<li><a href="visual-design/branding/index.html">Branding</a></li>
+			<li><a href="visual-design/color/index.html">Color</a></li>
+			<li><a href="visual-design/layout/index.html">Layout</a></li>
+			<li><a href="visual-design/typography/index.html">Typography</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>Graphics</h3>
+		<ul>
+			<li><a href="graphics/app-icon/index.html">App Icon</a></li>
+			<li><a href="graphics/custom-icons/index.html">Custom Icons</a></li>
+			<li><a href="graphics/image-size-and-resolution/index.html">Image Size and Resolution</a></li>
+			<li><a href="graphics/launch-screen/index.html">Launch Screen</a></li>
+			<li><a href="graphics/system-icons/index.html">System Icons</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-colc" class="column">
+
+
+		<h3>UI Bars</h3>
+		<ul>
+			<li><a href="ui-bars/navigation-bars/index.html">Navigation Bars</a></li>
+			<li><a href="ui-bars/search-bars/index.html">Search Bars</a></li>
+			<li><a href="ui-bars/status-bars/index.html">Status Bars</a></li>
+			<li><a href="ui-bars/tab-bars/index.html">Tab Bars</a></li>
+			<li><a href="ui-bars/toolbars/index.html">Toolbars</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+		<h3>UI Views</h3>
+		<ul>
+			<li><a href="ui-views/action-sheets/index.html">Action Sheets</a></li>
+			<li><a href="ui-views/activity-views/index.html">Activity Views</a></li>
+			<li><a href="ui-views/alerts/index.html">Alerts</a></li>
+			<li><a href="ui-views/collections/index.html">Collections</a></li>
+			<li><a href="ui-views/image-views/index.html">Image Views</a></li>
+			<li><a href="ui-views/maps/index.html">Maps</a></li>
+			<li><a href="ui-views/pages/index.html">Pages</a></li>
+			<li><a href="ui-views/popovers/index.html">Popovers</a></li>
+			<li><a href="ui-views/scroll-views/index.html">Scroll Views</a></li>
+			<li><a href="ui-views/split-views/index.html">Split Views</a></li>
+			<li><a href="ui-views/tables/index.html">Tables</a></li>
+			<li><a href="ui-views/text-views/index.html">Text Views</a></li>
+			<li><a href="ui-views/web-views/index.html">Web Views</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cold" class="column">
+
+
+		<h3>UI Controls</h3>
+		<ul>
+			<li><a href="ui-controls/buttons/index.html">Buttons</a></li>
+			<li><a href="ui-controls/edit-menus/index.html">Edit Menus</a></li>
+			<li><a href="ui-controls/labels/index.html">Labels</a></li>
+			<li><a href="ui-controls/page-controls/index.html">Page Controls</a></li>
+			<li><a href="ui-controls/pickers/index.html">Pickers</a></li>
+			<li><a href="ui-controls/progress-indicators/index.html">Progress Indicators</a></li>
+			<li><a href="ui-controls/refresh-content-controls/index.html">Refresh Content Controls</a></li>
+			<li><a href="ui-controls/segmented-controls/index.html">Segmented Controls</a></li>
+			<li><a href="ui-controls/sliders/index.html">Sliders</a></li>
+			<li><a href="ui-controls/steppers/index.html">Steppers</a></li>
+			<li><a href="ui-controls/switches/index.html">Switches</a></li>
+			<li><a href="ui-controls/text-fields/index.html">Text Fields</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3>Extensions</h3>
+		<ul>
+			<li><a href="extensions/custom-keyboards/index.html">Custom Keyboards</a></li>
+			<li><a href="extensions/document-providers/index.html">Document Providers</a></li>
+			<li><a href="extensions/home-screen-actions/index.html">Home Screen Actions</a></li>
+			<li><a href="extensions/messaging/index.html">Messaging</a></li>
+			<li><a href="extensions/photo-editing/index.html">Photo Editing</a></li>
+			<li><a href="extensions/sharing-and-actions/index.html">Sharing and Actions</a></li>
+			<li><a href="extensions/widgets/index.html">Widgets</a></li>
+		</ul>
+
+	</div>
+	<div id="dn-cole" class="column">
+
+
+		<h3>Technologies</h3>
+		<ul>
+			<li><a href="technologies/apple-pay/index.html">Apple Pay</a></li>
+			<li><a href="technologies/gamekit/index.html">GameKit</a></li>
+			<li><a href="technologies/healthkit/index.html">HealthKit</a></li>
+			<li><a href="technologies/homekit/index.html">HomeKit</a></li>
+			<li><a href="technologies/icloud/index.html">iCloud</a></li>
+			<li><a href="technologies/in-app-purchase/index.html">In-App Purchase</a></li>
+			<li><a href="technologies/live-photos/index.html">Live Photos</a></li>
+			<li><a href="technologies/researchkit/index.html">ResearchKit</a></li>
+			<li><a href="technologies/social-media/index.html">Social Media</a></li>
+			<li><a href="technologies/wallet/index.html">Wallet</a></li>
+		</ul>
+	</div>
+	<div id="dn-cola" class="column">
+
+		<h3><a href="resources/index.html">Resources</a></h3>
+		<ul>
+			<li><a href="resources/index.html#templates">Templates</a></li>
+			<li><a href="resources/index.html#typefaces">Typefaces</a></li>
+			<li><a href="resources/index.html#xcode-projects">Xcode Projects</a></li>
+		</ul>
+	</div>
+
+	<div id="dn-cola" class="column">
+
+		<h3>Related Guidelines</h3>
+		<ul>
+			<li><a href="../../watchos/human-interface-guidelines/index.html">watchOS Human Interface Guidelines</a></li>
+			<li><a href="../../tvos/human-interface-guidelines/index.html">tvOS Human Interface Guidelines</a></li>
+			<li><a href="../../library/content/documentation/UserExperience/Conceptual/OSXHIGuidelines/index.html">macOS Human Interface Guidelines</a></li>
+		</ul>
+	</div>
+</div>
+
+			</div>
+			</nav>
+			<div class="ac-gf-footer-legal">
+  <div class="ac-gf-footer-news"> To receive the latest developer news, visit and subscribe to our <a href="../../news/index.html">News and Updates</a>. </div>
+  <div class="ac-gf-footer-legal-copyright">Copyright © 2016 Apple Inc. All rights reserved.</div>
+  <div class="ac-gf-footer-legal-links">
+    <a href="https://www.apple.com/legal/internet-services/terms/site.html" class="first">Terms of Use</a>
+    <a href="https://www.apple.com/privacy/privacy-policy/">Privacy Policy</a>
+    <a href="../../bug-reporting/index.html">Report Bugs</a>
+    <a href="../../../idmsa.apple.com/IDMSWebAuth/login.html?path=%252F%252Fcontact%252Fsubmit%252F?subject=website-feedback&amp;appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757">Feedback</a>
+  </div>
+</div>
+
+		</footer><!-- globalfooter -->
+	</section>
+</body>
+</html>

@@ -1,0 +1,79 @@
+#sirikit .link-sirikit,
+#imessage .link-imessage,
+#stickers .link-stickers,
+#technologies .link-technologies,
+#documentation .link-documentation {
+	color: rgba(51, 51, 51, 0.6);
+	pointer-events: none;
+}
+
+#download .ac-ln-actions {
+	display: none;
+}
+
+.router-wrapper {
+	background-color: #fafafa;
+}
+
+.router h4 {
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.router:hover h4 {
+  color: #08c;
+}
+
+@media all and (max-width: 767px) {
+	.col-50.divider-left {
+		border-left:none;
+	}
+
+	.router .text-center {
+		text-align: center;
+	}
+
+	.router .router-copy h4 small {
+		display: block;
+	}
+
+}
+
+.inline-headline {
+	font-size: 16px;
+	line-height: 1.5em;
+	font-weight: 700;
+	display: inline;
+}
+
+.inline-headline + p {
+	display: inline;
+}
+
+.inline-headline + p + * {
+	margin-top: 1em;
+}
+
+@supports (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px)) {
+	/* Blur Navigation Bar */
+	#ac-globalnav {
+		-webkit-backdrop-filter: saturate(180%) blur(20px);
+		backdrop-filter: saturate(180%) blur(20px)
+	}
+
+	#ac-localnav.ac-localnav-scrim .ac-ln-background {
+		background-color: rgba(255, 255, 255, 0.65);
+		-webkit-backdrop-filter: saturate(180%) blur(20px);
+		backdrop-filter: saturate(180%) blur(20px)
+	}
+}
+
+.col-33 p {
+	display: block;
+	width: 90%;
+}
+
+img {
+	display:block;
+	margin-bottom: 1em;
+}

@@ -1,0 +1,69 @@
+ul.icons li { padding-left:2em; }
+.grid2colb-box ul.icons li { padding-left:1.8em; }
+a.pdf,
+ul.icons li.pdf,
+ul.icons.pdf li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/pdf.gif) no-repeat 0 .2em; }
+a.html,
+ul.icons li.html,
+ul.icons.html li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/html.gif) no-repeat 0 .2em; }
+a.doc,
+ul.icons li.doc,
+ul.icons.doc li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/doc.gif) no-repeat 0 .2em; }
+a.docs,
+ul.icons li.docs,
+ul.icons.docs li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/docs.gif) no-repeat 0 .2em; }
+a.codeqa,
+ul.icons li.codeqa,
+ul.icons.codeqa li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/codeqa.gif) no-repeat 0 .3em; }
+a.samplecode,
+ul.icons li.samplecode,
+ul.icons.samplecode li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/samplecode.png) no-repeat 0 .3em; }
+a.qt,
+ul.icons li.qt,
+ul.icons.qt li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/qt.gif) no-repeat 0 .2em; }
+a.ical,
+ul.icons li.ical,
+ul.icons.ical li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/ical.gif) no-repeat 0 .2em; }
+a.dl,
+ul.icons li.dl,
+ul.icons.dl li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/dl.gif) no-repeat 0 .2em; }
+a.dmg,
+ul.icons li.dmg,
+ul.icons.dmg li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/dmg.gif) no-repeat 0 .2em; }
+a.zip,
+ul.icons li.zip,
+ul.icons.zip li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/zip.gif) no-repeat 0 .2em; }
+a.keynote,
+ul.icons li.keynote,
+ul.icons.keynote li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/keynote.gif) no-repeat 0 .2em; }
+a.audio,
+ul.icons li.audio,
+ul.icons.audio li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/audio.gif) no-repeat 0 .2em; }
+a.podcast,
+ul.icons li.podcast,
+ul.icons.podcast li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/podcast.gif) no-repeat 0 .2em; }
+a.video,
+ul.icons li.video,
+ul.icons.video li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/video.gif) no-repeat 0 .2em; }
+a.book,
+ul.icons li.book,
+ul.icons.book li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/book.gif) no-repeat 0 .2em; }
+
+a.status,
+p.status,
+ul.icons li.status,
+ul.icons.status li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/status_yellow.gif) no-repeat 0 .2em; }
+a.status.red,
+p.status.red,
+ul.icons li.status.red,
+ul.icons.status.red li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/status_red.gif) no-repeat 0 .2em; }
+a.status.green,
+p.status.green,
+ul.icons li.status.green,
+ul.icons.status.green li { background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/12x12/status_green.gif) no-repeat 0 .2em; }
+
+/* links */
+a.pdf, a.html, a.doc, a.docs, a.codeqa, a.samplecode, a.qt, a.ical, a.dmg, a.zip, a.keynote, a.audio, a.podcast, a.video, a.status, p.status { padding-left:2em; white-space:nowrap; background-repeat:no-repeat; background-position:0 .2em; }
+.grid2colb-box a.pdf, .grid2colb-box a.html, .grid2colb-box a.doc, .grid2colb-box a.docs, .grid2colb-box a.codeqa, .grid2colb-box a.samplecode, .grid2colb-box a.qt, .grid2colb-box a.ical, .grid2colb-box a.dmg, .grid2colb-box a.zip, .grid2colb-box a.keynote, .grid2colb-box a.audio, .grid2colb-box a.podcast, .grid2colb-box a.video, .grid2colb-box a.status, .grid2colb-box p.status { padding-left:1.8em; }
+a.rss { display:block; width:27px; height:15px; text-indent:-9999px; outline:none; -moz-outline:none; background:url(https://devimages.apple.com.edgekey.net/assets/elements/icons/rss.png) no-repeat; }
+.boxheader a.rss { float:right; margin:.2em -8px -5px 0; }

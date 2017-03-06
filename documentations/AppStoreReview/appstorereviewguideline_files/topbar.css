@@ -1,0 +1,54 @@
+/* Topbar ----------------------------------------------------------------------------------------------------------------------- */
+.topbar { z-index:1; }
+.topbar .topbar-select-container { z-index:2; cursor:pointer; }
+.topbar .topbar-select { float:right; padding-left:16px; padding-right:16px; height:20px; font-size:11px; color:#333; text-shadow:0px 1px 1px #eaeaea; text-decoration:none; }
+.topbar .topbar-select span { padding-right:12px; background:url('https://devimages.apple.com.edgekey.net/assets/core/elements/topbar/dropdown_arrow_small.png') center right no-repeat; }
+.topbar-select-dropdown { right:54px; top:34px; width:197px; }
+.topbar-dropdown-options a { display:block; width:185px; height:33px; color:#333; }
+.select-dropdown { position:absolute; font-size:12px; border:1px solid #DCDCDC; background:#fff; -webkit-box-shadow:#919191 2px 3px 2px, #ababab -2px 0px 2px; -moz-border-shadow:#919191 2px 3px 2px, #ababab -2px 0px 2px; box-shadow:#919191 2px 3px 2px, #ababab -2px 0px 2px; }
+.select-dropdown a { display:block; margin-left:-1px; padding-left:14px; height:33px; color:#333; line-height:32px; }
+.select-dropdown a:hover { cursor:pointer; font-weight:bold; color:#fff; text-shadow:0px 1px 1px #333; background-repeat:repeat-x;
+	background-image: -webkit-linear-gradient(top, #08c, #2a5b9b);
+	background-image:    -moz-linear-gradient(top, #08c, #2a5b9b);
+	background-image:         linear-gradient(top, #08c, #2a5b9b);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#08c', endColorstr='#2a5b9b');
+}
+.select-dropdown a.first-option { border-radius:4px 4px 0 0; -webkit-border-radius:4px 4px 0 0; -moz-border-radius:4px 4px 0 0; -o-border-radius:4px 4px 0 0; -khtml-border-radius:4px 4px 0 0; }
+.select-dropdown a.last-option { border-radius:0 0 4px 4px; -webkit-border-radius:0 0 4px 4px; -moz-border-radius:0 0 4px 4px; -o-border-radius:0 0 4px 4px; -khtml-border-radius:0 0 4px 4px; }
+
+.topbar { position:relative; z-index:1; height:33px; padding:12px 0 0; border-radius:4px 4px 0 0; -webkit-border-radius:4px 4px 0 0; -moz-border-radius:4px 4px 0 0; -o-border-radius:4px 4px 0 0; -khtml-border-radius:4px 4px 0 0; border-bottom:1px solid #aaa;
+	background-image: -webkit-linear-gradient(top, #fff, #e8e8e8);
+	background-image:    -moz-linear-gradient(top, #fff, #e8e8e8);
+	background-image:         linear-gradient(top, #fff, #e8e8e8);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e8e8e8')
+}
+.topbar.standard h1,
+.topbar.standard h1 a { margin:0 auto; text-align:center; color:#666; font-size:20px; font-weight:normal; line-height:21px; text-shadow: 0px 1px 1px #fff; text-indent:0; text-decoration:none; }
+.topbar.standard .topbar-user { position:absolute; z-index:2; top:17px; right:20px; font-size:11px; font-weight:bold; line-height:13px; text-align:right; }
+.topbar.standard .topbar-user a,
+.topbar.standard .topbar-user span { color:#666; display:block; float:right; }
+.topbar.standard .topbar-user a:hover { color:#08c; }
+.topbar.standard .topbar-user a.user { padding-right:8px; width:240px; }
+.topbar.standard .topbar-user a.sign-out { padding-left:8px; white-space:nowrap; }
+
+
+/* Tooltip ----------------------------------------------------------------------------------------------------------------------- */
+.tooltip { position:absolute; z-index:10; }
+.tooltip .content-wrapper { float:left; }
+.tooltip .top { height:30px; }
+.tooltip.top-pointer .top.edge { background:url('https://devimages.apple.com.edgekey.net/assets/core/elements/tooltips/tooltip_pointer_edge.png') 50%  0 no-repeat; margin-top:-16px; }
+
+.topbar-select-container { position:absolute; top:12px; right:17px; }
+.topbar-select-container .topbar-select:hover,
+ 	.topbar-select-container .topbar-select.active { background-color:#ebebeb; border-radius:4px; }
+#topbar-dropdown-tooltip { position:absolute; top:33px; right:1px; margin-left:auto; margin-right:0px; width:160px; }
+#topbar-dropdown-tooltip .tooltip-content { padding:10px 0; border-radius:7px; background:#fff; box-shadow:0 4px 15px 4px #888; }
+#topbar-dropdown-tooltip .content-wrapper { float:none; }
+#topbar-dropdown-tooltip .top.edge { position:relative; top:8px; margin-top:-24px; margin-left:100px; background-image:url(https://devimages.apple.com.edgekey.net/assets/core/elements/tooltips/tooltip_pointer.png) !important; }
+#topbar-dropdown-tooltip .topbar-dropdown-options a { position:relative; z-index:5; margin-left:0; padding-left:16px; width:144px; height:24px; display:block; color:#333; font-size:12px; line-height:24px;  background-color:#fff; white-space:nowrap; }
+#topbar-dropdown-tooltip .topbar-dropdown-options a:hover { cursor:pointer; font-weight:bold; text-decoration:none; color:#fff; text-shadow:0px 1px 1px #333; background-repeat:repeat-x;
+	background-image: -webkit-linear-gradient(top, #08c, #08c); 
+    background-image:    -moz-linear-gradient(top, #08c, #08c);
+    background-image:         linear-gradient(top, #08c, #08c);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0088cc', endColorstr='#0088cc');
+}

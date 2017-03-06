@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>iOS Human Interface Guidelines: iOS App Anatomy</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.1.15.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.1.15.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="003a3034" />
+<meta id="j-version" name="j-version" content="1.1.5" />
+<meta id="build" name="build" content="bcf073e0579478458b78c3b3068a2133" />
+<meta id="book-project" name="book-project" content="MobileHIG" />
+<meta id="document-version" name="document-version" content="8.3.1" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40006556" />
+<meta id="book-title" name="book-title" content="iOS Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2014-03-10" />
+<meta id="description" name="description" content="Provides guidelines for designing the user interface of an iOS app." />
+<meta id="IndexTitle" name="IndexTitle" content="" />
+
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name = "viewport" content = "width = device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+      <a name="//apple_ref/doc/uid/TP40006556" title="iOS Human Interface Guidelines"></a>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+      <a href="../../../../navigation/">iOS Developer Library
+    </a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="../../../../Resources/1072/Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="https://developer.apple.com">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">iOS Human Interface Guidelines</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+
+    <span class="download-text hideInXcode">
+      <a href="https://itunes.apple.com/us/book/ios-human-interface-guidelines/id877942287?mt=11">iBooks</a>
+    </span>
+
+
+
+    <img id="shortstack" src="../../../../Resources/1072/Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+    <ul class="nav-parts">
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH2-SW1" class="part-name">UI 디자인 기본
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="#//apple_ref/doc/uid/TP40006556-CH66-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH66-SW1">iOS를 위한 디자인</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Anatomy.html#//apple_ref/doc/uid/TP40006556-CH24-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH24-SW1">iOS 앱 해부</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LayoutandAppearance.html#//apple_ref/doc/uid/TP40006556-CH54-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH54-SW1">적응과 레이아웃</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="StartingStopping.html#//apple_ref/doc/uid/TP40006556-CH52-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH52-SW1">시작과 종료</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Navigation.html#//apple_ref/doc/uid/TP40006556-CH53-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH53-SW1">네비게이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Modal.html#//apple_ref/doc/uid/TP40006556-CH64-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH64-SW1">모달 컨텍스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InteractivityInput.html#//apple_ref/doc/uid/TP40006556-CH55-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH55-SW1">상호작용과 피드백</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Animation.html#//apple_ref/doc/uid/TP40006556-CH57-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH57-SW1">애니메이션</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Branding.html#//apple_ref/doc/uid/TP40006556-CH60-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH60-SW1">상표붙이기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ColorImagesText.html#//apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">컬러와 타이포그래피</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Iconography.html#//apple_ref/doc/uid/TP40006556-CH59-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH59-SW1">아이콘과 그래픽스</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="FeedbackCommunication.html#//apple_ref/doc/uid/TP40006556-CH56-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH56-SW1">용어와 워딩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Integration.html#//apple_ref/doc/uid/TP40006556-CH61-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH61-SW1">iOS와 융합하기</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH5-SW1" class="part-name">디자인 전략
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Principles.html#//apple_ref/doc/uid/TP40006556-CH4-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH4-SW1">디자인 원칙들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Process.html#//apple_ref/doc/uid/TP40006556-CH6-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH6-SW1">컨셉트에서 프러덕트까지</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="DesktopToiOS.html#//apple_ref/doc/uid/TP40006556-CH51-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH51-SW1">케이스 스터디: 데스트탑에서 iOS로</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH31-SW1" class="part-name">iOS 기술
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="AppExtensions.html#//apple_ref/doc/uid/TP40006556-CH67-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH67-SW1">앱 확장</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NotificationCenter.html#//apple_ref/doc/uid/TP40006556-CH39-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH39-SW1">알림 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Multitasking.html#//apple_ref/doc/uid/TP40006556-CH38-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH38-SW1">멀티테스킹</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="SocialMedia.html#//apple_ref/doc/uid/TP40006556-CH34-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH34-SW1">소셜 미디어</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iCloud.html#//apple_ref/doc/uid/TP40006556-CH35-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH35-SW1">iCloud</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="HealthKit.html#//apple_ref/doc/uid/TP40006556-CH68-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH68-SW1">헬스킷</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Passbook.html#//apple_ref/doc/uid/TP40006556-CH33-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH33-SW1">패스북</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ApplePay.html#//apple_ref/doc/uid/TP40006556-CH69-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH69-SW1">애플 페이</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="InAppPurchase.html#//apple_ref/doc/uid/TP40006556-CH36-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH36-SW1">앱-내 구매</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="GameCenter.html#//apple_ref/doc/uid/TP40006556-CH37-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH37-SW1">게임 센터</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="iAdRichMediaAds.html#//apple_ref/doc/uid/TP40006556-CH41-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH41-SW1">iAd Rich Media Ads</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Printing.html#//apple_ref/doc/uid/TP40006556-CH40-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH40-SW1">에어프린트</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LocationServices.html#//apple_ref/doc/uid/TP40006556-CH42-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH42-SW1">사용자 데이터에 접근하기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="QuickLook.html#//apple_ref/doc/uid/TP40006556-CH43-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH43-SW1">퀵 룩</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Sound.html#//apple_ref/doc/uid/TP40006556-CH44-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH44-SW1">사운드</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="VoiceOverAccessibility.html#//apple_ref/doc/uid/TP40006556-CH45-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH45-SW1">보이스오버</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Routing.html#//apple_ref/doc/uid/TP40006556-CH32-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH32-SW1">길 찾기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="EditMenu.html#//apple_ref/doc/uid/TP40006556-CH46-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH46-SW1">편집 메뉴</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="UndoRedo.html#//apple_ref/doc/uid/TP40006556-CH47-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH47-SW1">언두와 리두</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="KeyboardInputView.html#//apple_ref/doc/uid/TP40006556-CH48-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH48-SW1">키보드와 입력 뷰들</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH11-SW1" class="part-name">UI 요소
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="Bars.html#//apple_ref/doc/uid/TP40006556-CH12-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH12-SW1">바</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ContentViews.html#//apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">콘텐트 뷰</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Controls.html#//apple_ref/doc/uid/TP40006556-CH15-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW1">컨트롤</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="Alerts.html#//apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">임시 뷰</a>
+              </li>
+          </ul>
+        <li data-id="//apple_ref/doc/uid/TP40006556-CH17-SW1" class="part-name">아이콘과 이미지 디자인
+          <ul class="nav-chapters">
+              <li class="nav-chapter">
+                <a href="IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH27-SW1">아이콘과 이미지의 크기</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="AppIcons.html#//apple_ref/doc/uid/TP40006556-CH19-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH19-SW1">앱 아이콘</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="LaunchImages.html#//apple_ref/doc/uid/TP40006556-CH22-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH22-SW1">런치 이미지들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="BarIcons.html#//apple_ref/doc/uid/TP40006556-CH21-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH21-SW1">바 버튼 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="NewsstandIcons.html#//apple_ref/doc/uid/TP40006556-CH28-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH28-SW1">뉴스스탠드 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="WebClipIcons.html#//apple_ref/doc/uid/TP40006556-CH29-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH29-SW1">웹 클립 아이콘들</a>
+              </li>
+              <li class="nav-chapter">
+                <a href="ResizableImages.html#//apple_ref/doc/uid/TP40006556-CH30-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH30-SW1">크기 조정 가능한 이미지 만들기</a>
+              </li>
+          </ul>
+      </li>
+    </ul>
+</nav>
+      <article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW1"></a>
+  <a name="//apple_ref/doc/uid/TP40006556-CH15"></a>
+  <h2 class='chapter-name chapter-name-short'>Controls</h2>
+    <section id="mini_toc" class="hideInXcode" role="navigation">
+	<div id="mini_toc_button">
+  	<p>On This Page</p>
+  </div>
+  <ul class="list-bullet">
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW2">
+	  				Activity Indicator
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW144">
+	  				Contact Add Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW3">
+	  				Date Picker
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW4">
+	  				Detail Disclosure Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW5">
+	  				Info Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW22">
+	  				Label
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW44">
+	  				Network Activity Indicator
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW6">
+	  				Page Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW23">
+	  				Picker
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW7">
+	  				Progress View
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW131">
+	  				Refresh Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW8">
+	  				Rounded Rectangle Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW27">
+	  				Segmented Control
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW57">
+	  				Slider
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW116">
+	  				Stepper
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW14">
+	  				Switch
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW10">
+	  				System Button
+	  			</a>
+  			</p>
+  		</li>
+  		<li class="item">
+  			<p class="para">
+	  			<a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW9">
+	  				Text Field
+	  			</a>
+  			</p>
+  		</li>
+	</ul>
+</section>
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW2"></a>
+  <h3 class="section-name" tabindex="0">액티비티 인디케이터</h3>
+  <p class="para">
+  <strong>액티비티 인디케이터</strong>는 테스크나 프로세스가 진행중이라는 것을 보여준다. (아래의 텍스트 레이블과 함께 있는 것)
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/activity_indicator_2x.png" alt="image: ../Art/activity_indicator_2x.png" width="224" height="74" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW11"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIActivityIndicatorView_Class/Reference/UIActivityIndicatorView.html#/apple_ref/doc/uid/TP40006830" target="_self">UIActivityIndicatorView 클래스 레퍼런스</a></em>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  액티비티 인디케이터는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  테스크가 진행 중일 때 회전하며 테스크 완료시 사라진다.
+</p>
+</li><li class="item"><p class="para">
+  사용자 인터렉션을 허용하지 않는다.
+</p>
+</li>
+</ul><p class="para">
+  액티비티 인디케이터는 툴바 또는 메인 뷰에서 처리가 일어나고 있다는 것을, 언제 종료될지에 대한 제안 없이 보여준다.
+</p><p class="para">
+  <strong class="inline-head">멈춰있는 액티비티 인디케이터를 디스플레이 하지 마라.</strong> 사용자들은 정지한 액티비티 인디케이터를 멈춰버린 프로세스와 연관지어 생각한다.
+</p><p class="para">
+  <strong class="inline-head">액티비티 인디케이터를 그들의 테스크나 프로세스가 멈추지 않았다고 안심시키기 위해 사용하라. </strong> 가끔은 언제 처리가 끝날지를 알려주는 것보다 그냥 사용자를 안심시키는 게 더 중요하다.
+</p><p class="para">
+  <strong class="inline-head">액티비티 인디케이터를 커스터마이즈해서 들어가는 뷰와 어울리게 하라.</strong> 가능하다면, 액티비티 인디케이터의 크기와 컬러를 들어가는 뷰와 맞춰라.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW144"></a>
+  <h3 class="section-name" tabindex="0">연락처 추가 버튼</h3>
+  <p class="para">
+  <strong>연락처 추가 버튼</strong>은 사용자에게 존재하는 연락처를 텍스트 필드 또는 다른 텍스트 기반의 뷰에 더하도록 한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/contact_add_7_2x.png" alt="image: ../Art/contact_add_7_2x.png" width="36" height="36" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW12"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  연락처 추가 버튼은 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  사용자의 연락처 리스트를 디스플레이 한다
+</p>
+</li><li class="item"><p class="para">
+  연락처 추가 버튼을 포함하고 있는 뷰에 연락처를 더하도록 돕는다.
+</p>
+</li>
+</ul><p class="para">
+  키보드를 사용하지 않고 연락처에 접근하는 손 쉬운 방법을 사용자에게 제공하기 위해 연락처 추가 버튼을 사용한다. 예를 들어, Mail 작성 뷰에서 To 필드에 수신자의 이름을 타이핑하는 대신에 연락처 추가 버튼을 탭 하면 된다.
+</p><p class="para">
+  연락처 추가 버튼은 연락처 정보를 타이핑하는 것에 대한 대안이므로, 키보드 입력을 받지 않는 뷰에는 적당하지 않다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW3"></a>
+  <h3 class="section-name" tabindex="0">날짜 피커</h3>
+  <p class="para">
+  <strong>날짜 피커</strong>는 연, 일, 시, 분 과 같은, 날짜와 시간의 컴포넌트를 디스플레이 한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/date_picker_2x.png" alt="image: ../Art/date_picker_2x.png" width="224" height="125" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW13"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIDatePicker.html#/apple_ref/doc/uid/TP40012857-UIDatePicker" target="_self">“Date Pickers”</a>.
+    를 보라.</p>
+
+  </aside>
+</div><p class="para">
+  날짜 피커는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  최대 네개의 독립된 휠을 디스플레이하며, 각각은 월 또는 시 같은 단일 범주의 값을 디스플레이 한다.
+</p>
+</li><li class="item"><p class="para">
+  현재 값을 어두운 텍스트로 뷰의 중간에 표시한다.
+</p>
+</li><li class="item"><p class="para">
+  사이즈 조정 불가 (날짜 피커의 크기는 아이폰 키보드 크기와 동일)
+</p>
+</li><li class="item"><p class="para">
+  네가지 모드를 가지고 있으며, 각각은 다른 값의 세트를 포함하는 휠을 디스플레이 한다.
+</p>
+<ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">날짜와 시간.</strong> (디폴트 모드) 칼렌더 날짜, 시간, 분 값을 가지며 AM/PM 지정을 위한 부가적인 휠도 있다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">시간.</strong> 시간 모드는 시, 분값을 위한 휠을 디스플레이 하며, AM/PM 지정을 위한 부가적인 휠도 있다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">날짜.</strong> 월, 일, 그리고 년 값을 디스플레이하는 휠을 가진다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">카운트다운 타이머.</strong> 시와 분을 위한 휠을 가진다. 최대 23시간 59분까지 카운트 다운의 총 기간을 설정할 수 있다.
+</p>
+</li>
+</ul>
+</li>
+</ul><p class="para">
+  날짜 피커, 년, 월,일의 다중 파트로 구성된, 를 이용해서 사용자가 - 타이프 하지 않고- 날짜 또는 시 값을 선택할 수 있도록 한다.
+</p><p class="para">
+  <strong class="inline-head">가능한 한, 날짜 피커를 콘텐트와 한 줄에 배치하라.</strong> 날짜 피커를 사용하기 위해 사용자가 다른 뷰로 네비게이션하는 것을 피하는 것이 좋다. 아이패드에서, 날짜 피커는 팝오버로 또는 인라인으로 나타날 수도 있고 한 줄로 나타날 수도 있다.
+</p><p class="para">
+  <strong class="inline-head">앱에서 의미적으로 문제가 없다면, 분 휠의 간격을 변경하라.</strong> 기본적으로, 분 휠은 60개의 값(0~59)을 디스플레이 한다. 보다 성근 선택을 디스플레이할 필요가 있다면, 휠을 60으로 떨어지는 보다 큰 분 간격으로 설정할 수 있다. 예를 들어, ¼ 시간 간격으로 0.15.30.45를 디스플레이 할 수 있다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW4"></a>
+  <h3 class="section-name" tabindex="0">디테일 디스클로저 버튼</h3>
+  <p class="para">
+  <strong>디테일 디스클로저 버튼</strong>은 아이템에 연관된 부가적인 상세함 또는 기능을 드러낸다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/detail_disclosure_2x.png" alt="image: ../Art/detail_disclosure_2x.png" width="22" height="22" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW15"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UITableViewCell_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006938" target="_self">UITableViewCell 클래스 레퍼런스</a></em> 와 <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  디테일 티스클로저 버튼은 특정 아이템에 연관된 부가적인 정보나 기능을 가지는 별도의 뷰를 드러낸다.
+</p><p class="para">
+ 디테일 티스클로저 버튼이 테이블 뷰 로우에 나타나면, 로우의 다른 영역을 탭하는 것은 디테일 티스클로저 버튼을 동작시키지 못한다; 그 대신, 그것은 로우 아이템을 선택하거나 앱이 정의한 동작을 할 것이다.
+</p><p class="para">
+  전형적으로, 디테일 티스클로저 버튼을 테이블 뷰에 사용해서 리스트 아이템에 대한 보다 자세한 정보나 기능을 보는 법을 제공한다. 그러나, 이 요소를 다른 타입의 뷰에서도 사용해서 그 뷰 안의 아이템에 연관된 정보나 기능을 보여주는 데 사용하라.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW5"></a>
+  <h3 class="section-name" tabindex="0">정보 버튼</h3>
+  <p class="para">
+  <strong>정보 버튼</strong>은 앱에 대한 상세한 설정 정보를 드러내며, 가끔은 현재의 뷰 뒤에 있다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/info_button_2x.png" alt="image: ../Art/info_button_2x.png" width="22" height="22" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW16"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  iOS는 두 종류의 정보 버튼 스타일을 가지고 있다. 어두운 색상의 버튼은 밝은 콘텐트 위에서 보기에 좋고, 밝은 색상의 버튼은 어두운 콘텐트 위에서 보기에 좋다.
+</p><p class="para">
+  정보 버튼을 이용해서 상세 설정 또는 앱에 대한 부가설정을 드러낸다. 정보 버튼의 스타일을 당신 앱의 UI와 가장 잘 어울리는 것으로 사용할 수 있다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW22"></a>
+  <h3 class="section-name" tabindex="0">레이블</h3>
+  <p class="para">
+  <strong>레이블</strong>은 스태틱한 문자를 디스플레이 한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/labels_2x.png" alt="image: ../Art/labels_2x.png" width="180" height="49" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW17"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UILabel_Class/Reference/UILabel.html#/apple_ref/doc/uid/TP40006797" target="_self">UILabel 클래스 레퍼런스</a></em>.
+    </p>
+
+  </aside>
+</div><p class="para">
+  레이블은 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  스태틱 텍스트를 얼마든지 디스플레이 할 수 있다.
+</p>
+</li><li class="item"><p class="para">
+  사용자 인터렉션 수신은 하지 않지만, 텍스트 복사를 위해서는 가능하다.
+</p>
+</li>
+</ul><p class="para">
+  레이블을 이용해 당신 UI의 일부를 설명하거나 이름붙이고, 사용자에게 짧은 메세지를 제공한다. 레이블은 상대적으로 적은 양의 텍스트를 디스플레이 하기에 최적으로 맞춰져 있다.
+</p><p class="para">
+  <strong class="inline-head">레이블을 읽을 수 있도록 주의를 기울여라.</strong> 레이블에 디스플레이 할 텍스트를 얻기 위해 다이나믹 타입을 지원하고  <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIFont_Class/Reference/Reference.html#/apple_ref/occ/cl/UIFont">UIFont</a></code>의 <code class="code-voice">preferredFontForTextStyle</code> 메소드를 사용하는 것은 좋은 생각이다. 커스텀 서체를 사용하기로 마음 먹었다면, 예쁜 레터링이나 화사한 컬러를 위해 명료함을 희생시키지 마라. (<span class="x-name"><a href="ColorImagesText.html#/apple_ref/doc/uid/TP40006556-CH58-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH58-SW1">“Color and Typography”페이지 51</a></span>을 보라. 다이나믹 타입에 대한 정보는 <em class="u-book"><a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#/apple_ref/doc/uid/TP40009542" target="">Text Programming Guide for iOS</a></em> 문서의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/CustomTextProcessing/CustomTextProcessing.html#/apple_ref/doc/uid/TP40009542-CH4-SW65" target="_self">“Text Styles”</a>를 보라.)
+
+
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW44"></a>
+  <h3 class="section-name" tabindex="0">네트워크 액티비티 인디케이터</h3>
+  <p class="para">
+  <strong>네트워크 액티비티 인디케이터</strong>는 스테이터스 바에 나타나서 네트워크 활동이 일어나고 있음을 보여준다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/network_activity_indicator_7_2x.png" alt="image: ../Art/network_activity_indicator_7_2x.png" width="17" height="17" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW18"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><code class="code-voice">UIApplication</code>의 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIApplication_Class/Reference/Reference.html#/apple_ref/occ/instm/UIApplication/isNetworkActivityIndicatorVisible">networkActivityIndicatorVisible</a></code> 메소드를 이용해 인디케이터가 보일지를 결정하라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  네트워크 액티비티 인디케이터는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  네트워크 활동이 진행중일 때 스테이터스 바에서 회전하며 네트워크 활동이 멈주면 사라진다.
+</p>
+</li><li class="item"><p class="para">
+  사용자 인터렉션을 허용하지 않는다.
+</p>
+</li>
+</ul><p class="para">
+  앱이 몇 초 이상 네트워크에 접근할 때는 네트워크 액티비티 인디케이터를 디스플레이해서 피드백을 제공하라. 그보다 빨리 동작이 끝난다면, 사용자가 그것을 인지하기도 전에 사라지게 될 것이므로 네트워크 액티비티 인디케이터를 보여줄 필요가 없다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW6"></a>
+  <h3 class="section-name" tabindex="0">페이지 컨트롤</h3>
+  <p class="para">
+  <strong>페이지 컨트롤</strong>은 얼마나 많은 뷰가 열려있는지와 현재 어떤 것이 보이고 있는지를 지시한다. (Weather 앱에서 보이는 것이 아래에 있다)
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/page_control_weather_2x.png" alt="image: ../Art/page_control_weather_2x.png" width="111" height="30" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW19"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIPageControl.html#/apple_ref/doc/uid/TP40012857-UIPageControl" target="_self">“Page Controls”</a>을 참고하라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  페이지 컨트롤은 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  앱에서 현재 열려있는 개별 뷰마다 점 하나를 디스플레이 한다. (왼쪽에서 오른쪽으로, 점은 뷰가 열려있는 순서를 나타낸다.)
+</p>
+</li><li class="item"><p class="para">
+  기본적으로, 불투명한 점을 사용해 현재 보이는 뷰를 나타내고 반투명한 점으로 다른 모든 뷰들을 나타낸다.
+</p>
+</li><li class="item"><p class="para">
+  비순차적으로 뷰를 보는 방식을 지원하지 않는다.
+</p>
+</li><li class="item"><p class="para">
+  많은 뷰가 열려있다고 해서 압축되거나 찌그러지지 않는다; 뷰의 크기보다 더 많은 점을 디스플레이 하려고 하면, 점들은 잘릴 것이다.
+</p>
+</li><li class="item"><p class="para">
+  Doesn’t enable navigation between views by default; you must implement view-to-view navigation and update the page control’s state appropriately
+</p>
+</li>
+</ul><p class="para">
+  앱의 각각의 뷰가 다른 모든 뷰들과 동류일 때 페이지 컨트롤을 이용하라.
+</p><p class="para">
+  <strong class="inline-head">앱의 정보를 뷰의 계층을 이용해 표시하는 경우 페이지 컨트롤을 사용하지 마라.</strong> 페이지 컨트롤은 사용자들이 특정 경로를 통해 되돌아 가는 것을 돕지 않으므로, 계층적인 네비게이션을 가능하게 하지 않는다.
+</p><p class="para">
+  <strong class="inline-head">Avoid displaying too many dots.</strong>  More than about 10 dots are hard for users to count at a glance and more than about 20 open views are time consuming to visit in sequence. If users can open more than about 20 peer views in your app, consider displaying the views in a different arrangement that provides more information about the views and enables nonsequential navigation.
+</p><p class="para">
+  <strong class="inline-head">페이지 컨트롤을 화면의 아래 모서리와 열린 뷰의 아래 모서리 사이에 세로 방향으로 중앙정렬 한다. </strong> 이 위치에 있으면, 페이지 컨트롤은 사용자를 가로막지 않으면서 항상 보인다. 현재 화면 방향에 대해 너무 많은 점들을 표시하지 마라. 예를 들어, 세로방향의 아이폰 화면은 20개에 달하는 점을 가질 수 있다.
+</p><p class="para">
+
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW23"></a>
+  <h3 class="section-name" tabindex="0">피커</h3>
+  <p class="para">
+  <strong>피커</strong>는 사용자가 하나를 선택할 수 있는 값의 세트를 디스플레이 한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/picker_2x.png" alt="image: ../Art/picker_2x.png" width="224" height="122" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW20"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIPickerView_Class/Reference/UIPickerView.html#/apple_ref/doc/uid/TP40006842" target="_self">UIPickerView 클래스 레퍼런스</a></em>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  피커는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  날짜 피커의 일반형 버전 (날짜 피커에 대한 정보가 필요하다면,<span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW3" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW3">날짜 피커</a></span>를 보라)
+</p>
+</li><li class="item"><p class="para">
+  하나 이상의 휠을 가지고 있으며, 각각은 값의 리스트를 가진다.
+</p>
+</li><li class="item"><p class="para">
+  뷰의 중간에 현재 값을 어두운 글자로 디스플레이 한다.
+</p>
+</li><li class="item"><p class="para">
+  크기 조정되지 않는다. (피커의 크기는 아이폰 키보드의 크기와 동일하다)
+</p>
+</li>
+</ul><p class="para">
+  피커를 이용해 사람들이 값의 세트에서 선택하는 것을 쉽게 한다.
+</p><p class="para">
+  <strong class="inline-head">일반적으로, 사용자가 세트 값에 전체적으로 익숙한 경우 피커를 사용한다.</strong> 휠이 정지해 있을 때는 많은 값들이 숨겨져 있으므로, 사용자가 그 숨겨진 값들이 어떤 값인지 예상할 수 있으면 좋다. 사용자에게 익숙하지 않은 방대한 세트의 선택지를 제공해야 하는 경우에는, 피커가 적당한 컨트롤이 아닐 수 있다.
+</p><p class="para">
+  <strong class="inline-head">가능한, 피커를 콘텐트와 한 줄에 디스플레이 하라.</strong> 사용자가 피커를 사용하기 위해 다른 뷰로 네비게이션하지 않도록 하는 게 좋다.
+</p><p class="para">
+  <strong class="inline-head">아주 많은 양의 값을 디스플레이 해야 하는 경우, 피커 대신 테이블 뷰 사용을 고려하라.</strong> 테이블 뷰의 더 큰 높이가 스크롤을 보다 빠르게 해 주기 때문이다.
+</p><p class="para">
+
+</p><p class="para">
+
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW7"></a>
+  <h3 class="section-name" tabindex="0">프로그레스 뷰</h3>
+  <p class="para">
+  <strong>프로그레스 뷰</strong>는 알려진 기간을 가지는 테스크나 프로세스의 진행단계를 보여준다.(아래는 Mails 툴바에서 보인 것)
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/progress_view_2x.png" alt="image: ../Art/progress_view_2x.png" width="223" height="40" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW21"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIProgressView_Class/Reference/Reference.html#/apple_ref/doc/uid/TP40006782" target="_self">UIProgressView 클래스 레퍼런스</a></em>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+
+</p><p class="para">
+  프로그레스 뷰는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  테스크나 프로세스가 진행되는 것을 왼쪽에서 오른쪽으로 채우는 트랙으로 구성되어 있다.
+</p>
+</li><li class="item"><p class="para">
+  사용자 인터렉션을 허용하지 않는다.
+</p>
+</li>
+</ul><p class="para">
+  iOS는 두가지 스타일의 프로그레스 뷰를 정의한다.
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">디폴트.</strong> 디폴트 스타일은 앱의 메인 콘텐트 영역에 적합한 무게를 가진다.
+</p>
+<p class="para">
+  <img class="inline-graphic" src="Art/progress_view_default_2x.png" alt="image: ../Art/progress_view_default_2x.png" width="223" height="31" />
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">바.</strong> 바 스타일은 디폴트 스타일보다 얇아서, 툴바에 적당하게 맞춰져 있다.
+</p>
+<p class="para">
+  <img class="inline-graphic" src="Art/progress_view_bar_2x.png" alt="image: ../Art/progress_view_bar_2x.png" width="223" height="31" />
+</p>
+</li>
+</ul><p class="para">
+
+</p><p class="para">
+  프로그레스 뷰는 잘-정의된 기간을 가지는 테스크에 대해 피드백을 제공하기 위해, 특히 테스크가 얼마나 걸릴지를 대략 알리는 것이 중요할 때 사용한다.
+</p><p class="para">
+  <strong class="inline-head">가능하다면, 프로그레스 뷰의 모양을 당신 앱의 스타일과 맞춰라.</strong> 프로그레스 뷰를 커스터마이즈 해서, 트랙과 필을 커스텀 틴트 또는 이미지로 지정할 수 있다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW131"></a>
+  <h3 class="section-name" tabindex="0">리프레시 컨트롤</h3>
+  <p class="para">
+  <strong>리프레시 컨트롤</strong>은 -주로 테이블 뷰에서-사용자가 시작하는 콘텐트 리프레시를 수행한다. (아래 메일박스 리스트 위에 보이는 것)
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/refresh_control_2x.png" alt="image: ../Art/refresh_control_2x.png" width="224" height="143" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW24"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><em class="u-book"><a href="../../../UIKit/Reference/UIRefreshControl_class/Reference/Reference.html#/apple_ref/doc/uid/TP40012250" target="_self">UIRefreshControl 클래스 레퍼런스</a></em>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  리프레시 컨트롤은 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  액티비티 인디케이터와 비슷하게 보인다.
+</p>
+</li><li class="item"><p class="para">
+  타이틀을 디스플레이 할 수 있다.
+</p>
+</li><li class="item"><p class="para">
+  사용자가 테이블의 위쪽에서 끌어당겨서 리프레시 액션을 시작하기 전까지는 기본적으로 숨겨져 있다.
+</p>
+</li>
+</ul><p class="para">
+  리프레시 컨트롤을, 사용자들에게 테이블이나 다른 뷰들이 그 콘텐트를 즉시 업데이트 하라고 말하는 일관된 방식을 제공하기 위해 사용하라.
+</p><p class="para">
+
+</p><p class="para">
+  <strong class="inline-head">리프레시 컨트롤을 제공했다고 해서 자동 콘텐트 업데이트 기능을 멈추지 마라.</strong> 사용자들이 <em>‘당장'</em> 업데이트를 수행하는 기능을 좋아하겠지만, 콘텐트가 자동으로 리프레시 되는 것 역시 좋아할 것이다. 모든 리프레시를 사용자에게 기대면, 리프레시 컨트롤을 알지 못하는 사용자들은 왜 당신의 앱은 정지한 데이터를 디스플레이하는지 궁금해 할 것이다. 일반적으로, 사용자들에게 즉시 콘텐트를 리프레시 하는 옵션을 주고 싶을 것이다; 모든 업데이트에 대한 책임을 사용자에게 넘기지 않을 것이다.
+</p><p class="para">
+  <strong class="inline-head">가치가 있다면 짧은 타이틀을 제공하라.</strong> 특히, 타이틀을 이용해 리프레시 컨트롤을 이용하는 방법을 설명하는 데 사용하지 말라.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW8"></a>
+  <h3 class="section-name" tabindex="0">라운디드 렉 버튼</h3>
+  <p class="para">
+  라운디드 렉 버튼은 iOS 7에서 디프리케이트 되었다, 대신 시스템 버튼 - <code class="code-voice">UIButtonTypeSystem</code>타입의 <code class="code-voice u-api"><a href="../../../UIKit/Reference/UIButton_Class/UIButton/UIButton.html#/apple_ref/occ/cl/UIButton">UIButton</a></code>을 사용하라. 가이드라인은 <span class="x-name"><a href="Controls.html#/apple_ref/doc/uid/TP40006556-CH15-SW10" data-id="//apple_ref/doc/uid/TP40006556-CH15-SW10">System Button</a></span>을 보라.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW27"></a>
+  <h3 class="section-name" tabindex="0">세그먼티드 컨트롤</h3>
+  <p class="para">
+  <strong>세그먼티드 컨트롤</strong> 다른 뷰를 디스플레이 할 수 있는 기능을 가지는 버튼 역할을 하는 세그먼트들의 직선적인 세트이다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/segmented_control_2x.png" alt="image: ../Art/segmented_control.jpg" width="224" height="33" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW25"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">세그먼티드 컨트롤을 코드로 공부하려면 <a href="../UIKitUICatalog/UISegmentedControl.html#/apple_ref/doc/uid/TP40012857-UISegmentedControl" target="_self">“Segmented Controls”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  세그먼티드 컨트롤은 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  세그먼트의 총 갯수에 기반해서 너비가 균등한, 두 개 이상의 세그먼트로 구성.
+</p>
+</li><li class="item"><p class="para">
+  텍스트나 이미지를 디스플레이 할 수 있다.
+</p>
+</li>
+</ul><p class="para">
+  세그먼티드 컨트롤을 이용해 매우 연관성이 있지만 상호 배타적인 것에 대한 선택사항을 제안하기 위해 사용하라..
+</p><p class="para">
+  <strong class="inline-head">각각의 세그먼트들이 탭 하기 쉬워야 한다.</strong> 각각의 세그먼트에 대해 44 X 44 포인트의 편안한 힛트 영역을 유지기 위해서, 세그먼트의 갯수를 제한하라. 아이폰에서, 세그먼티드 컨트롤은 다섯개 이하의 세그먼트를 가져야 한다.
+</p><p class="para">
+  <strong class="inline-head">가능한한, 각 세그먼트의 콘텐트 사이즈를 일관되게 하라. </strong> 세그먼티드 컨트롤의 모든 세그먼트들은 동일한 너비를 가진다. 콘텐트가 어떤 세그먼트는 꽉 채우고 다른 것은 그렇지 않다면 좋아보이지 않는다.
+</p><p class="para">
+  <strong class="inline-head">하나의 세그먼티드 콘트롤에 텍스트와 이미지를 섞어 넣지 마라. </strong> 세그먼티드 컨트롤은 텍스트나 이미지를 가질 수 있다. 개별 세그먼트는 텍스트 또는 이미지를 가질 수 있지만 둘 다 가져서는 안된다. 일반적으로, 하나의 세그먼티드 컨트롤에서 어떤 세그먼트에는 텍스트를 넣고, 다른 세그먼트에는 이미지를 넣는 것을 삼가라.
+
+</p><p class="para">
+  <strong class="inline-head">필요하다면, 커스터마이즈한 세그먼티드 컨트롤에서 콘텐트의 위치를 조정하라. </strong> 만약 세그먼티드 컨트롤의 배경을 커스터마이즈 했다면, 컨트롤의 콘텐트는 자동으로 중앙정렬하는 것이 여전히 보기에 좋다. 바 메트릭스 API를 이용해 세그먼티드 컨트롤 내부의 콘텐트 위치잡기를 하라. <a href="../../../UIKit/Reference/UISegmentedControl_Class/Reference/UISegmentedControl.html#/apple_ref/doc/uid/TP40006807-CH3" target="_self">UISegmentedControl</a>에 설명되어 있는 모양-커스터마이즈 API를 보라).
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW57"></a>
+  <h3 class="section-name" tabindex="0">슬라이더</h3>
+  <p class="para">
+  <strong>슬라이더</strong> 슬라이더는 허가된 값 범위안에서 사용자가 특정한 값으로 조정을 하거나 처리할 수 있도록 한다. (아래 그림은 좌우에 커스텀 이미지가 있는 것 )
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/slider_2x.png" alt="image: ../Art/slider_2x.png" width="203" height="24" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW26"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UISlider.html#/apple_ref/doc/uid/TP40012857-UISlider" target="_self">“Sliders”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  슬라이더는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  수평 트랙과 썸(사용자가 컨트롤할 수 있는 원형 컨트롤)으로 구성.
+</p>
+</li><li class="item"><p class="para">
+  좌우에 의미를 전달할 수 있는 부가적인 이미지를 포함할 수 있음.
+</p>
+</li><li class="item"><p class="para">
+  최소값과 썸 사이의 트랙 영역을 채움
+</p>
+</li>
+</ul><p class="para">
+  슬라이더를 사용자가 선택 가능한 범위 내에서 값을 미세하게 조정하거나 현재 프로세스의 동작을 선택할 수 있도록 한다.
+</p><p class="para">
+  <strong class="inline-head">가치가 있다면, 슬라이더의 커스텀 모양을 만들어라.</strong> 예를 들어, :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  썸의 모양을 정의해서, 사용자들이 그 슬라이더가 동작중인지 한 눈에 흘낏 볼 수 있도록 한다.
+</p>
+</li><li class="item"><p class="para">
+  슬라이더의 양쪽 끝에 이미지를 제공해서 그 슬라이더가 뭘 하는 건지 이해할 수 있도록 한다.
+</p>
+<p class="para">
+  전형적으로, 커스텀 이미지들은 슬라이더가 컨트롤하는 값 범위의 최소와 최대값에 해당한다. 예를 들어, 이미지 크기를 제어하는 슬라이더의 경우, 최소쪽 끝에 아주 작은 이미지를, 아주 큰 이미지를 최대쪽 끝에 디스플레이 한다.
+</p>
+</li><li class="item"><p class="para">
+  어떤 쪽의 썸인지와 어떤 상태의 컨트롤이 있는지에 따라, 트랙에 대해 다른 모양을 정의하라.
+</p>
+</li>
+</ul><p class="para">
+  <strong class="inline-head">슬라이더를 이용해 볼륨 컨트롤을 디스플레이 하지 말라.</strong> 음량 슬라이더를 디스플레이 해야 할 필요가 있다면, <code class="code-voice u-api"><a href="../../../MediaPlayer/Reference/MPVolumeView_Class/Reference/Reference.html#/apple_ref/occ/cl/MPVolumeView">MPVolumeView</a></code> 클래스를 이용하면 사용가능한, 시스템이 제공하는 볼륨 슬라이더를 사용하라. 현재 액티브한 오디오 아웃풋 디바이스가 볼륨 컨트롤을 지원하지 않는다면, 볼륨 슬라이더는 적당한 장치 이름으로 대체될 것이다.
+
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW116"></a>
+  <h3 class="section-name" tabindex="0">스테퍼</h3>
+  <p class="para">
+  <strong>스테퍼</strong>는 일정량 만큼 값을 늘리거나 줄인다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/stepper_2x.png" alt="image: ../Art/stepper.jpg" width="65" height="20" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW28"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UIStepper.html#/apple_ref/doc/uid/TP40012857-UIStepper" target="_self">“Steppers”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  스테퍼는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  두 세그먼트를 가지는 컨트롤이다. 하나의 세그먼트는 더하기 심볼을, 다른 세그먼트는 빼기 심볼을 기본적으로 표시하고 있다.
+</p>
+</li><li class="item"><p class="para">
+  커스텀 이미지를 지원한다.
+</p>
+</li><li class="item"><p class="para">
+  사용자가 바꾸는 값을 디스플레이 하지는 않는다.
+</p>
+</li>
+</ul><p class="para">
+  사용자가 조그만 값 조정을 해야 하는 경우, 스테퍼를 사용하라.
+</p><p class="para">
+  <strong class="inline-head">사용자가 값에 큰 변경을 할 것 같으면 스테퍼 사용을 하지 마라.</strong> 스테퍼를 사용해 프린터 옵션 액션 시트에서 사본의 수를 설정하는 것은 의미가 통한다 왜냐하면, 사용자가 이 값을 크게 바꾸는 경우는 거의 없기 때문이다. 그 반면에, 페이지 범위 선택에 스테퍼를 사용하는 것은 의미적으로 맞지 않다.왜냐하면 합리적인 페이지 범위인 경우에도 많은 탭을 필요로 하기 때문이다.
+</p><p class="para">
+  <strong class="inline-head">스테퍼가 영향을 미치는 값을 명백하게 지정하라.</strong> 스테퍼는 값을 표시하지 않기 때문에, 사용자가 스테퍼를 사용해 어떤 값을 변경시키는지를 확실하게 할 필요가 있다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW14"></a>
+  <h3 class="section-name" tabindex="0">스위치</h3>
+  <p class="para">
+  <strong>스위치</strong>는 두 개의 상호 배타적인 선택 또는 상태를 나타낸다.
+</p><section class="rec-container">
+	<div class="blurb">
+
+	</div>
+
+	<section class="left-container">
+			<p class="container-label on">On</p>
+		<img class="inline-graphic" src="Art/switch_on_2x.png" alt="image: ../Art/switch_on_2x.png" width="39" height="24" />
+	</section>
+		<section class="right-container">
+				<p class="container-label off">Off</p>
+			<img class="inline-graphic" src="Art/switch_off_2x.png" alt="image: ../Art/switch_off_2x.png" width="39" height="24" />
+		</section>
+</section><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW29"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UISwitch.html#/apple_ref/doc/uid/TP40012857-UISwitch" target="_self">“Switches”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  스위치는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  아이템의 이진 상태를 나타낸다.
+</p>
+</li><li class="item"><p class="para">
+  테이블 뷰에서만 사용된다.
+</p>
+</li>
+</ul><p class="para">
+  테이블 로우에서 스위치를 이용해 사용자들에게, 아이템의 상태를 관리하는 yes/no 또는 on/off 같은 두 선택지 중 하나를 지정할 수 있는 방법을 제공한다.
+</p><p class="para">
+  <strong>테이블 로우에서 스위치를 이용해 사용자들에게, 아이템의 상태를 관리하는 yes/no 또는 on/off 같은 두 선택지 중 하나를 지정할 수 있는 방법을 제공한다.</strong> 사용자가 만드는 선택에 따라, 새로운 리스트 아이템이 나타나거나 사라지고, 리스트 아이템이 액티브/인액티브가 된다.
+</p><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW10"></a>
+  <h3 class="section-name" tabindex="0">시스템 버튼</h3>
+  <p class="para">
+  시스템 버튼은 앱-지정 액션을 수행한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/system_button_2x.png" alt="image: ../Art/system_button_2x.png" width="43" height="11" />
+</figure><p class="para">
+
+</p><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW30"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para">iOS 7에서, <code class="code-voice">UIButtonTypeRoundedRect</code>이 <code class="code-voice">UIButtonTypeSystem</code>으로 재정의 되었다.  iOS 6에서 라운디드 렉 버튼을 사용하는 앱들은 iOS 7에 링크되었을 때 자동적으로 시스템 버튼 모양을 가지게 된다. </p>
+    <p class="para">자세한 정보는 <a href="../UIKitUICatalog/UIButton.html#/apple_ref/doc/uid/TP40012857-UIButton" target="_self">“Buttons”</a>를 보라.
+</p>
+
+
+  </aside>
+</div><p class="para">
+  시스템 버튼은  :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  기본적으로 백그라운드나 경계선을 가지고 있지 않다.
+</p>
+</li><li class="item"><p class="para">
+  아이콘이나 텍스트 타이틀을 가질 수 있다.
+</p>
+</li><li class="item"><p class="para">
+  경계선이나 백그라운드 이미지 같은 커스텀 장식을 지원한다. ( 커스텀 모양을 더하려면, <code class="code-voice">UIButtonTypeCustom</code> 타입의 버튼을 이용하고 커스텀 백그라운드 이미지를 제공하라 )
+
+</p>
+</li>
+</ul><p class="para">
+  액션을 시작하기 위해 시스템 버튼을 사용하라. 시스템 버튼의 제목을 제공할 때, 다음을 따르라 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  <strong class="inline-head">동사나 동사구를 이용해 그 버튼이 수행하는 액션을 묘사하라.</strong> 액션-지정 제목은 버튼이 인터렉티브하묘 그것을 탭 했을 때 어떤 일이 일어날지에 대해 설명한다.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">제목 스타일의 대문자를 사용하라.</strong> 관사(articles), 등위 접속사, 네 글자 이하의 전치사를 제외한 모든 단어를 대문자화하라.
+</p>
+</li><li class="item"><p class="para">
+  <strong class="inline-head">타이틀을 너무 길게 만들지 마라.</strong> 지나치게 긴 텍스트는 잘리기 때문에, 사용자들이 이해하기가 어렵다.
+</p>
+</li>
+</ul><p class="para">
+
+</p><div class="two-columns">
+  <div class="left-column">
+    <img class="inline-graphic" src="Art/phone_bordered_buttons_2x.png" alt="image: ../Art/phone_bordered_buttons_2x.png" width="256" height="438" />
+  </div>
+  <div class="right-column">
+    <p class="para">
+  <strong class="inline-head">가능하다면, 콘텐트 영역에 있는 시스템 버튼에는 외곽선이나 백그라운드를 더하라.</strong> 대부분의 시간동안, 명백한 행동개시(call-to-action) 타이틀을 다듬고, 틴트를 정의하고, 컨텍스추얼 단서들을 제공함으로서 버튼에 장식을 더하는 것을 지양할 수 있었다. 그러나, 어떤 콘텐트 영역에서는 버튼에 초점을 맞추기 위해 외곽선이나 백그라운드가 있는 외형을 만드는 게 적당할 수 있다.
+</p><p class="para">
+  대부분의 시간동안, 명백한 행동개시(call-to-action) 타이틀을 다듬고, 틴트를 정의하고, 컨텍스추얼 단서들을 제공함으로서 버튼에 장식을 더하는 것을 지양할 수 있었다. 그러나, 어떤 콘텐트 영역에서는 버튼에 초점을 맞추기 위해 외곽선이나 백그라운드가 있는 외형을 만드는 게 적당할 수 있다.
+</p>
+  </div>
+</div><p class="para">
+
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW9"></a>
+  <h3 class="section-name" tabindex="0">텍스트 필드</h3>
+  <p class="para">
+  <strong>텍스트 필드</strong>는 한 줄의 사용자 입력을 받아들인다 (아래에는 목적을 설명한 플레이스 홀더 텍스트가 있는 것)
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/text_field_2x.png" alt="image: ../Art/text_field_2x.png" width="199" height="50" />
+</figure><div class="note">
+  <a name="//apple_ref/doc/uid/TP40006556-CH15-SW31"></a>
+  <aside class="aside">
+    <p class="aside-title">API Note
+    </p>
+    <p class="para"><a href="../UIKitUICatalog/UITextField.html#/apple_ref/doc/uid/TP40012857-UITextField" target="_self">“Text Fields”</a>를 보라.
+    </p>
+
+  </aside>
+</div><p class="para">
+  텍스트 필드는 :
+</p><ul class="list-bullet">
+  <li class="item"><p class="para">
+  고정 높이를 가지며 모서리가 둥글다
+</p>
+</li><li class="item"><p class="para">
+  사용자가 탭하면 자동적으로 키보드를 디스플레이 한다
+</p>
+</li><li class="item"><p class="para">
+  북 마크 버튼 같은 시스템 제공 버튼을 포함할 수 있다
+</p>
+</li><li class="item"><p class="para">
+  다중 스타일을 이용하는 텍스트를 디스플레이 할 수 있다 (<code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextView_Class/Reference/UITextView.html#/apple_ref/occ/cl/UITextView">UITextView</a></code>를 보라)
+</p>
+</li>
+</ul><p class="para">
+  텍스트 필드는 사용자에게 적은 량의 정보를 얻을 때 이용하라.
+</p><p class="para">
+  <strong class="inline-head">사용자들이 그것을 사용하는 법을 이해하는 데 도움이 된다면 텍스트 필드를 커스터마이즈 하라.</strong> 예를 들어, 텍스트 필드의 왼쪽 또는 오른쪽에 커스텀 이미지를 디스플레이 하거나 북마크 버튼 같은 시스템 제공 버튼을 더할 수 있다. 일반적으로, 텍스트 필드의 왼쪽 끝에 그 목적을 나타내고, 오른쪽 끝에 북 마크 같은 부가적인 기능의 존재를 나타낸다.
+</p><p class="para">
+  <strong class="inline-head">적당하다면 텍스트 필드의 오른쪽 끝에 Clear 버튼을 디스플레이 하라.</strong> 이 요소가 있다면, 이걸 탭하면, 그 위에 어떤 이미지를 디스플레이 하든 상관없이, 텍스트 필드의 콘텐트를 지운다.
+</p><p class="para">
+  <strong class="inline-head">그 목적을 이해하는 데 도움이 된다면, 텍스트 필드에 힌트를 디스플레이 하라. </strong> 텍스트 필드는 다른 텍스트가 필드에 없을 때, Name 또는 Address 같은 플레이스홀더를 디스플레이 할 수 있다.
+</p><p class="para">
+  <strong class="inline-head">사용자들이 입력할 것으로 예상되는 콘텐트의 타입에 따라 맞추기 위해 다른 키보드 타입을 지정하라.</strong> 예를  들어, 사용자들이 URL, PIN, 전화번호를 쉽게 입력하도록 만들고 싶을 수 있다. 그러나 Note는 사용자의 언어 설정에 따라 결정될 뿐, 입력 메소드와 레이아웃을 제어하지 않는다.
+</p><p class="para">
+  iOS는 몇 종류의 키보드 타입을 가지고 있는데, 각각은 서로 다른 입력을 위해 디자인 되어 있다. 사용가능한 키보드 타입에 대해 공부하고 싶으면, <code class="code-voice u-api"><a href="../../../UIKit/Reference/UITextInputTraits_Protocol/Reference/UITextInputTraits.html#/apple_ref/c/tdef/UIKeyboardType">UIKeyboardType</a></code> 문서를 보라. 앱에서 키보드를 관리하는 법을 배우려면 <em class="u-book"><a href="../../../iPhone/Conceptual/iPhoneOSProgrammingGuide/Introduction/Introduction.html#/apple_ref/doc/uid/TP40007072" target="">iOS App Programming Guide</a></em>의 <a href="../../../StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#/apple_ref/doc/uid/TP40009542-CH5" target="_self">“Managing the Keyboard”</a>를 읽으라.
+</p><p class="para">
+
+</p>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="ContentViews.html#/apple_ref/doc/uid/TP40006556-CH13-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH13-SW1">Content Views</a></p>
+  			<p class="next-link"><a href="Alerts.html#/apple_ref/doc/uid/TP40006556-CH14-SW1" data-id="//apple_ref/doc/uid/TP40006556-CH14-SW1">Temporary Views</a></p>
+  <p class="copyright">Copyright &#x00a9; 2014 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  Updated: 2014-03-10
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper hideInXcode">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.1.15.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+<script type="text/javascript" src="../../../../../webstats/pagetracker.js"></script>
+<script type="text/javascript">
+if(typeof PageTracker !== 'undefined') {
+  if(window.addEventListener) {
+    window.addEventListener("load", function(){PageTracker.logPageLoad()},false);
+  } else if(window.attachEvent) {
+    window.attachEvent("onload",function(){PageTracker.logPageLoad()});
+  }
+}
+</script>
+</html>

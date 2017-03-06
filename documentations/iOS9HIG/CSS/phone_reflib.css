@@ -1,0 +1,32 @@
+/*! Copyright (c) 2009, 2010 Apple Inc. All Rights Reserved. */
+
+#frontPageTabContainer #frontPageTabContents {
+    height: 203px;
+    border-radius: 4px;
+}
+/* new style for Start Now button */
+#frontPageTabContainer #frontPageTabContents .ios-bg{
+  position: absolute;
+  border-radius: 2px;
+  left: 0; right: 0; top: 0; bottom: 0;
+  background-image: url('../Images/ios_ref_lib_splash_2x.png');
+  background-repeat: no-repeat;
+  background-size: 772px;
+}
+
+#frontPageTabContainer #frontPageTabContents #start-now-button {
+  cursor: pointer;
+  position: absolute;
+  left: 58px; width: 128px;
+  bottom: 50px; height: 49px;
+  background-image: url('https://developer.apple.com/library/ios/Resources/874/Images/startnow.png');
+}
+
+#frontPageTabContainer #frontPageTabContents #start-now-button:hover{
+ background-image: url('https://developer.apple.com/library/ios/Resources/874/Images/startnow_hover.png'); 
+}
+
+#frontPageTabContainer #frontPageTabContents #start-now-button.active{
+ background-image: url('https://developer.apple.com/library/ios/Resources/874/Images/startnow_depressed.png'); 
+}
+/* -- End new style -- */

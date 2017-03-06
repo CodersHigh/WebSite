@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>애플 와치 휴먼 인터페이스 가이드라인: 통지</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/style-1.2.1.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/feedback-1.2.1.css" />
+  <meta charset='utf-8'>
+<meta id="g-version" name="g-version" content="789fd41c" />
+<meta id="j-version" name="j-version" content="1.2.0" />
+<meta id="build" name="build" content="7f54c7f8d1cac93ebbe55b6cbd5aec1a" />
+<meta id="document-version" name="document-version" content="2.0.11" />
+<meta id="book-assignments" name="book-assignments" content="{Type/Guide}, {Framework/Cocoa Touch Layer/WatchKit}, {Topic/User Experience}" />
+<meta scheme="apple_ref" id="identifier" name="identifier" content="//apple_ref/doc/uid/TP40014992" />
+<meta id="chapterId" name="chapterId" content="TP40014992-CH20">
+<meta id="book-title" name="book-title" content="Apple Watch Human Interface Guidelines" />
+<meta id="book-resource-type" name="book-resource-type" content="Guide" />
+<meta id="book-root" name="book-root" content="./" />
+<meta id="book-json" name="book-json" content="book.json">
+<meta id="date" name="date" content="2015-02-09" />
+<meta id="description" name="description" content="Provides guidelines for designing a Watch app." />
+<meta id="IndexTitle" name="IndexTitle" content="Apple Watch Human Interface Guidelines" />
+<meta id="resources-uri" name="resources-uri" content="./">
+<link id="book-index-page" rel="Start" title="Apple Watch Human Interface Guidelines" type="text/html" href="index.html">
+<!-- , next_chapter: next_chapter, previous_chapter: previous_chapter -->
+<link id="next-page" rel="Next" type="text/html" href="">
+<link id="previous-page" rel="Prev" type="text/html" href="">
+<meta id="devcenter" name="devcenter" content="<!-- DEVCENTER_NAME -->" />
+<meta id="devcenter-url" name="devcenter-url" content="<!-- DEVCENTER_URL -->" />
+<meta id="reflib" name="reflib" content="<!-- REFLIB_NAME -->" />
+
+<meta id="xcode-display" name="xcode-display" content="render" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, maximum-scale=1.0">
+</head>
+
+  <body id="conceptual_flow_with_tasks" class="jazz">
+    <div id="_omniture_top">
+<!-- SiteCatalyst code will be injected here when viewed in production -->
+</div>
+
+    <header id="ios_header" class="hideOnPrint hideInXcode">
+  <div class="content-wrapper">
+    <p class="header-text">
+    	<a href="../../../../navigation/index.html">iOS Developer Library
+            &mdash; Pre-Release
+ 		</a>
+ </p>
+    <p id="wwdr"><img id="apple_logo" src="./Images/apple2.png" height="14px" width="12px" aria-hidden="true" /><a href="../../../../../../../index.html">Developer</a></p>
+  </div>
+</header>
+
+    <section id="valence">
+  <div class="content-wrapper">
+    <p id="hierarchial_navigation">
+      <span id="book_title">애플 와치 휴먼 인터페이스 가이드라인</span>
+    </p>
+    <form id='search' class='hideInXcode' method='get' action="../../../../search/" accept-charset='utf-8'>
+      <input type='search' id='ssi_SearchField' placeholder="Search iOS Developer Library" name='q' accesskey='s' />
+    </form>
+
+
+
+
+
+
+    <img id="shortstack" src="./Images/shortstack_2x.png"/>
+  </div>
+</section>
+    <div class="content-wrapper">
+      <nav id="navigator" class="book-parts hideInXcode" role="navigation">
+          <ul class="nav-parts">
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH2-SW1" class="part-name">UI 디자인 기본들
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./index.html" data-id="//apple_ref/doc/uid/TP40014992-CH3-SW1">애플 와치를 위해 디자인하기</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./WatchOSAppAnatomy.html" data-id="//apple_ref/doc/uid/TP40014992-CH4-SW1">앱 해부</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Glances.html" data-id="//apple_ref/doc/uid/TP40014992-CH21-SW1">글렌스</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Notifications.html" data-id="//apple_ref/doc/uid/TP40014992-CH20-SW1">통지</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./ModalContexts.html" data-id="//apple_ref/doc/uid/TP40014992-CH6-SW1">모달 시트</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Layout.html" data-id="//apple_ref/doc/uid/TP40014992-CH22-SW1">레이아웃</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./ColorandTypography.html" data-id="//apple_ref/doc/uid/TP40014992-CH9-SW1">컬러와 타이포그라피</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Animation.html" data-id="//apple_ref/doc/uid/TP40014992-CH7-SW1">애니메이션</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Branding.html" data-id="//apple_ref/doc/uid/TP40014992-CH8-SW1">브랜딩</a>
+                    </li>
+                </ul>
+              </li>
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH11-SW1" class="part-name">UI 요소들
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./Labels.html" data-id="//apple_ref/doc/uid/TP40014992-CH31-SW1">레이블</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Images.html" data-id="//apple_ref/doc/uid/TP40014992-CH25-SW1">이미지</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Groups.html" data-id="//apple_ref/doc/uid/TP40014992-CH23-SW1">그룹스</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Tables.html" data-id="//apple_ref/doc/uid/TP40014992-CH24-SW1">테이블</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Buttons.html" data-id="//apple_ref/doc/uid/TP40014992-CH28-SW1">버튼</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Switches.html" data-id="//apple_ref/doc/uid/TP40014992-CH29-SW1">스위치</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Sliders.html" data-id="//apple_ref/doc/uid/TP40014992-CH30-SW1">슬라이더</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Maps.html" data-id="//apple_ref/doc/uid/TP40014992-CH26-SW1">지도</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./DatesandTimers.html" data-id="//apple_ref/doc/uid/TP40014992-CH32-SW1">날짜와 시간</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./Menus.html" data-id="//apple_ref/doc/uid/TP40014992-CH14-SW1">메뉴</a>
+                    </li>
+                </ul>
+              </li>
+              <li data-id="//apple_ref/doc/uid/TP40014992-CH15-SW1" class="part-name">아이콘과 이미지 디자인
+                <ul class="nav-chapters">
+                    <li class="nav-chapter">
+                    	<a href="./IconandImageSizes.html" data-id="//apple_ref/doc/uid/TP40014992-CH16-SW1">아이콘과 이미지 크기</a>
+                    </li>
+                    <li class="nav-chapter">
+                    	<a href="./MenuImages.html" data-id="//apple_ref/doc/uid/TP40014992-CH18-SW1">메뉴 이미지</a>
+                    </li>
+                </ul>
+              </li>
+            <li data-id="revision-history" class="part-name">개정 기록
+              <ul class="nav-chapters">
+                <li class="nav-chapter"><a href="./RevisionHistory.html" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">문서 개정 기록</a></li>
+              </ul>
+            </li>
+          </ul>
+      </nav>
+
+      <menu id="bashful" type="toolbar">
+  <div class="shield"></div>
+  <menuitem id="jump_to" class="menu-bar-item closed">
+  <span>On This Page</span>
+  <div class="chevron">
+    <div class="chevy chevron-left"></div>
+    <div class="chevy chevron-right"></div>
+  </div>
+  <menu type="list" class="details">
+      <ul class="list-bullet">
+          <li class="item">
+            <a href="Notifications.html#/apple_ref/doc/uid/TP40014992-CH20-SW2">Short Look Notifications</a>
+          </li>
+          <li class="item">
+            <a href="Notifications.html#/apple_ref/doc/uid/TP40014992-CH20-SW3">Custom Long Look Notifications</a>
+          </li>
+      </ul>
+  </menu>
+</menuitem>
+
+</menu>
+<div class="pixel-line"></div>
+<div class="rubber-band-gap"></div>
+<article class="chapter">
+  <a name="//apple_ref/doc/uid/TP40014992-CH20"></a><a name="//apple_ref/doc/uid/TP40014992-CH20-SW1"></a>
+
+  <h2 class='chapter-name'>통지</h2>
+
+
+
+  	<section class="section">
+  		<p class="para">
+  애플 와치의 통지는 로컬 또는 리모트 통지에 대해 빠르고, 가벼운 인터렉션을 촉진한다. 인터렉션들은 두 단계로 발생하는데, 숏 룩과 롱 룩 인터페이스를 이용해 관리된다. <em>숏 룩</em> 인터페이스는 로컬이나 리모트 노티피케이션이 처음 도착해서 사용자에게 제공될 필요가 있을 때 나타난다.숏 룩은 신중하게, 프라이버시의 단계를 지키면서 최소한의 정보만을 제공한다. 착용자가 손목을 내리면 숏 룩 인터페이스는 사라진다. <em>롱 룩</em> 인터페이스는 착용자의 손목이 올려진채로 있거나 사용자가 숏 룩 인터페이스를 탭 했을 때 나타난다. 이것은 더 자세한 정보와 많은 기능을 제공하며 - 착용자에 의해 확실하게 제거되어야 한다.
+</p>
+<p class="para">
+  <strong class="inline-head">사용자에게 통지를 보내는 횟수에 대해 신중하게 생각하라.</strong> 사용자들이 빈번한 통지에 대해 화를 낼 수 있으며 애플 와치에서 당신의 앱이 보내는 노티피케이션을 수신 거부로 둘 수 있다. 항상 통지는 사용자가 원하는 것과 관련이 있도록 하라.
+</p>
+
+		</section>
+
+
+  <section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH20-SW2"></a>
+  <h3 class="section-name" tabindex="0">숏 룩 통지</h3>
+  <p class="para">
+  숏 룩은 사용자가 어떤 앱에서 통지가 왔는지를 알 수 있도록 하고 잠깐 동안만 볼 수 있다. 숏 룩 인터페이스는 템플리트 기반이며, 앱 이름, 앱 아이콘, 그리고 해당 통지의 제목 문자열을 포함한다. 시스템은 앱 이름을 앱의 키 컬러로 표시한다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/shortlook_calendar_2x.png" alt="image: ../Art/shortlook_calendar_2x.png" width="488" height="337" />
+</figure><p class="para">
+  <strong class="inline-head">제목을 짧고 집중적으로 만들라.</strong> 제목을 표시할 수 있는 공간이 아주 작기 때문에, 간략하게 핵심을 얘기한다. 제목은 통지의 자세한 내용을 제공하지 않도록 한다. 통지가 무엇에 관한 것인지에 대한 짧은 힌트만 제공한다.
+</p>
+
+</section>
+<section class="section">
+  <a name="//apple_ref/doc/uid/TP40014992-CH20-SW3"></a>
+  <h3 class="section-name" tabindex="0">커스텀 롱 룩 노티피케이션</h3>
+  <p class="para">
+  롱 룩은 수신된 통지에 대해 보다 자세한 정보응 제공한다. 시스템은 기본 롱 룩 외관을 제공하지만 앱은 롱 룩을 커스터마이즈해서 커스텀 그래픽스와 브랜딩에 사용할 수 있다. 롱 룩 인터페이스의 구조는 모든 앱이 동일하다. 시스템은 앱 아이콘과 앱 이름을 콘텐트가 블러된 새시(프레임)의 위쪽에 오버레이한다. 시스템은 Dismiss 버튼과 앱이 정의한 액션 버튼을 통지의 끝에 더한다. 그 중간 영역은 커스텀 콘텐트를 위한 것이다.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/longlook_calendar_2x.png" alt="image: ../Art/longlook_calendar_2x.png" width="479" height="703" />
+</figure><p class="para">
+  <strong class="inline-head">앱 콘텐트는 새시 아래를 덮거나 그 바로 아래에서 시작한다.</strong> 사진이나 그래픽 요소들에는 underlapping 옵션을 사용하라. 문자 콘텐트는 새시 영역 아래에서 시작하라.
+</p><figure class="figure">
+
+  <span class="caption"></span>
+  <img src="Art/notification_long_content_2x.png" alt="image: ../Art/notification_long_content_2x.png" width="471" height="457" />
+</figure><p class="para">
+  커스텀 롱 룩 인터페이스에서, 앱은 스태틱 인터페이스를 반드시 제공해야 하며, 다이나믹 인터페이스는 부가적으로 제공할 수 있다. 다이나믹 인터페이스는 스태틱 인터페이스에 비해 더 많은 설정이 가능하지만, 두 가지 모두 당신의 그래픽스와 브랜딩을 이용해서 동일한 통지를 표시한다. 스태틱 인터페이스는 다이나믹 인터페이스가 불가능할 경우의 대비책으로 제공한다.
+</p><p class="para">
+  <strong class="inline-head">롱 룩 통지는 최대 4개까지의 커스텀 액션 버튼을 표시할 수 있다.</strong> 애플 와치는 당신의 iOS 앱이 등록한 인터렉티브한 통지를 활용해서 롱 룩 인터페이스에서 액션 버튼을 표시한다. 액션 버튼들은 통지의 카테고리에 따라 자동으로 표시된다.
+</p><p class="para">
+  <strong class="inline-head">Dismiss 버튼은 항상 나타난다.</strong> 이 버튼은 당신이 제공하는 4개 버튼에 추가적인 것이다.
+</p><p class="para">
+  <strong class="inline-head">브랜딩에 맞게 새시 컬러를 설정하라.</strong> 새시 영역의 색상과 투명도는 커스텀 인터페이스에서 설정 가능하다.
+</p><p class="para">
+  스태틱과 다이나믹 인터페이스와 액션 버튼을 설정하는 방법에 대한 보다 자세한 정보는, <em class="u-book"><a href="../../../General/Conceptual/WatchKitProgrammingGuide/index.html#/apple_ref/doc/uid/TP40014969" target="_self">애플 와치 프로그래밍 가이드</a></em>를 보라.
+</p>
+
+</section>
+
+
+ 	<section id="next_previous" class="">
+    		<p class="previous-link"><a href="./Glances.html1" data-id="//apple_ref/doc/uid/TP40014992-CH21-SW1">Glances</a></p>
+  			<p class="next-link"><a href="./ModalContexts.html" data-id="//apple_ref/doc/uid/TP40014992-CH6-SW1">Modal Sheets</a></p>
+  <p class="copyright">Copyright &#x00a9; 2015 Apple Inc. All rights reserved. <a class="link" href="http://www.apple.com/legal/terms/site.html" target="_blank" rel='external'>Terms of Use</a>   |  <a class="link" href="http://www.apple.com/privacy/" target="_blank" rel='external'>Privacy Policy</a>  |  <a href="RevisionHistory.html#/apple_ref/doc/uid/TP40014992-CH99-SW1" data-id="//apple_ref/doc/uid/TP40014992-CH99-SW1">Updated: 2015-02-09</a>
+  </p>
+  </section>
+</article>
+
+    </div>
+    <div id='big_button'></div>
+    <footer id="footer">
+  <div class="content-wrapper">
+  	<div id="leave_feedback" class="button" role="button" tabindex="0">Feedback</div>
+  </div>
+  <script src="./JavaScript/devpubs-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./JavaScript/feedback-1.2.1.js" type="text/javascript" charset="utf-8"></script>
+</footer>
+
+
+  </body>
+    <div id="blackout">
+    <div id="preload"></div>
+</div>
+<div id="modal" aria-hidden="true">
+    <div id="closebox" tabindex="0" aria-label="Close feedback form" role="button"></div>
+    <div id="sending" class="hidden">
+        <h2 tabindex="0">Sending feedback&hellip;</h2>
+        <div id="sending_img"></div>
+    </div>
+    <div id="error" class="hidden">
+        <h2 tabindex="0">We&rsquo;re sorry, an error has occurred.</h2>
+        <p>Please try submitting your feedback later.</p>
+        <div id="error_icon"></div>
+    </div>
+    <div id="success" class="hidden">
+        <h2 tabindex="0">Thank you for providing feedback!</h2>
+        <p>Your input helps improve our developer documentation.</p>
+        <div id="thank_you_icon"></div>
+    </div>
+
+    <form id="feedback" action="#" method="post">
+        <div class="left-leaf">
+            <h2 id="helpful_title" data-asterisk="a1" tabindex="0">How helpful is this document?</h2>
+            <sup id="a1" class="asterisk" aria-hidden="true">*</sup>
+
+            <div id="star_group" role="radiogroup" aria-required="true">
+                <label>
+                    <input class="radio" type="radio" name="helped" value="1" />
+                    Very helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="2" />
+                    Somewhat helpful
+                </label>
+                <label>
+                    <input class="radio" type="radio" name="helped" value="3" />
+                    Not helpful
+                </label>
+            </div>
+        </div>
+        <div class="right-leaf">
+            <h2>How can we improve this document?</h2>
+            <div id="improve" class="checkboxes">
+                <label>
+                    <input type="checkbox" name="typo" />
+                    Fix typos or links
+                </label>
+                <label>
+                    <input type="checkbox" name="infoIncorrect" />
+                    Fix incorrect information
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_examples" />
+                    Add or update code samples
+                </label>
+                <label>
+                    <input type="checkbox" name="needs_art" />
+                    Add or update illustrations
+                </label>
+                <label>
+                    <input type="checkbox" name="missingInfo" />
+                    Add information about...
+                </label>
+            </div>
+        </div>
+
+        <textarea id="comment" name="problem" cols="70" rows="8" placeholder="Please tell us more about your experience with this document" data-asterisk="a2" required></textarea>
+        <sup id="a2" class="asterisk" aria-hidden="true">*</sup>
+
+        <input id="email" type="email" name="email" placeholder="Email (optional)" size="48">
+
+        <p class="fineprint">
+            <em aria-hidden="true"><span>*</span> Required information</em>
+        </p>
+
+        <input id="submit" type="button" value="Send" />
+
+        <section id="legal">
+            <p>
+                To submit a product bug or enhancement request, please visit the
+                <a href="../../../../../../../bug-reporting/index.html" target="_blank">Bug Reporter</a>
+                page.
+            </p>
+            <p>
+                Please read <a href="http://www.apple.com/legal/policies/ideas.html" target="_blank">Apple's Unsolicited Idea Submission Policy</a>
+                before you send us your feedback.
+            </p>
+        </section>
+    </form>
+</div>
+
+</div>
+</html>

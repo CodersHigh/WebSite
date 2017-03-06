@@ -1,0 +1,75 @@
+.figure-hero {
+	background-repeat: no-repeat;
+	background:url('https://devimages.apple.com.edgekey.net/ios/3d-touch/images/3d-touch-hero.png');
+	background-size:768px 600px;
+	width:768px;
+	height:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+h1 { padding-top:0.6em; }
+
+.router .router-copy { padding-top:3.5em; }
+
+.feature-p {
+	height: 240px;
+}
+
+@media all and (min-device-width:768px) and (max-width:1023px) {
+	header .col-50:first-of-type {
+		width:55%;
+	}
+
+	header .col-50:last-of-type {
+		width:45%;
+	}
+
+	.width-70 {
+		width:90% !important;
+	}
+
+	.width-80,
+	.width-85 {
+		width:100% !important;
+	}
+
+	.pay-providers >.col-50 {
+		padding-left:0 !important;
+		padding-right:0 !important;
+		border:none;
+	}
+
+	.figure-hero {
+		margin-left:-12px;
+	}
+
+	.router .router-copy {
+		padding-top:2.5em;
+		padding-left:9.25em;
+	}
+
+	.feature-p {
+		height: 320px;
+	}
+
+}
+
+@media all and (max-device-width:767px) {
+	.figure-hero {
+		background:url('https://devimages.apple.com.edgekey.net/ios/3d-touch/images/3d-touch-hero-small.png');
+		background-size:300px 235px;
+		width:300px;
+		height:235px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
+	.divider-left {
+		border-left : none;
+	}
+
+	.feature-p {
+		height: auto;
+	}
+}
