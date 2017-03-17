@@ -77,7 +77,7 @@
 	 		<! -- SINGLE POST -->
 	 		<div class="col-lg-12">
 	 			<! -- Blog Post 1 -->
-		 		<!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+		 		<p><img class="img-responsive" src="./tb001_media/calendar-vot.png" width = 600></p>
 		 		<a href="single-post.html"><h3 class="ctitle">메시지 익스텐션을 이용한 Calendar-Vot 제작기</h3></a>
 		 		<p><csmall>Posted: April 25, 2014.</csmall> | <csmall2>By: 염혜리(yhr7518@gmail.com)</csmall2></p>
                 <p><span style=" font-size: 1.5em; color: green;">1. iMessage Apps</span><br><br>
@@ -89,12 +89,12 @@
                     메시지앱은 단독으로 개발할 수도 있고, 일반 앱과 연동하여 개발할 수도 있습니다. 대부분의 스티커팩 앱은 메시지 내에만 존재하는 단독 메시지 익스텐션입니다. '에어비앤비' 앱처럼 기존의 앱과 기능이 연동되는 메시지 익스텐션을 제공할 수도 있습니다.<br>
 메시지 앱스토어에서 'Stick Man' 앱을 다운받으면 메시지 앱 목록에만 나타납니다. 하지만 '에어비앤비' 앱을 다운받으면 메시지 앱 목록 뿐만 아니라 일반적인 '에어비앤비' 앱이 함께 설치된 것을 볼 수 있습니다.(이 글에서는 단독(standalone) iMessage 앱을 개발한 내용 위주로 다루겠습니다.
                     )<br></p>
-                <p style="text-align: center;"> <img src = "./tb001_media/1-2.jpg" width = 700><br>
+                <p style="text-align: center;"> <img src = "./tb001_media/1-2.jpg" width = 500><br>
                 </p>
                 <p><span style=" font-size: 1.5em; color: green;">1-1. Message Extension 만들기<br><br></span>
                     <b>[새로운 iMessage 앱 만들기]</b><br>
                     새로운 앱을 만들기 위해서는 'iMessage Application' 프로젝트를 생성해야 합니다. 처음 프로젝트를 생성하면 아래와 같은 화면이 나타납니다.<br>
-                    <img src = "./tb001_media/1-1-1.png" width = 400><br><br>
+                    <img src = "./tb001_media/1-1-1.jpg" width = 400><br><br>
                     기본적으로 생성되는 MessagesViewController에서 앱의 사용자 인터페이스를 꾸밀 수 있습니다.<br>
                     <img src = "./tb001_media/1-1-2.png" width = 900><br><br>
                 </p>
@@ -145,7 +145,7 @@
 그리고 상황에 따라 이 뷰들을 생성하고, 메시지 전송을 담당하는 것이 <b>MessagesViewContoller 클래스입니다.</b></p>
                 <p>
                 아이메시지 앱을 실행하면 'willBecomeActive' 메서드가 호출되고, 이 안에서 'presentViewController'를 호출하여, 어느 뷰를 생성할지 결정합니다.<br>
-                    <img src = "./tb001_media/2-1-1.jpg" width = 800><br>
+                    <img src = "./tb001_media/2-1-1.jpg" width = 700><br>
                 </p>
                 <p>
                     <b>1) StartView 생성:</b> 아이메시지 앱 목록에서 앱을 선택하면 compact 모드로 보여집니다.
@@ -155,7 +155,7 @@
                 </p>
                 <p>
                 	<b>2) AddView 생성:</b> startView에서 '새로운 투표 생성' 버튼을 누르면 presentation style이 expanded로 바뀝니다.<br>
-                    이때는 willTransition 메서드가 호출되고, 이 메서드에서 presentViewController를 호출합니다.<br><br>
+                    이때는 willTransition 메서드가 호출되고, 이 메서드에서 presentViewController를 호출합니다.<br>
 	지금은 투표 데이터(voteData)가 존재하지 않기 때문에, 선택문 중 'else' 부분에 해당합니다.<br>
 instantiateAddViewController를 통해 뷰를 생성합니다.<br><br>
                 <img src = "./tb001_media/2-1-3.png" width = 800><br>
@@ -175,7 +175,7 @@ instantiateAddViewController를 통해 뷰를 생성합니다.<br><br>
                 <p><b>[참고 - willBecomeActive vs. willTransition]<br></b>
                     앱이 비활성화 되어 있을 때, 앱의 메시지를 선택하면 willBecomeActive가 호출됩니다.반면, 하단에 앱이 실행되고 있을 때 메시지를 선택하면 willTransition이 호출됩니다.
                     <br></p><p style="text-align: center;">
-                    <img src = "./tb001_media/2-1-6.png" width = 400><br>
+                    <img src = "./tb001_media/2-1-6.jpg" width = 400><br>
                 </p>
                 <p><span style=" font-size: 1.5em; color: green;">2-2. Start View</span><br><br>
                     Start View는 2개의 프로토타입 셀을 갖는 테이블뷰로 이루어져 있으며, StartViewController에 연결됩니다.<br><br>
@@ -220,21 +220,21 @@ addTarget을 하여 이 버튼이 눌리면 클래스 내에 addRow_date 메서�
 테이블뷰는 3개의 세션으로 이루어져 있으며, 각각 투표 이름, 날짜항목, 장소항목을 나타냅니다.<br></p>
                 <p style="text-align: center;"><img src ="./tb001_media/2-4-1.png" width = 200></p>
                 <p><b>1) Vote Title Cell:</b> 투표 객체를 로드할 때, 저장된 옵션 정보에 따라 '다중선택 가능' 한지 Title Cell에 표시합니다.<br><br>
-                    <img src ="./tb001_media/2-4-2.png" width = 700><br>
+                    <img src ="./tb001_media/2-4-2.png" width = 700><br><br>
                 </p>
-                <p><b>2) Vote Date Cell:</b> 투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.<br>                    <img src ="./tb001_media/2-4-3.png" width = 700><br>
+                <p><b>2) Vote Date Cell:</b> 투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.<br><br>                    <img src ="./tb001_media/2-4-3.png" width = 700><br>
                 </p>
                 <p>셀이 선택되면 득표수를 증가시키고, 체크마크를 표시합니다.<br>
-dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])<br><img src ="./tb001_media/2-4-4.png" width = 600><br><br>
+dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])<br><br><img src ="./tb001_media/2-4-4.png" width = 600><br><br>
 </p>
                 <p>	<b>3) Vote Location Cell:</b> 투표 객체 중 장소 정보를 추출하여 세 번째 섹션에 표시합니다. 동작 방식은 Vote Date Cell과 동일합니다.<br><br>
-                    <b>4) Done 버튼:</b> Done 버튼에 액션을 연결하여, 버튼을 누르면 saveData 메서드를 호출하고  변경된 득표수를 저장합니다.<br>
+                    <b>4) Done 버튼:</b> Done 버튼에 액션을 연결하여, 버튼을 누르면 saveData 메서드를 호출하고  변경된 득표수를 저장합니다.<br><br>
                 </p>
 
                 <p><span style=" font-size: 1.5em; color: green;">2-5. Result View</span><br><br>
                 Result View는 투표 종료 조건이 만족되고, 앱의 Present style이 expanded 일 때 생성됩니다.<br>투표 종료 시간은 기본적으로 투표 생성 후 24시간이고, 옵션을 통해 변경할 수도 있습니다.<br>(테스트를 위해 '강제종료' 버튼을 누르면 isCreated == "finish"가 되어 종료 조건을 만족)<br><br><img src ="./tb001_media/2-5-1.png" width = 500><br><br>
                 </p>
-                <p>MessagesViewController에서  instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.<br><img src ="./tb001_media/2-5-2.png" width = 400><br>
+                <p>MessagesViewController에서  instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.<br><br><img src ="./tb001_media/2-5-2.png" width = 350><br><br>
                     또한, 저장된 값을 이용해 최종 결과 셀의 배경색을 지정합니다.<br><br>
                     <img src ="./tb001_media/2-5-3.png" width = 800><br></p>
                 <p><b>[캘린더에 이벤트 생성하기]</b><br> Add Calendar Event 버튼을 누르면 연결된 액션에 의해 아래와 같은 메서드가 실행됩니다.<br><br><img src ="./tb001_media/2-5-4.png" width = 800><br><br>먼저 캘린더 접근 권한이 있는지 확인합니다.
@@ -246,7 +246,7 @@ dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다.
                 <p>여기서 정보를 MSMessage 객체에 담는 메서드가 composeMessage 입니다.<br><img src ="./tb001_media/3-2.png" width = 700></p>
                 <p>queryItems에 투표 정보를 적절한 형태로 저장합니다. 메시지는 정보들을 딕셔너리 배열로 저장하며, name(Key)과 value 는 string입니다. 투표 정보는 숫자, 날짜, 문자열 등 다양한 형태의 정보를 포함하므로, 적절히 변환해야합니다.<br><img src ="./tb001_media/3-3.png" width = 750>
 </p>
-                <p>queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.<br><img src ="./tb001_media/3-4.png" width = 300>
+                <p>queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.<br><img src ="./tb001_media/3-4.png" width = 250>
                 </p>
                 <p>메시지를 받으면,  메시지 고유의 URL을 통해 queryItems를 추출합니다.<br><img src ="./tb001_media/3-5.png" width = 700></p>
                 <p>
