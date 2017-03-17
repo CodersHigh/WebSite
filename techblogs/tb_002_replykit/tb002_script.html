@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
     <title>ReplayKit을 이용해 여행 떠나기</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../assets/css/style.css" rel="stylesheet">
-    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
 
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -27,7 +27,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="assets/js/modernizr.js"></script>
+    <script src="../../assets/js/modernizr.js"></script>
   </head>
 
   <body>
@@ -42,14 +42,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand abc" href="index.html"><img src="../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html" style="font-size: inherit;">홈</a></li>
-            <li><a style="font-size: inherit;" href="../about.html">소개</a></li>
-            <li><a style="font-size: inherit;"href="../contact.html">문의</a></li>
-            <li><a style="font-size: inherit;"href="../techblogs.html">기술블로그</a></li>
+            <li><a href="../../index.html" style="font-size: inherit;">홈</a></li>
+            <li><a style="font-size: inherit;" href="../../about.html">소개</a></li>
+            <li><a style="font-size: inherit;"href="../../contact.html">문의</a></li>
+            <li class="active"><a style="font-size: inherit;"href="../../techblogs.html">기술블로그</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -75,135 +75,131 @@
 	 	<div class="row">
 	 		<!-- SINGLE POST -->
 	 		<div class="col-lg-12">
-                <p><img class="img-responsive" src="assets/img/post01.jpg"></p>
+                <!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
 		 		<a href="single-post.html"><h3 class="ctitle">ReplayKit을 이용해 여행 떠나기</h3></a>
 		 		<p><csmall>Posted: Mar 15, 2017.</csmall> | <csmall2>By: Junyeong Yoo</csmall2></p>
-                
-                <!-- POST 시작  -->
-		 		<p>이번 포스트에서는 <b>ReplayKit</b>이라는 Framework를 이용해 스크린을 녹화하고 녹화한 영상을 공유하는 방법에 대해서 알려드리고자 합니다. ReplayKit은 <a href="https://developer.apple.com/videos/play/wwdc2015/101/?time=3931">WWDC 2015 Keynote</a>에서 처음 발표가 된 Framework입니다. WWDC Keynote를 보면 ReplayKit Framework는 본래 사용자가 자신의 게임 플레이를 녹화하거나 방송을 할 수 있도록 지원하기 위해 만들어졌습니다. ReplayKit이 적용된 애플리케이션의 사례를 하나 보여드리겠습니다.</p>
 
-                <div style="position: relative; text-align: center;">
-                    <iframe src="https://www.youtube.com/embed/xWZBUE5baLc?ecver=2" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-                </div>
-                
-                <p>위의 Youtube 영상처럼 ReplayKit은 게임 플레이를 녹화하고 공유할 수 있는 다양한 기능을 제공하고 있습니다. 그러나 꼭 게임 플레이만 녹화하라는 법이 있나요? 그래서 이번 포스트에서는 ReplayKit에서 제공하는 녹화와 방송 기능 중에서 <b>녹화</b>기능에 대해서 알아보고, 이를 이용해 <b>움직이는 지도를 녹화하는 간단한 예제</b>를 작성해보고자 합니다.</p>
-                
+                <!-- POST 시작  -->
+		 		<p>이번 포스트에서는 <b>ReplayKit</b>이라는 Framework를 이용해 스크린을 녹화하고 녹화한 영상을 공유하는 방법에 대해서 알려드리고자 합니다. ReplayKit은 <a href="https://developer.apple.com/videos/play/wwdc2015/101/?time=3931">WWDC 2015 Keynote</a>에서 처음 발표가 된 Framework입니다. WWDC Keynote를 보면 ReplayKit Framework는 본래 사용자가 자신의 게임 플레이를 녹화하거나 방송을 할 수 있도록 지원하기 위해 만들어졌습니다. 그러나 꼭 게임 플레이만 녹화하라는 법이 있나요? 그래서 이번 포스트에서는 ReplayKit에서 제공하는 녹화와 방송 기능 중에서 <b>녹화</b>기능에 대해서 알아보고, 이를 이용해 <b>움직이는 지도를 녹화하는 간단한 예제</b>를 작성해보고자 합니다.</p>
+
                 <h3>시작하기에 앞서</h3>
-                <p><b>움직이는 지도를 녹화하는 예제</b>라고 하면 잘 와닿지 않으실 것 같아서 예시를 하나 보여드리고자 합니다. 아래의 예시는 제가 최근에 만든 Memoravel이라는 애플리케이션에서 사용자의 여행 경로와 선택한 사진을 이용해 자동으로 만들어준 동영상입니다. 물론 이렇게 동영상을 만들어주기 위해 ReplayKit을 사용했으며, 지금부터 우리가 함께 공부할 코드를 기반으로 구현되었습니다.</p>
-                
+                <p><b>움직이는 지도를 녹화하는 예제</b>라고 하면 잘 와닿지 않으실 것 같아서 예시를 하나 보여드리고자 합니다. 아래의 예시는 제가 최근에 만든 Memoravel이라는 애플리케이션에서 사용자의 여행 경로와 선택한 사진을 이용해 만들어진 동영상입니다. 물론 위 동영상은 ReplayKit으로 만들었으며, 지금부터 우리가 함께 공부할 코드를 기반으로 구현되었습니다.</p>
+
                 <div style="position:relative; text-align:center;">
                     <iframe src="https://j.gifs.com/oYl9yL.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
                 </div>
-                
-                <p>흥미가 있으신가요? 여러분들은 저보다 ReplayKit을 사용해서 훨씬 멋진 결과물을 만드실 수 있습니다. 그럼 이제 본론으로 돌아가서 여러분이 ReplayKit의 사용법을 익히실 수 있도록 초기 예제 프로젝트와 완성된 프로젝트를 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>에 올려놨습니다. 초기 예제 프로젝트(ReplayKitExampleStarter)를 열어 포스트에 올려놓은 방법을 따라하며 프로젝트를 완성하셔도 좋고, 완성된 프로젝트(ReplayKitExampleComplete)를 참고해서 ReplayKit의 녹화 기능이 어떻게 동작하는지 한 눈에 보셔도 좋을 것 같습니다.</p>
-                
+
+                <p>흥미가 있으신가요? 여러분들은 저보다 ReplayKit을 사용해서 훨씬 멋진 결과물을 만드실 수 있습니다. 그럼 이제 본론으로 돌아가서 여러분이 ReplayKit의 사용법을 익히실 수 있도록 초기 예제 프로젝트와 완성된 프로젝트를 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>에 올려두었습니다. 초기 예제 프로젝트(ReplayKitExampleStarter)를 열어 포스트에 올려놓은 방법을 따라하며 프로젝트를 완성하셔도 좋고, 완성된 프로젝트(ReplayKitExampleComplete)를 참고해서 ReplayKit의 녹화 기능이 어떻게 동작하는지 한 눈에 보셔도 좋을 것 같습니다.</p>
+
                 <h3>예제 프로젝트에 대한 설명</h3>
                 <p>예제 프로젝트는 다음과 같은 프로세스를 가집니다.
-                <ol>
-                    <li>사용자가 지도 위에 표시할 여러 개의 지역을 입력합니다.</li>
-                    <li>지역을 모두 입력하면, <b>Record</b>버튼을 눌러 녹화할 수 있는 view로 이동합니다.</li>
-                    <li><b>Start Recording</b>버튼을 누르면 녹화가 시작되면서 지도가 움직입니다.<br>
-                    (지도는 사용자가 입력한 지역 순서대로 움직이며, <b>3초에 한 번씩 다음 지역으로 이동</b>합니다.)</li>
-                    <li>사용자가 입력한 모든 지역을 순회하면, 녹화를 마치고 Preview controller를 통해 녹화된 영상을 확인합니다.</li>
-                </ol>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_001.jpg">
+                </div>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_002.jpg">
+                </div>
+
                 </p>
                 <p>초기 예제 프로젝트(ReplayKitExampleStarter) 에서는 사용자가 지도 위에 표시할 <b>지역을 검색할 수 있는 view</b>와 <b>입력한 지역을 확인할 수 있는 view</b>가 구현되어 있습니다. 그리고 Record 버튼을 눌렀을 때 입력한 지역들이 지도 위에 pin으로 나타날 수 있도록 구현되어 있습니다. 이번 포스트의 취지는 ReplayKit의 사용법이므로, ReplayKit 기능 이외의 다른 기능의 설명은 생략하도록 하겠습니다. <br>
                 (ReplayKit 이외에 이 프로젝트에 대해서 궁금한 사항이 있으시다면 언제든 연락주세요 :] )</p>
-                
+
                 <!-- 첨부 내용 -->
                 <div class="info">
                     <p>참고로 본 예제는 MapKit을 이용해 지역을 검색하는 기능이 포함되어 있습니다. 따라서 <b>인터넷 접속이 가능한 환경에서 예제를 실행</b>해야 제대로 된 결과를 확인하실 수 있습니다. 또한 Simulator가 아닌 실제 iPhone, iPad 기기를 통해 테스트 하는 것을 권장합니다. ReplayKit이 Simulator에서 올바르게 동작하지 않을 수 있습니다.<br>
                     (혹시 Simulator에서도 ReplayKit이 올바르게 동작하는 방법이 있다면 알려주시면 감사하겠습니다. :])</p>
                 </div>
                 <!-- 첨부 내용 끝 -->
-            
+
                 <p>아래의 모든 단계를 따라오신다면 다음과 같이 자동으로 움직이는 지도를 녹화한 동영상을 생성하실 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <iframe src="https://j.gifs.com/xGxNEz.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
                 </div>
-            
+
                 <h3>Step 1 - 녹화 시작 버튼 만들기</h3>
                 <p>그럼 지금부터 함께 프로젝트를 진행해 보겠습니다. 우선, RecordViewController 화면 우측 상단에 버튼을 하나 만들겠습니다. 사용자가 버튼을 누르면 <b>화면 녹화가 시작되면서 동시에 지도가 자동으로 움직일 수 있게</b> 만들고자 합니다. 버튼을 만들고 RecordViewController에 <b>@IBAction</b>과 <b>@IBOutlet</b>으로 연결해줍니다. 지금 만든 버튼은 toggle 버튼처럼 사용하려고 합니다. 사용자가 Start Recording 버튼을 누르면 녹화가 시작되고, 버튼을 한번 더 누르면 녹화가 중지될 수 있도록 만들겠습니다. 우선 다음과 같이 target method를 작성해 보겠습니다.</p>
-            
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_000.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_001.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <!-- 첨부 내용 -->
                 <div clss="info">
                     <p>위에서 사용한 Log 클래스는 <a href="https://github.com/emaloney/CleanroomLogger">CleanroomLogger</a>에 정의되어 있습니다. 예시 프로젝트에는 이미 Carthage로 라이브러리를 추가한 상태이므로 그대로 사용하셔도 무방하지만, CleanroomLogger가 설치되지 않은 환경에서는 NSLog 혹은 본인이 원하는 방식으로 버튼이 잘 동작하는지 확인하시면 됩니다.</p>
                 </div>
                 <!-- 첨부 내용 끝 -->
-            
+
                 <p>위의 코드와 같이 작업을 진행하신 후에 코드를 실행 해보세요. 그럼 아래의 사진처럼 Bar button이 제대로 동작하는 것을 확인하실 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_001.png">
+                    <img src="tb002_media/images/img_003.jpg">
                 </div>
-            
+
                 <p>그럼 이제 버튼이 <b>Start Recording</b> 일 때 버튼을 누르면 녹화가 시작되고, <b>Stop Recording</b> 일 때 버튼을 누르면 녹화가 중지될 수 있도록 메소드를 입력해 줍니다.</p>
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_001.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_002.jpg" style="width: 70%; height: 70%;">
                 </div>
                 <p>startRecording() 메소드는 녹화를 시작하기 위해 필요한 절차가 담겨있고, stopRecording() 메소드는 녹화를 종료하기 위해 필요한 절차가 담겨있습니다. 두 메소드 아직 구현이 되어있지 않습니다. 지금부터 각각의 메소드를 함께 정의해 보겠습니다.</p>
-            
+
                 <h3>Step 2 - 녹화 시작하기</h3>
                 <p>지금부터는 ReplayKit을 사용하므로 `import ReplayKit` 을 통해 ReplayKit을 가져옵니다. 이제 `startRecording() `메소드를 구현해 보겠습니다. </p>
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_002.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_003.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <p>위 코드에서 사용된 <a href="https://developer.apple.com/reference/replaykit/rpscreenrecorder">RPScreenRecorder</a>는 <b>현재 화면에 대해서 녹화를 시작하거나 종료하기 위해서 사용</b>합니다. RPScreenRecorder는 공유객체를 사용하며, 객체가 가지고 있는 <b>startRecording 메소드를 호출함으로써 녹화를 시작</b>하게 됩니다. 녹화가 시작된 이후에 처리해야 할 일은 startRecording 메소드의 클로저 매개변수에 포함시키면 됩니다. 위 코드에서는 녹화가 정상적으로 실행되었을 때 `startAnimatingMap()` 메소드를 호출함으로써, 녹화가 시작되면 자동으로 지도가 움직일 수 있도록 하였습니다. 그럼 이번에는 `startAnimatingMap()` 메소드와 `stopAnimatingMap()` 메소드를 구현해 보겠습니다.</p>
-            
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_003.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_004.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <p>startAnimatingMap() 메소드에 대해서 좀 더 자세히 알아보겠습니다. <b>currentLocation</b>변수는 현재 지도 위에 표시되고 있는 지역의 인덱스를 나타냅니다. 초기값은 0으로 설정되어 있습니다. 또한 <b>placemarks</b>배열은 사용자가 앞서 입력한 지역 데이터를 포함하고 있습니다. <b>showLocationOnMap(index:)</b> 메소드는 매개변수로 받은 인덱스의 위치로 지도를 움직입니다. 만약 showLocationOnMap(index: 0) 이라면 placemarks 배열의 0번째 인덱스에 저장된 지역을 지도 위에 보여주게 됩니다. Timer는 3초마다 한 번씩 `animatesMap()` 메소드를 호출하도록 설정되어 있습니다. animatesMap() 메소드는 사용자가 입력한 지역을 지도 위에 보여주는 역할을 합니다. 따라서 3초마다 지도는 사용자가 입력한 다음 지역으로 자동으로 움직이게 됩니다. 만약 사용자가 입력한 모든 지역을 지도 위에 모두 보여주었다면, stopAnimatingMap() 메소드를 호출해서 Timer를 종료시키고 녹화를 중지하는 `stopRecording()` 메소드를 호출하게 됩니다.</p>
-            
+
                 <h3>Step 3 - 녹화 종료하기</h3>
                 <p>다음은 `stopRecording()` 메소드를 구현해서 녹화를 끝내는 방법에 대해서 알아보겠습니다. `stopRecording()` 메소드가 호출되는 경우는 크게 두 가지가 있습니다. 첫번째는 사용자가 녹화 중간에 종료 버튼을 눌렀을 경우입니다. 두번째는 지도 위의 애니메이션이 모두 종료된 후 자동으로 녹화가 종료되는 경우입니다. 이 두가지 경우를 모두 생각하여 메소드를 구현해 보겠습니다.</p>
-            
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_004.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_005.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <p>앞서 startRecording() 메소드를 구현할 때와 마찬가지로 <b>RPScreenRecorder의 공유객체를 사용</b>합니다. 만약 녹화가 진행되고 있는 상태(isRecording)에서 stopRecording() 메소드가 호출되었다면, 사용자가 녹화를 중지한 것이라고 판단할 수 있습니다. 반면 녹화가 진행되고 있지 않은 상태라면 지도 애니메이션이 끝까지 진행되어 정상적으로 녹화를 중지해야 할 때라고 판단할 수 있습니다.</p>
-            
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_002.png">
+                    <img src="tb002_media/images/img_004.jpg">
                 </div>
-            
-                <p>위 다이어그램은 RPScreenRecorder의 stopRecording() 메소드가 취할 수 있는 2가지 행동을 보여줍니다. 우선 사용자가 <b>녹화를 중단한 상태</b>라면, stopRecording() 의 후행 클로저 안에서 discardRecording() 함수를 실행시킬 수 있습니다. discardRecording() 은 현재 녹화하고 있던 내용을 지울 때 사용합니다. 주의하실 점은 <b>discardRecording() 메소드는 stopRecording() 클래스의 클로저 안에서만 동작할 수 있다</b>는 점입니다. 여기서는 discardRecording() 메소드를 통해 Timer를 해지시켰습니다.<br>
+
+                <p>위 다이어그램은 RPScreenRecorder의 stopRecording() 메소드가 취할 수 있는 2가지 행동을 보여줍니다. 우선 사용자가 <b>녹화를 중단한 상태</b>라면, stopRecording() 의 클로저 안에서 discardRecording() 함수를 실행시킬 수 있습니다. discardRecording() 은 현재 녹화하고 있던 내용을 지울 때 사용합니다. 주의하실 점은 <b>discardRecording() 메소드는 stopRecording() 클래스의 클로저 안에서만 동작할 수 있다</b>는 점입니다. 여기서는 discardRecording() 메소드를 통해 Timer를 해지시켰습니다.<br>
                 이번에는 지도 애니메이션이 종료되어 정상적으로 녹화를 종료하는 부분에 대해서 살펴보겠습니다. stopRecording() 메소드가 가지고 있는 클로저에는 매개변수로 RPPreviewViewController를 가지고 있습니다. RPPReviewViewController는 녹화된 동영상을 저장, 공유할 수 있고 원하는 부분만 잘라내어 저장할 수 있는 다양한 기능을 포함하고 있습니다. 여기서는 녹화가 정상적으로 종료되었을 때 RPPreviewViewController를 modal로 띄워서 보여주도록 구현하였습니다.</p>
-            
+
                 <h3>Step 4 - PreviewViewController로 녹화 영상 확인하기</h3>
-            
+
                 <p>이번에는 RPPreviewViewControllerDelegate를 사용해서 PreviewViewController에서 화면을 처리하는 방법을 구현해 보겠습니다.</p>
-                
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_005.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_006.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <p>위의 코드에서는 RPPreviewViewControllerDelegate 중 previewControllerDidFinish(:) 메소드를 사용해서 RPPreviewViewController에서 작업이 끝나면 MasterViewController로 돌아가도록 설정하였습니다. previewControllerDidFinish(:) 메소드는 사용자가 RPPreviewViewController에서 Cancel 혹은 Save 버튼을 눌렀을 때 호출이 됩니다.</p>
-                
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_003.png">
+                    <img src="tb002_media/images/img_005.jpg">
                 </div>
-                
+
                 <p>여기까지 잘 따라오셨나요? 그럼 코드를 한번 실행시켜 보세요. 원하는 지역을 입력한 후에 녹화를 시작하면 자동으로 지도가 움직이고 애니메이션이 종료되었을 때 자동으로 RPPreviewViewController가 modal형태로 올라오는 것을 확인하실 수 있을겁니다. RPPreviewViewController는 위의 사진과 같이 생겼답니다 :]</p>
-            
+
                 <h3>Step 5 - 녹화 화면 다듬기</h3>
                 <p>이제 모든 작업이 다 끝났습니다. 여러분은 본인이 입력한 지역에 따라 자동으로 움직이는 지도를 녹화하는 애플리케이션을 만들었습니다. 그런데 한가지 아쉬운 점이 있네요. 여러분이 녹화한 화면을 유심히 보셨다면, 화면 위의 Navigation Bar가 그대로 노출이 되어있는 것을 볼 수 있을겁니다. <b>ReplayKit은 현재 스크린을 통째로 녹화</b>하기 때문에 원하지 않는 부분은 녹화가 시작되기 전에 숨겨야 합니다. 그럼 지금부터 녹화가 시작될 때 Navigation Bar를 숨기는 부분을 구현해 보겠습니다.</p>
-            
+
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/codes/code_006.png" style="width: 50%; height: 50%;">
+                    <img src="tb002_media/codes/code_007.jpg" style="width: 70%; height: 70%;">
                 </div>
-            
+
                 <p>위의 방법대로 코드를 구현하신 다음 다시 실행해보세요. 이제 지도만 녹화가 된 것을 확인하실 수 있습니다!</p>
-            
+
                 <h3>마치며</h3>
                 <p>지금까지 ReplayKit의 녹화 기능에 대해서 간단하게 살펴 보았습니다. RPScreenRecorder를 사용하면 간단하게 현재 스크린을 녹화할 수 있으며, 녹화한 결과는 RPPreviewViewController를 이용해 다양하게 사용할 수 있다는 것을 확인해 보았습니다. 프로젝트의 좀 더 자세한 구현 내용은 앞서 올려드린 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>의 ReplayKitExampleComplete를 통해 확인해 볼 수 있습니다. 본 포스트에 대한 제안 사항이나 궁금하신 점이 있다면 언제든 연락 주시면 감사하겠습니다.</p>
-            
+
 		 		<div class="spacing"></div>
 		 		<h6>SHARE:</h6>
 		 		<p class="share">
@@ -235,7 +231,7 @@
  		 			<p>
  		 				<a href="#"><i class="fa fa-facebook"></i></a>
  						<a href="#">
- 							<img src="assets/img/mailchimp.png">
+ 							<img src="../../assets/img/mailchimp.png">
  						</a>
  		 			</p>
  		 		</div>
@@ -257,13 +253,13 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/retina-1.1.0.js"></script>
-	<script src="assets/js/jquery.hoverdir.js"></script>
-	<script src="assets/js/jquery.hoverex.min.js"></script>
-	<script src="assets/js/jquery.prettyPhoto.js"></script>
-  	<script src="assets/js/jquery.isotope.min.js"></script>
-  	<script src="assets/js/custom.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/retina-1.1.0.js"></script>
+	<script src="../../assets/js/jquery.hoverdir.js"></script>
+	<script src="../../assets/js/jquery.hoverex.min.js"></script>
+	<script src="../../assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="../../assets/js/jquery.isotope.min.js"></script>
+  	<script src="../../assets/js/custom.js"></script>
 
 
   </body>
