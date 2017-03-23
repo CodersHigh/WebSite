@@ -146,24 +146,26 @@
 그리고 상황에 따라 이 뷰들을 생성하고, 메시지 전송을 담당하는 것이 <b>MessagesViewContoller 클래스입니다.</b></p>
                 <p>
                 아이메시지 앱을 실행하면 'willBecomeActive' 메서드가 호출되고, 이 안에서 'presentViewController'를 호출하여, 어느 뷰를 생성할지 결정합니다.<br>
-                    <img src = "./tb001_media/2-1-1.jpg" width = 700><br>
+                    <script src="https://gist.github.com/yhr7518/8124ceede0ce68975f91fe002794a334.js"></script><br><script src="https://gist.github.com/yhr7518/3eaea5add26517e146ca1360280bd2cc.js"></script><br>
                 </p>
                 <p>
                     <b>1) StartView 생성:</b> 아이메시지 앱 목록에서 앱을 선택하면 compact 모드로 보여집니다.
 이 때는 StartView를 생성합니다. 뷰의 생성은 instantiateViewController를 통해 이루어집니다.
                     <br><br>
-                    <img src = "./tb001_media/2-1-2.png" width = 700><br>
+                    <script src="https://gist.github.com/yhr7518/94fe7db10b79e9a82d07d1e0188c4d2b.js"></script><br>
                 </p>
                 <p>
                 	<b>2) AddView 생성:</b> startView에서 '새로운 투표 생성' 버튼을 누르면 presentation style이 expanded로 바뀝니다.<br>
                     이때는 willTransition 메서드가 호출되고, 이 메서드에서 presentViewController를 호출합니다.<br>
 	지금은 투표 데이터(voteData)가 존재하지 않기 때문에, 선택문 중 'else' 부분에 해당합니다.<br>
 instantiateAddViewController를 통해 뷰를 생성합니다.<br><br>
-                <img src = "./tb001_media/2-1-3.png" width = 800><br>
+               <script src="https://gist.github.com/yhr7518/e74feee573445824f98174958deaa7b5.js"></script><br>
                 </p>
                 <p>
-                    <b>3) VoteView 생성:</b> Vote 클래스 'Created'라는 구조체 변수가 있습니다. 처음 Vote 객체가 생성되면 Created.isCreated = "false"로 초기화됩니다. 새로 생성된 투표를 저장할 때, 'saveData'라는 메서드가 호출되고, 이때 Created.isCreated = "true"가 됩니다.<br>대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 true일 때, instantiateVoteViewController가 호출되어 VoteView가 생성됩니다. 이 때 생성되는 뷰컨트롤러의 voteData 로 선택된 메시지의 투표 데이터를 넘겨줍니다.<br>
-                    <img src = "./tb001_media/2-1-4.png" width = 800><br><br>
+                    <b>3) VoteView 생성:</b> Vote 클래스 'Created'라는 구조체 변수가 있습니다. 처음 Vote 객체가 생성되면 Created.isCreated = "false"로 초기화됩니다. 새로 생성된 투표를 저장할 때, 'saveData'라는 메서드가 호출되고, 이때 Created.isCreated = "true"가 됩니다.<br>대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 true일 때, instantiateVoteViewController가 호출되어 VoteView가 생성됩니다. 이 때 생성되는 뷰컨트롤러의 voteData 로 선택된 메시지의 투표 데이터를 넘겨줍니다.<br><br>
+                    <script src="https://gist.github.com/yhr7518/e3e83c146cd03003d7ca381b31d8c836.js"></script><br>
+                    <script src="https://gist.github.com/yhr7518/bc0ca3d96b761727aee2ed21c14593b7.js"></script><br>
+                    <script src="https://gist.github.com/yhr7518/7f2d7d3af0ed3a131c14397adf3c6ff7.js"></script><br>
 
                 </p>
                 <p>
@@ -171,7 +173,7 @@ instantiateAddViewController를 통해 뷰를 생성합니다.<br><br>
 </b> 투표 종료 조건이 만족되면 Created.isCreated = "finish"가 됩니다.<br>
 	대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 finish일 때, instantiateResultViewController가 호출되어 ResultView가 생성됩니다.<br>
                     이 때 생성되는 뷰컨트롤러의 voteData로 선택된 메시지의 투표 데이터를 넘겨주며,SettingVoteResult 메서드를 호출하여 투표 결과를 계산합니다.<br><br>
-                    <img src = "./tb001_media/2-1-5.png" width = 700><br>
+                    <script src="https://gist.github.com/yhr7518/bcbbd4c130a41d44e475d05fa9239a4c.js"></script><br>
                 </p>
                 <p><b>[참고 - willBecomeActive vs. willTransition]<br></b>
                     앱이 비활성화 되어 있을 때, 앱의 메시지를 선택하면 willBecomeActive가 호출됩니다.반면, 하단에 앱이 실행되고 있을 때 메시지를 선택하면 willTransition이 호출됩니다.
@@ -183,75 +185,74 @@ instantiateAddViewController를 통해 뷰를 생성합니다.<br><br>
                     <img src ="./tb001_media/2-2-1.png" width = 700><br>
                 </p>
                 <p>UITableView의 'cellForRowAt'은 테이블뷰에 들어갈 내용을 결정합니다. 이 테이블뷰는 2 개의 섹션으로 이루어져있고,  첫번째 섹션에는 VoteView로 연결되는 셀, 두 번째 섹션에는 투표 히스토리를 보여주는 셀이 나타납니다.<br><br>
-                    <img src ="./tb001_media/2-2-2.png" width = 700><br>
+                    <script src="https://gist.github.com/yhr7518/6314eb22f3642f1317df17788d40ef74.js"></script><br>
                     AddVoteCell이 선택되면  델리게이트가 MessagesViewController 내의 메서드를 호출하여 compact 스타일이 었던 앱을 expanded 스타일로 바꿔줍니다.<br><br>
-                     <img src ="./tb001_media/2-2-3.png" width = 450>
+                    <script src="https://gist.github.com/yhr7518/527f007707d0d21ae566d12da9da91fb.js"></script><br>
+                     <script src="https://gist.github.com/yhr7518/6a714b6bf84e10d49395c0fe159ed155.js"></script>
                 </p>
                 <p><span style=" font-size: 1.5em; color: green;">2-3. Add View</span><br><br>
                     AddView는 4개의 섹션을 갖는 테이블뷰로 이루어져있습니다.<br><br>
                      <img src ="./tb001_media/2-3-1.png" width = 700><br><br>
                     <b>1) Title Cell:</b>  첫 번째 섹션에 대한 프로토타입 셀로, 1개의 행을 갖습니다. 텍스트필드의 아울렛을 연결하여 입력된 문자열을 임시 변수에 저장합니다.<br>최종 데이터 저장은 Done 버튼이 눌리면 'saveData' 메서드를 호출하여 입력된 모든 데이터를 검사하며 저장 vote 객체에 저장합니다.<br><br><b>2) Date Cell:</b> 두 번째 섹션에서는 날짜 정보를 입력받습니다. 이번에는 커스텀 셀을 이용합니다. 'DateCell' 클래스를 만들어서 기능을 구현합니다.<br><br>
-                    <img src ="./tb001_media/2-3-2.png" width = 600><br>
+                    <script src="https://gist.github.com/yhr7518/5de3accb44a76d310e53078df9e04344.js"></script><br>
                 </p>
                 <p>
                 Date Cell의 텍스트필드에 액션을 연결하고, 텍스트 필드 편집 시 'showDatePicker' 메서드가 호출됩니다. 이 메서드에서는 입력을 위해 밑에서 올라오는  input view를 커스터마이징 합니다. UIDatePicker와 UIButton을 서브뷰로 만들어 날짜를 입력할 수 있도록 만듭니다.<br><br>
-                    <img src ="./tb001_media/2-3-3.png" width = 800><br>
+                    <img src ="./tb001_media/2-3-3.png" width = 1000><br>
+                    <script src="https://gist.github.com/yhr7518/06abe28f787af79e7a7a468318999476.js"></script><br>
                 </p>
                 <p><br><br>섹션 헤더 부분도 단순 문자열이 아닌 UIView로 구성되어 있습니다. 초기에는 입력할 수 있는 행이 3개 주어지는데, + 버튼을 누르면 행의 개수가 증가되어 새로운 항목을 입력할 수 있습니다.<br><br>
                     <span style="color: #000080;">func tableView(_ tableView: UITableView, <b>viewForHeaderInSection</b> section: Int) -> <b>UIView?</b></span><br>
-위의 메서드를 이용하여 문자열과 버튼으로 이루어진 UIView 헤더를 만듭니다.<br><br>
-                    <span style="color:#000080;">addDateBtn.addTarget(self, action: #selector(self.addRow_date), for: UIControlEvents.touchUpInside)</span><br>
-addTarget을 하여 이 버튼이 눌리면 클래스 내에 addRow_date 메서드를 호출하고, 이 메서드에서 행의 개수를 증가시킵니다.<br><br>
-                    <img src ="./tb001_media/2-3-4.png" width = 700>
-                    <img src ="./tb001_media/2-3-5.png" width = 250><br>
+위의 메서드를 이용하여 문자열과 버튼으로 이루어진 UIView 헤더를 만듭니다.<br><br>addTarget을 하여 이 버튼이 눌리면 클래스 내에 addRow_date 메서드를 호출하고, 이 메서드에서 행의 개수를 증가시킵니다.<br><br>
+                    <script src="https://gist.github.com/yhr7518/5818ea0c382ff5af0d70b60f18162a63.js"></script><br>
                 </p>
                 <p><b>3) Location Cell:</b> 세 번째 섹션은 Location Cell로, 장소를 입력받는 텍스트 필드를 가집니다.Date Cell과 마찬가지로 헤더가 UIView로 구성되며,  + 버튼을 눌러 행의 개수를 추가할 수 있습니다.
                 </p>
                 <p>
                     <b>4) Option Cell:</b> 네 번째 섹션에서는 투표 옵션을 선택할 수 있습니다.<br><span style="color:#000080;">func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)<br></span>
 	위 메서드를 이용해,  선택된 셀의 index path를 알 수 있습니다.<br><br>IndexPath.section == 3 (네 번째 섹션:option) 일 때, 셀이 선택되면 셀의 액세서리타입을 체크마크로 변경합니다.<br><br>
-특히 '마감기한 설정' 셀(row == 2)이 선택되면 행의 개수를 증가시키고, row == 3 에 Date Cell을 추가하여 날짜를 선택할 수 있게 합니다.<br><br>
-                    <img src ="./tb001_media/2-3-option.png" width = 700><br></p><p style="text-align: center;"> <img src ="./tb001_media/2-3-6.gif" width = 200><br><br></p>
+특히 '마감기한 설정' 셀(row == 2)이 선택되면 행의 개수를 증가시키고, row == 3 에 Date Cell을 추가하여 날짜를 선택할 수 있게 합니다.<br>
+                    <script src="https://gist.github.com/yhr7518/a7fe06ffb25abe036aa33a393a33551c.js"></script><br></p><p style="text-align: center;"> <img src ="./tb001_media/2-3-6.gif" width = 200><br><br></p>
 
                 <p>	<b>5) Done 버튼:</b> Done 버튼에 액션을 연결하여, 버튼이 눌리면 saveData 메서드를 호출하고, 테이블뷰의 모든 행을 검사하며 Vote 객체에 정보를 입력된 저장합니다.<br>
-                    <img src ="./tb001_media/2-3-7.png" width = 500><br><br>
+                    <script src="https://gist.github.com/yhr7518/776ef3e793904442b36a4a301bca04be.js"></script><br><br>
                 </p>
                 <p><span style=" font-size: 1.5em; color: green;">2-4. Vote View</span><br><br>
                     Vote View에서는 선택된 메시지 세션의 투표 객체의 정보를 로드하고, 사용자에 의해 선택된 투표 항목의 투표 수를 증가하여 다시 투표 정보를 업데이트 합니다.<br>
 테이블뷰는 3개의 세션으로 이루어져 있으며, 각각 투표 이름, 날짜항목, 장소항목을 나타냅니다.<br></p>
                 <p style="text-align: center;"><img src ="./tb001_media/2-4-1.png" width = 200></p>
-                <p><b>1) Vote Title Cell:</b> 투표 객체를 로드할 때, 저장된 옵션 정보에 따라 '다중선택 가능' 한지 Title Cell에 표시합니다.<br><br>
-                    <img src ="./tb001_media/2-4-2.png" width = 700><br><br>
+                <p><b>1) Vote Title Cell:</b> 투표 객체를 로드할 때, 저장된 옵션 정보에 따라 '다중선택 가능' 한지 Title Cell에 표시합니다.<br>
+                    <script src="https://gist.github.com/yhr7518/4cefecccb1f9c26068ad532b782907b8.js"></script><br>
                 </p>
-                <p><b>2) Vote Date Cell:</b> 투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.<br><br>                    <img src ="./tb001_media/2-4-3.png" width = 700><br>
+                <p><b>2) Vote Date Cell:</b> 투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.<br><br><script src="https://gist.github.com/yhr7518/2b630475d78ad84271154c6a5ed5538f.js"></script><br>
                 </p>
                 <p>셀이 선택되면 득표수를 증가시키고, 체크마크를 표시합니다.<br>
-dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])<br><br><img src ="./tb001_media/2-4-4.png" width = 600><br><br>
+dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])<br><script src="https://gist.github.com/yhr7518/0bd3052b3b253d7768442bb5f8160c1e.js"></script><br>
 </p>
-                <p>	<b>3) Vote Location Cell:</b> 투표 객체 중 장소 정보를 추출하여 세 번째 섹션에 표시합니다. 동작 방식은 Vote Date Cell과 동일합니다.<br><br>
+                <p>	<b>3) Vote Location Cell:</b> 투표 객체 중 장소 정보를 추출하여 세 번째 섹션에 표시합니다. 동작 방식은 Vote Date Cell과 동일합니다.<br>
                     <b>4) Done 버튼:</b> Done 버튼에 액션을 연결하여, 버튼을 누르면 saveData 메서드를 호출하고  변경된 득표수를 저장합니다.<br><br>
                 </p>
 
                 <p><span style=" font-size: 1.5em; color: green;">2-5. Result View</span><br><br>
-                Result View는 투표 종료 조건이 만족되고, 앱의 Present style이 expanded 일 때 생성됩니다.<br>투표 종료 시간은 기본적으로 투표 생성 후 24시간이고, 옵션을 통해 변경할 수도 있습니다.<br>(테스트를 위해 '강제종료' 버튼을 누르면 isCreated == "finish"가 되어 종료 조건을 만족)<br><br><img src ="./tb001_media/2-5-1.png" width = 500><br><br>
+                Result View는 투표 종료 조건이 만족되고, 앱의 Present style이 expanded 일 때 생성됩니다.<br>투표 종료 시간은 기본적으로 투표 생성 후 24시간이고, 옵션을 통해 변경할 수도 있습니다.<br>(테스트를 위해 '강제종료' 버튼을 누르면 isCreated == "finish"가 되어 종료 조건을 만족)<br><script src="https://gist.github.com/yhr7518/94054a8b1fb9c1b6e81110d8e18b6379.js"></script><br><script src="https://gist.github.com/yhr7518/9a62859bb72b32f3afc2c9d1459ccda3.js"></script><br>
                 </p>
-                <p>MessagesViewController에서  instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.<br><br><img src ="./tb001_media/2-5-2.png" width = 350><br><br>
+                <p>MessagesViewController에서  instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.<br><script src="https://gist.github.com/yhr7518/bd708412382efbd8776ced11c5d703a8.js"></script><br>
                     또한, 저장된 값을 이용해 최종 결과 셀의 배경색을 지정합니다.<br><br>
                     <img src ="./tb001_media/2-5-3.png" width = 800><br></p>
-                <p><b>[캘린더에 이벤트 생성하기]</b><br> Add Calendar Event 버튼을 누르면 연결된 액션에 의해 아래와 같은 메서드가 실행됩니다.<br><br><img src ="./tb001_media/2-5-4.png" width = 800><br><br>먼저 캘린더 접근 권한이 있는지 확인합니다.
-권한을 얻은 다음, createEvent메서드를 호출합니다.<br><br><img src ="./tb001_media/2-5-5.png" width = 700><br><br>EKEventStore 클래스를 통해 캘린더에 접근할 수 있습니다. EKEventStore 오브젝트를 생성하여 캘린더에 일정 정보를 설정하고 저장합니다.<br><br><img src ="./tb001_media/2-5-6.png" width = 600>
+                <p><b>[캘린더에 이벤트 생성하기]</b><br> Add Calendar Event 버튼을 누르면 연결된 액션에 의해 아래와 같은 메서드가 실행됩니다.<br><script src="https://gist.github.com/yhr7518/ff588657930651db1c9fe1f104c72025.js"></script><br>먼저 캘린더 접근 권한이 있는지 확인합니다.
+권한을 얻은 다음, createEvent메서드를 호출합니다.<br><br><img src ="./tb001_media/2-5-5.png" width = 700><br><br>EKEventStore 클래스를 통해 캘린더에 접근할 수 있습니다.  EKEventStore 오브젝트를 생성하여 캘린더에 일정 정보를 설정하고 저장합니다.<br><script src="https://gist.github.com/yhr7518/68b99167985792ea20cb8f59c8388107.js"></script>
                 </p>
                 <p>시뮬레이터에서 앱을 실행하는 중에 캘린더에 들어가면 에러가 발생하므로, 앱을 종료한 후에 캘린더에 들어가면 일정이 등록된 것을 확인할 수 있습니다.<br></p><p style="text-align: center;"><img src ="./tb001_media/2-5-7.png" width = 200></p>
                 <p><span style=" font-size: 1.5em; color: green;">3. 메시지에 정보 담아 보내기</span><br><br>
-                Vote 객체를 통째로 메시지에 담을 수 있으면 좋겠지만, 전달해야하는 정보를 MSMessage 객체에 담아 보내야 합니다. AddView에서 투표를 생성하는 과정을 통해 메시지에 정보를 담는 방법을 보이겠습니다.<br>AddViewController에서 'Done'버튼을 누르면 델리게이트를 통해 아래와 같은 메서드가 실행됩니다.<br><br><img src ="./tb001_media/3-1.png" width = 700></p>
-                <p>여기서 정보를 MSMessage 객체에 담는 메서드가 composeMessage 입니다.<br><img src ="./tb001_media/3-2.png" width = 700></p>
-                <p>queryItems에 투표 정보를 적절한 형태로 저장합니다. 메시지는 정보들을 딕셔너리 배열로 저장하며, name(Key)과 value 는 string입니다. 투표 정보는 숫자, 날짜, 문자열 등 다양한 형태의 정보를 포함하므로, 적절히 변환해야합니다.<br><img src ="./tb001_media/3-3.png" width = 750>
+                Vote 객체를 통째로 메시지에 담을 수 있으면 좋겠지만, 전달해야하는 정보를 MSMessage 객체에 담아 보내야 합니다. AddView에서 투표를 생성하는 과정을 통해 메시지에 정보를 담는 방법을 보이겠습니다.<br>AddViewController에서 'Done'버튼을 누르면 델리게이트를 통해 아래와 같은 메서드가 실행됩니다.<br><script src="https://gist.github.com/yhr7518/e12fd23ae5205f9e8def2bb43ce97811.js"></script><br><script src="https://gist.github.com/yhr7518/bedbd79700e959d71c7cdb0ebb8849a4.js"></script><br></p>
+                <p>여기서 정보를 MSMessage 객체에 담는 메서드가 composeMessage 입니다.<br><script src="https://gist.github.com/yhr7518/10ae5764fa1b25f6d3f0523c7f706c35.js"></script></p>
+                <p>queryItems에 투표 정보를 적절한 형태로 저장합니다. 메시지는 정보들을 딕셔너리 배열로 저장하며, name(Key)과 value 는 string입니다. 투표 정보는 숫자, 날짜, 문자열 등 다양한 형태의 정보를 포함하므로, 적절히 변환해야합니다.<br><script src="https://gist.github.com/yhr7518/79a49def181bbece4eb2e8ca697cf941.js"></script>
 </p>
-                <p>queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.<br><img src ="./tb001_media/3-4.png" width = 250>
+                <p>queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.<br><script src="https://gist.github.com/yhr7518/ce6b304d733ce30946ab108db25969cf.js"></script>
                 </p>
-                <p>메시지를 받으면,  메시지 고유의 URL을 통해 queryItems를 추출합니다.<br><img src ="./tb001_media/3-5.png" width = 700></p>
+                <p>메시지를 받으면,  메시지 고유의 URL을 통해 queryItems를 추출합니다.<br><script src="https://gist.github.com/yhr7518/745b7c34fbc07e9a6f67f3e9ee5b7063.js"></script></p>
                 <p>
-                그리고 queryItems의 각 요소를 key 값으로 구분하여 투표 정보를 추출하고 저장합니다.<br><img src ="./tb001_media/3-6.png" width = 450><br><br>
+                그리고 queryItems의 각 요소를 key 값으로 구분하여 투표 정보를 추출하고 저장합니다.<br><script src="https://gist.github.com/yhr7518/1bdb0a5a7ae0c4178ff7fff969fcf6de.js"></script><br><br>
 </p>
                 <p style="text-align: center;">이것으로 메시지 익스텐션을 이용한 Clendar-Vot 제작기를 모두 마치겠습니다. 아래는 시뮬레이터에서 구동한 앱의 실행 동영상입니다.<b><br><br>Calendar-Vot 실행 화면</b><br>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/bgT3bJK_bNg" frameborder="0" allowfullscreen></iframe></p>
