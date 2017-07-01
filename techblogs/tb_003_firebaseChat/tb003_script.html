@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Firebase를 이용하여 채팅창 만들기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../assets/js/modernizr.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html" style="font-size: inherit;">홈</a></li>
+            <li><a style="font-size: inherit;" href="../../about.html">소개</a></li>
+            <li><a style="font-size: inherit;"href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+            <li class="active"><a style="font-size: inherit;"href="../../techblog_list.html">기술블로그</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>코더스하이 기술블로그</h3>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
+
+
+	<!-- *****************************************************************************************************************
+	 BLOG CONTENT
+	 ***************************************************************************************************************** -->
+
+	 <div class="container mtb">
+	 	<div class="row">
+	 		<!-- SINGLE POST -->
+	 		<div class="col-lg-12">
+        <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+
+                <!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+		 		<a href="single-post.html"><h3 class="ctitle">Firebase를 이용하여 채팅창 만들기</h3></a>
+		 		<p><csmall>Posted: June 17, 2017.</csmall> | <csmall2>By: Hyunsoo Park</csmall2></p>
+
+                <!-- POST 시작  -->
+		 		<p>이번 포스트에서는 <b>Firebase</b>라는 백엔드 서비스를 이용하여 여러 사용자와 채팅을 할 수 있는 공간을 구현해보겠습니다. 
+                 Firebase는 Google에서 제공하는 직접 서버를 구축할 필요 없이 서버가 가져야 할 기본적인 기능과 유저 인증, 활동 분석, 파일 저장소 등을 제공해주는 서비스입니다. 
+                 그렇기에 서버 없이도 많은 사용자들끼리 소통하거나 중요한 데이터들을 중앙서버에 저장할 필요가 있는 어플리케이션을 제작할 수가 있어 이 서비스를 활용한 많은 앱들이 등장하고 있는데요,
+                 이 포스트를 이용하여 Firebase의 활용법과 실제 채팅창이 어떠한 방식으로 구현되는지 참고하고 더 좋은 채팅기능을 가진 어플리케이션을 제작하길 희망합니다.  
+                </p>
+
+                <b/>
+                <div style="height:60px"></div>
+                <h3>시작하기</h3>
+                
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_001.png">
+                </div>
+                
+                <p>우선 프로젝트를 시작하여 다음과 같이 UI를 구성할 필요가 있습니다. 이 프로젝트에서는 총 4개의 View Controller들을 사용하겠습니다. 각각의 View Controller들은 다음과 같은 기능을 가지고 있습니다.</p>
+
+                <p>1.  로그인 - 이번 프로젝트에서는 2명의 유저를 Firebase에 추가하여 2개의 버튼("Park으로 로그인", "John으로 로그인")을 이용하여 로그인을 할 수 있게끔 합니다.</p>
+                <p>2.  채팅방 선택 - 진행되고 있던 채팅창의 목록을 확인하여 지난 채팅에 이어 계속해나갈 수 있도록 합니다. (TableView 활용)</p>
+                <p>3.  채팅을 하고자 하는 사용자 - 새로운 유저와 채팅을 하고 싶을 때 다른 유저들의 목록을 확인하여 새로운 채팅방을 개설합니다. (TableView 활용)</p>
+                <p>4.  실제 채팅창 - 채팅하고자 하는 유저와 실제 채팅을 합니다. (Collection View 활용 - Collection View Cell의 자동 resizing이 어떠한 방식으로 구현되는지 보여드리려고 합니다.)</p>
+
+                <div style="height:60px"></div>
+                <h3>Firebase 서비스 구성하기</h3>
+                <p>Firebase를 이용하기 위해서는 Firebase 서비스에 프로젝트를 추가하여 자신이 작업하고 있는 프로젝트에 연동을 해주셔야합니다. 그 방법을 차례대로 확인해보겠습니다.</p>
+
+                <p>1. 파이어베이스 홈페이지에 들어가서 로그인합니다. (구글 계정으로 가능) <a href="https://firebase.google.com/">https://firebase.google.com/</a></p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_002.png">
+                </div>
+                
+
+                <div style="height:36px"></div>
+                <p>2. 프로젝트 추가를 클릭합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_003.png">
+                </div>
+                
+
+                <div style="height:36px"></div>
+                <p>3. 프로젝트의 이름과 국가를 선택합니다. (현재 있는 위치에서 가까운 곳에 서버가 구축됩니다.)</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_004.png">
+                </div>
+                
+
+                <div style="height:36px"></div>
+                <p>4. 다음과 같은 화면이 나오면 "iOS앱에 Firebase 추가"를 선택합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_006.png">
+                </div>
+                
+
+                <div style="height:36px"></div>
+                <p>5. 이제, Firebase를 추가하는 절차화면이 나오게 되는데, 이곳에 번들 id를 입력하라고 나옵니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_007.png">
+                </div>
+                
+
+                <div style="height:36px"></div>
+                <p>6. 번들 id는 프로젝트를 클릭하여 General에 가시면 다음 위치에 존재합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_008.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>7. 앱 등록을 클릭하시면 "GoogleService-info.plist"파일이 자동으로 다운로드 되는데, 다운받은 파일을 다음과 같이 프로젝트에 추가하면 됩니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_009.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>8. Firebase는 Cocoapod를 이용하여 실제 프로젝트에 추가되는데 다음과 같이 계속 진행하기 전에 명령어 "sudo gem install cocoapods"를 입력하여 cocoapods를 설치합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_010.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>9. 계속 진행하여 다음과 같은 화면이 나오면 Terminal로 자신의 프로젝트가 있는 디렉토리로 이동하여 "pod init"명령어를 입력합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_011.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>10. 다음과 같이 "Podfile"이 생성되면 텍스트 에디터를 이용하여 열어봅니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_012.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>11. 우리는 Firebase의 여러가지 기능 중, 로그인 기능과 데이터베이스를 활용할 것이므로 다음과 같이 Podfile을 수정합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_013.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>12. 수정이 완료되면, 저장하고 나와서 "pod install"명령어를 입력하면 Firebase이용을 위한 라이브러리들이 설치됩니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_014.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>13. 설치 완료 후, 프로젝트 디렉토리를 보면 다음과 같이 구성되어 있는데, 프로젝트를 진행하던 xcode를 종료 한 후, 새로 생긴 .xcworkspace를 실행시켜줍니다. (기존 xcodeproj를 열어 프로젝트를 진행하면 cocoapods로 설치된 라이브러리들이 적용되지 않습니다.)</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_015.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>14. 계속을 클릭하여 진행하면, 마지막으로 Firebase를 구성하기위한 코드 작성 페이지가 나옵니다. 다음 화면같이 AppDelegate.swift 파일에 코드를 추가하시면 되겠습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_016.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>14. 계속을 클릭하여 진행하면, 마지막으로 Firebase를 구성하기위한 코드 작성 페이지가 나옵니다. 다음 화면같이 AppDelegate.swift 파일에 코드를 추가하시면 되겠습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_016.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>14. 계속을 클릭하여 진행하면, 마지막으로 Firebase를 구성하기위한 코드 작성 페이지가 나옵니다. 다음 화면같이 AppDelegate.swift 파일에 코드를 추가하시면 되겠습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_016.png">
+                </div>
+
+                <div style="height:60px"></div>
+                <h3>Firebase 서비스 이용하기</h3>
+                <p>이제, 연동된 Firebase의 기본기능들을 직접 이용해보면서 어떠한 방식으로 Firebase를 활용할 수 있는지 살펴보도록 하겠습니다.</p>
+                
+                <div style="height:36px"></div>
+                <p>우선 제일 먼저 사용할 기능은 사용자 인증입니다. Firebase에서는 사용자를 인증할 수 있는 여러가지 방법들을 제공하는데요, 그 중에 이메일을 사용한 인증방법을 활용해보겠습니다.</p>
+                <p>왼쪽 패널에서 Authentication > 로그인 방법에 보시면 로그인 제공업체가 있는데, 이곳에서 이메일을 이용한 인증을 사용하겠다는 설정을 해주셔야합니다. "이메일/비밀번호"를 클릭하면 다음과 같은 화면이 나오는데, 사용설정을 사용으로 바꿔주시고 저장버튼을 클릭해주세요.</p>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_017.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>그 다음, "사용자"탭을 눌러 들어오시면, 다음과 같이 사용자를 수동으로 추가하실 수 있습니다. 이번 프로젝트에서는 총 2명의 사용자를 직접 추가하여 로그인 하고 채팅하는 데 이용하겠습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_018.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>오른쪽 부분의 "사용자 추가"버튼을 클릭하여 사용자를 추가해주세요.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_019.png">
+                </div>
+
+                <div style="height:36px"></div>
+                <p>총 2명의 사용자를 추가하면 다음과 같이 나오는데 오른쪽 부분의 사용자 uid는 사용자를 인식하거나 추가정보를 붙여넣을 때 활용될 수 있습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_020.png">
+                </div>
+
+
+                <div style="height:60px"></div>
+                <p>자, 이렇게 채팅에 활용할 사용자 등록을 마쳤고, 이제는 실제 서버역할을 해줄 데이터베이스를 어떻게 활용하는지 살펴보겠습니다.</p>
+                <p>왼쪽 패널에서 "Database"를 클릭해주세요.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_021.png">
+                </div>
+
+
+
+                 
+
+                <div style="position:relative; text-align:center;">
+                    <iframe src="https://j.gifs.com/oYl9yL.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
+                </div>
+
+                <p>흥미가 있으신가요? 여러분들은 저보다 ReplayKit을 사용해서 훨씬 멋진 결과물을 만드실 수 있습니다. 그럼 이제 본론으로 돌아가서 여러분이 ReplayKit의 사용법을 익히실 수 있도록 초기 예제 프로젝트와 완성된 프로젝트를 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>에 올려두었습니다. 초기 예제 프로젝트(ReplayKitExampleStarter)를 열어 포스트에 올려놓은 방법을 따라하며 프로젝트를 완성하셔도 좋고, 완성된 프로젝트(ReplayKitExampleComplete)를 참고해서 ReplayKit의 녹화 기능이 어떻게 동작하는지 한 눈에 보셔도 좋을 것 같습니다.</p>
+
+                <h3>예제 프로젝트에 대한 설명</h3>
+                <p>예제 프로젝트는 다음과 같은 프로세스를 가집니다.
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_001.jpg">
+                </div>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_002.jpg">
+                </div>
+
+                </p>
+                <p>초기 예제 프로젝트(ReplayKitExampleStarter) 에서는 사용자가 지도 위에 표시할 <b>지역을 검색할 수 있는 view</b>와 <b>입력한 지역을 확인할 수 있는 view</b>가 구현되어 있습니다. 그리고 Record 버튼을 눌렀을 때 입력한 지역들이 지도 위에 pin으로 나타날 수 있도록 구현되어 있습니다. 이번 포스트의 취지는 ReplayKit의 사용법이므로, ReplayKit 기능 이외의 다른 기능의 설명은 생략하도록 하겠습니다. <br>
+                (ReplayKit 이외에 이 프로젝트에 대해서 궁금한 사항이 있으시다면 언제든 연락주세요 :] )</p>
+
+                <!-- 첨부 내용 -->
+                <div class="info">
+                    <p>참고로 본 예제는 MapKit을 이용해 지역을 검색하는 기능이 포함되어 있습니다. 따라서 <b>인터넷 접속이 가능한 환경에서 예제를 실행</b>해야 제대로 된 결과를 확인하실 수 있습니다. 또한 Simulator가 아닌 실제 iPhone, iPad 기기를 통해 테스트 하는 것을 권장합니다. ReplayKit이 Simulator에서 올바르게 동작하지 않을 수 있습니다.<br>
+                    (혹시 Simulator에서도 ReplayKit이 올바르게 동작하는 방법이 있다면 알려주시면 감사하겠습니다. :])</p>
+                </div>
+                <!-- 첨부 내용 끝 -->
+
+                <p>아래의 모든 단계를 따라오신다면 다음과 같이 자동으로 움직이는 지도를 녹화한 동영상을 생성하실 수 있습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <iframe src="https://j.gifs.com/xGxNEz.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
+                </div>
+
+                <h3>Step 1 - 녹화 시작 버튼 만들기</h3>
+                <p>그럼 지금부터 함께 프로젝트를 진행해 보겠습니다. 우선, RecordViewController 화면 우측 상단에 버튼을 하나 만들겠습니다. 사용자가 버튼을 누르면 <b>화면 녹화가 시작되면서 동시에 지도가 자동으로 움직일 수 있게</b> 만들고자 합니다. 버튼을 만들고 RecordViewController에 <b>@IBAction</b>과 <b>@IBOutlet</b>으로 연결해줍니다. 지금 만든 버튼은 toggle 버튼처럼 사용하려고 합니다. 사용자가 Start Recording 버튼을 누르면 녹화가 시작되고, 버튼을 한번 더 누르면 녹화가 중지될 수 있도록 만들겠습니다. 우선 다음과 같이 target method를 작성해 보겠습니다.</p>
+
+                <script src="https://gist.github.com/chizcake/1a98d0488e356d7f39b6893632182d65.js"></script>
+
+                <!-- 첨부 내용 -->
+                <div clss="info">
+                    <p>위에서 사용한 Log 클래스는 <a href="https://github.com/emaloney/CleanroomLogger">CleanroomLogger</a>에 정의되어 있습니다. 예시 프로젝트에는 이미 Carthage로 라이브러리를 추가한 상태이므로 그대로 사용하셔도 무방하지만, CleanroomLogger가 설치되지 않은 환경에서는 NSLog 혹은 본인이 원하는 방식으로 버튼이 잘 동작하는지 확인하시면 됩니다.</p>
+                </div>
+                <!-- 첨부 내용 끝 -->
+
+                <p>위의 코드와 같이 작업을 진행하신 후에 코드를 실행 해보세요. 그럼 아래의 사진처럼 Bar button이 제대로 동작하는 것을 확인하실 수 있습니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_003.jpg">
+                </div>
+
+                <p>그럼 이제 버튼이 <b>Start Recording</b> 일 때 버튼을 누르면 녹화가 시작되고, <b>Stop Recording</b> 일 때 버튼을 누르면 녹화가 중지될 수 있도록 메소드를 입력해 줍니다.</p>
+                
+                <script src="https://gist.github.com/chizcake/cc5f8adeb4f390113419254d3c9936b5.js"></script>
+            
+                <p>startRecording() 메소드는 녹화를 시작하기 위해 필요한 절차가 담겨있고, stopRecording() 메소드는 녹화를 종료하기 위해 필요한 절차가 담겨있습니다. 두 메소드 아직 구현이 되어있지 않습니다. 지금부터 각각의 메소드를 함께 정의해 보겠습니다.</p>
+
+                <h3>Step 2 - 녹화 시작하기</h3>
+                <p>지금부터는 ReplayKit을 사용하므로 `import ReplayKit` 을 통해 ReplayKit을 가져옵니다. 이제 `startRecording() `메소드를 구현해 보겠습니다. </p>
+                
+                <script src="https://gist.github.com/chizcake/8dc6e68092377a16253075f51fb98cd9.js"></script>
+
+                <p>위 코드에서 사용된 <a href="https://developer.apple.com/reference/replaykit/rpscreenrecorder">RPScreenRecorder</a>는 <b>현재 화면에 대해서 녹화를 시작하거나 종료하기 위해서 사용</b>합니다. RPScreenRecorder는 공유객체를 사용하며, 객체가 가지고 있는 <b>startRecording 메소드를 호출함으로써 녹화를 시작</b>하게 됩니다. 녹화가 시작된 이후에 처리해야 할 일은 startRecording 메소드의 클로저 매개변수에 포함시키면 됩니다. 위 코드에서는 녹화가 정상적으로 실행되었을 때 `startAnimatingMap()` 메소드를 호출함으로써, 녹화가 시작되면 자동으로 지도가 움직일 수 있도록 하였습니다. 그럼 이번에는 `startAnimatingMap()` 메소드와 `stopAnimatingMap()` 메소드를 구현해 보겠습니다.</p>
+
+                <script src="https://gist.github.com/chizcake/7c47c1548d1875dacfdf653ebc877e01.js"></script>
+
+                <p>startAnimatingMap() 메소드에 대해서 좀 더 자세히 알아보겠습니다. <b>currentLocation</b>변수는 현재 지도 위에 표시되고 있는 지역의 인덱스를 나타냅니다. 초기값은 0으로 설정되어 있습니다. 또한 <b>placemarks</b>배열은 사용자가 앞서 입력한 지역 데이터를 포함하고 있습니다. <b>showLocationOnMap(index:)</b> 메소드는 매개변수로 받은 인덱스의 위치로 지도를 움직입니다. 만약 showLocationOnMap(index: 0) 이라면 placemarks 배열의 0번째 인덱스에 저장된 지역을 지도 위에 보여주게 됩니다. Timer는 3초마다 한 번씩 `animatesMap()` 메소드를 호출하도록 설정되어 있습니다. animatesMap() 메소드는 사용자가 입력한 지역을 지도 위에 보여주는 역할을 합니다. 따라서 3초마다 지도는 사용자가 입력한 다음 지역으로 자동으로 움직이게 됩니다. 만약 사용자가 입력한 모든 지역을 지도 위에 모두 보여주었다면, stopAnimatingMap() 메소드를 호출해서 Timer를 종료시키고 녹화를 중지하는 `stopRecording()` 메소드를 호출하게 됩니다.</p>
+
+                <h3>Step 3 - 녹화 종료하기</h3>
+                <p>다음은 `stopRecording()` 메소드를 구현해서 녹화를 끝내는 방법에 대해서 알아보겠습니다. `stopRecording()` 메소드가 호출되는 경우는 크게 두 가지가 있습니다. 첫번째는 사용자가 녹화 중간에 종료 버튼을 눌렀을 경우입니다. 두번째는 지도 위의 애니메이션이 모두 종료된 후 자동으로 녹화가 종료되는 경우입니다. 이 두가지 경우를 모두 생각하여 메소드를 구현해 보겠습니다.</p>
+
+                <script src="https://gist.github.com/chizcake/cb26b998264e1df6f5da27daee622e09.js"></script>
+
+                <p>앞서 startRecording() 메소드를 구현할 때와 마찬가지로 <b>RPScreenRecorder의 공유객체를 사용</b>합니다. 만약 녹화가 진행되고 있는 상태(isRecording)에서 stopRecording() 메소드가 호출되었다면, 사용자가 녹화를 중지한 것이라고 판단할 수 있습니다. 반면 녹화가 진행되고 있지 않은 상태라면 지도 애니메이션이 끝까지 진행되어 정상적으로 녹화를 중지해야 할 때라고 판단할 수 있습니다.</p>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_004.jpg">
+                </div>
+
+                <p>위 다이어그램은 RPScreenRecorder의 stopRecording() 메소드가 취할 수 있는 2가지 행동을 보여줍니다. 우선 사용자가 <b>녹화를 중단한 상태</b>라면, stopRecording() 의 클로저 안에서 discardRecording() 함수를 실행시킬 수 있습니다. discardRecording() 은 현재 녹화하고 있던 내용을 지울 때 사용합니다. 주의하실 점은 <b>discardRecording() 메소드는 stopRecording() 클래스의 클로저 안에서만 동작할 수 있다</b>는 점입니다. 여기서는 discardRecording() 메소드를 통해 Timer를 해지시켰습니다.<br>
+                이번에는 지도 애니메이션이 종료되어 정상적으로 녹화를 종료하는 부분에 대해서 살펴보겠습니다. stopRecording() 메소드가 가지고 있는 클로저에는 매개변수로 RPPreviewViewController를 가지고 있습니다. RPPReviewViewController는 녹화된 동영상을 저장, 공유할 수 있고 원하는 부분만 잘라내어 저장할 수 있는 다양한 기능을 포함하고 있습니다. 여기서는 녹화가 정상적으로 종료되었을 때 RPPreviewViewController를 modal로 띄워서 보여주도록 구현하였습니다.</p>
+
+                <h3>Step 4 - PreviewViewController로 녹화 영상 확인하기</h3>
+
+                <p>이번에는 RPPreviewViewControllerDelegate를 사용해서 PreviewViewController에서 화면을 처리하는 방법을 구현해 보겠습니다.</p>
+
+                <script src="https://gist.github.com/chizcake/0a2307bdd3c372851e1ef7064784318f.js"></script>
+
+                <p>위의 코드에서는 RPPreviewViewControllerDelegate 중 previewControllerDidFinish(:) 메소드를 사용해서 RPPreviewViewController에서 작업이 끝나면 MasterViewController로 돌아가도록 설정하였습니다. previewControllerDidFinish(:) 메소드는 사용자가 RPPreviewViewController에서 Cancel 혹은 Save 버튼을 눌렀을 때 호출이 됩니다.</p>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb002_media/images/img_005.jpg">
+                </div>
+
+                <p>여기까지 잘 따라오셨나요? 그럼 코드를 한번 실행시켜 보세요. 원하는 지역을 입력한 후에 녹화를 시작하면 자동으로 지도가 움직이고 애니메이션이 종료되었을 때 자동으로 RPPreviewViewController가 modal형태로 올라오는 것을 확인하실 수 있을겁니다. RPPreviewViewController는 위의 사진과 같이 생겼답니다 :]</p>
+
+                <h3>Step 5 - 녹화 화면 다듬기</h3>
+                <p>이제 모든 작업이 다 끝났습니다. 여러분은 본인이 입력한 지역에 따라 자동으로 움직이는 지도를 녹화하는 애플리케이션을 만들었습니다. 그런데 한가지 아쉬운 점이 있네요. 여러분이 녹화한 화면을 유심히 보셨다면, 화면 위의 Navigation Bar가 그대로 노출이 되어있는 것을 볼 수 있을겁니다. <b>ReplayKit은 현재 스크린을 통째로 녹화</b>하기 때문에 원하지 않는 부분은 녹화가 시작되기 전에 숨겨야 합니다. 그럼 지금부터 녹화가 시작될 때 Navigation Bar를 숨기는 부분을 구현해 보겠습니다.</p>
+
+                <script src="https://gist.github.com/chizcake/29bea523aad0e8164a3b6f3689687670.js"></script>
+
+                <p>위의 방법대로 코드를 구현하신 다음 다시 실행해보세요. 이제 지도만 녹화가 된 것을 확인하실 수 있습니다!</p>
+
+                <h3>마치며</h3>
+                <p>지금까지 ReplayKit의 녹화 기능에 대해서 간단하게 살펴 보았습니다. RPScreenRecorder를 사용하면 간단하게 현재 스크린을 녹화할 수 있으며, 녹화한 결과는 RPPreviewViewController를 이용해 다양하게 사용할 수 있다는 것을 확인해 보았습니다. 프로젝트의 좀 더 자세한 구현 내용은 앞서 올려드린 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>의 ReplayKitExampleComplete를 통해 확인해 볼 수 있습니다. 본 포스트에 대한 제안 사항이나 궁금하신 점이 있다면 언제든 연락 주시면 감사하겠습니다.</p>
+                <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+		 		<div class="spacing"></div>
+
+        <!--<h6>SHARE:</h6>
+		 		<p class="share">
+		 			<a href="#"><i class="fa fa-twitter"></i></a>
+		 			<a href="#"><i class="fa fa-facebook"></i></a>
+		 			<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			<a href="#"><i class="fa fa-google-plus"></i></a>
+		 		</p>-->
+			</div><!-- /col-lg-12 -->
+        </div><!-- /row -->
+	 </div><!-- /container -->
+
+
+   <!-- *****************************************************************************************************************
+ 	 FOOTER
+ 	 ***************************************************************************************************************** -->
+   <div id="footerwrap">
+	 	<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-4">
+		 			<h4>회사 소개</h4>
+		 			<div class="hline-w"></div>
+		 			<p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+		 			코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>소셜 네트워크</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				<a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+						<a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+							<img src="../../assets/img/mailchimp.png">
+						</a>
+		 			</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>회사 위치</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				경기도 수원시<br/>
+		 				영통구 광교로 156,<br/>
+		 				광교비즈니스센터 11층<br/>
+		 			</p>
+		 		</div>
+
+		 	</div><!--/row -->
+	 	</div><!--/container -->
+	 </div><!--/footerwrap -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/retina-1.1.0.js"></script>
+	<script src="../../assets/js/jquery.hoverdir.js"></script>
+	<script src="../../assets/js/jquery.hoverex.min.js"></script>
+	<script src="../../assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="../../assets/js/jquery.isotope.min.js"></script>
+  	<script src="../../assets/js/custom.js"></script>
+
+
+  </body>
+</html>
