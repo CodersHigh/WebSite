@@ -237,121 +237,101 @@
                     <img src="tb003_media/images/img_020.png">
                 </div>
 
-
                 <div style="height:60px"></div>
                 <p>자, 이렇게 채팅에 활용할 사용자 등록을 마쳤고, 이제는 실제 서버역할을 해줄 데이터베이스를 어떻게 활용하는지 살펴보겠습니다.</p>
-                <p>왼쪽 패널에서 "Database"를 클릭해주세요.</p>
+                <p>왼쪽 패널에서 "Database"를 클릭해주시면 다음과 같은 화면을 보실 수 있는데 여기서 'fir-chattest-2d377' 부분에 마우스를 갖다 대시면 JSON형식으로 추가해나갈 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_021.png">
                 </div>
 
-
-
-                 
-
+                <div style="height:60px"></div>
+                <p>처음에는 각 채팅 사용자의 이메일과 비밀번호를 제외한 부가정보(여기서는 name)를 추가하기 위해 데이터베이스에 유저 정보를 입력해보겠습니다.</p>
+                <p>'+' 버튼을 이용하여 다음과 같이 데이터를 추가해보겠습니다.</p>
+                <p> * 여기에서 uid는 Database탭의 상단에 있는 Authentication패널에서 각 유저를 구별할 수 있는 사용자 UID를 복사한 값입니다.</p>
                 <div style="position:relative; text-align:center;">
-                    <iframe src="https://j.gifs.com/oYl9yL.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
+                    <img src="tb003_media/images/img_022.png">
                 </div>
 
-                <p>흥미가 있으신가요? 여러분들은 저보다 ReplayKit을 사용해서 훨씬 멋진 결과물을 만드실 수 있습니다. 그럼 이제 본론으로 돌아가서 여러분이 ReplayKit의 사용법을 익히실 수 있도록 초기 예제 프로젝트와 완성된 프로젝트를 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>에 올려두었습니다. 초기 예제 프로젝트(ReplayKitExampleStarter)를 열어 포스트에 올려놓은 방법을 따라하며 프로젝트를 완성하셔도 좋고, 완성된 프로젝트(ReplayKitExampleComplete)를 참고해서 ReplayKit의 녹화 기능이 어떻게 동작하는지 한 눈에 보셔도 좋을 것 같습니다.</p>
-
-                <h3>예제 프로젝트에 대한 설명</h3>
-                <p>예제 프로젝트는 다음과 같은 프로세스를 가집니다.
-
+                <div style="height:60px"></div>
+                <p>다음으로 '추가' 버튼을 클릭하면 다음과 같이 줄기 형태의 데이터가 저장되는데, 이러한 데이터를 활용하여 채팅창을 구현할 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_001.jpg">
+                    <img src="tb003_media/images/img_023.png">
                 </div>
 
-                <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_002.jpg">
-                </div>
 
-                </p>
-                <p>초기 예제 프로젝트(ReplayKitExampleStarter) 에서는 사용자가 지도 위에 표시할 <b>지역을 검색할 수 있는 view</b>와 <b>입력한 지역을 확인할 수 있는 view</b>가 구현되어 있습니다. 그리고 Record 버튼을 눌렀을 때 입력한 지역들이 지도 위에 pin으로 나타날 수 있도록 구현되어 있습니다. 이번 포스트의 취지는 ReplayKit의 사용법이므로, ReplayKit 기능 이외의 다른 기능의 설명은 생략하도록 하겠습니다. <br>
-                (ReplayKit 이외에 이 프로젝트에 대해서 궁금한 사항이 있으시다면 언제든 연락주세요 :] )</p>
-
-                <!-- 첨부 내용 -->
-                <div class="info">
-                    <p>참고로 본 예제는 MapKit을 이용해 지역을 검색하는 기능이 포함되어 있습니다. 따라서 <b>인터넷 접속이 가능한 환경에서 예제를 실행</b>해야 제대로 된 결과를 확인하실 수 있습니다. 또한 Simulator가 아닌 실제 iPhone, iPad 기기를 통해 테스트 하는 것을 권장합니다. ReplayKit이 Simulator에서 올바르게 동작하지 않을 수 있습니다.<br>
-                    (혹시 Simulator에서도 ReplayKit이 올바르게 동작하는 방법이 있다면 알려주시면 감사하겠습니다. :])</p>
-                </div>
-                <!-- 첨부 내용 끝 -->
-
-                <p>아래의 모든 단계를 따라오신다면 다음과 같이 자동으로 움직이는 지도를 녹화한 동영상을 생성하실 수 있습니다.</p>
-                <div style="position:relative; text-align:center;">
-                    <iframe src="https://j.gifs.com/xGxNEz.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe>
-                </div>
-
-                <h3>Step 1 - 녹화 시작 버튼 만들기</h3>
-                <p>그럼 지금부터 함께 프로젝트를 진행해 보겠습니다. 우선, RecordViewController 화면 우측 상단에 버튼을 하나 만들겠습니다. 사용자가 버튼을 누르면 <b>화면 녹화가 시작되면서 동시에 지도가 자동으로 움직일 수 있게</b> 만들고자 합니다. 버튼을 만들고 RecordViewController에 <b>@IBAction</b>과 <b>@IBOutlet</b>으로 연결해줍니다. 지금 만든 버튼은 toggle 버튼처럼 사용하려고 합니다. 사용자가 Start Recording 버튼을 누르면 녹화가 시작되고, 버튼을 한번 더 누르면 녹화가 중지될 수 있도록 만들겠습니다. 우선 다음과 같이 target method를 작성해 보겠습니다.</p>
-
-                <script src="https://gist.github.com/chizcake/1a98d0488e356d7f39b6893632182d65.js"></script>
-
-                <!-- 첨부 내용 -->
-                <div clss="info">
-                    <p>위에서 사용한 Log 클래스는 <a href="https://github.com/emaloney/CleanroomLogger">CleanroomLogger</a>에 정의되어 있습니다. 예시 프로젝트에는 이미 Carthage로 라이브러리를 추가한 상태이므로 그대로 사용하셔도 무방하지만, CleanroomLogger가 설치되지 않은 환경에서는 NSLog 혹은 본인이 원하는 방식으로 버튼이 잘 동작하는지 확인하시면 됩니다.</p>
-                </div>
-                <!-- 첨부 내용 끝 -->
-
-                <p>위의 코드와 같이 작업을 진행하신 후에 코드를 실행 해보세요. 그럼 아래의 사진처럼 Bar button이 제대로 동작하는 것을 확인하실 수 있습니다.</p>
-                <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_003.jpg">
-                </div>
-
-                <p>그럼 이제 버튼이 <b>Start Recording</b> 일 때 버튼을 누르면 녹화가 시작되고, <b>Stop Recording</b> 일 때 버튼을 누르면 녹화가 중지될 수 있도록 메소드를 입력해 줍니다.</p>
+                <div style="height:60px"></div>
+                <h3>Firebase를 이용한 채팅창 구현하기</h3>
+                <p>이제, Firebase의 데이터를 iOS에서 활용할 수 있도록 어플리케이션을 직접 제작하여 구현해보도록 하겠습니다.</p>
                 
-                <script src="https://gist.github.com/chizcake/cc5f8adeb4f390113419254d3c9936b5.js"></script>
-            
-                <p>startRecording() 메소드는 녹화를 시작하기 위해 필요한 절차가 담겨있고, stopRecording() 메소드는 녹화를 종료하기 위해 필요한 절차가 담겨있습니다. 두 메소드 아직 구현이 되어있지 않습니다. 지금부터 각각의 메소드를 함께 정의해 보겠습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>우선 파이어베이스와 데이터 연동을 위한 싱글턴 클래스를 제작해 보도록 하겠습니다.</p>
+                <script src="https://gist.github.com/anonymous/e230e1fe2f2a0351be135b8a8c17971d.js"></script>
 
-                <h3>Step 2 - 녹화 시작하기</h3>
-                <p>지금부터는 ReplayKit을 사용하므로 `import ReplayKit` 을 통해 ReplayKit을 가져옵니다. 이제 `startRecording() `메소드를 구현해 보겠습니다. </p>
-                
-                <script src="https://gist.github.com/chizcake/8dc6e68092377a16253075f51fb98cd9.js"></script>
+                <p></p>
+                <p>파이어베이스의 데이터베이스 내부의 특정 데이터에 접근하기 위해서는 다음과 상단 코드의 'userRef', 'groupRef', 'messageRef' 같은 데이터의 레퍼런스가 필요합니다. child 메소드를 이용하면 데이터의 root에서 줄기를 따라 원하는 데이터가 있는 장소에 도달할 수 있는데, 그 레퍼런스를 후에 접근하기 쉽게 예를 들면, 유저 정보에 접근하고자 하면 'userRef'변수를 사용하면 되게끔 구성하였습니다.</p>
+                <p>currentUserUid를 이용하면 현재 어플리케이션에 로그인 되었는지 확인할 수 있고, signIn 메소드를 이용하여 로그인을 합니다.</p>
 
-                <p>위 코드에서 사용된 <a href="https://developer.apple.com/reference/replaykit/rpscreenrecorder">RPScreenRecorder</a>는 <b>현재 화면에 대해서 녹화를 시작하거나 종료하기 위해서 사용</b>합니다. RPScreenRecorder는 공유객체를 사용하며, 객체가 가지고 있는 <b>startRecording 메소드를 호출함으로써 녹화를 시작</b>하게 됩니다. 녹화가 시작된 이후에 처리해야 할 일은 startRecording 메소드의 클로저 매개변수에 포함시키면 됩니다. 위 코드에서는 녹화가 정상적으로 실행되었을 때 `startAnimatingMap()` 메소드를 호출함으로써, 녹화가 시작되면 자동으로 지도가 움직일 수 있도록 하였습니다. 그럼 이번에는 `startAnimatingMap()` 메소드와 `stopAnimatingMap()` 메소드를 구현해 보겠습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>이번엔 채팅 앱에서 사용될 데이터 모델을 살펴보겠습니다.</p>
+                <script src="https://gist.github.com/Hpark11/d7e0cdbac5948124ba73555cbe4c00f2.js"></script>
+                <p></p>
+                <p>총 3가지 모델로 구성되어 있는데 다음과 같습니다.</p>
+                <p>1. 말풍선 - 채팅앱에서 핵심이 되는 한 단위의 메세지를 담는데 사용됩니다. 누구한테 왔는지, 무슨내용인지, 언제보냈는지에 대한 기본정보가 담겨있습니다.</p>
+                <p>2. 채팅방 - 각각의 채팅방이 가지고 있는 기본 정보와 채팅방이 포함한 말풍선들을 참조하는 데이터를 담고 있습니다.</p>
+                <p>3. 사용자 - 사용자의 기본적인 부가정보를 담아내는 데 사용합니다.</p>
 
-                <script src="https://gist.github.com/chizcake/7c47c1548d1875dacfdf653ebc877e01.js"></script>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>이제, 뷰 컨트롤러들을 살펴보겠습니다. 처음엔 로그인을 위한 뷰 컨트롤러입니다.</p>
+                <script src="https://gist.github.com/Hpark11/0de38026e5831633bedabd97d007820c.js"></script>
 
-                <p>startAnimatingMap() 메소드에 대해서 좀 더 자세히 알아보겠습니다. <b>currentLocation</b>변수는 현재 지도 위에 표시되고 있는 지역의 인덱스를 나타냅니다. 초기값은 0으로 설정되어 있습니다. 또한 <b>placemarks</b>배열은 사용자가 앞서 입력한 지역 데이터를 포함하고 있습니다. <b>showLocationOnMap(index:)</b> 메소드는 매개변수로 받은 인덱스의 위치로 지도를 움직입니다. 만약 showLocationOnMap(index: 0) 이라면 placemarks 배열의 0번째 인덱스에 저장된 지역을 지도 위에 보여주게 됩니다. Timer는 3초마다 한 번씩 `animatesMap()` 메소드를 호출하도록 설정되어 있습니다. animatesMap() 메소드는 사용자가 입력한 지역을 지도 위에 보여주는 역할을 합니다. 따라서 3초마다 지도는 사용자가 입력한 다음 지역으로 자동으로 움직이게 됩니다. 만약 사용자가 입력한 모든 지역을 지도 위에 모두 보여주었다면, stopAnimatingMap() 메소드를 호출해서 Timer를 종료시키고 녹화를 중지하는 `stopRecording()` 메소드를 호출하게 됩니다.</p>
+                <p></p>
+                <p>버튼을 누르면 로그인되는 단순한 구조입니다.</p>
 
-                <h3>Step 3 - 녹화 종료하기</h3>
-                <p>다음은 `stopRecording()` 메소드를 구현해서 녹화를 끝내는 방법에 대해서 알아보겠습니다. `stopRecording()` 메소드가 호출되는 경우는 크게 두 가지가 있습니다. 첫번째는 사용자가 녹화 중간에 종료 버튼을 눌렀을 경우입니다. 두번째는 지도 위의 애니메이션이 모두 종료된 후 자동으로 녹화가 종료되는 경우입니다. 이 두가지 경우를 모두 생각하여 메소드를 구현해 보겠습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>현재 이미 구성되어있는 채팅방의 목록을 볼 수 있는 뷰 컨트롤러입니다.</p>
+                <script src="https://gist.github.com/Hpark11/30200152d262f93275680de7a9e58460.js"></script>
 
-                <script src="https://gist.github.com/chizcake/cb26b998264e1df6f5da27daee622e09.js"></script>
+                <p></p>
+                <p>유심히 보아야 할 메소드는 fetchChatGroupList입니다. 이 메소드는 현재 유저가 로그인이 되어있으면 미리 정의해둔 파이어베이스용 데이터 레퍼런스의 데이터를 지켜보고 있다가 데이터를 받아오는 데, 다음과 같은 순서로 동작합니다.</p>
+                <p>1. 사용자가 어떠한 채팅방을 가지고 있는지 확인하여 채팅방에 대한 레퍼런스를 가져온다.</p>
+                <p>2. 각 채팅방에 대한 레퍼런스를 가져오면 해달 레퍼런스를 이용하여 채팅방에 대한 정보를 가져온다.</p>
+                <p>3. 채팅방의 배열을 채우고 테이블 뷰를 메인 UI스레드에서 업데이트한다.</p>
 
-                <p>앞서 startRecording() 메소드를 구현할 때와 마찬가지로 <b>RPScreenRecorder의 공유객체를 사용</b>합니다. 만약 녹화가 진행되고 있는 상태(isRecording)에서 stopRecording() 메소드가 호출되었다면, 사용자가 녹화를 중지한 것이라고 판단할 수 있습니다. 반면 녹화가 진행되고 있지 않은 상태라면 지도 애니메이션이 끝까지 진행되어 정상적으로 녹화를 중지해야 할 때라고 판단할 수 있습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>새로운 채팅방을 열고 싶을 때 가능한 유저의 목록을 볼 수 있는 뷰 컨트롤러입니다.</p>
+                <script src="https://gist.github.com/Hpark11/674b29a504cf4fabcc9c427eb90d6a2f.js"></script>
 
-                <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_004.jpg">
-                </div>
+                <p></p>
+                <p>유저의 목록을 불러올 때도 채팅방 목록을 불러올 때와 비슷한 방식으로 동작시킵니다. 비교해보면서 어떠한 방식으로 파이어베이스 데이터를 활용하는지 확인해보세요.</p>
 
-                <p>위 다이어그램은 RPScreenRecorder의 stopRecording() 메소드가 취할 수 있는 2가지 행동을 보여줍니다. 우선 사용자가 <b>녹화를 중단한 상태</b>라면, stopRecording() 의 클로저 안에서 discardRecording() 함수를 실행시킬 수 있습니다. discardRecording() 은 현재 녹화하고 있던 내용을 지울 때 사용합니다. 주의하실 점은 <b>discardRecording() 메소드는 stopRecording() 클래스의 클로저 안에서만 동작할 수 있다</b>는 점입니다. 여기서는 discardRecording() 메소드를 통해 Timer를 해지시켰습니다.<br>
-                이번에는 지도 애니메이션이 종료되어 정상적으로 녹화를 종료하는 부분에 대해서 살펴보겠습니다. stopRecording() 메소드가 가지고 있는 클로저에는 매개변수로 RPPreviewViewController를 가지고 있습니다. RPPReviewViewController는 녹화된 동영상을 저장, 공유할 수 있고 원하는 부분만 잘라내어 저장할 수 있는 다양한 기능을 포함하고 있습니다. 여기서는 녹화가 정상적으로 종료되었을 때 RPPreviewViewController를 modal로 띄워서 보여주도록 구현하였습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>이제 이번 앱의 핵심인 채팅창을 나타내는 뷰 컨트롤러 입니다.</p>
+                <script src="https://gist.github.com/Hpark11/707fffda3bc95ba621a5f1a0510ba4d6.js"></script>
 
-                <h3>Step 4 - PreviewViewController로 녹화 영상 확인하기</h3>
+                <p></p>
+                <p>코드의 양이 많아 복잡해 보이지만, 몇 가지 중점사항을 보면 됩니다.</p>
+                <p>1. 채팅 목록 창에서 특정 채팅방을 선택하면 그 채팅방을 구별할 수 있는 그룹 키를 가져와야합니다. (groupKey 프로퍼티)</p>
+                <p>2. 그룹키를 이용하여 해당 채팅방 데이터의 레퍼런스를 얻고, 이 레퍼런스를 활용하여 이 채팅방의 기본정보와 이 방안에서 이루어진 모든 채팅 메세지를 가져옵니다. (fetchMessage 메소드)</p>
+                <p>3. 채팅 메세지가 포함한 정보중에 'fromUserId'라는 정보가 있는데 이 정보가 로그인한 유저와 동일하면 말풍선을 오른쪽, 아니면 왼쪽에 붙여야 합니다. (setupChatCell 메소드) </p>
+                <p>4. 메세지를 보내면 파이어베이스의 데이터베이스에 채팅 메세지가 기록되어야 합니다. (sendButtonTapped 메소드)</p>
 
-                <p>이번에는 RPPreviewViewControllerDelegate를 사용해서 PreviewViewController에서 화면을 처리하는 방법을 구현해 보겠습니다.</p>
+                <div style="height:36px"></div>
+                <p></p>
+                <p>마지막으로 채팅 메세지의 말풍선을 구성하는 컬렉션뷰의 셀에 대한 코드입니다.</p>
+                <script src="https://gist.github.com/Hpark11/cf1dc8a76af8cb9a93ba8183c11333b4.js"></script>
 
-                <script src="https://gist.github.com/chizcake/0a2307bdd3c372851e1ef7064784318f.js"></script>
-
-                <p>위의 코드에서는 RPPreviewViewControllerDelegate 중 previewControllerDidFinish(:) 메소드를 사용해서 RPPreviewViewController에서 작업이 끝나면 MasterViewController로 돌아가도록 설정하였습니다. previewControllerDidFinish(:) 메소드는 사용자가 RPPreviewViewController에서 Cancel 혹은 Save 버튼을 눌렀을 때 호출이 됩니다.</p>
-
-                <div style="position:relative; text-align:center;">
-                    <img src="tb002_media/images/img_005.jpg">
-                </div>
-
-                <p>여기까지 잘 따라오셨나요? 그럼 코드를 한번 실행시켜 보세요. 원하는 지역을 입력한 후에 녹화를 시작하면 자동으로 지도가 움직이고 애니메이션이 종료되었을 때 자동으로 RPPreviewViewController가 modal형태로 올라오는 것을 확인하실 수 있을겁니다. RPPreviewViewController는 위의 사진과 같이 생겼답니다 :]</p>
-
-                <h3>Step 5 - 녹화 화면 다듬기</h3>
-                <p>이제 모든 작업이 다 끝났습니다. 여러분은 본인이 입력한 지역에 따라 자동으로 움직이는 지도를 녹화하는 애플리케이션을 만들었습니다. 그런데 한가지 아쉬운 점이 있네요. 여러분이 녹화한 화면을 유심히 보셨다면, 화면 위의 Navigation Bar가 그대로 노출이 되어있는 것을 볼 수 있을겁니다. <b>ReplayKit은 현재 스크린을 통째로 녹화</b>하기 때문에 원하지 않는 부분은 녹화가 시작되기 전에 숨겨야 합니다. 그럼 지금부터 녹화가 시작될 때 Navigation Bar를 숨기는 부분을 구현해 보겠습니다.</p>
-
-                <script src="https://gist.github.com/chizcake/29bea523aad0e8164a3b6f3689687670.js"></script>
-
-                <p>위의 방법대로 코드를 구현하신 다음 다시 실행해보세요. 이제 지도만 녹화가 된 것을 확인하실 수 있습니다!</p>
-
+                <p></p>
+                <p>여기서는 containerView가 풍선처럼 감싸는 컨테이너가 되겠고, textLabel이 채팅내용이 되겠습니다. 이 컬렉션 셀에서는 눈여겨볼 사항은 2가지인데요.</p>
+                <p>1. containerView가 현재 포함하고 있는 모든 constraint 객체를 멤버변수로 가지고 있으면 뷰 컨트롤러에서 접근하여 위치를 자유자재로 조절할 수 있습니다.</p>
+                <p>2. 채팅의 내용은 항상 다르기 때문에 말풍선의 크기는 항상 다를 수밖에 없는데, preferredLayoutAttributesFitting 오버라이드 메소드를 이용하면 내부에서 정해준 크기에 따라 auto-resizing(자동 크기조절)을 할 수 있어 문자열 길이에 따라 다양한 크기의 말풍선을 만들어낼 수 있습니다 (현재 measuredFrameHeightForEachMessage 메소드 내부를 확인하면 가로 200에 문자열 16으로 특정 글을 구성하였을 때 그 글을 포함할 수 있는 사각형의 크기를 반환받을 수 있습니다.)</p>
                 <h3>마치며</h3>
-                <p>지금까지 ReplayKit의 녹화 기능에 대해서 간단하게 살펴 보았습니다. RPScreenRecorder를 사용하면 간단하게 현재 스크린을 녹화할 수 있으며, 녹화한 결과는 RPPreviewViewController를 이용해 다양하게 사용할 수 있다는 것을 확인해 보았습니다. 프로젝트의 좀 더 자세한 구현 내용은 앞서 올려드린 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>의 ReplayKitExampleComplete를 통해 확인해 볼 수 있습니다. 본 포스트에 대한 제안 사항이나 궁금하신 점이 있다면 언제든 연락 주시면 감사하겠습니다.</p>
+                <p>지금까지 파이어베이스를 이용하여 채팅창을 구성하는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 채팅어플을 만들어보세요. 전체 소스는 <a href="https://github.com/Hpark11/firebaseChatTest">Github</a>에서 확인하실 수 있습니다. </p>
                 <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
 		 		<div class="spacing"></div>
 
