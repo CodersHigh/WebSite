@@ -112,20 +112,17 @@
                     <img src="tb003_media/images/img_002.png">
                 </div>
 
-
                 <div style="height:36px"></div>
                 <p>2. 프로젝트 추가를 클릭합니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_003.png">
                 </div>
 
-
                 <div style="height:36px"></div>
                 <p>3. 프로젝트의 이름과 국가를 선택합니다. (현재 있는 위치에서 가까운 곳에 서버가 구축됩니다.)</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_004.png">
                 </div>
-
 
                 <div style="height:36px"></div>
                 <p>4. 다음과 같은 화면이 나오면 "iOS앱에 Firebase 추가"를 선택합니다.</p>
@@ -201,47 +198,47 @@
 
                 <div style="height:36px"></div>
                 <p>우선 제일 먼저 사용할 기능은 사용자 인증입니다. Firebase에서는 사용자를 인증할 수 있는 여러가지 방법들을 제공하는데요, 그 중에 이메일을 사용한 인증방법을 활용해보겠습니다.</p>
-                <p>왼쪽 패널에서 Authentication > 로그인 방법에 보시면 로그인 제공업체가 있는데, 이곳에서 이메일을 이용한 인증을 사용하겠다는 설정을 해주셔야합니다. "이메일/비밀번호"를 클릭하면 다음과 같은 화면이 나오는데, 사용설정을 사용으로 바꿔주시고 저장버튼을 클릭해주세요.</p>
+                <p>1. 왼쪽 패널에서 Authentication > 로그인 방법에 보시면 로그인 제공업체가 있는데, 이곳에서 이메일을 이용한 인증을 사용하겠다는 설정을 해주셔야합니다. "이메일/비밀번호"를 클릭하면 다음과 같은 화면이 나오는데, 사용설정을 사용으로 바꿔주시고 저장버튼을 클릭해주세요.</p>
 
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_017.png">
                 </div>
 
                 <div style="height:36px"></div>
-                <p>그 다음, "사용자"탭을 눌러 들어오시면, 다음과 같이 사용자를 수동으로 추가하실 수 있습니다. 이번 프로젝트에서는 총 2명의 사용자를 직접 추가하여 로그인 하고 채팅하는 데 이용하겠습니다.</p>
+                <p>2. "사용자"탭을 눌러 들어오시면, 다음과 같이 사용자를 수동으로 추가하실 수 있습니다. 이번 프로젝트에서는 총 2명의 사용자를 직접 추가하여 로그인 하고 채팅하는 데 이용하겠습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_018.png">
                 </div>
 
                 <div style="height:36px"></div>
-                <p>오른쪽 부분의 "사용자 추가"버튼을 클릭하여 사용자를 추가해주세요.</p>
+                <p>3. 오른쪽 부분의 "사용자 추가"버튼을 클릭하여 사용자를 추가해주세요.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_019.png">
                 </div>
 
                 <div style="height:36px"></div>
-                <p>총 2명의 사용자를 추가하면 다음과 같이 나오는데 오른쪽 부분의 사용자 uid는 사용자를 인식하거나 추가정보를 붙여넣을 때 활용될 수 있습니다.</p>
+                <p>4. 총 2명의 사용자를 추가하면 다음과 같이 나오는데 오른쪽 부분의 사용자 uid는 사용자를 인식하거나 추가정보를 붙여넣을 때 활용될 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_020.png">
                 </div>
 
                 <div style="height:60px"></div>
-                <p>자, 이렇게 채팅에 활용할 사용자 등록을 마쳤고, 이제는 실제 서버역할을 해줄 데이터베이스를 어떻게 활용하는지 살펴보겠습니다.</p>
-                <p>왼쪽 패널에서 "Database"를 클릭해주시면 다음과 같은 화면을 보실 수 있는데 여기서 'fir-chattest-2d377' 부분에 마우스를 갖다 대시면 JSON형식으로 추가해나갈 수 있습니다.</p>
+                <p>5. 이렇게 채팅에 활용할 사용자 등록을 마쳤고, 이제는 실제 서버역할을 해줄 데이터베이스를 어떻게 활용하는지 살펴보겠습니다.</p>
+                <p> - 왼쪽 패널에서 "Database"를 클릭해주시면 다음과 같은 화면을 보실 수 있는데 여기서 'fir-chattest-2d377' 부분에 마우스를 갖다 대시면 JSON형식으로 추가해나갈 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_021.png">
                 </div>
 
                 <div style="height:60px"></div>
-                <p>처음에는 각 채팅 사용자의 이메일과 비밀번호를 제외한 부가정보(여기서는 name)를 추가하기 위해 데이터베이스에 유저 정보를 입력해보겠습니다.</p>
-                <p>'+' 버튼을 이용하여 다음과 같이 데이터를 추가해보겠습니다.</p>
-                <p> * 여기에서 uid는 Database탭의 상단에 있는 Authentication패널에서 각 유저를 구별할 수 있는 사용자 UID를 복사한 값입니다.</p>
+                <p>6. 각 채팅 사용자의 이메일과 비밀번호를 제외한 부가정보(여기서는 name)를 추가하기 위해 데이터베이스에 유저 정보를 입력해보겠습니다.</p>
+                <p>'+' 버튼을 이용하여 다음과 같이 데이터를 추가할 수 있습니다.</p>
+                <p> - 여기에서 uid는 Database탭의 상단에 있는 Authentication패널에서 각 유저를 구별할 수 있는 사용자 UID를 복사한 값입니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_022.png">
                 </div>
 
                 <div style="height:60px"></div>
-                <p>다음으로 '추가' 버튼을 클릭하면 다음과 같이 줄기 형태의 데이터가 저장되는데, 이러한 데이터를 활용하여 채팅창을 구현할 수 있습니다.</p>
+                <p>7. '추가' 버튼을 클릭하면 다음과 같이 줄기 형태의 데이터가 저장되는데, 이러한 데이터를 활용하여 채팅창을 구현할 수 있습니다.</p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_023.png">
                 </div>
@@ -250,7 +247,6 @@
                 <div style="height:60px"></div>
                 <h3>Firebase를 이용한 채팅창 구현하기</h3>
                 <p>이제, Firebase의 데이터를 iOS에서 활용할 수 있도록 어플리케이션을 직접 제작하여 구현해보도록 하겠습니다.</p>
-
                 <div style="height:36px"></div>
                 <p></p>
                 <p>우선 파이어베이스와 데이터 연동을 위한 싱글턴 클래스를 제작해 보도록 하겠습니다.</p>
@@ -259,6 +255,20 @@
                 <p></p>
                 <p>파이어베이스의 데이터베이스 내부의 특정 데이터에 접근하기 위해서는 다음과 상단 코드의 'userRef', 'groupRef', 'messageRef' 같은 데이터의 레퍼런스가 필요합니다. child 메소드를 이용하면 데이터의 root에서 줄기를 따라 원하는 데이터가 있는 장소에 도달할 수 있는데, 그 레퍼런스를 후에 접근하기 쉽게 예를 들면, 유저 정보에 접근하고자 하면 'userRef'변수를 사용하면 되게끔 구성하였습니다.</p>
                 <p>currentUserUid를 이용하면 현재 어플리케이션에 로그인 되었는지 확인할 수 있고, signIn 메소드를 이용하여 로그인을 합니다.</p>
+
+                <div style="height:36px"></div>
+                <p>잠깐, 더 넘어가기 전에 여기서 언급하는 '레퍼런스'와 기본적인 파이어베이스 API들을 살펴봅시다.</p>
+                <p>파이어베이스의 데이터들은 마치 파일 디렉토리 같이, 하나의 루트에서 여러 줄기로 뻗어나온 형태로 구성되어 있습니다. 그렇기에 데이터의 조직화를 짜임새 있게 맞춰주는 것이 중요한데요. 이 데이터들을 탐색하기 위하여 '레퍼런스'라는 개념을 사용합니다.</p>
+                <p>상단의 코드를 보시면 "fileprivate let baseRef = FIRDatabase.database().reference()"라는 부분이 있는데 이것이 현재 "fir-chattest-2d377(즉, 모든 데이터의 루트)"를 가리키고 있습니다.</p>
+                <p></p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_023.png">
+                </div>
+                <p>다음은, 레퍼런스를 이용하여 파이어베이스의 데이터 탐색, 삽입, 변경, 관찰 등을 가능하게 해주는 API입니다.</p>
+                <p>1. child(key) - key를 이용하여 하위 데이터에 접근할 수 있습니다. ex) baseRef.child("user") 하면 위 그림에서 user 노드로 참조하는 레퍼런스가 변경됩니다.</p>
+                <p>2. updateChildValues(data), setValues(data) - 현재 접근한 레퍼런스에 존재하는 데이터를 변경하거나 삽입합니다. data는 딕셔너리 형태로 들어가도되고 단순 정수나 문자열로도 삽입이 가능합니다.</p>
+                <p>3. observe(), observeSingleEvent() - 현재 접근한 레퍼런스의 데이터의 변경이 이루어졌을 경우를 감시할 수 있습니다. 이 관찰자들을 설정해 두면 completion 인자에 넣어둔 클로저를 호출 할 수 있기 때문에 데이터의 변경이 일어날 때마다 어떠한 작업을 할 것인지 결정 할 수 있습니다. 이번 프로젝트에서는 대부분 채팅창이 입력될 때마다 데이터가 새로 추가되고 그것이 UI에 반영되게 하기 위해서 주로 사용합니다.</p>
+                <p> - 자세한 사항은 <a href="https://firebase.google.com/docs/reference">https://firebase.google.com/docs/reference</a> 를 확인해주세요.</p>
 
                 <div style="height:36px"></div>
                 <p></p>
@@ -277,6 +287,9 @@
 
                 <p></p>
                 <p>버튼을 누르면 FirebaseDataService의 인스턴스에 signIn(email:,password:) 함수를 호출해 로그인합니다.</p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_024.png" style="height:60vh; border:solid 1px;">
+                </div>
 
                 <div style="height:36px"></div>
                 <p></p>
@@ -289,6 +302,10 @@
                 <p>2. 각 채팅방에 대한 레퍼런스를 가져오면 해달 레퍼런스를 이용하여 채팅방에 대한 정보를 가져온다.</p>
                 <p>3. 채팅방의 배열을 채우고 테이블 뷰를 메인 UI스레드에서 업데이트한다.</p>
 
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_025.png" style="height:60vh; border:solid 1px;">
+                </div>
+
                 <div style="height:36px"></div>
                 <p></p>
                 <p>새로운 채팅방을 열고 싶을 때 가능한 유저의 목록을 볼 수 있는 뷰 컨트롤러입니다.</p>
@@ -296,6 +313,10 @@
 
                 <p></p>
                 <p>유저의 목록을 불러올 때도 채팅방 목록을 불러올 때와 비슷한 방식으로 동작시킵니다. 비교해보면서 어떠한 방식으로 파이어베이스 데이터를 활용하는지 확인해보세요.</p>
+
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_027.png" style="height:60vh; border:solid 1px;">
+                </div>
 
                 <div style="height:36px"></div>
                 <p></p>
@@ -309,6 +330,10 @@
                 <p>3. 채팅 메세지가 포함한 정보중에 'fromUserId'라는 정보가 있는데 이 정보가 로그인한 유저와 동일하면 말풍선을 오른쪽, 아니면 왼쪽에 붙여야 합니다. (setupChatCell 메소드) </p>
                 <p>4. 메세지를 보내면 파이어베이스의 데이터베이스에 채팅 메세지가 기록되어야 합니다. (sendButtonTapped 메소드)</p>
 
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_026.png" style="height:60vh; border:solid 1px;">
+                </div>
+
                 <div style="height:36px"></div>
                 <p></p>
                 <p>마지막으로 채팅 메세지의 말풍선을 구성하는 컬렉션뷰의 셀에 대한 코드입니다.</p>
@@ -320,6 +345,9 @@
                 <p>2. 채팅의 내용은 항상 다르기 때문에 말풍선의 크기는 항상 다를 수밖에 없는데, preferredLayoutAttributesFitting 오버라이드 메소드를 이용하면 내부에서 정해준 크기에 따라 auto-resizing(자동 크기조절)을 할 수 있어 문자열 길이에 따라 다양한 크기의 말풍선을 만들어낼 수 있습니다 (현재 measuredFrameHeightForEachMessage 메소드 내부를 확인하면 가로 200에 문자열 16으로 특정 글을 구성하였을 때 그 글을 포함할 수 있는 사각형의 크기를 반환받을 수 있습니다.)</p>
                 <h3>마치며</h3>
                 <p>지금까지 파이어베이스를 이용하여 채팅창을 구성하는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 채팅어플을 만들어보세요. 전체 소스는 <a href="https://github.com/Hpark11/firebaseChatTest">Github</a>에서 확인하실 수 있습니다. </p>
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U1ABna0XRgY" frameborder="0" allowfullscreen style="display:block; margin: 0 auto;"></iframe>
+                
                 <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
 		 		<div class="spacing"></div>
 
