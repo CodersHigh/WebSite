@@ -253,8 +253,23 @@
                 <script src="https://gist.github.com/anonymous/e230e1fe2f2a0351be135b8a8c17971d.js"></script>
 
                 <p></p>
-                <p>파이어베이스의 데이터베이스 내부의 특정 데이터에 접근하기 위해서는 다음과 상단 코드의 'userRef', 'groupRef', 'messageRef' 같은 데이터의 레퍼런스가 필요합니다. child 메소드를 이용하면 데이터의 root에서 줄기를 따라 원하는 데이터가 있는 장소에 도달할 수 있는데, 그 레퍼런스를 후에 접근하기 쉽게 예를 들면, 유저 정보에 접근하고자 하면 'userRef'변수를 사용하면 되게끔 구성하였습니다.</p>
-                <p>currentUserUid를 이용하면 현재 어플리케이션에 로그인 되었는지 확인할 수 있고, signIn 메소드를 이용하여 로그인을 합니다.</p>
+                <p>파이어베이스 데이터베이스 내부의 특정 데이터에 접근하기 위해서는 위 코드의 'userRef', 'groupRef', 'messageRef' 같은 레퍼런스가 필요합니다. 이 레퍼런스를 child 메소드의 매개변수로 이용하면 데이터의 root에서 줄기를 따라 원하는 데이터가 있는 장소에 도달할 수 있습니다.</p>
+                <p>예를 들면, child 메소드에 'userRef'변수를 사용하면 유저 정보에 접근할 수 있으며, currentUserUid를 이용하면 현재 어플리케이션에 로그인 되었는지 확인할 수 있고, signIn 메소드를 이용하여 로그인을 합니다.</p>
+
+                <div style="height:36px"></div>
+                <p>잠깐, 더 넘어가기 전에 여기서 언급하는 '레퍼런스'와 기본적인 파이어베이스 API들을 살펴봅시다.</p>
+                <p>파이어베이스의 데이터들은 마치 파일 디렉토리 같이, 하나의 루트에서 여러 줄기로 뻗어나온 형태로 구성되어 있습니다. 그렇기에 데이터의 구조를 짜임새 있게 맞추는 것이 중요하며, 이 데이터들을 탐색하기 위하여 '레퍼런스'라는 개념을 사용합니다.</p>
+                <p>상단의 코드를 보시면 "fileprivate let baseRef = FIRDatabase.database().reference()"라는 부분이 있는데 이것이 현재 "fir-chattest-2d377(즉, 모든 데이터의 루트)"를 가리키고 있습니다.</p>
+                <p></p>
+                <div style="position:relative; text-align:center;">
+                    <img src="tb003_media/images/img_023.png">
+                </div>
+                <p>다음은, 레퍼런스를 이용하여 파이어베이스의 데이터 탐색, 삽입, 변경, 관찰 등을 가능하게 해주는 API입니다.</p>
+                <ol>
+                <li>child(key)<p>key를 이용하여 하위 데이터에 접근할 수 있습니다. ex) baseRef.child("user") 하면 위 그림에서 user 노드로 참조하는 레퍼런스가 변경됩니다.</p></li>
+                <li>updateChildValues(data), setValues(data)<p>현재 접근한 레퍼런스에 존재하는 데이터를 변경하거나 삽입합니다. data는 딕셔너리 형태로 들어가도되고 단순 정수나 문자열로도 삽입이 가능합니다.</p></li>
+                <li>observe(), observeSingleEvent()<p>현재 접근한 레퍼런스의 데이터의 변경이 이루어졌을 경우를 감시할 수 있습니다. 이 관찰자들을 설정해 두면 completion 인자에 넣어둔 클로저를 호출 할 수 있기 때문에 데이터의 변경이 일어날 때마다 어떠한 작업을 할 것인지 결정 할 수 있습니다. 이번 프로젝트에서는 대부분 채팅창이 입력될 때마다 데이터가 새로 추가되고 그것이 UI에 반영되게 하기 위해서 주로 사용합니다.</p></li>
+                <p> - 자세한 사항은 <a href="https://firebase.google.com/docs/reference">https://firebase.google.com/docs/reference</a> 를 확인해주세요.</p>
 
                 <div style="height:36px"></div>
                 <p>잠깐, 더 넘어가기 전에 여기서 언급하는 '레퍼런스'와 기본적인 파이어베이스 API들을 살펴봅시다.</p>
@@ -345,9 +360,9 @@
                 <p>2. 채팅의 내용은 항상 다르기 때문에 말풍선의 크기는 항상 다를 수밖에 없는데, preferredLayoutAttributesFitting 오버라이드 메소드를 이용하면 내부에서 정해준 크기에 따라 auto-resizing(자동 크기조절)을 할 수 있어 문자열 길이에 따라 다양한 크기의 말풍선을 만들어낼 수 있습니다 (현재 measuredFrameHeightForEachMessage 메소드 내부를 확인하면 가로 200에 문자열 16으로 특정 글을 구성하였을 때 그 글을 포함할 수 있는 사각형의 크기를 반환받을 수 있습니다.)</p>
                 <h3>마치며</h3>
                 <p>지금까지 파이어베이스를 이용하여 채팅창을 구성하는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 채팅어플을 만들어보세요. 전체 소스는 <a href="https://github.com/Hpark11/firebaseChatTest">Github</a>에서 확인하실 수 있습니다. </p>
-                
+
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/U1ABna0XRgY" frameborder="0" allowfullscreen style="display:block; margin: 0 auto;"></iframe>
-                
+
                 <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
 		 		<div class="spacing"></div>
 
