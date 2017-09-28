@@ -43,8 +43,11 @@ h1.medium{
 h4.top{
 	color: white;
 	margin-left: 30px;
-	margin-top: 20px;
+	margin-top: 50px;
 	margin-bottom: 20px;
+}
+h4.footer{
+	text-align: center;
 }
 
 p { 
@@ -233,8 +236,9 @@ a:focus {
 }
 
 .hline-w {
-	border-bottom: 2px solid #ffffff;
+	border-bottom: 1px solid #979797;
 	margin-bottom: 25px;
+	margin-top: 20px;
 }
 /*	################################################################
 	SITE WRAPS
@@ -373,7 +377,7 @@ a:focus {
 
 /* clients logo */
 #cwrap {
-	background: #f7f7f7;
+	background: #d8d8d8;
 	margin-top: 0px;
 	padding-top: 80px;
 	padding-bottom: 100px;
@@ -385,9 +389,9 @@ a:focus {
 
 /* Footer */
 #footerwrap {
-	padding-top: 60px;
-	padding-bottom: 60px;
-	background: #384452;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background: #082236;
 }
 
 #footerwrap p {
@@ -417,8 +421,9 @@ a:focus {
 	background: #00b3fe;
 	margin-top: 60px;
 	margin-bottom: 60px;
-	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-top: 25px
+	padding: 100;
+	height: 600;
 }
 
 
@@ -519,11 +524,19 @@ csmall2 {
 }
 
 /* mouse-over image */
+
+.codersSymbol{
+	width: 65%; height: 45%;
+	margin-left: 100px; 
+	margin-top: 20px;
+}
 .codersSymbolImage {
 	width: 100%; height: 100%;
 	background-image: url( ../img/codersHighSymbol.png );
 	background-repeat: no-repeat; background-position: center;
 }
+
+
 .codersSymbolImage:hover {
 	background-image: url( ../img/codersHighSymbolHover.png );	
 }
@@ -572,7 +585,7 @@ csmall2 {
 	text-align: center;
 }
 .cimgs > img {
-	width: 86px;
+	width: 150px;
 	margin-left: 12px; margin-right: 12px;
 	
 	margin-bottom: 12px;
