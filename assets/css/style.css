@@ -26,12 +26,13 @@ body {
 	margin: 0; 
 	height: 100%; 
 	color: #384452;
-	font-family: 'Helvetica Neue', 'NanumGothic' sans-serif;
+	font-family:'Lato', sans-serif;
 	font-weight: 400;
 	}
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
+	font-family: 'Lato', sans-serif;
 }
 
 h1.medium{
@@ -246,15 +247,15 @@ a:focus {
 
 #headerwrap {
 	background-color: #00b3fe;
-	min-height: 330px;
-	padding-top: 100px;
+	min-height: 265px;
+	padding-top: 30px;
 	padding-bottom: 0px;
 	text-align: center;
 }
 
 #headerwrap h3, h5 {
 	color: white;
-	font-weight: 00;
+	font-weight: 400;
 }
 
 #headerwrap h1 {
@@ -520,6 +521,11 @@ csmall2 {
 }
 
 /* Blog Page */
+.blogcontent p{
+	font-size: 16px;
+}
+
+
 .popular-posts { 
 	margin: 0px;
 	padding-left: 0px;
