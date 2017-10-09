@@ -1,3 +1,15 @@
+<!-- 구글애널리틱스 -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-106816416-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,6 +21,22 @@
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <title>Home | CodersHigh</title>
+
+<!-- 페이스북 페이지 연동 -->
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.10&appId=493022517702978";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="fb-page" data-href="https://www.facebook.com/codershighteam" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codershighteam" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codershighteam">코더스하이 CodersHigh</a></blockquote></div>
+
+
+
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
@@ -48,10 +76,10 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html" style="font-size: inherit;">홈</a></li>
-            <li><a style="font-size: inherit;" href="./about.html">소개</a></li>
-            <li><a style="font-size: inherit;"href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
-            <li><a style="font-size: inherit;"href="./techblog_list.html">기술블로그</a></li>
+            <li class="active"><a href="index.html" style="margin-left: 30px;font-size: inherit;">홈</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./about.html">소개</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;"href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;"href="./techblog_list.html">기술블로그</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -120,8 +148,9 @@
 	 <div class="container mtb">
 	 	<div class="row">
       <div class="col-md-6">
-	 			<h3>교육 결과물</h3>
+	 			<h3 style="font-size: 36px;">교육 결과물</h3>
 	 			<div class="hline"></div>
+	 			<div class="blogcontent">
         <p>[준비중] 2017 여름방학 고려대학교 iOS 특강</p>
         <p>[준비중] 2017 여름방학 중앙대학교 iOS 특강</p>
         <p><a href="https://www.youtube.com/playlist?list=PLBjx8AiS7qA0n3TlnHOf7rzXlPgAi6jD5">2017 1학기 한양대학교 공과대학 컴퓨터/SW 전공</a></p>
@@ -137,12 +166,16 @@
         <p><a href="https://www.youtube.com/playlist?list=PLBjx8AiS7qA3HCfUO2FwIwrR1NJbWfS05">2016 1학기 서울대학교 정보문화학과</a></p>
         <p><a href="https://www.youtube.com/playlist?list=PLBjx8AiS7qA2P2w7kvZ-VLh4Bb6nUQqbm">2016 겨울방학 고려대학교 iOS 특강</a></p>
 	 		</div>
+	 		</div>
 	 		<div class="col-md-6">
-	 			<h3>기술 블로그</h3>
+	 			<h3 style="font-size: 36px;">기술 블로그</h3>
 	 			<div class="hline"></div>
+	 				<div class="blogcontent">
+
 	 			<p><a href="techblogs/tb_001_calendarvot/tb001_script.html">메시지 익스텐션을 이용한 Calendar-Vot 제작기 by 염혜리</a></p>
 	 			<p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
         <p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
+	 			</div>
 	 		</div>
 	 	</div><!--/row -->
 	 </div><!--/container -->
@@ -150,17 +183,17 @@
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
-	 <div id="footerwrap">
+	<div id="footerwrap">
 	 	<div class="container">
 		 	<div class="row">
 		 		<div class="col-lg-4">
-		 			<h4>회사 소개</h4>
+		 			<h4 class="footer">회사 소개</h4>
 		 			<div class="hline-w"></div>
 		 			<p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
 		 			코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
 		 		</div>
 		 		<div class="col-lg-4">
-		 			<h4>소셜 네트워크</h4>
+		 			<h4 class="footer">소셜 네트워크</h4>
 		 			<div class="hline-w"></div>
 		 			<p>
 		 				<a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
@@ -170,18 +203,19 @@
 		 			</p>
 		 		</div>
 		 		<div class="col-lg-4">
-		 			<h4>회사 위치</h4>
+		 			<h4 class="footer">회사 위치</h4>
 		 			<div class="hline-w"></div>
 		 			<p>
-		 				경기도 수원시<br/>
-		 				영통구 광교로 156,<br/>
-		 				광교비즈니스센터 11층<br/>
+		 				경기도 수원시 영통구 광교로 156, 광교비즈니스센터 11층<br/>
 		 			</p>
 		 		</div>
-
 		 	</div><!--/row -->
+		 	<div style="margin-top: 50px">
+				<h4 class="footer">2017 ⓒ CodersHigh</h4>
+			</div>
 	 	</div><!--/container -->
 	 </div><!--/footerwrap -->
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
