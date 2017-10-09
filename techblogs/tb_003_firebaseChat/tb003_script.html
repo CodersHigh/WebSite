@@ -28,6 +28,15 @@
     <![endif]-->
 
     <script src="../../assets/js/modernizr.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107692655-1');
+    </script>
   </head>
 
   <body>
@@ -344,7 +353,7 @@
                 <p>여기서는 containerView가 풍선처럼 감싸는 컨테이너가 되겠고, textLabel이 채팅내용이 되겠습니다. 이 컬렉션 셀에서는 눈여겨볼 사항은 2가지인데요.</p>
                 <p>1. containerView가 현재 포함하고 있는 모든 constraint 객체를 멤버변수로 가지고 있으면 뷰 컨트롤러에서 접근하여 위치를 자유자재로 조절할 수 있습니다.</p>
                 <p>2. 채팅의 내용은 항상 다르기 때문에 말풍선의 크기는 항상 다를 수밖에 없는데, preferredLayoutAttributesFitting 오버라이드 메소드를 이용하면 내부에서 정해준 크기에 따라 auto-resizing(자동 크기조절)을 할 수 있어 문자열 길이에 따라 다양한 크기의 말풍선을 만들어낼 수 있습니다 (현재 measuredFrameHeightForEachMessage 메소드 내부를 확인하면 가로 200에 문자열 16으로 특정 글을 구성하였을 때 그 글을 포함할 수 있는 사각형의 크기를 반환받을 수 있습니다.)</p>
-                
+
                 <p>여기까지 구현이 완료되어 어플로 채팅을 직접 해보면 다음과 같은 방식으로 파이어베이스의 데이터베이스에 다음과 같이 기록됩니다. </p>
                 <div style="position:relative; text-align:center;">
                     <img src="tb003_media/images/img_028.png" style="height:60vh; border:solid 1px;">
@@ -353,7 +362,7 @@
 
                 <h3>마치며</h3>
                 <p>지금까지 파이어베이스를 이용하여 채팅창을 구성하는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 채팅어플을 만들어보세요. 전체 소스는 <a href="https://github.com/Hpark11/firebaseChatTest">Github</a>에서 확인하실 수 있습니다. </p>
-            
+
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0BO0aaSQoXY" frameborder="0" allowfullscreen style="display:block; margin: 0 auto;"></iframe>
 
                 <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>

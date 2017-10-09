@@ -28,6 +28,15 @@
     <![endif]-->
 
     <script src="../../assets/js/modernizr.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107692655-1');
+    </script>
   </head>
 
   <body>
@@ -137,14 +146,14 @@
                 </div>
 
                 <p>그럼 이제 버튼이 <b>Start Recording</b> 일 때 버튼을 누르면 녹화가 시작되고, <b>Stop Recording</b> 일 때 버튼을 누르면 녹화가 중지될 수 있도록 메소드를 입력해 줍니다.</p>
-                
+
                 <script src="https://gist.github.com/chizcake/cc5f8adeb4f390113419254d3c9936b5.js"></script>
-            
+
                 <p>startRecording() 메소드는 녹화를 시작하기 위해 필요한 절차가 담겨있고, stopRecording() 메소드는 녹화를 종료하기 위해 필요한 절차가 담겨있습니다. 두 메소드 아직 구현이 되어있지 않습니다. 지금부터 각각의 메소드를 함께 정의해 보겠습니다.</p>
 
                 <h3>Step 2 - 녹화 시작하기</h3>
                 <p>지금부터는 ReplayKit을 사용하므로 `import ReplayKit` 을 통해 ReplayKit을 가져옵니다. 이제 `startRecording() `메소드를 구현해 보겠습니다. </p>
-                
+
                 <script src="https://gist.github.com/chizcake/8dc6e68092377a16253075f51fb98cd9.js"></script>
 
                 <p>위 코드에서 사용된 <a href="https://developer.apple.com/reference/replaykit/rpscreenrecorder">RPScreenRecorder</a>는 <b>현재 화면에 대해서 녹화를 시작하거나 종료하기 위해서 사용</b>합니다. RPScreenRecorder는 공유객체를 사용하며, 객체가 가지고 있는 <b>startRecording 메소드를 호출함으로써 녹화를 시작</b>하게 됩니다. 녹화가 시작된 이후에 처리해야 할 일은 startRecording 메소드의 클로저 매개변수에 포함시키면 됩니다. 위 코드에서는 녹화가 정상적으로 실행되었을 때 `startAnimatingMap()` 메소드를 호출함으로써, 녹화가 시작되면 자동으로 지도가 움직일 수 있도록 하였습니다. 그럼 이번에는 `startAnimatingMap()` 메소드와 `stopAnimatingMap()` 메소드를 구현해 보겠습니다.</p>

@@ -248,7 +248,7 @@ a:focus {
 #headerwrap {
 	background-color: #00b3fe;
 	min-height: 265px;
-	padding-top: 30px;
+	padding-top: 80px;
 	padding-bottom: 0px;
 	text-align: center;
 }
@@ -349,7 +349,7 @@ a:focus {
 
 .admincenter
 {
-	display: 
+	display:
 	justify-content: center;
 }
 
@@ -554,7 +554,7 @@ csmall2 {
 	font-size: 16px;
 }
 
-.popular-posts { 
+.popular-posts {
 	margin: 0px;
 	padding-left: 0px;
 	}
@@ -601,7 +601,7 @@ csmall2 {
 
 .codersSymbol{
 	width: 90%; height: 45%;
-	margin-left: 100px; 
+	margin-left: 100px;
 	margin-top: 20px;
 }
 .codersSymbolImage {
@@ -660,7 +660,7 @@ csmall2 {
 }
 .cimgs > img {
 	width: 150px;
-	margin-left: 12px; 
+	margin-left: 12px;
 	margin-right: 12px;
 	margin-bottom: 12px;
 }
