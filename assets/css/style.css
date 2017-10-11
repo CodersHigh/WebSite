@@ -285,7 +285,7 @@ a:focus {
 
 .brushimage {
 	background: url( ../img/brush.png ) no-repeat;
-	background-size: 105% initial;
+	background-size: 120% initial;
 }
 
 
@@ -505,15 +505,14 @@ a:focus {
 
 .ctitle {
 	color: #00b3fe;
-	font-weight: 700;
 	margin-bottom: 15px;
 }
 
-csmall {
+.csmall {
 	font-size: 12px;
 	color: #b3b3b3;
 }
-csmall2 {
+.csmall2 {
 	font-size: 12px;
 	color: #f39c12
 }
@@ -618,7 +617,6 @@ csmall2 {
 	opacity: 0;
 }
 .centered div {
-
 	text-align: center;
 	padding: 12px;
 }
