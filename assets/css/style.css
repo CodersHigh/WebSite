@@ -357,6 +357,8 @@ a:focus {
 
 .lectures
 {
+	display:
+	justify-content: center;
 }
 
 
@@ -467,6 +469,9 @@ a:focus {
 .newsimage {
 	height: 400px;
 	background-repeat: no-repeat;
+}
+.newsimage a:hover {
+	background-color: blue;
 }
 
 
@@ -720,16 +725,17 @@ a:focus {
 }
 
 
+
 /* 5 columns customize */
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
 .col-lg-15 {
-    position: relative;
+  position: left;
     min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-	}
+ 
+    
+  }
 
 .col-xs-15 {
     width: 20%;
@@ -749,10 +755,10 @@ a:focus {
         float: left;
     }
 }
-
 @media (min-width: 1200px) {
     .col-lg-15 {
         width: 20%;
         float: left;
     }
 }
+
