@@ -21,6 +21,7 @@
 		padding: 0px;
 	}
 
+
 body {
 	background: #ffffff;
 	margin: 0;
@@ -286,6 +287,8 @@ a:focus {
 .brushimage {
 	background: url( ../img/brush.png ) no-repeat;
 	background-size: 120% initial;
+	border-color: transparent;
+
 }
 
 
@@ -355,6 +358,8 @@ a:focus {
 
 .lectures
 {
+	display:
+	justify-content: center;
 }
 
 
@@ -429,21 +434,49 @@ a:focus {
 	color: #00b3fe
 }
 
+
+.newscontainer h4{
+	font-size: 20px;
+	margin-top: 0;
+	margin-bottom: 7px; 
+}
+
 .newstitle {
 	background-color: white;
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
+	padding-top: 7px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 10px;
+	color: #103f62;
+	}
 .newscontent{
-	text-align: center;
-	background-color: blue;
-	margin-top: 0px;
+	background-color: #103f62;
+	padding-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 15px;
+	color: white;
+	font-weight: normal;
 }
 .newscontainer {
-	position: relative;
-	width: 300px;
-	height: 500px;
+	grid-column-gap:40px;
+	padding: 30px;
+
 }
+.newsshadow{
+	 box-shadow: 0px 0px 15px black;
+}
+
+.newsimage {
+	height: 400px;
+	background-repeat: no-repeat;
+}
+.newsimage a:hover {
+	background-color: blue;
+}
+
+
+
 
 /* Footer */
 #footerwrap {
@@ -693,16 +726,18 @@ a:focus {
 }
 
 
+
 /* 5 columns customize */
 .col-xs-15,
 .col-sm-15,
 .col-md-15,
 .col-lg-15 {
-    position: relative;
+  position: left;
     min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
+ 
+    
+  }
+
 .col-xs-15 {
     width: 20%;
     float: left;
@@ -721,10 +756,10 @@ a:focus {
         float: left;
     }
 }
-
 @media (min-width: 1200px) {
     .col-lg-15 {
         width: 20%;
         float: left;
     }
 }
+
