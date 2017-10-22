@@ -242,6 +242,14 @@ a:focus {
 	margin-bottom: 25px;
 	margin-top: 20px;
 }
+
+.hline-white {
+
+	border-bottom: 2px solid #fff;
+	margin-bottom: 25px;
+	margin-top: 20px;
+
+}
 /*	################################################################
 	SITE WRAPS
 ################################################################# */
@@ -278,6 +286,14 @@ a:focus {
 	color: #00b3fe;
 	font-size: 60px;
 	padding: 15px;
+}
+#service h3{
+	font-weight: 400;
+	margin: 0px;
+}
+#service h2{
+	margin-bottom: 20px;
+	color: #27b1ff;
 }
 
 
@@ -761,5 +777,56 @@ a:focus {
         width: 20%;
         float: left;
     }
+}
+
+
+/* curriculum */
+
+.titlebox{
+	background-color: #103f62;
+	width: 250px;
+	height: 65px;
+	display: inline-block;
+
+}
+.titlebox h3{
+	color:white;
+	font-weight: 400;
+}
+
+.circle
+{
+	 width:250px;
+	 height:250px;
+	 border-radius:50%;
+	-webkit-border-radious:50%;
+	-moz-border-radious:50%;
+	 font-size:16px;
+	 text-align:center;
+	 border:30px solid #fff;
+	 display: inline-block;
+	 margin: 0 auto;
+
+}
+
+.circle h2{
+	color:white;
+}
+
+.circle2{
+	 width:300px;
+	 height:300px;
+	 border-radius:50%;
+	-webkit-border-radious:50%;
+	-moz-border-radious:50%;
+	 font-size:16px;
+	 text-align:center;
+	 border:30px solid #27b1ff;
+	 display: ;
+	 margin: 0 auto;
+}
+
+.curricontent{
+
 }
 
