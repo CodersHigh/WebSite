@@ -1,3 +1,6 @@
+@import url("prettyPhoto.css") screen;
+@import url("hoverex-all.css") screen;
+
 * {
 		margin: 0;
 		padding: 0px;
@@ -44,6 +47,7 @@ p {
 	color: #384452;
 	margin-top: 10px;
 }
+
 p.longtime{
 	font-size: 13px;
 	font-family: 'applesdgothicneo-light' ;
@@ -88,6 +92,16 @@ a:focus {
 
 
 
+a {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	-webkit-transition: background-color .4s linear, color .4s linear;
+	-moz-transition: background-color .4s linear, color .4s linear;
+	-o-transition: background-color .4s linear, color .4s linear;
+	-ms-transition: background-color .4s linear, color .4s linear;
+	transition: background-color .4s linear, color .4s linear;
+}
 
 .centered {
 	text-align: center
