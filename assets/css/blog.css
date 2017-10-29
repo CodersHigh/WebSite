@@ -348,7 +348,10 @@ a {
 }
 .text-md{
 	width: 70%;
-	margin-bottom: 50px;
+	margin-bottom: 25px;
+}
+.text-lg{
+	width: 80%;
 }
 .aligner {
   display: flex;
