@@ -370,3 +370,7 @@ a:focus {
 	margin-top: 10px;
 		margin-bottom: 30px;
 }
+.margin-lr{
+	margin-left: 90px;
+	margin-right: 90px;
+}
