@@ -28,12 +28,21 @@
     <![endif]-->
 
     <script src="assets/js/modernizr.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107692655-1');
+    </script>
   </head>
 
   <body>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" background-color= "103f62" >
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,10 +55,11 @@
         </div>
         <div class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="index.html" style="font-size: inherit;">홈</a></li>
-            <li class="active"><a style="font-size: inherit;" href="./about.html">소개</a></li>
-            <li><a style="font-size: inherit;"href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
-            <li><a style="font-size: inherit;"href="./techblog_list.html">기술블로그</a></li>
+            <li><a href="index.html" style="margin-left: 30px; font-size: inherit; ">홈</a></li>
+            <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="./about.html">소개</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./techblog_list.html">기술블로그</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./edublog_list.html">교육블로그</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -59,204 +69,443 @@
 	<!-- *****************************************************************************************************************
 	 BLUE WRAP
 	 ***************************************************************************************************************** -->
-	<div id="blue">
-	    <div class="container">
-			<div class="row">
-				<h3>코더스하이 소개</h3>
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /blue -->
+		<div id= "blue">
+		    <div class="container ">
+				<div class="row">
+					<h4 class="top">코더스하이 소개</h4>
+				</div><!-- /row -->
+		    </div> <!-- /container -->
 
 
 	<!-- *****************************************************************************************************************
 	 AGENCY ABOUT
 	 ***************************************************************************************************************** -->
+		 <div class="container intro">
+		 	<div class="row table-rows">
 
-	 <div class="container mtb">
-	 	<div class="row table-rows">
-	 		<div class="col-lg-6">
-				<div class="codersSymbolImage">
-					<img class="img-responsive" src="assets/img/codersHighSymbol.png" alt="">
-				</div>
+		 		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			 		<h1 class="medium"><span style="color: #ffeb8c"> 코더스하이</span>는<br>
+				 		<span style="color: #ffeb8c">코딩하는 사람</span>을 위한<br>
+				 		<span style="color: #ffeb8c">교육 콘텐츠</span> 제작 그룹입니다.<br></h1>
 
-	 		</div>
+		        	<p class="longtime">	오랜시간 힘겨운 코딩 끝에 정상동작하는<br>
+		        		코드를 얻어낸 희열을 느껴보세요.</p><br>
 
-	 		<div class="col-lg-6">
-		 		<h4>코더스하이는</h4>
-		 		<p>코딩하는 사람을 위한 교육 콘텐츠 제작 그룹입니다.<br>
-        오랜시간 힘겨운 코딩 끝에 정상동작하는 코드를 얻어낸 희열을 표현하고 있습니다.</p>
-        <h4>코더스하이의 미션</h4>
-        <ul>
-          <li>앱 프로토타입 제작 방식을 개발/공유하여 디자이너 - 프로그래머 간 소통을 원활하게 한다.</li>
-          <li>대학생들을 위한 iOS/macOS 앱 개발 교육을 통해 프로그래머로서 사회진출을 돕는다.</li>
-          <li>초등/중학생을 위한 코딩 (스위프트 플레이그라운드) 교육으로 계산적 사고와 추상화 능력 배양을 돕는다.</li>
-        </ul>
+		        	<h1 class="medium"><span style="color: #ffeb8c">코더스 하이</span>의 미션</h1>
 
-        <p></p>
- 				<p><br/>
-					<a href="/assets/codersHighSymbol.zip" class="btn btn-theme">
-						<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp;
-						다운로드
+		        	<p class="longtime">
+		        	+ 앱 프로토타입 제작 방식을 개발/공유하여 디자이너 - 프로그래머 간 소통을 원활하게 한다.<br>
+		        	+ 대학생들을 위한 iOS/macOS 앱 개발 교육을 통해 프로그래머로서 사회진출을 돕는다.<br>
+		        	+ 초등/중학생을 위한 코딩 (스위프트 플레이그라운드) 교육으로 계산적 사고와 추상화 능력 배양을 돕는다.
+		        	</p>
+	        		<p></p>
+
+	        <!-- contact -->
+	 				<p><br/>
+
+						<a href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="btn btn-theme">Contact Us</a>
+
+					</p>
+		 		</div>
+
+
+
+
+
+
+		 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="codersSymbol" style="margin-left: -10px;">
+						<img class="img-responsive" src="assets/img/codersHighLogo/codersHighMain.png" alt="">
+
+						<br><br>
+
+					<a href="./assets/img/codersHighOrigin.zip" class="btn btn-theme">
+							<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp;
+							다운로드
 					</a>
-					<a href="contact.html" class="btn btn-theme">Contact Us</a>
+					<a href="./assets/img/originalBrandGuide.pdf" class="btn btn-theme" style="margin-left: 10px;">
+							<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp;
+							브랜드 가이드
+					</a>
+					</div>
+		 		</div>
 
-				</p>
-	 		</div>
-	 	</div><!--/row -->
-	 </div><!--/container -->
+		 		<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+					<div class="codersSymbol" style="margin-left: -10px; width: 115%;">
+						<img class="img-responsive" src="assets/img/codersHighLogo/codersHighSimple.png" alt="">
+
+						<br><br>
+
+					<a href="./assets/img/codersHighOrigin.zip" class="btn btn-theme">
+							<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp;
+							다운로드
+					</a>
+					<a href="./assets/img/simpleBrandGuide.pdf" class="btn btn-theme" style="margin-left: 10px;">
+							<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>&nbsp;
+							브랜드 가이드
+					</a>
+					</div>
+		 		</div>
+
+
+		 	</div><!--/row -->
+		 </div><!--/container -->
+	</div>
+
+	<!-- 브러쉬 이미지 -->
+
+
+	<div class="brushimage" style="background-color:  #00b3fe; border-color: transparent;">
+		<br><br><br>
+		<br><br><br>
+		<br><br>
+
+	</div>
+
+
+		<div class="centered">
+	 		<h3 style="">Administrator</h3>
+		</div>
+
+
+
+
 
 	<!-- *****************************************************************************************************************
 	 TEEAM MEMBERS
 	 ***************************************************************************************************************** -->
 
 	 <div class="container mtb">
-	 	<div class="row centered">
-      <h3 class="mb">Administrator</h3>
-      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <div class="he-wrap tpl6">
-        <img src="assets/img/team/team_lingostar.jpg" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:admin@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
-                            <a href="https://github.com/lingostar" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
-                      </div><!-- he bg -->
-          </div><!-- he view -->
-        </div><!-- he wrap -->
-        <h4 style="display: inline-block;">윤성관 </h4> <h5 class="ctitle" style="display: inline-block;"> lingostar</h5>
-        <p><i class="fa fa-apple"></i> Distinguished Educator<br>동국대학교 겸임교수</br></p>
-        <div class="hline"></div>
-      </div><! --/col-lg-2 -->
-    </div><!--/row -->
+	 	<div class="row centered" style="margin-top: -30px;">
+    		<div class="admincenter">
+
+    			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+     	 	    	<div class="he-wrap tpl6">
+	        			<img src="assets/img/team/team_lingostar.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+	      			    <div class="he-view">
+	            			<div class="bg a0" data-animate="fadeIn">
+	                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+	                            <a href="mailto:admin@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+	                            <a href="https://github.com/lingostar" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
+	                    	</div><!-- he bg -->
+	          			</div><!-- he view -->
+	        		</div><!-- he wrap -->
+		        		<h4 style="display: inline-block;">윤성관 </h4> <h5 class="ctitle" style="display: inline-block;"> lingostar</h5>
+			      		<p><i class="fa fa-apple"></i> Distinguished Educator<br>동국대학교 겸임교수</br></p>
+  	  	 		</div><!--/col-lg-2 -->
+
+  	  	 	</div>
+	    </div><!--/row -->
    </div><!--/container -->
 
+
+
     <div class="container mtb">
-    <div class="row centered">
+   		<div class="row centered">
 		 	<h3 class="mb">Lecturers</h3>
-
-
-
-		 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="he-wrap tpl6">
-				<img src="assets/img/team/team_goya.jpg" alt="">
-					<div class="he-view">
-						<div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:goya320@gmail.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+		 		<div class="Lecturers">
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+							<img src="assets/img/team/team_goya.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+                	            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+               		             <a href="mailto:goya320@gmail.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
                             <!--<a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>-->
-                    	</div><!-- he bg -->
-					</div><!-- he view -->
-				</div><!-- he wrap -->
-				<h4 style="display: inline-block;">고준일 </h4> <h5 class="ctitle" style="display: inline-block;"> goya</h5>
-				<p>모카포트 대표<br>(전)호서대 겸임교수</br></p>
-				<div class="hline"></div>
-		 	</div><!--/col-lg-2 -->
+                    			</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+						<h4 style="display: inline-block;">고준일 </h4> 
+						<h5 class="ctitle" style="display: inline-block;"> goya</h5>
+						<p>모카포트 대표<br>(전)호서대 겸임교수<br></p>
+		 			</div><!--/col-lg-2 -->
 
-		 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="he-wrap tpl6">
-				<img src="assets/img/team/team_mocona.jpg" alt="">
-					<div class="he-view">
-						<div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:me@ebadaq.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
-                            <a href="https://www.facebook.com/goyadb" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-facebook"></i></a>
-                    	</div><!-- he bg -->
-					</div><!-- he view -->
-				</div><!-- he wrap -->
-				<h4 style="display: inline-block;">박종영 </h4> <h5 class="ctitle" style="display: inline-block;"> mocona</h5>
-				<p>이바닥닷컴 대표<br><br></p>
-				<div class="hline"></div>
-		 	</div><!--/col-lg-2 -->
-
-		 	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="he-wrap tpl6">
-				<img src="assets/img/team/team_icebomb.jpg" alt="">
-					<div class="he-view">
-						<div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:nedpark@icloud.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+							<img src="assets/img/team/team_pacman.jpg" style="  box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+                	            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+               		             <a href="mailto:sr9872@naver.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
                             <!--<a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>-->
-                    	</div><!-- he bg -->
-					</div><!-- he view -->
-				</div><!-- he wrap -->
-				<h4 style="display: inline-block;">박종욱 </h4> <h5 class="ctitle" style="display: inline-block;"> icebomb</h5>
-				<p>뉴로어소시에이츠 CTO <br>(전)네오위즈, SK플래닛 iOS 앱 개발자</br></p>
-				<div class="hline"></div>
-		 	</div><!--/col-lg-2 -->
+                    			</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+						<h4 style="display: inline-block;">김태선 </h4>
+						<h5 class="ctitle" style="display: inline-block;"> pacman</h5>
+						<p>NHN Connect 프리렌서<br>(전)디자인씽킹 과정 수료(Standford D School)</p>
+		 			</div><!--/col-lg-2 -->
 
-      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-        <div class="he-wrap tpl6">
-        <img src="assets/img/team/team_wannabewize.jpg" alt="">
-          <div class="he-view">
-            <div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:wannabewize@gmail.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+
+
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+							<img src="assets/img/team/team_black.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+                	            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+               		             <a href="mailto:blackjeffnam@gmail.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
                             <!--<a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>-->
-                      </div><!-- he bg -->
-          </div><!-- he view -->
-        </div><!-- he wrap -->
-        <h4 style="display: inline-block;">이재훈 </h4> <h5 class="ctitle" style="display: inline-block;"> wannabewize</h5>
-        <p>T 아카데미 iOS 강사 <br>VanillaStep 대표</br></p>
-        <div class="hline"></div>
-      </div><!--/col-lg-2 -->
+                    			</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+						<h4 style="display: inline-block;">남장혁 </h4> 
+						<h5 class="ctitle" style="display: inline-block;"> black </h5>
+						<p>코더스하이 강사<br><br><br></p>
+		 			</div><!--/col-lg-2 -->
 
-      <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-				<div class="he-wrap tpl6">
-				<img src="assets/img/team/team_yagom.jpg" alt="">
-					<div class="he-view">
-						<div class="bg a0" data-animate="fadeIn">
-                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
-                            <a href="mailto:me@yagom.net?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
-                            <a href="https://yagom.github.io/contacts" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
-                    	</div><!-- he bg -->
-					</div><!-- he view -->
-				</div><!-- he wrap -->
-				<h4 style="display: inline-block;">조성규 </h4> <h5 class="ctitle" style="display: inline-block;"> yagom</h5>
-				<p>네이버 커넥트 부스트캠프 튜터 <br>(전)이음소시어스 개발팀</br></p>
-				<div class="hline"></div>
-		 	</div><!--/col-lg-2 -->
 
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+						<img src="assets/img/team/team_mocona.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+		                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+		                            <a href="mailto:me@ebadaq.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+		                            <a href="https://www.facebook.com/goyadb" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-facebook"></i></a>
+		                    	</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+						<h4 style="display: inline-block;">박종영 </h4> 
+						<h5 class="ctitle" style="display: inline-block;"> mocona</h5>
+						<p>이바닥닷컴 대표<br><br><br></p>
+				 	</div><!--/col-lg-2 -->
+
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+						<img src="assets/img/team/team_icebomb.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+		                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+		                            <a href="mailto:nedpark@icloud.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+		                            <!--<a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>-->
+		                    	</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+						<h4 style="display: inline-block;">박종욱 </h4> <h5 class="ctitle" style="display: inline-block;"> icebomb</h5>
+						<p>뉴로어소시에이츠 CTO <br>(전)네오위즈, SK플래닛 iOS 앱 개발자<br><br></p>
+				 	</div><!--/col-lg-2 -->
+
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+				        <div class="he-wrap tpl6">
+				        <img src="assets/img/team/team_wannabewize.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+				          <div class="he-view">
+				            <div class="bg a0" data-animate="fadeIn">
+				                            <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+				                            <a href="mailto:wannabewize@gmail.com?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+				                            <!--<a href="#" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-twitter"></i></a>-->
+				                      </div><!-- he bg -->
+				          </div><!-- he view -->
+				        </div><!-- he wrap -->
+				        <h4 style="display: inline-block;">이재훈 </h4> 
+				        <h5 class="ctitle" style="display: inline-block;"> wannabewize</h5>
+				        <p>T 아카데미 iOS 강사 <br>VanillaStep 대표<br><br><br></p>
+				    </div><!--/col-lg-2 -->
+
+					<div class="col-lg-15 col-md-3 col-sm-4 col-xs-6">
+						<div class="he-wrap tpl6">
+							<img src="assets/img/team/team_yagom.jpg" style="box-shadow: 0px 0px 25px grey;" alt="">
+							<div class="he-view">
+								<div class="bg a0" data-animate="fadeIn">
+				                    <h3 class="a1" data-animate="fadeInDown">Contact Me:</h3>
+				                    <a href="mailto:me@yagom.net?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-envelope"></i></a>
+				                    <a href="https://yagom.github.io/contacts" class="dmbutton a2" data-animate="fadeInUp"><i class="fa fa-github"></i></a>
+				               	</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+							<h4 style="display: inline-block;">조성규 </h4> 
+							<h5 class="ctitle" style="display: inline-block;"> yagom</h5>
+							<p>네이버 커넥트 부스트캠프 튜터 <br>(전)이음소시어스 개발팀<br></p>
+					</div><!--/col-lg-2 -->
+
+
+
+					
+
+
+
+			</div>
 	 	</div><!--/row -->
 	 </div><!--/container -->
+
+
+	<!-- 브러쉬 이미지 -->
+
+		<div class="brushimage" style="background-color: #d8d8d8; background-position: 0px -200px;">
+			<br><br><br>
+			<br><br><br>
+			<br><br>
+			<div if="cwrap">
+				<div class="row centered">
+				 	<h3 style="margin-bottom: -20px; margin-top: -20px; ">고객사</h3>
+				</div>
+		 	</div>
+
+		</div>
+
+
 
 	<!-- *****************************************************************************************************************
 	 OUR CLIENTS
 	 ***************************************************************************************************************** -->
 	 <div id="cwrap">
 		 <div class="container">
-		 	<div class="row centered">
-			 	<h3 style="margin-bottom: 24px;">고객사</h3>
-			 	<div class="cimgs col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			 		<img src="assets/img/clients/client08.png" class="img-responsive">
-          <h4>LINE Plus</h4>
-  				<h5 class="ctitle">iOS 프로토타이핑 컨설팅</h5>
+		 	<div class="row centered" style="margin-bottom: 40px;">
+
+		 		<div class="col-xs-15">
+			 		<img src="assets/img/clients/appleLogo.png" class="img-responsive">
+			 	</div>
+
+				<div class="col-xs-15">
+			 		<img src="assets/img/clients/LINE.png" class="img-responsive">
+			 	</div>
+
+
+				<div class="col-xs-15">
+			 		<img src="assets/img/clients/SAP.png" class="img-responsive">
+			 	</div>
+
+			 	<div class="col-xs-15">
+			 		<img src="assets/img/clients/sk.png" class="img-responsive">
+			 	</div>
+ 
+				<div class="col-xs-15">
+			 		<img src="assets/img/clients/client06.png" class="img-responsive">
 			 	</div>
 		 	</div><!--/row -->
-		<div class="row centered">
-			 	<h3 style="margin-bottom: 24px;">교육기관</h3>
 
-        <div class="cimgs col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			 		<img src="assets/img/clients/client01.png" class="img-responsive">
-			 		<img src="assets/img/clients/client05.png" class="img-responsive">
-			 		<img src="assets/img/clients/chungangLogo.png" class="img-responsive">
-			 		<img src="assets/img/clients/seoulWomenLogo.png" class="img-responsive">
-			 	</div>
-				<!--
-			 	<div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
-			 		<img src="../assets/img/clients/client05.png" class="img-responsive">
-			 	</div>
-			 	<div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
-			 		<img src="../assets/img/clients/chungangLogo.png" class="img-responsive">
-			 	</div>
-			 	<div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
-			 		<img src="../assets/img/clients/sukmyeongLogo.png" class="img-responsive">
-			 	</div>
-			 	<div class="col-lg-1 col-md-2 col-sm-2 col-xs-6">
-			 		<img src="../assets/img/clients/seoulWomenLogo.png" class="img-responsive">
-			 	</div>-->
-		 	</div><! --/row -->
-		 </div><! --/container -->
-	 </div><! --/cwrap -->
+
+
+		<div class="row centered" style="margin-bottom: 40px;">
+			 	<h3 style="margin-bottom: 60px; margin-top: 60px;">교육기관</h3>
+
+			<div class="col-xs-15">
+				<img src="assets/img/clients/korea.png" class="img-responsive">
+			</div>
+			
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/client02.png" class="img-responsive">
+			</div>
+
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/sokang.png" class="img-responsive">
+			</div>
+
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/seoulwomen.png" class="img-responsive">
+			</div>
+
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/sukmyeongLogo.png" class="img-responsive">
+			</div>
+
+		</div>
+			
+		<div class="row centered">
+
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/cau.png" class="img-responsive">
+			</div>
+
+			<div class="col-xs-15">
+			 	<img src="assets/img/clients/HYU.png" class="img-responsive">
+			 </div>
+
+			
+			
+		 	</div><!--/row -->
+		 </div><!--/container -->
+	 </div><!--/cwrap -->
+
+
+	 <!-- **************************************************************************************************************
+	 언론 보도
+	**************************************************************************************************************-->
+<div id="newswrap">
+		<h3 style="text-align: center;"> 언론 보도 </h3>
+	<div class="container">
+		<div class="row">
+
+
+	       	<div class="newscontainer col-md-4 col-sm-6" style="size: fixed;">
+	       		<div class="newsshadow">
+					<div class="he-wrap tpl6">
+	       				<div class="newsimage" style="background: url(./assets/img/news/news1.png); background-position: 400px 0px;"></a></div>
+						<div class="he-view">
+							<div class="bg a0" data-animate="fadeIn">
+                	    	    <h3 class="a1" data-animate="fadeInDown"><br><br><br>News Link </h3><br>
+               		        	<a href="http://dongascience.donga.com/news/view/18272" class="dmbutton a2" data-animate="fadeInUp">GO</a>
+                            
+                    		</div><!-- he bg -->
+						</div><!-- he view -->
+					</div><!-- he wrap -->
+
+     			    <div class="newstitle">
+    	       		  <h4>우리는 왜 소프트웨어를 배울까? </h4>
+    	       		   2017.05.24 동아사이언스
+ 	       			</div>
+         			<div class="newscontent">
+       					코더스하이 SeongKwan Yoon 대표가 운영하는 교실에 대한 기사입니다. 현재 서울대학교에서 진행하고 있는 [앱 프로토타이핑] 과정에 대한 소개가 있습니다.
+
+       				</div>
+	       		</div>
+	       	</div>
+
+	       	<div class="newscontainer col-md-4 col-sm-6" >
+       			<div class="newsshadow">
+					<div class="he-wrap tpl6">
+	       				<div class="newsimage" style="background: url(./assets/img/news/news2.png); background-position: -50px 0px;"></div>
+						<div class="he-view">
+							<div class="bg a0" data-animate="fadeIn">
+                	            <h3 class="a1" data-animate="fadeInDown"><br><br><br>News Link </h3><br>
+               		             <a href="http://www.kunews.ac.kr/news/articleView.html?idxno=23234"  class="dmbutton a" data-animate="fadeInUp">GO</a>
+                           
+                   			</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+        			<div class="newstitle">
+            		  <h4>중고책 거래 앱 '책잇' 인터뷰</h4>
+            		  	2016.06.14 고려대뉴스
+          			</div>
+          			<div class="newscontent">
+          				코더스 하이 출신 고려대 학생들이 만든 중고 전공서적 직거래 앱 '책잇'에 관한 내용입니다.
+          				<br><br><br>
+          			</div>
+         		</div>
+         	</div>
+
+	       	<div class="newscontainer col-md-4 col-sm-6" >
+       			<div class="newsshadow">
+					<div class="he-wrap tpl6">
+	       				<div class="newsimage" style="background: url(./assets/img/news/news3.png); background-position: 350px -20px; background-size: 220%"></div>
+						<div class="he-view">
+							<div class="bg a0" data-animate="fadeIn">
+                	            <h3 class="a1" data-animate="fadeInDown"><br><br><br>News Link </h3><br>
+               		             <a href="http://news.cau.ac.kr/bbs/life_view.php?page=1&s_key=&s_word=&list_size=20&sorting=new&idx=364"  class="dmbutton a" data-animate="fadeInUp">GO</a>
+                           
+                   			</div><!-- he bg -->
+							</div><!-- he view -->
+						</div><!-- he wrap -->
+        			<div class="newstitle">
+            		  <h4>중앙대, 'iOS 기반교육'</h4>
+            		  	2017.06.01 중앙대학교
+          			</div>
+          			<div class="newscontent">
+          				코더스하이의 중앙대학교 방학특강 과정에 대한 기사입니다.
+          				<br><br><br>
+          			</div>
+         		</div>
+         	</div>
+         	
+
+      	</div>
+    </div>
+</div><!--	newswrap -->
+
+
+
+
+
 
 	<!-- *****************************************************************************************************************
 	 FOOTER
@@ -264,14 +513,16 @@
    <div id="footerwrap">
 	 	<div class="container">
 		 	<div class="row">
-		 		<div class="col-lg-4">
-		 			<h4>회사 소개</h4>
+
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">회사 소개</h4>
 		 			<div class="hline-w"></div>
 		 			<p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
 		 			코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
 		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>소셜 네트워크</h4>
+
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">소셜 네트워크</h4>
 		 			<div class="hline-w"></div>
 		 			<p>
 		 				<a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
@@ -280,17 +531,18 @@
 						</a>
 		 			</p>
 		 		</div>
-		 		<div class="col-lg-4">
-		 			<h4>회사 위치</h4>
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">회사 위치</h4>
 		 			<div class="hline-w"></div>
 		 			<p>
-		 				경기도 수원시<br/>
-		 				영통구 광교로 156,<br/>
-		 				광교비즈니스센터 11층<br/>
+		 				경기도 수원시 영통구 광교로 156, 광교비즈니스센터 11층<br/>
 		 			</p>
 		 		</div>
-
 		 	</div><!--/row -->
+		 	<div style="margin-top: 50px">
+				<h4 class="footer">2017 ⓒ CodersHigh</h4>
+				<p style="text-align: center;">대표이사 윤성관 | 사업자등록번호 740-81-00581</p>
+			</div>
 	 	</div><!--/container -->
 	 </div><!--/footerwrap -->
 
