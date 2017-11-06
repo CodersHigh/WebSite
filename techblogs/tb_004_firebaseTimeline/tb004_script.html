@@ -46,7 +46,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
   <style media="screen">
-    body .code_by_line {
+    body .code_by_line imagecenter text-md {
       line-height: 150%;
     }
   </style>
@@ -264,12 +264,13 @@
         </br>
 
         <h4 class = "textcenter">Database, Storage 규칙, info.plist 설정</h4>
-        <img src="tb004_media/images/BaseSetting.png" width="800" class = "imagecenter">
+        <img src="tb004_media/images/BaseSetting.jpg" width="600" class = "imagecenter">
+        <img src="tb004_media/images/BaseSetting-info.png" width="800" class = "imagecenter">
         <p class="imagecenter text-md">앱에서 Database, Storage에 접근하기 위해서 임시로 규칙을 공개하도록 합니다. (
           <a href="https://firebase.google.com/docs/database/security/quickstart?hl=ko">Database규칙</a>
           <a href="https://firebase.google.com/docs/storage/security/start?hl=ko">Storage규칙</a>)
           </br>
-          또한 앱이 사진 라이브러리 접근하기 위해선 그 목적을 알려주어야 합니다. 따라서 프로젝트 내부 'info.plist'에는 다음과 같은 값을 추가해줍니다.</p>
+          또한 앱이 사진 라이브러리 접근하기 위해선 그 목적을 알려주어야 합니다. 따라서 프로젝트 내부 'info.plist'에는 다음과 같이 "Privacy- ..." 값을 추가해줍니다.</p>
         </br>
         </br>
 
@@ -291,44 +292,42 @@
         <div style="height:60px"></div>
         <h3>Fusuma와 Firebase를 이용한 데이터 저장 및 파일 업로드</h3><br><br>
 
+        <h4 class = "textcenter">이미지 게시과정 살펴보기</h4>
+
           <img src="tb004_media/images/AddNavi_Overview.png" width="600" class = "imagecenter">
 
-          <p class="imagecenter text-md">먼저 이미지를 업로드하기 위해 전체적인 구조를 살펴보겠습니다. Fusuma는 독자적인 버튼을 가지고 있기 때문에, 이를 NavigationBarButtonItem으로 사용하기 위해선 코드로 구현해야합니다.</br>
+          <p class="imagecenter text-md">먼저 이미지를 업로드하기 위해 전체적인 구조를 살펴보겠습니다.
+            사용자가 Fusuma의 "X"버튼을 누르면 원래 창으로 되돌아 오고, "V"버튼을 누르면 글을 작성할수 있는 창으로 넘어가야 합니다.<br>
+            이를 구현하기 위해선 fusumaWillClosed(), fusumaImageSelected() 메소드를 이용합니다.<br><br>
+            따라서 구현해야 할 것은 <b>"Close버튼을 누르면 바꾸어 2번 컨트롤러로 돌아가게하기, Select버튼을 누르면 5번 컨트롤러로 가게하기"</b>입니다.
           </p>
-          <p class="imagecenter text-md">버튼에 대한 액션은 FusumaDelegate를 위임받고 fusumaWillClosed(), fusumaImageSelected() 메소드를 이용하여 구현합니다.
-            <b>Close버튼을 누르면 탭을 바꾸어 2번 컨트롤러로 돌아가게하고, Select버튼을 누르면 5번 컨트롤러로 가게해야합니다.</b>
-          </p>
-          <br>
-          <br>
-          <p class="imagecenter text-md">4번
+          <p class="imagecenter text-md" >4번
             <b>AddNavigationController.swift</b>부터 보겠습니다.
-            <b>AddNavigationCotroller는 fusuma, uploadController프로퍼티를 가지며, 이를 상황에 따라 Navigation Stack에 푸쉬, 팝을 합니다.</b>
+            <b>AddNavigationCotroller는 fusuma, uploadController프로퍼티를 가집니다.</b> 여기서 fusuma프로퍼티는 위 사진 가운데에 있는 뷰 컨트롤러 이고, uploadController프로퍼티는 5번 뷰 컨트롤러입니다. 이를 상황에 따라 Navigation Stack에 푸쉬, 팝을 하는 것이 4번 컨트롤러의 역할입니다.
           </p>
-          <p class="code_by_line">
-            <i>18~29</i> : fusuma에 대한 설정을 합니다.</p>
-          <p class="code_by_line">
-            <i>31~32</i> : 5번 컨트롤러는 Main.storyboard로부터 코드로 불러오겠습니다.</p>
-          <p class="code_by_line">
+          <p class="code_by_line imagecenter text-md ">
+            <i>18~29</i> : fusuma에 대한 설정입니다.</p>
+          <p class="code_by_line imagecenter text-md ">
+            <i>31~32</i> : 5번 컨트롤러는 Main.storyboard로부터 코드로 불러옵니다.</p>
+          <p class="code_by_line imagecenter text-md ">
             <i>29, 36~39</i> : fusuma컨트롤러는 위아래에 독자적인 버튼이 있기 때문에, Navigation Bar와 Bottom Bar는 숨겨줍니다. 그리고 AddNavigationController가
             최초 표시될 때 fusuma가 표시되도록 설정합니다.</p>
-          <p class="code_by_line">
+          <p class="code_by_line imagecenter text-md ">
             <i>43~49</i> : fusuma에서 체크버튼을 누르면 uploadController에 이미지를 넘겨주고 uploadController를 푸쉬합니다. close버튼을 누르면 2번 컨트롤러로 이동합니다.</p>
           <code data-gist-id="d1923be4cdf48e7ca6ddc77279639401" data-gist-hide-footer="true" data-gist-line="9-49"></code>
           </br>
           <br>
 
           <h4 class = "textcenter">업로드 뷰 컨트롤러</h4>
-          <p class="imagecenter text-md">다음으로 5번
-            <b>UploadViewController</b>를 보겠습니다. TextView PlaceHolder에 대한 설명은 여기서 다루지 않고, Firebase Database, Firebase Storage에
+          <p class="imagecenter text-md">다음으로 텍스트를 게시하는 5번
+            <b>UploadViewController</b>를 보겠습니다. Firebase Database, Firebase Storage에
             게시글을 업로드 하는 과정을 살펴보겠습니다.</br>
             프로퍼티들은 다음과 같이 설정합니다.</br>
           </p>
-          <p class="code_by_line">
+          <p class="code_by_line imagecenter text-md">
             <i>34~35</i> : 여기서 UploadViewController의 Navigation Bar button item을 추가하고,
             <i>34줄</i>에서 버튼에 대한 액션으로 uploadPost()메소드를 지정해 줍니다.</br>
-            <csmall>
-              <a href="https://firebase.google.com/docs/reference/ios/naming-migration-guide">참고로 swift Firebase 4.0.0버전부터 naming convention이 바뀌었습니다.</a>
-            </csmall>
+            <i>(참고로 Swift Firebase 4.0.0버전부터 FirebaseDatabase, FirebaseStorage 등을 import한 경우에는 FirebaseDatabase가 아닌 앞에 "Firebase"를 생략한 "Database"로 호출 가능합니다.)</i>
           </p>
 
           <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-hide-footer="true" data-gist-line="9-27"></code>
@@ -336,11 +335,11 @@
           </br>
           <br>
 
-          <p class="code_by_line">
+          <p class="code_by_line imagecenter text-md">
             <i>69~75</i> : 앞서 fusuma에서 숨겼던 Navigation Bar를 표시하고, 넘겨준 이미지를 표시합니다. 뷰가 사라질때 Navigation Bar를 숨기도록하여, BackButton이
             눌리면 다시 Navigation Bar를 숨겨줍니다.
           </p>
-          <p class="code_by_line">
+          <p class="code_by_line imagecenter text-md">
             <i>76~105</i> :
             <b>uploadPost()메소드</b>를 이용하여 데이터를 저장하고 파일을 업로드합니다. text, date는 Database에 저장하고 image는 Storage에 업로드합니다. 텍스트 저장은 placeHolder의
             유무에 따라 달리하고
@@ -395,26 +394,26 @@
 
             <p class="imagecenter text-md">코드를 줄번호에 맞춰 설명하겠습니다.</br>
             </p>
-            <p class="code_by_line">
+            <p class="code_by_line imagecenter text-md">
               <i>59~60</i> : posts들을 date순으로 정렬하는 쿼리를 만듭니다. Firebase Database에
               <b>'나는 이런 데이터를 원해'</b>를 알려주는 질문입니다.</p>
-            <p class="code_by_line">
+            <p class="code_by_line imagecenter text-md">
               <i>62~65</i> : 만들어 놓은 쿼리를 통해 데이터를 가져옵니다. Firebase의 데이터들은 snapshot타입으로 얻을 수 있으며, snapshot은 기본적으로 key, value, child들을
               갖습니다.
               <b>
                 여기선 snapshot은 모든 posts들을 담고 있으며, 이를 배열로 바꾸기 위해
                 <i>64번째 줄</i>을 실행 합니다. 배열로 바꾸지 않고 딕셔너리로 받게되면 posts들의 정렬된 순서가 망가지게 됩니다.</b> queryOrdered() 쿼리를 통해 얻은 데이터들은 오름차순이기
               때문에 reversed()를 이용하여 내림차순으로 바꾸어 줍니다.</p>
-            <p class="code_by_line">
+            <p class="code_by_line imagecenter text-md">
               <i>67~73</i> : snapshotData 배열 안에 있는 각각의 anyDatum들은 Any타입이므로 이를 DataSnapshot타입으로 다시 바꾸어 줍니다.
               <b>이제 for문이 처음 실행 되는 snapshotDatum안에는 가장 최근 게시글이 들어있습니다.</b> snapshotDatum.key안에는 AutoId가, snapshotDatum.value안에는
               text, date를 키로 갖는 딕셔너리 데이터들이 들어있습니다. 이 데이터로 부터 Post를 생성해줍니다. 참고로 for문안에서 생성된 post 인스턴스가 사라지지 않으려면 class타입이어야만
               합니다.
             </p>
-            <p class="code_by_line">
+            <p class="code_by_line imagecenter text-md">
               <i>75~76</i> : 스토리지 레퍼런스로 부터 Image를 가져옵니다. FirebaseStorageUI를 import하면, UIImageView안에 sd_setImage()메소드가 생기게 되며,
               이를 이용하여 구현 할 수 있습니다. 매개변수로 스토리지 레퍼런스와, 다운로드 중에 표시할 이미지를 표시합니다.
-              <p class="code_by_line">
+              <p class="code_by_line imagecenter text-md">
                 <i>78~85</i> : loadedPost.prefix()메소드를 이용하여, 3개의 게시글만 posts에 추가하고, 테이블뷰를 갱신합니다.
               </p>
 
@@ -432,10 +431,10 @@
               </br>
               <p class="imagecenter text-md">loadFreshPosts()메소드는 loadPosts()메소드와 거의 동일하니 다른 부분만 살펴보겠습니다.</br>
               </p>
-              <p class="code_by_line">
+              <p class="code_by_line imagecenter text-md">
                 <i>88~93</i> : DatabaseQuery.queryStarting(atValue:) 메소드를 이용하여 현재 표시되고 있는 posts프로퍼티중에서 가장 최근 Date보다 더 최근에 나온
                 게시글을 질문합니다. 단 Firebase Database에 저장되는 값들은 전부 String타입 이므로 이를 String으로 캐스팅해줍니다.</p>
-              <p class="code_by_line">
+              <p class="code_by_line imagecenter text-md">
                 <i>99, 112~122</i> : 새로 불러들인 최근 게시글들은 freshPostsChunk에 담아둡니다. 만약 이 갯수가 g_NumPerOneLoad개 이상이면 for문을 빠져나와 더 이상
                 표시하지 않습니다. 이 freshPostsChunk를 loadedPosts, posts 배열 맨 앞에 삽입합니다. </p>
               <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="87-122"></code>
