@@ -49,6 +49,9 @@
     body .code_by_line imagecenter text-md {
       line-height: 150%;
     }
+    .gist .blob-code-inner {
+    white-space: pre-wrap;
+    }
   </style>
 </head>
 
@@ -161,23 +164,23 @@
         </p>
         <ol class="margin-lr">
           <li>
-            &nbsp; &nbsp; 게시글은 이미지와 텍스트, 게시시간을 담고 있습니다. 이 중에 이미지와 텍스트를 사용자가 올릴 수 있도록 만들어야 합니다.</br>
-            사용자가 이미지를 올리는 방법도 생각해야합니다. 이미지는 카메라로 찍어서 올릴 수 있고, 갤러리에서 선택하여 올릴 수 있습니다. 또한 선택한 이미지를 편집하여 게시할 수 있다면 사용자 입장에서 더더욱 좋습니다. </br>
+            게시글은 이미지와 텍스트, 게시시간을 담고 있습니다. 이 중에 이미지와 텍스트를 사용자가 올릴 수 있도록 만들어야 합니다.</br>
+            사용자가 이미지를 올리는 방법도 생각해야합니다. 이미지는 카메라로 찍어서 올릴 수 있고, 갤러리에서 선택하여 올릴 수 있습니다. 또한 선택한 이미지를 편집하여 게시할 수 있다면 사용자 입장에서 편리합니다. </br>
             </br>
           </li>
           <li>
-            &nbsp; &nbsp; 타임라인은 전체 게시글을 보여주지 않습니다. 사용자가 예전 게시글을 보는 경우는 드물기 때문입니다. 또한 많은 게시글을 한 번에 불러오는 것은 성능상으로도 좋지 않습니다.</br>
+            타임라인은 전체 게시글을 보여주지 않습니다. 사용자가 예전 게시글을 보는 경우는 드물기 때문입니다. 또한 많은 게시글을 한 번에 불러오는 것은 성능상으로도 좋지 않습니다.</br>
             </br>
           </li>
           <li>
-            &nbsp; &nbsp; 따라서 최신/이전게시글은 사용자에 스크롤에 따라 불러오도록 해야합니다. 최신게시글들은 스크롤을 맨 위로 올릴 시 보여주고, 이전게시글들은 스크롤을 맨 아래로 내릴 시 보여주도록 합니다.</br>
+            따라서 최신/이전게시글은 사용자에 스크롤에 따라 불러오도록 해야합니다. 최신게시글들은 스크롤을 맨 위로 올릴 시 보여주고, 이전게시글들은 스크롤을 맨 아래로 내릴 시 보여주도록 합니다.</br>
           </li>
         </ol>
         </br>
         <p class="imagecenter text-md">
           &nbsp; &nbsp; 먼저, 첫번째 기능을 위해,
           <b>Fusuma</b>라이브러리를 이용 하겠습니다. Fusuma 라이브러리는 Instagram과 유사한 방식으로 이미지 게시를 할 수 있도록 만들어졌습니다. Fusuma라이브러리를 이용하면 사용자는 한
-          화면에서 이미지를 선택/편집이 가능합니다. 또한 그 화면에서 바로 카메라로 넘어 갈 수 도 있습니다. 따라서 첫번째 기능을 구현하기에 적합합니다. 추가적인 설명과 실제 UI를 보고싶다면
+          화면에서 이미지를 선택/편집이 가능합니다. 또한 그 화면에서 바로 카메라로 넘어 갈 수 도 있습니다. 따라서 첫번째 기능을 구현하기에 적합하다고 판단하여 이용하였습니다. 추가적인 설명과 실제 UI를 보고싶다면
           <a href=h ttps://github.com/ytakzk/Fusuma>
             Fusuma github 페이지</a>를 참고하시기 바랍니다. </br>
           <i>(이 글에선 Fusuma를 사용하여 앱을 구현하기 위해 개발이 복잡해진 부분이 있습니다. 라이브러리를 이용하면 부가적으로 복잡해지는 부분도 생기기 때문에, 굳이 Fusuma를 사용하여 구현할 필요는
@@ -190,14 +193,15 @@
 
         <div style="height:60px"></div>
 
-        <h3> Firebase Database</h3>
+        <h3> Firebase Database에서 데이터를 읽는 두 가지 방법</h3>
         <br>
         <br>
         <p class="imagecenter text-md">
 
           Firebase Database는 Data를 가져오기 위해, observe()메소드와 observeSingleEvent()메소드를 제공합니다. observe()메소드는 앱이 동작하고 있고, 네트워크가 연결되어 있다면
-          실시간으로 data를 읽어옵니다. 이와 반대로 observeSingleEvent()메소드는 이 메소드가 호출된 당시에만 data를 읽어 옵니다.</br>
-          우리가 만들 타임라인은 사용자의 스크롤에 의해 게시글을 불러옵니다. 따라서 이 글에선 observeSingleEvent()를 이용하여 게시글을 원하는 시점에 불러올 것이고, 자동 동기화는 구현하지 않습니다. 자동 동기화는
+          실시간으로 data를 읽어옵니다. </br>
+          이와 반대로 observeSingleEvent()메소드는 이 메소드가 호출된 당시에만 data를 읽어 옵니다.</br></br>
+          우리가 만들 타임라인은 사용자의 스크롤에 의해 게시글을 불러옵니다. 따라서 이 글에선 observeSingleEvent()를 이용하여 사용자의 액션에 따라 게시글을 불러올 것이고, 자동 동기화는 구현하지 않습니다. 자동 동기화는
           <a href="https://firebase.google.com/docs/database/ios/lists-of-data">iOS에서 데이터 검색</a>을 참조하길 바랍니다.
 
         </p>
@@ -221,33 +225,33 @@
           <ol class="margin-lr">
             <li>
               <b>Tab Bar Controller</b>
-              <p class="margin-lr"> Tab Bar의 Attribute-image Tint는 Black으로 설정합니다. 현재 선택된 탭아이콘의 색을 나타냅니다.</p>
+              <p class="margin-lr"> Tab Bar의 Attribute Inspector 내부 image Tint는 Black으로 설정합니다. 이는 현재 선택된 탭아이콘의 색을 나타냅니다.</p>
             </li>
             <li>
               <b>Navigation Controller</b>
-              <p class="margin-lr"> Navigation Bar의 Attribute-Translucent를 체크해제 합니다. 배경과 무관한 색을 가지게 합니다.</br>
-                Tab Bar Item의 Attribute-selected image, Attribute-Image를 집모양으로 설정합니다.</p>
+              <p class="margin-lr"> Navigation Bar의 Attribute Inspector 내부 Translucent를 체크해제 합니다. 이는 배경과 무관한 색을 가지게 합니다.</br>
+                Tab Bar Item의 Attribute Inspector 내부 selected image, Image를 집모양으로 설정합니다.</p>
             </li>
             <li>
               <b>TimelineTableViewController</b>
-              <p class="margin-lr"> Identity-Custom class를 TimelineTableViewController로 지정합니다.</br>
-                Table View의 Attribute-content는 Dynamic Prototypes로 지정합니다.</br>
-                TimelineCell의 Identity-Custom class를 TimelineTableViewCell로, Attribute-Identifier는 TimelineCell로 지정합니다.</br>
-                <i>[Outlet] Image View와 Text Label은 TimelineTableViewCell로, Footer Label은 TimelineTableViewController로 연결합니다.</i>
+              <p class="margin-lr"> Identity Inspector 내부 Custom class를 TimelineTableViewController로 지정합니다.</br>
+                Table View의 Attribute Inspector 내부 content는 Dynamic Prototypes로 지정합니다.</br>
+                TimelineCell의 Identity Inspector 내부 Custom class를 TimelineTableViewCell로, Attribute Inspector 내부 Identifier는 TimelineCell로 지정합니다.</br>
+                <i>[@IBOutlet] 위 스토리보드에서 3번 컨트롤러의 Image View와 Text Label은 TimelineTableViewCell.swift와 outlet을 연결하고, Footer Label은 TimelineTableViewController.swift와 연결합니다.(적절한 프로퍼티를 만들어 줍니다.)</i>
                 </br>
               </p>
             </li>
             <li>
               <b>Add Navigation Controller</b>
               <p class="margin-lr"> 2번과 같습니다. 하지만 아이콘은 '+'모양으로 설정합니다.</br>
-                Identity-Custom class를 AddNavigationController로 지정합니다.</p>
+                Identity Inspector 내부 Custom class를 AddNavigationController로 지정합니다.</p>
             </li>
             <li>
               <b>UploadViewController</b>
               <p class="margin-lr">
-                Identity-Custom class를 UploadViewController로 지정해 주고, TextView와 ImageView를 추가합니다.</br>
-                또한 코드로 4번과 5번을 연결하기 위해 Identity-Storyboard ID를 UploadViewController로 지정해 줍니다.</br>
-                <i>[Outlet] Image View와 Text View는 UploadViewController로 연결합니다.</i>
+                Identity Inspector 내부 Custom class를 UploadViewController로 지정해 주고, TextView와 ImageView를 추가합니다.</br>
+                또한 코드로 4번과 5번을 연결하기 위해 Identity Inspector 내부 Storyboard ID를 UploadViewController로 지정해 줍니다.</br>
+                <i>[@IBOutlet] 위 스토리보드에서 5번 컨트롤러의 Image View와 Text View는 UploadViewController.swift로 연결합니다.(적절한 프로퍼티를 만들어 줍니다.)</i>
               </p>
             </li>
           </ol>
@@ -256,7 +260,7 @@
         <br>
 
 
-        <h4 class = "textcenter">Podfile 설정</h4>
+        <h4 class = "textcenter">Podfile 설정</h4><br>
         <img src="tb004_media/images/podfile.png" width="600" class = "imagecenter">
         <p class="imagecenter text-md">이미지를 저장 하기위해 Firebase/Storage, 저장한 이미지를 표시하기 위해 FirebaseUI/Storage, 텍스트를 업로드 하기위해 Firebase/Database, 사용자가 이미지를 게시하도록 하기위해 Fusuma를 이용하도록 하겠습니다.2번째 줄 platform은 버전에 알맞게 설정합니다. Podfile을 다음과 같이 설정한 후 'pod install'을 실행합니다.
         </p>
@@ -266,11 +270,11 @@
         <h4 class = "textcenter">Database, Storage 규칙, info.plist 설정</h4>
         <img src="tb004_media/images/BaseSetting.jpg" width="600" class = "imagecenter">
         <img src="tb004_media/images/BaseSetting-info.png" width="800" class = "imagecenter">
-        <p class="imagecenter text-md">앱에서 Database, Storage에 접근하기 위해서 임시로 규칙을 공개하도록 합니다. (
+        <p class="imagecenter text-md">앱에서 Database, Storage에 접근하기 위해서 임시로 규칙을 공개하도록 합니다.<br> (
           <a href="https://firebase.google.com/docs/database/security/quickstart?hl=ko">Database규칙</a>
           <a href="https://firebase.google.com/docs/storage/security/start?hl=ko">Storage규칙</a>)
           </br>
-          또한 앱이 사진 라이브러리 접근하기 위해선 그 목적을 알려주어야 합니다. 따라서 프로젝트 내부 'info.plist'에는 다음과 같이 "Privacy- ..." 값을 추가해줍니다.</p>
+          또한 앱이 사진 라이브러리 접근하기 위해선 그 목적을 알려주어야 합니다. 따라서 프로젝트 내부 'info.plist'에는 다음과 같이 "Privacy- Photo Library Usage Des..." 값을 추가해줍니다.</p>
         </br>
         </br>
 
@@ -278,21 +282,21 @@
 
         <div style="height:60px"></div>
 
-        <h4 class = "textcenter">게시글 데이터</h4>
+        <h4 class = "textcenter">게시글 데이터</h4><br>
         <p class="imagecenter text-md">
           <b>Data.swift</b>파일에 게시글 데이터를 구조화합니다.</br>
           사용자가 입력한 메세지를 담을 text, 게시한 상대적 시간을 나타내는 date, 게시글 이미지를 담을 imageView프로퍼티가 있습니다.</br>
         </p>
+        <code data-gist-id="f5f6662e4a9e729d6a26e9354ecadc22" ></code>
         <p class="imagecenter text-md">여기서 date는 Int타입입니다. 이는 Date.timeIntervalSince1970를 이용하여 1970년 이후의 시간을 숫자로 얻어오기 때문입니다. 비교가 쉽도록 하기 위함이므로 여기선 이를 기준으로
           진행하겠습니다.
           </br>
           생성자는 매개변수 마다 앞에 '_'를 붙여 인자이름을 생략할 수 있도록 했습니다.</p>
-        <code data-gist-id="f5f6662e4a9e729d6a26e9354ecadc22" data-gist-hide-footer="true"></code>
 
         <div style="height:60px"></div>
         <h3>Fusuma와 Firebase를 이용한 데이터 저장 및 파일 업로드</h3><br><br>
 
-        <h4 class = "textcenter">이미지 게시과정 살펴보기</h4>
+        <h4 class = "textcenter">이미지 게시과정 살펴보기</h4><br>
 
           <img src="tb004_media/images/AddNavi_Overview.png" width="600" class = "imagecenter">
 
@@ -301,99 +305,118 @@
             이를 구현하기 위해선 fusumaWillClosed(), fusumaImageSelected() 메소드를 이용합니다.<br><br>
             따라서 구현해야 할 것은 <b>"Close버튼을 누르면 바꾸어 2번 컨트롤러로 돌아가게하기, Select버튼을 누르면 5번 컨트롤러로 가게하기"</b>입니다.
           </p>
+        </br>
+      </br>
+        <h4 class = "textcenter">4번 컨트롤러 AddNavigationController</h4><br>
           <p class="imagecenter text-md" >4번
             <b>AddNavigationController.swift</b>부터 보겠습니다.
             <b>AddNavigationCotroller는 fusuma, uploadController프로퍼티를 가집니다.</b> 여기서 fusuma프로퍼티는 위 사진 가운데에 있는 뷰 컨트롤러 이고, uploadController프로퍼티는 5번 뷰 컨트롤러입니다. 이를 상황에 따라 Navigation Stack에 푸쉬, 팝을 하는 것이 4번 컨트롤러의 역할입니다.
           </p>
+          <code data-gist-id="d1923be4cdf48e7ca6ddc77279639401" data-gist-line="9-49" data-gist-wrap="softwrap"></code>
           <p class="code_by_line imagecenter text-md ">
-            <i>18~29</i> : fusuma에 대한 설정입니다.</p>
+            <i>18~29</i> : ViewDidLoad는 AddNavigationController가 처음으로 load될 때 수행하는 루틴입니다. fusuma에 대한 설정을 해줍니다.</p>
           <p class="code_by_line imagecenter text-md ">
-            <i>31~32</i> : 5번 컨트롤러는 Main.storyboard로부터 코드로 불러옵니다.</p>
+            <i>31~32</i> : 시작하기 부분에서 보았듯 5번 컨트롤러는 연결된 컨트롤러가 없습니다. 따라서  Main.storyboard로부터 Identity가 UploadViewController인 컨트롤러를 불러옵니다. 이렇게 5번 컨트롤러를 얻어옵니다.</p>
           <p class="code_by_line imagecenter text-md ">
-            <i>29, 36~39</i> : fusuma컨트롤러는 위아래에 독자적인 버튼이 있기 때문에, Navigation Bar와 Bottom Bar는 숨겨줍니다. 그리고 AddNavigationController가
+            <i>29, 36~39</i> :  fusuma컨트롤러는 위아래에 독자적인 버튼이 있기 때문에, Navigation Bar와 Bottom Bar는 숨겨줍니다. 그리고 AddNavigationController가
             최초 표시될 때 fusuma가 표시되도록 설정합니다.</p>
           <p class="code_by_line imagecenter text-md ">
-            <i>43~49</i> : fusuma에서 체크버튼을 누르면 uploadController에 이미지를 넘겨주고 uploadController를 푸쉬합니다. close버튼을 누르면 2번 컨트롤러로 이동합니다.</p>
-          <code data-gist-id="d1923be4cdf48e7ca6ddc77279639401" data-gist-hide-footer="true" data-gist-line="9-49"></code>
+            <i>43~49</i> : fusuma에서 체크버튼("V")을 누르면 uploadController에 이미지를 넘겨주고 uploadController를 푸쉬합니다. 이를 통해 5번 컨트롤러가 나타나도록 합니다. close버튼("X")을 누르면 탭을 전환하여 2번 컨트롤러로 이동합니다.</p>
           </br>
           <br>
 
-          <h4 class = "textcenter">업로드 뷰 컨트롤러</h4>
+          <h4 class = "textcenter">5번 컨트롤러 UploadViewController</h4><br>
           <p class="imagecenter text-md">다음으로 텍스트를 게시하는 5번
             <b>UploadViewController</b>를 보겠습니다. Firebase Database, Firebase Storage에
-            게시글을 업로드 하는 과정을 살펴보겠습니다.</br>
-            프로퍼티들은 다음과 같이 설정합니다.</br>
+            게시글을 게시하는 역할을 합니다. 프로퍼티들은 다음과 같이 설정합니다.</br>
           </p>
+          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-line="9-27"></code>
+          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-line="34-35"></code>
           <p class="code_by_line imagecenter text-md">
-            <i>34~35</i> : 여기서 UploadViewController의 Navigation Bar button item을 추가하고,
-            <i>34줄</i>에서 버튼에 대한 액션으로 uploadPost()메소드를 지정해 줍니다.</br>
-            <i>(참고로 Swift Firebase 4.0.0버전부터 FirebaseDatabase, FirebaseStorage 등을 import한 경우에는 FirebaseDatabase가 아닌 앞에 "Firebase"를 생략한 "Database"로 호출 가능합니다.)</i>
+            <i>34~35</i> : 여기서 UploadViewController의 Navigation Bar button item을 추가합니다. "+"버튼의 역할을 합니다.<br>
+             <i>34 : </i> "action:#selector(uploadPost)"를 통해 이 버튼을 누를 경우 uploadPost()메소드가 호출되도록 지정해 줍니다. uploadPost는 바로 아래 코드를 통해 확인하겠습니다.</br><br>
+            <i>(참고로 Swift Firebase 4.0.0버전부터 FirebaseDatabase, FirebaseStorage 등을 import한 경우에는 앞에 "Firebase"를 생략한 "Database"로 호출 가능합니다.)</i>
           </p>
-
-          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-hide-footer="true" data-gist-line="9-27"></code>
-          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-hide-footer="true" data-gist-line="34-35"></code>
-          </br>
-          <br>
-
+        </br>
+        <br>
+          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec"  data-gist-line="68-106"></code>
           <p class="code_by_line imagecenter text-md">
-            <i>69~75</i> : 앞서 fusuma에서 숨겼던 Navigation Bar를 표시하고, 넘겨준 이미지를 표시합니다. 뷰가 사라질때 Navigation Bar를 숨기도록하여, BackButton이
-            눌리면 다시 Navigation Bar를 숨겨줍니다.
+            <i>69~75</i> : 앞서 4번 컨트롤러 설정시, fusuma가 보여지는 경우에는 Navigation Bar를 숨겼었습니다. 하지만 UploadViewController가 나타난 경우에는 필요하므로 표시하도록 합니다. 또한 AddNavigationController.swift에서 fusumaImageSelected()가 호출 될경우, uploadController.image에 이미지를 넣어 주었습니다. 이를 imageView프로퍼티에 넣어줍니다.
+            <br>
+            뷰가 사라질때는 Navigation Bar를 다시 숨기도록하여, fusuma가 나타날시 Navigation Bar가 보이지 않도록 합니다.
           </p>
           <p class="code_by_line imagecenter text-md">
             <i>76~105</i> :
-            <b>uploadPost()메소드</b>를 이용하여 데이터를 저장하고 파일을 업로드합니다. text, date는 Database에 저장하고 image는 Storage에 업로드합니다. 텍스트 저장은 placeHolder의
-            유무에 따라 달리하고
-            <i>(77~85)</i>, date는 1970년 이후의 시간을 Int로 받아옵니다
-            <i>(87~89)</i>.</br>
-            <b>이미지는 storageRef.child([filename])메소드를 이용하여 루트안에 저장할 filename을 지정합니다
-              <i>(91)</i>. 이미지를 JPEG형식으로 바꾸어 주고, imageRef.putData()메소드를 이용하여 파일을 업로드합니다
-              <i>(93~102)</i>
-            </b>.
+            <b>uploadPost()메소드</b>를 이용하여 데이터를 저장하고 파일을 업로드합니다. <b>Firebase Database에 data를 저장하는 것은 간단합니다. (77)줄과 같이 새로운게시글에 대한 참조변수를 설정하고, 그 참조변수를 이용하여 setValue()메소드를 호출하면 됩니다. </b><br>
+            77번 줄에서 참조변수를 설정하는 과정은 다음과 같습니다.<br>
+            <ol class = "imagecenter text-md">
+              <li>21번줄에서 선언한 ref를 26번줄에서 Database의 루트로 지정해줍니다.</li>
+              <li>루트 아래 posts 자식을 얻어오고, posts 아래에 AutoID(임의의 ID)로 새로운 게시글을 참조합니다.</li>
+            </ol>
+          <p class="imagecenter text-md">
+            79번 줄에서 해당 참조변수에 데이터를 저장하는 과정은 다음과 같습니다.<br>
+            </p>
+            <ol class = "imagecenter text-md">
+              <li>해당 참조변수 아래에 text라는 key를 가진 child를 만듭니다.</li>
+            <li>"text" key를 가진 child의 value로 self.TextView.text를 넣어 줍니다.</li>
+          </ol>
+          <p class="imagecenter text-md">
+            다만 저장시에 유의할 점은 Firebase Database의 data는 key,value페어로 이루어져 있으며 모두 String이라는 것입니다.<br>
+            이를 이용하여 먼저 text를 placeHolder의 유무에 따라 업로드 합니다. placeHolder로 text가 설정되어 있다는 의미는 사용자가 아무런 글자도 입력하지 않았다는 의미입니다. 따라서 placeHolder로 text가 설정되어있을 경우에는 빈 글자를 업로드 합니다. <br>
+            date는 1970년대 이후흐른시간을 숫자로 얻어 오고 Database에 저장합니다.<br><br>
+            image는 Storage에 업로드합니다. 
+            <b>Firebase Storage에 data를 저장하는 것 또한 간단합니다. storageRef.child([filename])메소드를 이용하여 루트에 저장할 filename의 참조를 얻어 오고 해당하는 참조에 업로드하면 됩니다.</b><br>
+            여기서 주의해야 할 점은 앱 내의 image를 바로 Firebase Storage에 저장할 수 없다는 것입니다. Firebase Storage에 앱 내의 image객체를 업로드 하기 위해선 JPEG형식으로 바꾸어 주어야만 합니다. 따라서 다음과 같이 합니다.
+            <ol class = "imagecenter text-md">
+              <li><i>93</i>: 이미지를 JPEG형식으로 바꾸어 줍니다.</li>
+              <li><i>96~103</i>: JPEG형식으로 바꾼 파일을 업로드합니다</li></ol> 
           </p>
-          <code data-gist-id="e963729ff7632c3b29da5d54dc4c2bec" data-gist-hide-footer="true" data-gist-line="68-106"></code>
           </br>
           <br>
 
 
         <div style="height:60px"></div>
-        <h3>타임라인 테이블 뷰 컨트롤러</h3>
+        <h3>3번 컨트롤러 TimelineTableViewController</h3><br><br>
           <p class="imagecenter text-md">이제 게시글을 표시하기 위해
             <b>TimelineTableViewController.swift</b>를 작성하겠습니다.</br>
-            먼저 필요한 라이브러리를 모두 import하고, 프로퍼티들을 선언 합니다. 프로퍼티들의 용도는 주석과 같습니다.</br>
-            <p class="imagecenter text-md">posts와 loadedPosts를 이해하기 위해선, 이 앱이 데이터들을 가져오는 방식을 이해해야 합니다. 이는 추후에 loadPosts()메소드와 함께 설명하도록 하겠습니다.</br>
-              <p class="imagecenter text-md">최신글을 불러 들이기 위해선 기본적으로 UITableViewController에 있는 프로퍼티인
-                <b>refreshControl</b>을 이용합니다. 사용하기 위한 양식은 다음과 같습니다. refreshControl은 테이블뷰 스크롤을 맨 위로 올리면 나타나며 이에 대한 액션은 직접 구현해야
-                합니다.
-                <i>33줄</i> addTarget()메소드 안 action 매개변수에 지정된 메소드를 넘겨주어 구현합니다.</br>
-              </p>
+            먼저 필요한 라이브러리를 모두 import하고, 프로퍼티들을 선언 합니다. 테이블 뷰에 표시될 포스트들을 담을 배열을 선언하고, Firebase에서 로드된 포스트를 따로 담을 배열도 선언합니다. 이 배열들은 모두 Data.swift에서 정의한 Post타입 입니다.</br>
+            <p class="imagecenter text-md">posts와 loadedPosts를 따로 둔 것은 뒤에서 loadPosts()메소드와 함께 설명하도록 하겠습니다.</br>
+              <p class="imagecenter text-md">최신글을 불러 들이기 위해선 UITableViewController에 기본적으로 있는
+                <b>refreshControl</b>을 이용합니다. refreshControl은 객체를 할당만 해주면(31) 됩니다. 이 경우 테이블뷰의 스크롤을 맨 위로 올리면 refreshControl은 자동으로 나타납니다. 하지만 이에 대한 액션은 직접 구현해야 합니다.<br>
             </p>
 
-            <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="9-34"></code>
+            <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="9-34"></code>
+            <p class="imagecenter text-md">
+                <i>33 : </i> addTarget()메소드 안 action 매개변수에 지정된 메소드를 넘겨주어 refreshControl이 나타날 경우의 액션을 구현합니다.</br>
+              </p>
+            </br>
+            </br>
             </br>
             </br>
 
-            <h4 class = "textcenter">테이블 뷰 Section, Row, Cell 설정</h4>
-            <p class="imagecenter text-md"> Section의 갯수는 하나로 하고, Row는 posts의 수만큼 지정합니다.</br>
-              cell은 TimelineTableViewCell로 캐스팅하여 얻어오고, row에 해당하는 포스트에서 프로퍼티를 읽어와 알맞은 cell의 프로퍼티에 할당합니다.
+            <h4 class = "textcenter">테이블 뷰 Section, Row, Cell 설정</h4><br>
+            <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="39-55"></code>
+            <p class="imagecenter text-md"> Section의 갯수는 하나로 하고, Row는 posts의 수만큼 지정합니다. posts는 현재 보여지고 있는 게시글들 입니다.</br>
+              cell은 TimelineTableViewCell로 캐스팅하여 얻어옵니다.<br>
+               row에 해당하는 포스트를 읽어와 읽어온 포스트의 text와 image를  cell의 text와 image로  할당합니다.
               </br>
               <b>TimelineTableViewCell</b>안에는
               <b>시작하기</b> 3번파트에서 Outlet을 연결해 주었던 Image View와 Text Label 프로퍼티가 들어있습니다.</p>
-            <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="39-55"></code>
             </br>
             </br>
 
-            <h4 class = "textcenter">데이터 검색 및 파일 다운로드 - loadPosts()메소드</h4>
-            <p class="imagecenter text-md">이제 본격적으로 Firebase로 부터 저장된 포스트들을 읽어 오겠습니다. 그 전에 앞에서 넘어갔던 loadPosts와 posts의 관계에 대해서 설명하겠습니다.</br>
-              처음 앱이 실행 되면 Timeline App은 Firebase에 있는 모든 Posts들을
-              <b>observeSingleEvent()</b>메소드로 읽어 옵니다. observe()메소드를 이용하면 자동 동기화가 가능하지만 이 포스트에선 구현하지 않습니다.</br>
-              읽어온 Posts들은 loadedPosts프로퍼티에 저장되며, 이 중 가장 최근 게시글을
-              <b>g_NumPerOneLoad</b>개수만큼만 posts프로퍼티에 저장합니다. TimelineTableViewController는 이 posts의 정보를 읽어옵니다.</p>
+            <h4 class = "textcenter">데이터 검색 및 파일 다운로드 - loadPosts()메소드</h4><br>
             <img src="tb004_media/images/DataLoadProcedure.png" width="600" class = "imagecenter">
+            <p class="imagecenter text-md">
+              &nbsp; &nbsp; 이제 본격적으로 Firebase로 부터 저장된 포스트들을 읽어 오겠습니다. 이 부분은 "데이터 저장"처럼 간단하지는 않습니다. 일단 설명하기에 앞서, 넘어갔던 loadPosts프로퍼티와 posts프로퍼티의 관계에 대해서 설명하겠습니다.</br>
+              &nbsp; &nbsp; 처음 앱이 실행 되면 Timeline App은 Firebase에 있는 모든 Posts를
+              <b>observeSingleEvent()</b>메소드로 읽어 옵니다.</br>
+              읽어온 Posts들은 loadedPosts프로퍼티에 저장되며, 이 중 가장 최근 게시글을
+              <b>g_NumPerOneLoad</b>개수만큼만 posts프로퍼티에 저장합니다. 3번 컨트롤러 TimelineTableViewController는 이 posts의 정보를 읽어옵니다. 이것이 구현된 loadPosts()메소드를 살펴보겠습니다</p>
             </br>
             </br>
 
-            <p class="imagecenter text-md">코드를 줄번호에 맞춰 설명하겠습니다.</br>
-            </p>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="57-85"></code>
             <p class="code_by_line imagecenter text-md">
               <i>59~60</i> : posts들을 date순으로 정렬하는 쿼리를 만듭니다. Firebase Database에
               <b>'나는 이런 데이터를 원해'</b>를 알려주는 질문입니다.</p>
@@ -417,17 +440,16 @@
                 <i>78~85</i> : loadedPost.prefix()메소드를 이용하여, 3개의 게시글만 posts에 추가하고, 테이블뷰를 갱신합니다.
               </p>
 
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="57-85"></code>
               </br>
               </br>
 
-              <h4 class = "textcenter">최신게시글 검색 refresh(), loadFreshPosts()메소드</h4>
+              <h4 class = "textcenter">최신게시글 검색 refresh(), loadFreshPosts()메소드</h4><br>
               <p class="imagecenter text-md">앞서
                 <i>33줄</i>에서 refreshControl의 액션으로 refresh()메소드를 설정했습니다. 이제 테이블 뷰 스크롤을 맨 위로 올리면 원형으로 도는 refresh 뷰가 표시되고, 이때의
                 동작을 refresh()메소드에서 구현합니다. refresh()메소드에서는 loadFreshPosts()메소드를 호출하여 새로운 게시글을 불러오게합니다.
               </p>
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="33"></code>
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="135-139"></code>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="33"></code>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="135-139"></code>
               </br>
               <p class="imagecenter text-md">loadFreshPosts()메소드는 loadPosts()메소드와 거의 동일하니 다른 부분만 살펴보겠습니다.</br>
               </p>
@@ -437,25 +459,25 @@
               <p class="code_by_line imagecenter text-md">
                 <i>99, 112~122</i> : 새로 불러들인 최근 게시글들은 freshPostsChunk에 담아둡니다. 만약 이 갯수가 g_NumPerOneLoad개 이상이면 for문을 빠져나와 더 이상
                 표시하지 않습니다. 이 freshPostsChunk를 loadedPosts, posts 배열 맨 앞에 삽입합니다. </p>
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="87-122"></code>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="87-122"></code>
               </br>
               </br>
 
-              <h4 class = "textcenter">이전게시글 검색 scrollViewDidScroll(), loadPastPosts()메소드</h4>
-              <p class="imagecenter text-md">Timelin앱은 스크롤을 맨 아래로 내리면 이전게시글을 불러옵니다. UITableViewController는 기본적으로 UIScrollViewDelegate를 위임받습니다. 우리는 이 내부에
+              <h4 class = "textcenter">이전게시글 검색 scrollViewDidScroll(), loadPastPosts()메소드</h4><br>
+              <p class="imagecenter text-md">Timeline앱은 스크롤을 맨 아래로 내리면 이전게시글을 불러옵니다. UITableViewController는 기본적으로 UIScrollViewDelegate를 위임받습니다. 우리는 이 내부에
                 scrollViewDidScroll()메소드를 이용하여 이전게시글 검색을 구현합니다. 다음과 같은 과정을 통해 스크롤이 contentSize를 넘어감을 체크하고, 넘거가게 되면 이전게시글을
                 불러오도록 합니다. loadPastPosts()메소드를 호출하여 이전게시글을 불러옵니다.
               </p>
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="141-150"></code>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="141-150"></code>
               </br>
               <p class="imagecenter text-md">loadPastPosts()메소드에서는 앱 실행시 불러왔던 이전게시글들을 g_NumPerOneLoad개 만큼 불러옵니다. 로딩 중임을 보여주기 위해 대기시간 sleep(1)을 넣도록 합니다.
               </p>
-              <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="123-131"></code>
+              <code data-gist-id="196f327528322762177eb2e627c4f182"  data-gist-line="123-131"></code>
               </br>
               </br>
 
         <div style="height:60px"></div>
-        <h3>마치며</h3>
+        <h3>마치며</h3><br><br>
         <p class="imagecenter text-md">지금까지 파이어베이스를 이용하여 Instagram과 같은 Timeline을 만드는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 타임라인을 만들어보세요.</br>
           전체 소스는
           <a href="https://github.com/PBW99/ex-Timeline">Github</a>에서 확인하실 수 있습니다. </p>
