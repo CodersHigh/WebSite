@@ -107,25 +107,25 @@
           <csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall>
         </p>
 
-        <!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+        <!--<p class = "textcenter"><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
         <h3 class="ctitle">Firebase를 이용하여 Timeline만들기</h3>
-        <p>
+        <p class = "textcenter">
           <csmall>Posted: Agust 16, 2017.</csmall> |
           <csmall2>By: Byoungwook Park</csmall2>
         </p>
 
         <!-- POST 시작  -->
-        <p>이 글에선
+        <p class = "textcenter">이 글에선
           <b>Firebase</b>를 이용하여 Instagram을 모방한 앱을 만들어 보겠습니다.</br>
           <i>(Firebase 설치 및, 기본 API에 대한 설명은
-            <a href="TODO">Firebase를 이용하여 채팅창 만들기</a>
-            이 글을 참조하길 바랍니다.)</i>
+            <a href="https://codershigh.github.io/WebSite/techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기</a>
+            를 참조하길 바랍니다.)</i>
         </p>
 
         <div style="height:60px"></div>
 
         <h3>만들고자 하는 타임 라인</h3>
-        <p>먼저 Timeline에 대해 알아보겠습니다.</br>
+        <p class = "textcenter">먼저 Timeline에 대해 알아보겠습니다.</br>
           Instagram에서는 한 명의 유저가 하나의 Timeline을 가집니다. Timeline은 유저가 팔로우한 모든사람의 게시글들을 최신글 부터 보여줍니다.
           <i>(2016년 이후로 Timelne은 시간 역행 순으로 보여주지 않고, 맞춤형 피드 알고리즘을 통해 보여줍니다. 여기선 변경 전을 기준으로 얘기하겠습니다.)</i>
           </br>
@@ -139,7 +139,7 @@
         <div style="height:60px"></div>
 
         <h3>만들어야할 기능</h3>
-        <p> 모든 사용자들은 같은 하나의 타임라인만을 공유합니다. 따라서 Timeline은 그저 시간순으로 게시글을 보여주는
+        <p class = "textcenter"> 모든 사용자들은 같은 하나의 타임라인만을 공유합니다. 따라서 Timeline은 그저 시간순으로 게시글을 보여주는
           <b>게시판</b> 역할입니다.</br>
           타임라인의 게시글은
           <b>이미지, 텍스트, 게시시간</b>을 담고 있습니다. 자 이제 구현해야 할 내용을 정리해 보겠습니다.</br>
@@ -155,7 +155,7 @@
                 </br>
               </li>
               <li>
-                &nbsp; &nbsp; 따라서 최신게시글들은 스크롤을 맨 위로 올릴 시 보여주고, 이전게시글들은 스크롤을 맨 아래로 내릴 시 보여줍니다.</br>
+                &nbsp; &nbsp; 따라서 최신/이전게시글은 사용자에 스크롤에 따라 불러오도록 해야합니다. 최신게시글들은 스크롤을 맨 위로 올릴 시 보여주고, 이전게시글들은 스크롤을 맨 아래로 내릴 시 보여주도록 합니다.</br>
               </li>
             </ol>
           </blockquote>
@@ -174,7 +174,7 @@
           Firebase Database는 Data를 가져오기 위해, observe()메소드와 observeSingleEvent()메소드를 제공합니다. observe()메소드는 앱이 동작하고 있고, 네트워크가 연결되어 있다면
           실시간으로 data를 읽어옵니다. 이와 반대로 observeSingleEvent()메소드는 이 메소드가 호출된 당시에만 data를 읽어 옵니다.</br>
           우리가 만들 타임라인은 사용자의 스크롤에 의해 게시글을 불러옵니다. 따라서 이 글에선 observeSingleEvent()를 이용하여 게시글을 원하는 시점에 불러올 것이고, 자동 동기화는 구현하지  않습니다. 자동 동기화는
-          <a href="https://firebase.google.com/docs/database/ios/retrieve-data?hl=ko#read_data_once">iOS에서 데이터 검색</a>을 참조하길 바랍니다.
+          <a href="https://firebase.google.com/docs/database/ios/lists-of-data">iOS에서 데이터 검색</a>을 참조하길 바랍니다.
 
         </p>
 
@@ -183,45 +183,45 @@
         <h3>시작하기</h3>
         <blockquote>
 
-          <p>새 프로젝트를 만들고 Timeline이라고 지칭합니다. 다음과 같이 Data.swift는 일반 swift파일로, 나머지는 Cocoa Touch Class로 파일을 추가합니다. </p>
+          <p class = "textcenter">새 프로젝트를 만들고 Timeline이라고 지칭합니다. 다음과 같이 Data.swift는 일반 swift파일로, 나머지는 Cocoa Touch Class로 파일을 추가합니다. </p>
           <img src="tb004_media/images/created_files.png" width="250">
           <br>
           <br>
-          <p>Main.stoyboard는 아래와 같이 설정합니다. </p>
+          <p class = "textcenter">Main.stoyboard는 아래와 같이 설정합니다. </p>
           <img src="tb004_media/images/UIoverview.png" width="800">
           <br>
           <br>
-          <p>각각의 오브젝트들은 다음과 같이 설정합니다.
+          <p class = "textcenter">각각의 오브젝트들은 다음과 같이 설정합니다.
             <ol>
               <li>
                 <b>Tab Bar Controller</b>
-                <p> Tab Bar의 Attribute-image Tint는 Black으로 설정합니다. 현재 선택된 탭아이콘의 색을 나타냅니다.</p>
+                <p class = "textcenter"> Tab Bar의 Attribute-image Tint는 Black으로 설정합니다. 현재 선택된 탭아이콘의 색을 나타냅니다.</p>
               </li>
               <li>
                 <b>Navigation Controller</b>
-                <p> Navigation Bar의 Attribute-Translucent를 체크해제 합니다. 배경과 무관한 색을 가지게 합니다.</br>
+                <p class = "textcenter"> Navigation Bar의 Attribute-Translucent를 체크해제 합니다. 배경과 무관한 색을 가지게 합니다.</br>
                   Tab Bar Item의 Attribute-selected image, Attribute-Image를 집모양으로 설정합니다.</p>
               </li>
               <li>
                 <b>TimelineTableViewController</b>
-                <p> Identity-Custom class를 TimelineTableViewController로 지정합니다.</br>
+                <p class = "textcenter"> Identity-Custom class를 TimelineTableViewController로 지정합니다.</br>
                   Table View의 Attribute-content는 Dynamic Prototypes로 지정합니다.</br>
                   TimelineCell의 Identity-Custom class를 TimelineTableViewCell로, Attribute-Identifier는 TimelineCell로 지정합니다.</br>
-                  <csmall>[Outlet] Image View와 Text Label은 TimelineTableViewCell로, Footer Label은 TimelineTableViewController로 연결합니다.</csamll>
+                  <i>[Outlet] Image View와 Text Label은 TimelineTableViewCell로, Footer Label은 TimelineTableViewController로 연결합니다.</i>
                     </br>
                 </p>
               </li>
               <li>
                 <b>Add Navigation Controller</b>
-                <p> 2번과 같습니다. 하지만 아이콘은 '+'모양으로 설정합니다.</br>
+                <p class = "textcenter"> 2번과 같습니다. 하지만 아이콘은 '+'모양으로 설정합니다.</br>
                   Identity-Custom class를 AddNavigationController로 지정합니다.</p>
               </li>
               <li>
                 <b>UploadViewController</b>
-                <p>
+                <p class = "textcenter">
                   Identity-Custom class를 UploadViewController로 지정해 주고, TextView와 ImageView를 추가합니다.</br>
                   또한 코드로 4번과 5번을 연결하기 위해 Identity-Storyboard ID를 UploadViewController로 지정해 줍니다.</br>
-                  <csmall>[Outlet] Image View와 Text View는 UploadViewController로 연결합니다.</csamll>
+                  <i>[Outlet] Image View와 Text View는 UploadViewController로 연결합니다.</i>
                 </p>
               </li>
             </ol>
@@ -231,7 +231,7 @@
 
 
           <h4>Podfile 설정</h4>
-          <p>이미지를 저장 하기위해 Firebase/Storage, 저장한 이미지를 표시하기 위해 FirebaseUI/Storage, 텍스트를 업로드 하기위해 Firebase/Database, 사용자가 이미지를
+          <p class = "textcenter">이미지를 저장 하기위해 Firebase/Storage, 저장한 이미지를 표시하기 위해 FirebaseUI/Storage, 텍스트를 업로드 하기위해 Firebase/Database, 사용자가 이미지를
             선택하도록 하기위해 Fusuma를 이용하도록 하겠습니다.2번째 줄 platform은 버전에 알맞게 설정합니다. Podfile을 다음과 같이 설정한 후 'pod install'을 실행합니다.
           </p>
           <img src="tb004_media/images/podfile.png" width="600">
@@ -239,7 +239,7 @@
           </br>
 
           <h4>Database, Storage 규칙, info.plist 설정</h4>
-          <p>앱에서 Database, Storage에 접근하기 위해서 임시로 규칙을 공개하도록 합니다. (
+          <p class = "textcenter">앱에서 Database, Storage에 접근하기 위해서 임시로 규칙을 공개하도록 합니다. (
             <a href="https://firebase.google.com/docs/database/security/quickstart?hl=ko">Database규칙</a>
             <a href="https://firebase.google.com/docs/storage/security/start?hl=ko">Storage규칙</a>)
             </br>
@@ -253,11 +253,11 @@
           <div style="height:60px"></div>
 
           <h4>게시글 데이터</h4>
-          <p>
+          <p class = "textcenter">
             <b>Data.swift</b>파일에 게시글 데이터를 구조화합니다.</br>
             사용자가 입력한 메세지를 담을 text, 게시한 상대적 시간을 나타내는 date, 게시글 이미지를 담을 imageView프로퍼티가 있습니다.</br>
           </p>
-          <p>여기서 date는 Int타입입니다. 이는 Date.timeIntervalSince1970를 이용하여 1970년 이후의 시간을 숫자로 얻어오기 때문입니다. 비교가 쉽도록 하기 위함이므로 여기선 이를 기준으로
+          <p class = "textcenter">여기서 date는 Int타입입니다. 이는 Date.timeIntervalSince1970를 이용하여 1970년 이후의 시간을 숫자로 얻어오기 때문입니다. 비교가 쉽도록 하기 위함이므로 여기선 이를 기준으로
             진행하겠습니다.
             </br>
             생성자는 매개변수 마다 앞에 '_'를 붙여 인자이름을 생략할 수 있도록 했습니다.</p>
@@ -267,15 +267,15 @@
         <div style="height:60px"></div>
         <h3>Fusuma와 Firebase를 이용한 데이터 저장 및 파일 업로드</h3>
         <blockquote>
-          <p>먼저 이미지를 업로드하기 위한 디자인을 살펴보겠습니다. Fusuma는 독자적인 버튼을 가지고 있기 때문에, 이를 NavigationBarButtonItem으로 사용하기 위해선 코드로 구현해야합니다.</br>
+          <p class = "textcenter">먼저 이미지를 업로드하기 위한 디자인을 살펴보겠습니다. Fusuma는 독자적인 버튼을 가지고 있기 때문에, 이를 NavigationBarButtonItem으로 사용하기 위해선 코드로 구현해야합니다.</br>
           </p>
-          <p>버튼에 대한 액션은 FusumaDelegate를 위임받고 fusumaWillClosed(), fusumaImageSelected() 메소드를 이용하여 구현합니다.
+          <p class = "textcenter">버튼에 대한 액션은 FusumaDelegate를 위임받고 fusumaWillClosed(), fusumaImageSelected() 메소드를 이용하여 구현합니다.
             <b>Close버튼을 누르면 탭을 바꾸어 2번 컨트롤러로 돌아가게하고, Select버튼을 누르면 5번 컨트롤러로 가게해야합니다.</b>
           </p>
           <img src="tb004_media/images/AddNavi_Overview.png" width="600">
           <br>
           <br>
-          <p>4번
+          <p class = "textcenter">4번
             <b>AddNavigationController.swift</b>부터 보겠습니다.
             <b>AddNavigationCotroller는 fusuma, uploadController프로퍼티를 가지며, 이를 상황에 따라 Navigation Stack에 푸쉬, 팝을 합니다.</b>
           </p>
@@ -293,7 +293,7 @@
           <br>
 
           <h4>업로드 뷰 컨트롤러</h4>
-          <p>다음으로 5번
+          <p class = "textcenter">다음으로 5번
             <b>UploadViewController</b>를 보겠습니다. TextView PlaceHolder에 대한 설명은 여기서 다루지 않고, Firebase Database, Firebase Storage에
             게시글을 업로드 하는 과정을 살펴보겠습니다.</br>
             프로퍼티들은 다음과 같이 설정합니다.</br>
@@ -335,11 +335,11 @@
         <div style="height:60px"></div>
         <h3>타임라인 테이블 뷰 컨트롤러</h3>
         <blockquote>
-          <p>이제 게시글을 표시하기 위해
+          <p class = "textcenter">이제 게시글을 표시하기 위해
             <b>TimelineTableViewController.swift</b>를 작성하겠습니다.</br>
             먼저 필요한 라이브러리를 모두 import하고, 프로퍼티들을 선언 합니다. 프로퍼티들의 용도는 주석과 같습니다.</br>
-            <p>posts와 loadedPosts를 이해하기 위해선, 이 앱이 데이터들을 가져오는 방식을 이해해야 합니다. 이는 추후에 loadPosts()메소드와 함께 설명하도록 하겠습니다.</br>
-              <p>최신글을 불러 들이기 위해선 기본적으로 UITableViewController에 있는 프로퍼티인
+            <p class = "textcenter">posts와 loadedPosts를 이해하기 위해선, 이 앱이 데이터들을 가져오는 방식을 이해해야 합니다. 이는 추후에 loadPosts()메소드와 함께 설명하도록 하겠습니다.</br>
+              <p class = "textcenter">최신글을 불러 들이기 위해선 기본적으로 UITableViewController에 있는 프로퍼티인
                 <b>refreshControl</b>을 이용합니다. 사용하기 위한 양식은 다음과 같습니다. refreshControl은 테이블뷰 스크롤을 맨 위로 올리면 나타나며 이에 대한 액션은 직접 구현해야
                 합니다.
                 <i>33줄</i> addTarget()메소드 안 action 매개변수에 지정된 메소드를 넘겨주어 구현합니다.</br>
@@ -351,7 +351,7 @@
             </br>
 
             <h4>테이블 뷰 Section, Row, Cell 설정</h4>
-            <p> Section의 갯수는 하나로 하고, Row는 posts의 수만큼 지정합니다.</br>
+            <p class = "textcenter"> Section의 갯수는 하나로 하고, Row는 posts의 수만큼 지정합니다.</br>
               cell은 TimelineTableViewCell로 캐스팅하여 얻어오고, row에 해당하는 포스트에서 프로퍼티를 읽어와 알맞은 cell의 프로퍼티에 할당합니다.
               </br>
               <b>TimelineTableViewCell</b>안에는
@@ -361,7 +361,7 @@
             </br>
 
             <h4>데이터 검색 및 파일 다운로드 - loadPosts()메소드</h4>
-            <p>이제 본격적으로 Firebase로 부터 저장된 포스트들을 읽어 오겠습니다. 그 전에 앞에서 넘어갔던 loadPosts와 posts의 관계에 대해서 설명하겠습니다.</br>
+            <p class = "textcenter">이제 본격적으로 Firebase로 부터 저장된 포스트들을 읽어 오겠습니다. 그 전에 앞에서 넘어갔던 loadPosts와 posts의 관계에 대해서 설명하겠습니다.</br>
               처음 앱이 실행 되면 Timeline App은 Firebase에 있는 모든 Posts들을
               <b>observeSingleEvent()</b>메소드로 읽어 옵니다. observe()메소드를 이용하면 자동 동기화가 가능하지만 이 포스트에선 구현하지 않습니다.</br>
               읽어온 Posts들은 loadedPosts프로퍼티에 저장되며, 이 중 가장 최근 게시글을
@@ -370,7 +370,7 @@
             </br>
             </br>
 
-            <p>코드를 줄번호에 맞춰 설명하겠습니다.</br>
+            <p class = "textcenter">코드를 줄번호에 맞춰 설명하겠습니다.</br>
             </p>
             <p class="code_by_line">
               <i>59~60</i> : posts들을 date순으로 정렬하는 쿼리를 만듭니다. Firebase Database에
@@ -400,14 +400,14 @@
               </br>
 
               <h4>최신게시글 검색 refresh(), loadFreshPosts()메소드</h4>
-              <p>앞서
+              <p class = "textcenter">앞서
                 <i>33줄</i>에서 refreshControl의 액션으로 refresh()메소드를 설정했습니다. 이제 테이블 뷰 스크롤을 맨 위로 올리면 원형으로 도는 refresh 뷰가 표시되고, 이때의
                 동작을 refresh()메소드에서 구현합니다. refresh()메소드에서는 loadFreshPosts()메소드를 호출하여 새로운 게시글을 불러오게합니다.
               </p>
               <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="33"></code>
               <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="135-139"></code>
               </br>
-              <p>loadFreshPosts()메소드는 loadPosts()메소드와 거의 동일하니 다른 부분만 살펴보겠습니다.</br>
+              <p class = "textcenter">loadFreshPosts()메소드는 loadPosts()메소드와 거의 동일하니 다른 부분만 살펴보겠습니다.</br>
               </p>
               <p class="code_by_line">
                 <i>88~93</i> : DatabaseQuery.queryStarting(atValue:) 메소드를 이용하여 현재 표시되고 있는 posts프로퍼티중에서 가장 최근 Date보다 더 최근에 나온
@@ -420,13 +420,13 @@
               </br>
 
               <h4>이전게시글 검색 scrollViewDidScroll(), loadPastPosts()메소드</h4>
-              <p>Timelin앱은 스크롤을 맨 아래로 내리면 이전게시글을 불러옵니다. UITableViewController는 기본적으로 UIScrollViewDelegate를 위임받습니다. 우리는 이 내부에
+              <p class = "textcenter">Timelin앱은 스크롤을 맨 아래로 내리면 이전게시글을 불러옵니다. UITableViewController는 기본적으로 UIScrollViewDelegate를 위임받습니다. 우리는 이 내부에
                 scrollViewDidScroll()메소드를 이용하여 이전게시글 검색을 구현합니다. 다음과 같은 과정을 통해 스크롤이 contentSize를 넘어감을 체크하고, 넘거가게 되면 이전게시글을
                 불러오도록 합니다. loadPastPosts()메소드를 호출하여 이전게시글을 불러옵니다.
               </p>
               <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="141-150"></code>
               </br>
-              <p>loadPastPosts()메소드에서는 앱 실행시 불러왔던 이전게시글들을 g_NumPerOneLoad개 만큼 불러옵니다. 로딩 중임을 보여주기 위해 대기시간 sleep(1)을 넣도록 합니다.
+              <p class = "textcenter">loadPastPosts()메소드에서는 앱 실행시 불러왔던 이전게시글들을 g_NumPerOneLoad개 만큼 불러옵니다. 로딩 중임을 보여주기 위해 대기시간 sleep(1)을 넣도록 합니다.
               </p>
               <code data-gist-id="196f327528322762177eb2e627c4f182" data-gist-hide-footer="true" data-gist-line="123-131"></code>
               </br>
@@ -435,7 +435,7 @@
 
         <div style="height:60px"></div>
         <h3>마치며</h3>
-        <p>지금까지 파이어베이스를 이용하여 Instagram과 같은 Timeline을 만드는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 타임라인을 만들어보세요.</br>
+        <p class = "textcenter">지금까지 파이어베이스를 이용하여 Instagram과 같은 Timeline을 만드는 방법을 배웠습니다. 이것을 기본으로 하여 다른 다양한 방식의 타임라인을 만들어보세요.</br>
           전체 소스는
           <a href="https://github.com/PBW99/ex-Timeline">Github</a>에서 확인하실 수 있습니다. </p>
 
@@ -474,7 +474,7 @@
         <div class="col-lg-4">
           <h4>회사 소개</h4>
           <div class="hline-w"></div>
-          <p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+          <p class = "textcenter">코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
             코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
         </div>
         <div class="col-lg-4">
