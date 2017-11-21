@@ -295,6 +295,26 @@ a:focus {
 	color: #27b1ff;
 }
 
+/* color wrap*/
+#whiteheaderwrap {
+	background-color: white;
+	min-height: 265px;
+	padding-top: 80px;
+
+	text-align: center;
+}
+
+#D1EEFF {
+
+	background-color: #d1eeff;
+	min-height: 265px;
+	padding-top: 80px;
+	padding-bottom: 100px;
+}
+
+#D1EEFF.h6 {
+	font-size: 19px;
+}
 
 
 /* Brush image */
@@ -465,7 +485,7 @@ a:focus {
 .newscontainer h4{
 	font-size: 20px;
 	margin-top: 0;
-	margin-bottom: 7px; 
+	margin-bottom: 7px;
 }
 
 .newstitle {
@@ -761,8 +781,8 @@ a:focus {
 .col-lg-15 {
   position: left;
     min-height: 1px;
- 
-    
+
+
   }
 
 .col-xs-15 {
@@ -838,5 +858,12 @@ a:focus {
 }
 
 
+.leftmargin {
+	margin-left: 30px;
+}
 
+.bottom-space {
 
+	height: 498px;
+
+}
