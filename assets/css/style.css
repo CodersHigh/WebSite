@@ -600,6 +600,8 @@ a:focus {
 .spacing {
 	margin-top: 40px;
 	margin-bottom: 40px;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .badge-theme {
@@ -820,6 +822,13 @@ a:focus {
 	display: inline-block;
 
 }
+.titlebox2{
+	background-color: #27b1ff;
+	width: 250px;
+	height: 65px;
+	display: inline-block;
+}
+
 .titlebox h3{
 	color:white;
 	font-weight: 400;
@@ -866,4 +875,11 @@ a:focus {
 
 	height: 498px;
 
+}
+
+@media screen and (min-width: 992px){
+	.verticalline{
+		border-left:solid 1px grey;
+
+	}
 }
