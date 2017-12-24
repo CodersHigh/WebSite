@@ -894,3 +894,15 @@ a:focus {
 		height: 38px;
 		line-height: 38px;
 }
+
+.certificate_img{
+   position: relative;
+   width: 100%;
+}
+
+.certificate_text{
+    position: absolute;
+
+   width: auto;
+
+}
