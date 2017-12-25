@@ -1,0 +1,74 @@
+<!-- Fixed navbar -->
+<div class="navbar navbar-default navbar-fixed-top" role="navigation" background-color= "103f62" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    <a class="navbar-brand abc" href="../../index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+    </div>
+    <div class="navbar-collapse collapse navbar-right">
+      <ul class="nav navbar-nav">
+          <li><a href="../../index.html" style="margin-left: 30px; font-size: inherit;">홈</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../about.html">소개</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">수강생작품</a></li>
+          <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">수료생</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">기술블로그</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">교육블로그</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
+
+
+
+<!-- *****************************************************************************************************************
+CONTENT
+ ***************************************************************************************************************** -->
+<div id="posts">
+   <div class="certificate_img">
+       <img src="../../assets/img/certificate/background.png" style="width:100%;" >
+           <div class="row">
+               <div class="certificate_text" style="top:10%; left:9%;">
+                   <h4>123asdasd</h4>
+               </div>
+
+               <div class="certificate_text" style="top:35%; left:45%;">
+                   <h1>류효광</h1>
+               </div>
+
+
+               <div class="certificate_text" style="top:52.8%; left:13%;">
+                   <h3>중앙대학교 특성화 교육과정</h3>
+               </div>
+
+
+               <div class="certificate_text" style="top:55.3%; left:13%;">
+                   <h3>2015년 3월 02일 ~ 2015년 7월 02일</h3>
+               </div>
+
+
+               <div class="certificate_text" style="top:67.2%; left:31%;">
+                   <h3>ABC</h3>
+               </div>
+
+
+               <div class="certificate_text" style="top:69.7%; left:31%;">
+                   <h3>아이유</h3>
+               </div>
+
+               <div class="certificate_text" style="top:67.2%; left:62.5%;">
+                   <h3>고준일</h3>
+               </div>
+
+               <div class="certificate_text" style="top:65%; left:1%;">
+                   <img src="../../qrtest.jpg" style="width:180px; height:auto;"/>
+               </div>
+
+           </div>
+       </div>
+</div>
