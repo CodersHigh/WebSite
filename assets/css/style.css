@@ -906,3 +906,12 @@ a:focus {
    width: auto;
 
 }
+
+.appIcon {
+	 width:120px;
+	 border-radius:25%;
+}
+
+.appScreen {
+	width: 280px;
+}
