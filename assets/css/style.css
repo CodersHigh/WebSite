@@ -906,3 +906,48 @@ a:focus {
    width: auto;
 
 }
+
+.appIcon {
+	 width:120px;
+	 border-radius:25%;
+}
+
+.appScreen {
+	width: 280px;
+}
+
+
+
+
+	#cwrap .non-circle-lg {
+		width: 200%;
+		margin-top: -25px;
+	}
+
+
+@media (max-width: 991px) {
+	#cwrap .non-circle-md {
+		width: 200%;
+		margin-top: -17px;
+	}
+}
+
+@media (max-width: 648px) {
+	#cwrap .non-circle-sm {
+		width: 200%;
+		margin-top: -13px;
+	}
+}
+
+@media (max-width: 440px) {
+	#cwrap .non-circle-xs {
+		width: 200%;
+		margin-top: -8px;
+	}
+}
+
+@media (max-width: 725px) {
+	#cwrap .kor-img {
+		margin-top: -5px;
+	}
+}
