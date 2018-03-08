@@ -951,3 +951,7 @@ a:focus {
 		margin-top: -5px;
 	}
 }
+
+.appComment {
+	height: 100px;
+}
