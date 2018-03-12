@@ -52,16 +52,37 @@ h4.footer{
 	text-align: center;
 }
 
-p {
-	padding: 0;
-	margin-bottom: 12px;
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 24px;
-	color: #384452;
-	margin-top: 10px;
+@media (max-width: 650px) {
+	p {
+		padding: 0;
+		margin-bottom: 12px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		color: #384452;
+		margin-top: 10px;
+	}
+
+	h2.appTitle{
+		font-size: 25px;
+	}
+
 }
+
+@media (min-width: 651px) {
+	p {
+		padding: 0;
+		margin-bottom: 12px;
+		font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: #384452;
+		margin-top: 10px;
+	}
+}
+
+
 p.longtime{
 	font-size: 13px;
 	font-family: 'applesdgothicneo-light' ;
@@ -597,12 +618,39 @@ a:focus {
 	color: #f39c12
 }
 
-.spacing {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	padding-left: 30px;
-	padding-right: 30px;
+@media (max-width: 650px) {
+	.spacing{
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.leftmargin {
+		margin-left: 0px;
+	}
+
+	.appIcon {
+		 width:60px;
+		 border-radius:25%;
+	}
 }
+@media (min-width:651px) {
+	.spacing {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.leftmargin {
+		margin-left: 30px;
+	}
+
+	.appIcon {
+		 width:120px;
+		 border-radius:25%;
+	}
+}
+
 
 .badge-theme {
 	background: #00b3fe;
@@ -787,16 +835,27 @@ a:focus {
 
   }
 
-.col-xs-15 {
-    width: 20%;
-    float: left;
+@media (max-width: 767px) {
+		.col-xs-15 {
+		    width: 20%;
+		    float: left;
+		}
+		.col-xs-15 h4 {
+		    font-size: 11px;
+		}
+
 }
 
 @media (min-width: 768px) {
-.col-sm-15 {
+		.col-sm-15 {
         width: 20%;
         float: left;
     }
+		.col-xs-15 {
+		    width: 20%;
+		    float: left;
+
+		}
 }
 
 @media (min-width: 992px) {
@@ -867,9 +926,7 @@ a:focus {
 }
 
 
-.leftmargin {
-	margin-left: 30px;
-}
+
 
 .bottom-space {
 
@@ -907,10 +964,6 @@ a:focus {
 
 }
 
-.appIcon {
-	 width:120px;
-	 border-radius:25%;
-}
 
 .appScreen {
 	width: 280px;
@@ -953,5 +1006,5 @@ a:focus {
 }
 
 .appComment {
-	height: 100px;
+
 }
