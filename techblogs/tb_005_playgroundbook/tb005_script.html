@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>플레이그라운드 북 만들기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../assets/js/modernizr.js"></script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="../../index.html" style="margin-left: 30px; font-size: inherit;">홈</a>
+                </li>
+                <li>
+                    <a style="margin-left: 30px; font-size: inherit;" href="../../about.html">소개</a>
+                </li>
+                <li>
+                    <a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a>
+                </li>
+                <li class="active">
+                    <a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">기술블로그</a>
+                </li>
+                <li>
+                    <a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">교육블로그</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>코더스하이 기술블로그</h3>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
+
+
+	<!-- *****************************************************************************************************************
+	 BLOG CONTENT
+	 ***************************************************************************************************************** -->
+
+	 <div class="container mtb">
+	 	<div class="row">
+
+	 		<!-- SINGLE POST -->
+	 		<div class="col-lg-12">
+        <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+
+	 			<!-- Blog Post 1 -->
+		 		<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>
+		 		<a href="single-post.html"><h3 class="ctitle">플레이그라운드 북 만들기</h3></a>
+
+		 		<p><csmall>등록일: 2018년 3월 18일.</csmall> |
+        <csmall2>글쓴이: 윤성관</csmall2></p>
+
+        <p class="imagecenter text-md">애플이 <a href="https://developer.apple.com/wwdc/scholarships/">WWDC 18 Scholarship</a> 모집 요강을 발표했습니다.</br>
+            2017년에 이어 올 해에도 플레이그라운드 북으로 평가하여 Scholarship 선정을 합니다. </br>
+            코더스하이에서 플레이그라운드 북을 만든 경험을 토대로 간단한 튜토리얼을 제공합니다. 많은 학생들이 WWDC Scholarship을 얻는 데 도움이 되길 바랍니다.
+        </p>
+      </br>
+
+
+        <h3>1. 시작하기</h3>
+        <div class="col-lg-8">
+		 		<p><b>플레이그라운드 북</b>은 iPad의 <a href="https://www.apple.com/swift/playgrounds/">Swift Playground</a> 앱 내에서 사용하는 책 콘텐츠이다. 애플은 지난 2016년, 코딩 교육에 Swift 언어를 활용할 수 있도록 Swift Playground 앱을 만들고 대표 콘텐츠로 LearnToCode 1, 2, 3권을 배포했다.</p>
+        </div>
+        <div class="col-lg-4">
+        <img src = "./tb005_media/ipad_swift_playground.png" class="imagecenter margin-md">
+        </div>
+        <br clear="all" /></br></br>
+
+
+        <h4>a. 준비물</h4>
+        <div class="col-lg-12">
+		 		<p>현재로서는 Mac의 Xcode에서만 플레이그라운드 북을 저술할 수 있으며, 결과물을 확인하기 위해서는 iPad 디바이스에 있는 스위프트 플레이그라운드에 넣어줘야 한다. </br>
+        iPhone에는 Swift Playground 앱이 없기 때문에 콘텐츠를 확인할 방법이 없으며, 시뮬레이터에서 제공하는 iPad 역시 Swift Playground 앱이 없기 때문에 결과를 확인하는 데 사용할 수 없다. 즉, </p>
+        <ul style="padding-left:40px">
+        <li>Xcode 9 이상이 설치되어 있는 맥 </li>
+        <li>결과물을 보기 위한 iPad</li>
+        </ul>
+        <p>가 필요하며, 자동으로 결과물을 연동할 수 있도록 iCloud 계정을 준비하는 게 편리하다.</p>
+        </div>
+        <br clear="all" /></br></br>
+
+        <h4>b. 마음의 준비</h4>
+        <div class="col-lg-12">
+        <p>앞서 말한 것처럼 플레이그라운드 북 만들기는 어렵다.</br>
+        Swift 언어를 충분히 이해하고 있어야 하며, 앱을 완성해 본 수준으로 Xcode를 다룰 수 있어야 한다.</br>
+        앱 개발 시에는 구글에 키워드만 잘 치면 당장 붙여 넣을 수 있는 코드를 몇 페이지 검색할 수 있는 반면, 플레이그라운드 북은 레퍼런스 문서 하나와 비디오 몇 편에 있는 정보를 제외하고는 가이드 문서나 튜토리얼이 없다. 구글 검색을 해도 거의 나오지 않는다. (이것이 내가 이 글을 쓰게 된 이유이기도 하다)</br>
+        다행히, 애플이 지난 2년간 만들어 둔 다양한 콘텐츠들이 있으므로 이 콘텐츠들을 해킹하듯 분석해 보면 내가 표현하고자 하는 플레이그라운드 북을 만들 수 있을 것이다.</p>
+        </div>
+        <br clear="all" /></br></br>
+
+        <h4>c. 참고자료</h4>
+        <div class="col-lg-12">
+        <p>애플이 제공하는 공식적인 자료는 아래와 같다.</br>
+          <ul style="padding-left:40px">
+          <li>문서</li>
+            <ul style="padding-left:40px">
+            <li><a href="https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/index.html">Playground Book Format Reference</a></li>
+            </ul>
+          <li>비디오</li>
+            <ul style="padding-left:40px">
+            <li><a href="https://developer.apple.com/videos/play/wwdc2016/408/">WWDC16 : Introducing Swift Playgrounds</a></li>
+            <li><a href="https://developer.apple.com/videos/play/wwdc2017/408/">WWDC17 : What’s New in Swift Playgrounds</a></li>
+            <li><a href="https://developer.apple.com/videos/play/wwdc2017/410/">WWDC17 : Localizing Content for Swift Playgrounds</a></li>
+            <li><a href="https://developer.apple.com/videos/play/wwdc2017/605/">WWDC17 : SceneKit in Swift Playgrounds</a></li>
+            <li><a href="https://developer.apple.com/videos/play/wwdc2017/416/">WWDC17 : Teaching with Swift Playgrounds</a></li>
+            </ul>
+          </ul>
+        </div>
+        <br clear="all" /></br></br>
+
+
+        <h4>d. 공식 스타터 킷</h4>
+        <div class="col-lg-12">
+        <p>애플이 제공하는 <a href="https://developer.apple.com/sample-code/swift/downloads/Playgrounds-Starter-Book.zip">플레이그라운드 북 스타터 킷을 다운로드</a> 받을 수 있다.</br>
+        </div>
+        <div class="col-lg-8">
+		 		<p>Starter.playgroundbook 파일의 컨텍스추얼 메뉴(오른쪽 클릭) 에서 Show Package Contents 버튼을 누르면 번들 내부를 확인 할 수 있다.</p>
+        </div>
+        <div class="col-lg-4">
+        <img src = "./tb005_media/starter_right_click.jpg" class="imagecenter margin-md">
+        </div>
+        <div class="col-lg-6">
+        <img src = "./tb005_media/starter_inside.jpg" class="imagecenter margin-md">
+        </div>
+        <div class="col-lg-6">
+		 		<p>스타터 킷의 번들 내부를 보면, Chapter 폴더 안에 하나의 .playgroundchapter 폴더가 있고, 그 안에 있는 Pages 폴더를 보면 2개의 .playgroundpage 폴더가 나온다. 하나의 챕터에 2개의 페이지가 있는 구조이다.</p>
+        </div>
+        <br clear="all" />
+        <div class="col-lg-12">
+        <p>Page1.playgroundpage 파일의 Content.swift 파일을 더블클릭하면 Xcode의 에디터가 열려서 내용을 수정할 수 있다.</p>
+        <b>폴더구성</b>
+        <ul style="padding-left:40px">
+          <li>.playgroundbook : 최상위 폴더. 책 번들</li>
+          <li>.playgroundchapter : 챕터 폴더 </li>
+          <li>.playgroundpage : 개별 페이지 폴더</li>
+          <li>.cutscenepage : 컷 씬 (챕터 시작 애니메이션) 페이지 폴더</li>
+        </ul>
+        </br>
+        <p><b>Manifest 파일</b></br>
+        각 단계마다 콘텐츠의 속성을 정의하는 plist(링크) 포맷의  manifest 파일이 있다. 패이지나 챕터를 추가하는 등 내용을 수정할 때마다 해당 manifest 파일을 수정해야 한다.</br>
+        page의 manifest에는 hint 항목이 있어서 사용자에게 힌트를 제공하기도 한다.<p>
+        </div>
+        <br clear="all" /></br></br>
+
+
+
+        <h4>e. 화면 구성</h4>
+        <p>플레이그라운드 북은 아래와 같이 3영역으로 나뉘어져 있다.</p>
+        <div class="col-lg-4">
+        <img src = "./tb005_media/playground_liveview.jpg" class="imagecenter margin-md">
+        </div>
+        <div class="col-lg-8">
+        <p><b>LiveView :</b> 코드 실행의 결과를 볼 수 있는 곳이다. LiveView.swift 파일의 내용이 나타난다.</p>
+        </div>
+        <br clear="all" /></br>
+        <div class="col-lg-4">
+        <img src = "./tb005_media/playground_prose.jpg" class="imagecenter margin-md">
+        </div>
+        <div class="col-lg-8">
+        <p><b>Prose :</b> 페이지에 대한 설명 콘텐츠가 들어가는 곳이다. Content.swift 파일의 내용이 나타난다.</p>
+        </div>
+        <br clear="all" /></br>
+        <div class="col-lg-4">
+        <img src = "./tb005_media/playground_code.jpg" class="imagecenter margin-md">
+        </div>
+        <div class="col-lg-8">
+        <p><b>Code :</b> 독자가 코드를 작성할 수 있는 곳이다. Content.swift 파일의 내용이 나타난다.</p>
+        </div>
+        <br clear="all" /></br></br>
+
+    <h3> 2. Sample : CodingRabbitPirate 플레이그라운드 북 만들기 </h3>
+    <p>우리는 간단한 플레이그라운드 북 콘텐츠를 하나 만들어 볼 예정이다.</br>
+    애플의 공식 스타터 킷을 이용해도 되지만 리소스등을 확보하기 어려우므로 이곳(링크)에서 CodingRabbitPirate 시작 파일을 다운로드 받아서 수정하자.</p>
+    </br>
+        <h4>a. 개발 환경 만들기</h4>
+        <div class="col-lg-12">
+        <p>이제 본격적으로 플레이그라운드 북 콘텐츠를 제작하기 전에 작업 환경을 만들어 보자. 작성한 코드를 실행해 보기 위해서는 플레이그라운드 북 파일을 iPad의 Swift Playground앱 안으로 넣어야 한다.</br>
+          Mac에서 iPad로 파일을 복사하는 방법은 아래 두가지가 있다.</br>
+          <ul style="padding-left:40px">
+          <li>iPad의 설정에서 SwiftPlayground 를 iCloud 공유하도록 설정한 뒤 Mac 의 iCloud 에서 해당 폴더의 파일들을 수정한 뒤 동기화 시킨다.</li>
+          <li>Mac에서 플레이그라운드 파일을 선택한 뒤, AirDrop으로 iPad에 복사하면 SwiftPlayground 앱에서 열 수 있다.</li>
+          </ul>
+        <p>플레이그라운드 북에서 사용하는 Swift 파일들은 UIKit을 import하지만 메소드의 자동 완성 제안이 제대로 동작하지 않기 때문에, 복잡한 콘텐츠를 만들 때는 iOS 앱을 만들어 코드를 충분히 테스트 한 뒤 플레이그라운드 북으로 변환하는 게 좋다.</p>
+        </div>
+        <br clear="all" /></br></br>
+
+        <h4>b. 페이지 목표</h4>
+        <div class="col-lg-12">
+        <p>첫 페이지에서 우리는 기본적인 Prose 를 만드는 방법을 알아보고, 코드 영역의 일부를 숨기고 일부를 노출시켜 볼 것이다.</br>
+        라이브 뷰는 최대한 간단하게 하기 위해 코드로만 작성한다. </p>
+        <p><i>페이지의 시각적 구성에 대한 설명과 이미지가 추가되어야 함</i></p>
+        </div>
+        <br clear="all" /></br></br>
+
+        <h4>c. Prose 만들기</h4>
+        <div class="col-lg-6">
+        <p>Prose는 페이지에서 제시하는 문제에 대한 설명을 하는 곳이다.</br>
+        마크업 형태의 구문으로 형태를 갖춘 텍스트를 플레이그라운드 북 안에 넣을 수 있다. </p>
+        <p>앞 서 소개한 Playground Book Format Reference 문서 내의 <a href= "https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/PageAnnotationOverview.html">Page Annotation Overview</a> 문서와
+          <a href= "https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html">Markup Formatting Reference</a> 에서 자세히 설명하고 있다.</br>
+        여기에서는 최소한의 Prose 작성법을 알아보자.</p>
+
+        <p>/* : 부터 시작해서 */ 까지가 플레이그라운드 마크업의 영역이다.</br>
+        #을 하나 쓰면 Heading 1 , ## 은 Heading 2 이다. #의 갯수가 많아질 수록 점점 더 작은 제목이 된다.</br>
+        한 줄을 띄어쓰기 한 뒤, 4칸 이상 들여쓰면 코드로 인식한다.</br>
+        지금은 다루지 않았지만 , 숫자를 앞에 넣으면 numbered list 가, * 문자를 앞에 넣으면 bullet list 가 만들어진다.
+        </p>
+        </div>
+        <div class="col-lg-6">
+        <img src = "./tb005_media/prose_rendered.jpg" class="imagecenter margin-md">
+        </div>
+        <br clear="all" />
+        <div class="col-lg-12">
+        <code data-gist-id="1508c13ade09291363bfc3c8839cee7c" data-gist-line="21-39" data-gist-wrap="softwrap"></code>
+        </div>
+
+        <h4>d. 숨은 코드 작성하기</h4>
+        <div class="col-lg-12">
+        <p>첫 페이지에서 우리는 기본적인 Prose 를 만드는 방법을 알아보고, 코드 영역의 일부를 숨기고 일부를 노출시켜 볼 것이다.</br>
+        라이브 뷰는 최대한 간단하게 하기 위해 코드로만 작성한다. </p>
+        <p><i>페이지의 시각적 구성에 대한 설명과 이미지가 추가되어야 함</i></p>
+        </div>
+        <br clear="all" /></br></br>
+
+
+
+        <br clear="all" /></br></br>
+
+        <br clear="all" /></br></br>
+
+        <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+        <div class="spacing"></div>
+
+		 		<!--<h6>SHARE:</h6>
+		 		<p class="share">
+		 			<a href="#"><i class="fa fa-twitter"></i></a>
+		 			<a href="#"><i class="fa fa-facebook"></i></a>
+		 			<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			<a href="#"><i class="fa fa-google-plus"></i></a>
+		 		</p>-->
+
+			</div><!--/col-lg-8 -->
+
+
+	 </div><!--/container -->
+
+
+   <!-- *****************************************************************************************************************
+ 	 FOOTER
+ 	 ***************************************************************************************************************** -->
+   <div id="footerwrap">
+	 	<div class="container">
+		 	<div class="row">
+		 		<div class="col-lg-4">
+		 			<h4>회사 소개</h4>
+		 			<div class="hline-w"></div>
+		 			<p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+		 			코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>소셜 네트워크</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				<a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+						<a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+							<img src="../../assets/img/mailchimp.png">
+						</a>
+		 			</p>
+		 		</div>
+		 		<div class="col-lg-4">
+		 			<h4>회사 위치</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				경기도 수원시<br/>
+		 				영통구 광교로 156,<br/>
+		 				광교비즈니스센터 11층<br/>
+		 			</p>
+		 		</div>
+
+		 	</div><!--/row -->
+	 	</div><!--/container -->
+	 </div><!--/footerwrap -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/retina-1.1.0.js"></script>
+	<script src="assets/js/jquery.hoverdir.js"></script>
+	<script src="assets/js/jquery.hoverex.min.js"></script>
+	<script src="assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="assets/js/jquery.isotope.min.js"></script>
+  	<script src="assets/js/custom.js"></script>
+
+
+  </body>
+</html>
