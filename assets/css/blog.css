@@ -305,8 +305,8 @@ a:focus {
 	color: #00b3fe
 }
 
-/* article */ 
-		
+/* article */
+
 .article {
 	margin-bottom: 100px;
 }
@@ -315,7 +315,7 @@ a:focus {
 
 }
 .article p{
-	text-align: 
+	text-align:
 }
 
 .imagecenter{
@@ -364,15 +364,24 @@ a:focus {
 }
 
 .margin-md{
-
-	margin-bottom: 50px;
-	margin-top: 50px;
+	margin-bottom: 60px;
+	margin-top: 40px;
 }
 .margin-sm{
 	margin-top: 10px;
 		margin-bottom: 30px;
 }
-.margin-lr{
-	margin-left: 90px;
-	margin-right: 90px;
+
+@media (min-width :651px){
+	.margin-lr{
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+}
+
+@media (max-width :650px) {
+	.margin-lr{
+		margin-left: 20px;
+		margin-right: 20px;
+	}
 }

@@ -57,6 +57,7 @@
           <ul class="nav navbar-nav">
             <li><a href="../../index.html" style="margin-left: 30px; font-size: inherit;">홈</a></li>
             <li><a style="margin-left: 30px; font-size: inherit;" href="../../about.html">소개</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">수강생작품</a></li>
             <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
             <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">기술블로그</a></li>
             <li><a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">교육블로그</a></li>
@@ -64,6 +65,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
+
 
 	<!-- *****************************************************************************************************************
 	 BLUE WRAP
@@ -101,32 +103,32 @@
 
         <h3>시작하기에 앞서</h3><br><br>
         <p class="imagecenter text-md"><b>움직이는 지도를 녹화하는 예제</b>라고 하면 잘 와닿지 않으실 것 같아서 예시를 하나 보여드리고자 합니다. 아래의 예시는 제가 최근에 만든 Memoravel이라는 애플리케이션에서 사용자의 여행 경로와 선택한 사진을 이용해 만들어진 동영상입니다. 물론 위 동영상은 ReplayKit으로 만들었으며, 지금부터 우리가 함께 공부할 코드를 기반으로 구현되었습니다.</p>
-        
+
         <iframe class="imagecenter" src="https://j.gifs.com/oYl9yL.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe><br><br>
-                
+
 
         <p class="imagecenter text-md">흥미가 있으신가요? 여러분들은 저보다 ReplayKit을 사용해서 훨씬 멋진 결과물을 만드실 수 있습니다. 그럼 이제 본론으로 돌아가서 여러분이 ReplayKit의 사용법을 익히실 수 있도록 초기 예제 프로젝트와 완성된 프로젝트를 <a href="https://github.com/chizcake/ReplayKitExample">Github</a>에 올려두었습니다. 초기 예제 프로젝트(ReplayKitExampleStarter)를 열어 포스트에 올려놓은 방법을 따라하며 프로젝트를 완성하셔도 좋고, 완성된 프로젝트(ReplayKitExampleComplete)를 참고해서 ReplayKit의 녹화 기능이 어떻게 동작하는지 한 눈에 보셔도 좋을 것 같습니다.</p><br><br>
 
         <h3>예제 프로젝트에 대한 설명</h3><br><br>
         <p class="textcenter">예제 프로젝트는 다음과 같은 프로세스를 가집니다.</p>
 
-        
+
         <img src="tb002_media/images/img_001.jpg" class="imagecenter">
         <img src="tb002_media/images/img_002.jpg" class="imagecenter"><br><br>
-                
 
-               
+
+
         <p class="imagecenter text-md">초기 예제 프로젝트(ReplayKitExampleStarter) 에서는 사용자가 지도 위에 표시할 <b>지역을 검색할 수 있는 view</b>와 <b>입력한 지역을 확인할 수 있는 view</b>가 구현되어 있습니다. 그리고 Record 버튼을 눌렀을 때 입력한 지역들이 지도 위에 pin으로 나타날 수 있도록 구현되어 있습니다. 이번 포스트의 취지는 ReplayKit의 사용법이므로, ReplayKit 기능 이외의 다른 기능의 설명은 생략하도록 하겠습니다. <br>(ReplayKit 이외에 이 프로젝트에 대해서 궁금한 사항이 있으시다면 언제든 연락주세요 :] )</p>
 
     <!-- 첨부 내용 -->
-                
+
         <p class="imagecenter text-md">참고로 본 예제는 MapKit을 이용해 지역을 검색하는 기능이 포함되어 있습니다. 따라서 <b>인터넷 접속이 가능한 환경에서 예제를 실행</b>해야 제대로 된 결과를 확인하실 수 있습니다. 또한 Simulator가 아닌 실제 iPhone, iPad 기기를 통해 테스트 하는 것을 권장합니다. ReplayKit이 Simulator에서 올바르게 동작하지 않을 수 있습니다.<br>
         (혹시 Simulator에서도 ReplayKit이 올바르게 동작하는 방법이 있다면 알려주시면 감사하겠습니다. :])</p><br>
-                
+
     <!-- 첨부 내용 끝 -->
 
         <p class="textcenter">아래의 모든 단계를 따라오신다면 다음과 같이 자동으로 움직이는 지도를 녹화한 동영상을 생성하실 수 있습니다.</p><br>
-                
+
         <iframe class="imagecenter" src="https://j.gifs.com/xGxNEz.gif" frameborder="0" width="268px" height="480px" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);"></iframe><br><br>
 
 
@@ -137,15 +139,15 @@
         <script src="https://gist.github.com/chizcake/1a98d0488e356d7f39b6893632182d65.js"></script>
 
     <!-- 첨부 내용 -->
-                
+
         <p class="imagecenter text-md">위에서 사용한 Log 클래스는 <a href="https://github.com/emaloney/CleanroomLogger">CleanroomLogger</a>에 정의되어 있습니다. 예시 프로젝트에는 이미 Carthage로 라이브러리를 추가한 상태이므로 그대로 사용하셔도 무방하지만, CleanroomLogger가 설치되지 않은 환경에서는 NSLog 혹은 본인이 원하는 방식으로 버튼이 잘 동작하는지 확인하시면 됩니다.</p>
     <!-- 첨부 내용 끝 -->
 
 
         <p class="imagecenter text-md">위의 코드와 같이 작업을 진행하신 후에 코드를 실행 해보세요. 그럼 아래의 사진처럼 Bar button이 제대로 동작하는 것을 확인하실 수 있습니다.</p>
-                
+
         <img src="tb002_media/images/img_003.jpg" class="imagecenter">
-                
+
 
         <p class="textcenter">그럼 이제 버튼이 <b>Start Recording</b> 일 때 버튼을 누르면 녹화가 시작되고, <b>Stop Recording</b> 일 때 버튼을 누르면 녹화가 중지될 수 있도록 메소드를 입력해 줍니다.</p><br>
 
@@ -172,7 +174,7 @@
         <p class="imagecenter text-md">앞서 startRecording() 메소드를 구현할 때와 마찬가지로 <b>RPScreenRecorder의 공유객체를 사용</b>합니다. 만약 녹화가 진행되고 있는 상태(isRecording)에서 stopRecording() 메소드가 호출되었다면, 사용자가 녹화를 중지한 것이라고 판단할 수 있습니다. 반면 녹화가 진행되고 있지 않은 상태라면 지도 애니메이션이 끝까지 진행되어 정상적으로 녹화를 중지해야 할 때라고 판단할 수 있습니다.</p><br><br>
 
         <img src="tb002_media/images/img_004.jpg" class="imagecenter"><br>
-                
+
         <p class="imagecenter text-md">위 다이어그램은 RPScreenRecorder의 stopRecording() 메소드가 취할 수 있는 2가지 행동을 보여줍니다. 우선 사용자가 <b>녹화를 중단한 상태</b>라면, stopRecording() 의 클로저 안에서 discardRecording() 함수를 실행시킬 수 있습니다. discardRecording() 은 현재 녹화하고 있던 내용을 지울 때 사용합니다. 주의하실 점은 <b>discardRecording() 메소드는 stopRecording() 클래스의 클로저 안에서만 동작할 수 있다</b>는 점입니다. 여기서는 discardRecording() 메소드를 통해 Timer를 해지시켰습니다.<br><br>이번에는 지도 애니메이션이 종료되어 정상적으로 녹화를 종료하는 부분에 대해서 살펴보겠습니다. stopRecording() 메소드가 가지고 있는 클로저에는 매개변수로 RPPreviewViewController를 가지고 있습니다. RPPReviewViewController는 녹화된 동영상을 저장, 공유할 수 있고 원하는 부분만 잘라내어 저장할 수 있는 다양한 기능을 포함하고 있습니다. 여기서는 녹화가 정상적으로 종료되었을 때 RPPreviewViewController를 modal로 띄워서 보여주도록 구현하였습니다.</p><br><br>
 
         <h3>Step 4 - PreviewViewController로 녹화 영상 확인하기</h3><br><br>
@@ -183,9 +185,9 @@
 
         <p class="imagecenter text-md">위의 코드에서는 RPPreviewViewControllerDelegate 중 previewControllerDidFinish(:) 메소드를 사용해서 RPPreviewViewController에서 작업이 끝나면 MasterViewController로 돌아가도록 설정하였습니다. previewControllerDidFinish(:) 메소드는 사용자가 RPPreviewViewController에서 Cancel 혹은 Save 버튼을 눌렀을 때 호출이 됩니다.</p><br><br>
 
-                
+
         <img src="tb002_media/images/img_005.jpg" class="imagecenter"><br>
-                
+
 
         <p class="imagecenter text-md">여기까지 잘 따라오셨나요? 그럼 코드를 한번 실행시켜 보세요. 원하는 지역을 입력한 후에 녹화를 시작하면 자동으로 지도가 움직이고 애니메이션이 종료되었을 때 자동으로 RPPreviewViewController가 modal형태로 올라오는 것을 확인하실 수 있을겁니다. RPPreviewViewController는 위의 사진과 같이 생겼답니다 :]</p><br><br>
 
