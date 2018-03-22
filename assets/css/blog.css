@@ -310,12 +310,19 @@ a:focus {
 .article {
 	margin-bottom: 100px;
 }
-.article h3{
+
+.article h3 {
 	color: green;
 
 }
-.article p{
+
+.article p {
 	text-align:
+}
+
+.shadow {
+	box-shadow: 0px 0px 20px grey;
+
 }
 
 .imagecenter{

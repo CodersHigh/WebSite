@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>플레이그라운드 북 만들기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/blog.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../assets/js/modernizr.js"></script>
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-107692655-1');
+    </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.4/gist-embed.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html" style="margin-left: 30px; font-size: inherit;">Home</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../about.html">About</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">Portfolio</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">Contact</a></li>
+            <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">Tech Blog</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">Edu Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>CodersHigh Tech Blog</h3>
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
+
+
+
+
+
+<!-- ****************
+    Language
+    ***************-->
+
+    <div class="w3-bar">
+        <button class="w3-bar-item w3-button tablink" onclick="window.location.href='./tb005_script.html'">KOR.ver</button>
+        <button class="w3-bar-item w3-button tablink w3-red" onclick="window.location.href=''">ENG.ver</button>
+    </div>
+
+
+
+
+
+
+
+        <div class="container">
+   	 	<div class="row">
+
+   	 		<!-- SINGLE POST -->
+   	 		<div class="header">
+                   <p align="center"><csmall>This article is copyrighted by the author and is distributed by CodersHigh.</csmall></p>
+
+   		 		<!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+   		 	    <h2 class="ctitle">Create a “Playground Book”</h2>
+
+   		 		<p><csmall>Posted on March 18, 2018. | Author: SeongkwanYoon</csmall></p>
+               </div>
+
+
+       <div class="article">
+           <p class="centered margin-lr">Apple has announced the <a href="https://developer.apple.com/wwdc/scholarships/">WWDC 18 Scholarship</a> Application Guide.</br>
+               Continued from 2017, this year's Scholarship will also be chosen rated based on Playground Book.</br>
+               This tutorial is provided based on the experience of creating a playground book at Coders High.</br>
+               I hope that it will help many students get the WWDC Scholarship.</br>
+               The 2018 WWDC Scholarship application is available from March 26 through April 1.
+           </p>
+         </br>
+
+         <br>
+         <div class="hline"></div>
+         <br>
+
+           <h3>1. Getting Started</h3>
+           <div class="col-lg-8 margin-md">
+   		 		<p><b>Playground Books</b> is a book content used in the iPad's <a href="https://www.apple.com/swift/playgrounds/">Swift Playground</a> app. In 2016, Apple created the Swift Playground app to use the Swift language for coding training and distributed LearnToCode 1, 2, 3</p>
+           </div>
+           <div class="col-lg-4">
+           <img src = "./tb005_media/ipad_swift_playground.png" class="imagecenter margin-md">
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h4>a. Materials</h4>
+           <div class="margin-md margin-lr">
+   		 		<p>For now, you can only write a playground book on your Mac's Xcode, and you'll need to put it in the Swift playground on your iPad device to see the output. </br>
+           Because there is no Swift Playground app on iPhone, there is no way to check the content, and also the iPad provided by the simulator can not be used to check the results since there is no Swift Playground app.<br />
+           In other words, you first need to prepare this:</p>
+
+           <ul style="padding-left:40px">
+           <li>Mac with Xcode 9 or later installed</li>
+           <li>IPad for viewing results</li>
+           </ul>
+           <p>And it's convenient to have an iCloud account ready to automatically link the results</p>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h4>b. Preparation of mind</h4>
+           <div class="margin-md margin-lr">
+           <p>As mentioned above, making playground books is difficult. </br>
+           You should have a good understanding of the Swift language and be able to handle Xcode at this level by completing your app.</br>
+           While Google can search for a few pages of code that you can paste when you type in keywords in an app development, Playground Books does not have a guide document or tutorial, except for a reference document and a few pieces of video. Even if you do a Google search, it hardly comes out. (This is why I wrote this article) </br>
+           Fortunately, there are a variety of contents Apple has created over the past two years, so if you hack into them, you'll be able to create the Playstation book I would like to express.</p>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h4>c. Resources</h4>
+           <div class="margin-md margin-lr">
+           <p>The official data provided by Apple is as below.</br>
+             <ul style="padding-left:40px">
+             <li>document</li>
+               <ul style="padding-left:40px">
+               <li><a href="https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/index.html">Playground Book Format Reference</a></li>
+               </ul>
+             <li>video</li>
+               <ul style="padding-left:40px">
+               <li><a href="https://developer.apple.com/videos/play/wwdc2016/408/">WWDC16 : Introducing Swift Playgrounds</a></li>
+               <li><a href="https://developer.apple.com/videos/play/wwdc2017/408/">WWDC17 : What’s New in Swift Playgrounds</a></li>
+               <li><a href="https://developer.apple.com/videos/play/wwdc2017/410/">WWDC17 : Localizing Content for Swift Playgrounds</a></li>
+               <li><a href="https://developer.apple.com/videos/play/wwdc2017/605/">WWDC17 : SceneKit in Swift Playgrounds</a></li>
+               <li><a href="https://developer.apple.com/videos/play/wwdc2017/416/">WWDC17 : Teaching with Swift Playgrounds</a></li>
+               </ul>
+             </ul>
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h4>d. Official Starter Kit</h4>
+           <div class="margin-md margin-lr">
+           <p>You can <a href="https://developer.apple.com/sample-code/swift/downloads/Playgrounds-Starter-Book.zip">download the Playground Book Starter Kit</a> from Apple.</br>
+           </div>
+           <div class="col-lg-6 margin-md">
+   		 		<p>You can check the inside of the bundle by clicking the Show Package Contents button in the Context menu (right click) of the Starter.playgroundbook file.</p>
+           </div>
+           <div class="col-lg-6">
+           <img src = "./tb005_media/starter_right_click.jpg" class="imagecenter margin-md shadow">
+           </div>
+           <div class="col-lg-6">
+           <img src = "./tb005_media/starter_inside.jpg" class="imagecenter margin-md">
+           </div>
+           <div class="col-lg-6 margin-md">
+   		 		<p>f you look at the stack of starter kits, you will find a .playgroundchapher folder in the Chapter folder and two Pages folders inside it. A structure with two pages in one chapter.</p>
+           </div>
+           <br clear="all" />
+           <div class="margin-lr">
+           <p>Double-click the Content.swift file in the Page1.playgroundpage file to open Xcode's editor and modify its contents.</p>
+           <b>Folder configuration</b>
+           <ul style="padding-left:40px">
+             <li>.playgroundbook : The top-level folder. Book bundle</li>
+             <li>.playgroundchapter : chapter folder </li>
+             <li>.playgroundpage : individual page folder </li>
+             <li>.cutscenepage : Cut scene (chapter start animation) Page folder</li>
+           </ul>
+           </br>
+           <p><b>Manifest file</b></br>
+           At each stage, there is a plist (link) format manifest file that defines the properties of the content. You must modify the manifest file whenever you modify content, such as adding a page or a chapter. </br>
+           The page's manifest has a hint entry, which also provides a hint to the user. </br>
+           Our playground book is an app with one chapter and one page. The .playgroundbook manifest must contain exactly one chapter name, and the .playgroundchapter manifest must contain exactly one page name.<p>
+           </div>
+           <br clear="all" /></br></br>
+
+
+
+           <h4>e. Screen Layout</h4>
+           <p class="margin-md margin-lr">The playground book is divided into three areas as shown below.</p>
+           <div class="col-lg-4">
+           <img src = "./tb005_media/playground_liveview.jpg" class="imagecenter margin-md">
+           </div>
+           <div class="col-lg-8 margin-md">
+           <p><b>LiveView :</b> This is where you can see the results of the code execution. The contents of the LiveView.swift file appears here.</p>
+           </div>
+           <br clear="all" /></br>
+           <div class="col-lg-4">
+           <img src = "./tb005_media/playground_prose.jpg" class="imagecenter margin-md">
+           </div>
+           <div class="col-lg-8 margin-md">
+           <p><b>Prose :</b> This is where a description content of the page enters. The content of the Content.swift file appears here.</p>
+           </div>
+           <br clear="all" /></br>
+           <div class="col-lg-4">
+           <img src = "./tb005_media/playground_code.jpg" class="imagecenter margin-md">
+           </div>
+           <div class="col-lg-8 margin-md">
+           <p><b>Code :</b> This is where you can write your code. The content of the Content.swift file appears here.</p>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h3> 2.  Sample: CodingRabbitPirate Create a playground book </h3>
+           <p class="margin-md margin-lr">We are going to create a simple playground book content. </br>
+           You can use Apple's official starter kit, but as it’s hard to get resources, <a href="./tb005_media/Example_Start.zip">CodingRabbitPirate startup file</a>download the CodingRabbitPirate startup file and fix it.</p>
+           </br>
+           <h4>a. Creating a development environment</h4>
+           <div class="margin-md margin-lr">
+           <p>Now let's create a working environment before creating playground book content. To run your code, you need to put the playground book file into the Swift Playground app on your iPad. </br>
+             There are two ways to copy files from your Mac to your iPad.</br>
+             <ul style="padding-left:40px">
+             <li>After you set up iPad to share SwiftPlayground with iCloud, modify the files in that folder in iCloud on your Mac and sync them.</li>
+             <li>You can open it in the SwiftPlayground app by selecting the playground file on your Mac and copying it to your iPad with AirDrop.</li>
+             </ul>
+           <p>While the Swift files used in the Playground book import UIKit, since the method's auto-completion proposal is not working properly, it is recommended to create an iOS App after creating a complicated content.</p>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h4>b. Page Goals</h4>
+           <div class="margin-md margin-lr">
+           <p>On the first page, we will learn how to create a basic Prose, hide some of the code areas and expose some of it. </br>
+           Live View is written in code, to make it as simple as possible.</p>
+           <p><i>A description and image of the visual composition of the page should be added</i></p>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h4>c. Creating Prose</h4>
+           <div class="col-lg-6 margin-md">
+           <p>Prose is a place to describe the quizzes presented on the page. </br>
+           You can put text that is shaped in a markup-like syntax into the playground book.</p>
+           <p>This is described in detail in the <a href= "https://developer.apple.com/library/content/documentation/Xcode/Conceptual/swift_playgrounds_doc_format/PageAnnotationOverview.html">Page Annotation Overview</a> document and
+             <a href= "https://developer.apple.com/library/content/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html">Markup Formatting Reference</a> in the previous Playground Book Format Reference document.</br>
+           Here's how to create a minimal Prose.</p>
+
+           <p>Starting from /*: to */ is the area of playground markup. </br>
+           If you use #, it’s Heading 1, and ## will make Heading 2. As the number of # increases, it becomes smaller and smaller. </br>
+           After leaving out a line, write down more than 4 spaces to will make it recognized as a code.</br>
+           I did not deal with it now, but if you put a number in front, a numbered list is created, and if you put a * before, a bullet list will be created.
+           </p>
+           </div>
+           <div class="col-lg-6">
+           <img src = "./tb005_media/prose_rendered.jpg" class="imagecenter margin-md shadow">
+           </div>
+           <br clear="all" />
+           <div class="col-lg-12">
+           <code data-gist-id="1508c13ade09291363bfc3c8839cee7c" data-gist-line="21-39" data-gist-wrap="softwrap"></code>
+           </div>
+           <br clear="all" /></br></br>
+
+           <h4>d. Connecting Live View</h4>
+           <b class="">Adding files</b></br>
+           <div class="col-lg-6 margin-md">
+           <p>To create a live view, you usually need to create two swift files. One is a file named LiveView.swift and the other is a view controller that manages the actual live view. </br>
+           Although you can wrestle the code for this simpler file structure, we would better learn the typical file structure needed to create a usable page.</p>
+           <p>Create LiveView.swift and HelloViewController.swift using Xcode's File> New> File ... menu. </br>
+           Put the LiveView.swift file in the Name.playgroundpage folder. The files in this folder will be added in the same configuration each time you add a page.  </br>
+           Place the HelloViewController.swift file in the common Sources folder. The files in this folder are accessible from any page.</p>
+           </div>
+           <div class="col-lg-6">
+             <img src = "./tb005_media/liveview_files.png" class="imagecenter margin-md">
+           </div>
+           <br clear="all" /></br>
+
+           <div class="col-lg-8">
+           <code data-gist-id="7ca70d54b6c091b1ce4b9d9c0a904b99" data-gist-line="1-6" data-gist-wrap="softwrap"></code></br>
+           </div>
+           <div class="col-lg-4">
+           <p>The code on the left is the contents of the Live. swift.</br>
+           This code creates a HelloViewController object and sets the live view of the page.</p>
+           </div>
+           <br clear="all" /></br>
+           <div class="col-lg-8">
+           <code data-gist-id="9659acda15eda85a4f7c02766f31ec25" data-gist-line="1-4" data-gist-wrap="softwrap"></code></br>
+           </div>
+           <div class="col-lg-4">
+           <p>There are no codes in HelloViewController.swift yet.</br>
+              Install the Playstation book you've created on your iPad's Swift Playground App using methods such as iCloud Sync.</p>
+           </div>
+           <br clear="all" /></br>
+
+           <div class="col-lg-12">
+             <img src = "./tb005_media/step_1_result.jpg" class="imagecenter margin-md shadow">
+             <p>Up to this point : <a href="./tb005_media/Example_Step1.zip">Example_Step1 Download</a></p>
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h4>e. Write hidden code</h4>
+           <div class="margin-md margin-lr">
+           <p>Since Playground Books is content for Swift language learning, consumers of this content may not yet be familiar with the Swift language. </br>
+           Therefore, instead of showing all the code, you need to show only what the learner is going to focus on and cover the rest. </p>
+           <p>// All code between the #-hidden-code markup and // #-end-hidden-code markup is not visible in the Progress area or Code area of the playground.</p>
+
+           <code data-gist-id="1508c13ade09291363bfc3c8839cee7c" data-gist-line="1-19" data-gist-wrap="softwrap"></code></br>
+
+           <p><b>PlaygroundPage class</b></br>
+           This class represents the individual pages of the playground and manages basic operations. </br>
+           You can access the current page in a singleton format like PlaygroundPage.current. For example, if you want to check whether the user entered a particular string in the code area of the current page, check whether PlaygroundPage.current.text has a particular string. </br>
+           PlaygroundPage.current.liveview provides access to live view proxy. </br>
+           This is a somewhat difficult part, and you cannot directly call the live view method because it is accessed <b>through the proxy,</b> rather than directly accessing the live view. </br>
+           You must send the PlaygroundRemoteLiveViewProxy object in the middle to send and receive messages. Details are provided below.</p>
+           <p>So the code above assigns the current playground page to a constant called “page”, and assigns a proxy for the live view to a constant called “proxy”.  </br>
+           Then, we will use the page constant to determine whether to proceed with the playground according to the user input, that is, to check the input value and pass it to the next page or provide a hint about the wrong input value.<br />
+           Live view update according to user input will pass through the proxy.</br></p>
+
+           <p><b>PlaygroundRemoteLiveViewProxy Class</b></br>
+           An object that enables the transmission of messages between live views and playground pages. The live view object currently active on the playground page must be downcasted to PlaygroundRemoteLiveViewProxy to exchange messages. </br>
+           In other words, for the page you are creating, you can not cast the HelloViewController directly to live view in Content.swift and call the method. So downcast it to PlaygroundRemoteLiveViewProxy, access it,
+           assign an object to PlaygroundRemoteLiveViewProxyDelegate, and call remoteLiveViewProxy (_ :, received :) Function to receive messages from live view and send messages to the page using the receive (_ :) and send (_ :) functions on objects that conform to the PlaygroundLiveViewMessageHandler protocol.</p>
+           </div>
+
+           <div class="col-lg-6">
+           <code data-gist-id="dc8ab3d718798017e3f65dc859f3e01d" data-gist-line="1-7" data-gist-wrap="softwrap"></code></br>
+           </div>
+           <div class="col-lg-6">
+             <p> The setName (: _) function passes the username to PassPort.shared.name.  </br>
+             <b>PassPort class</b>creates a typical Singleton accessible object. This is because passports required for boarding should be accessible from all pages as one object of the same.</br>
+             On this page, you will enter the name in your passport using the name you passed to setName (_ :). </br>
+             Data that is used over multiple pages can be created like this.
+           </div>
+
+           <br clear="all" /></br></br>
+
+           <h4>f. Create a user input area</h4>
+           <div class="margin-md margin-lr">
+             <p>Users should write a code to solve the problems on each page in the coding area created by the author in the Playstation book content.<br />
+                 Authors can adjust the solvency of the solution by allowing the user to fill in some of the code they have exposed, in addition to the code they have hidden.
+            </p>
+           </div>
+           <div class="col-lg-6">
+           <code data-gist-id="1508c13ade09291363bfc3c8839cee7c" data-gist-line="41-47" data-gist-wrap="softwrap"></code></br>
+           </div>
+           <div class="col-lg-6">
+           <p>There is a space between the // #-editable-code markup and // # -end-editable-code markup where the user can enter the code.</p>
+           <p>You can give a suggestion for code completion through // #-code-completion markup. The iPad is inconvenient for keyboard input, so it will be nice to provide some pre-input code for the learner's efficiency. </br>
+               This page hides all of the basic code suggestions through // #-code-completion (everything, hide) markup and then uses //#-code-completion(identifier, show, setName(_:)) markup to provide the setName () function to the user.</p>
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h4>g. Configuring Live View</h4>
+           <div class="col-lg-6">
+           <p>Previously, we connected HelloViewController to live view of PlaygroundPage.current which we are working on now. </br>
+           Therefore, the content to be displayed in Live View can be configured in the same way as configuring UI of iOS app in HelloViewController.
+           </p>
+           <p>iIt's a little different than creating an iOS app's UI, but if you have experience creating an app, you'll be able to organize your view without much difficulty.</br>
+           Create a mainView with an object of UIVIew, and create a Label and an ImageView to construct the screen. <br>
+           After you set the font size, font, color, text, etc. of the label, you can display the label on the screen by putting it into the subview of mainView and applying auto-layout. </br>
+           The same is true for ImageView, where you can create a Resources folder in the .playgroundpage folder or a global Resources folder in the .playgroundbook folder.</p>
+           <img src = "./tb005_media/liveview_result.jpg" class="imagecenter margin-md shadow">
+           </div>
+           <div class="col-lg-6">
+           <code data-gist-id="9659acda15eda85a4f7c02766f31ec25" data-gist-line="1-70" data-gist-wrap="softwrap"></code></br>
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h4>h. Checking user input values</h4>
+           <div class="margin-md margin-lr">
+           <p>The playground page can change the LiveView according to the user's input value or proceed to the next page. </br>
+           Of course, if the input is wrong, you can give the correct answer by giving the proper hint to the user.
+           </p>
+           <code data-gist-id="1508c13ade09291363bfc3c8839cee7c" data-gist-line="50-57" data-gist-wrap="softwrap"></code></br>
+           <p>The playground page uses the enum property called AssessmentStatus to display the task success text of the page or provide additional hints. </br>
+             <b>AssessmentStatus</b> consists of </br>
+             <ul style="padding-left:40px;">
+             <li>case fail(hints: [String], solution: String?)</li>
+             <li>case pass(message: String?)</li>
+             </ul>
+           And the message at the time of .pass is displayed in a dialogue box after executing the code.  <br>
+           Here we analyze the text of the playground page, make sure that the function name setName is used, and then </br>
+           jump to the next page using the [Orientation](@ next) markup in a message to celebrate success.</p>
+
+           </br></br>
+             <img src = "./tb005_media/step_2_result.jpg" class="imagecenter margin-md shadow">
+             <p>Up to this point : <a href="./tb005_media/Example_Step2.zip">Example_Step2 Download</a></p>
+           </div>
+           <br clear="all" /></br></br>
+
+
+           <h3>3. Finishing and next page</h3>
+           <div class="margin-md margin-lr">
+           <p>So far we have seen how to create a playground book and compose one chapter and one page.
+              Originally, I wanted to create a Playground book with two pages and deal with all the features listed below, but the article is so long that I think it should be followed in the next article.</p>
+             <ul style="padding-left:40px;">
+               <li>Using the storyboard file to configure the UI</li>
+               <li>Create an Assessment file to check user code and provide hints</li>
+               <li>Adding guide animations with cut scene page</li>
+             </ul>
+           </div>
+           <br clear="all" /></br></br>
+           <br>
+           <div class="hline"></div>
+           <br>
+
+             <p class="centered spacing"><b>Coders High</b>is creating playground book content. </br>
+               </br>
+               If you read this article and are interested in creating playground book content, please feel free to contact me even if you are not a student of Coders High. </br>
+               Let's create interesting content together.</p>
+
+
+
+           <br clear="all" /></br></br>
+           <br clear="all" /></br></br>
+
+           <br clear="all" /></br></br>
+
+           <p align="center"><csmall>This article is copyrighted by the author and distributed by Codershigh.</csmall></p>
+           <div class="spacing"></div>
+
+   		 		<!--<h6>SHARE:</h6>
+   		 		<p class="share">
+   		 			<a href="#"><i class="fa fa-twitter"></i></a>
+   		 			<a href="#"><i class="fa fa-facebook"></i></a>
+   		 			<a href="#"><i class="fa fa-tumblr"></i></a>
+   		 			<a href="#"><i class="fa fa-google-plus"></i></a>
+   		 		</p>-->
+
+   	</div><!--/col-lg-8 -->
+
+
+       </div>
+       </div><!--/container -->
+
+       <!-- *****************************************************************************************************************
+         FOOTER
+         ***************************************************************************************************************** -->
+         <div id="footerwrap">
+              <div class="container">
+                  <div class="row">
+                      <div class="col-xs-4">
+                          <h4 class="footer">About Us</h4>
+                          <div class="hline-w"></div>
+                          <p>Coders High is an iOS / macOS educational content creation group. </br>
+                          It is our goal to make the coder feel excited.</p>
+                      </div>
+                      <div class="col-xs-4">
+                          <h4 class="footer">Social network</h4>
+                          <div class="hline-w"></div>
+                          <p>
+                              <a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+                              <a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+                              <img src="../../assets/img/mailchimp.png">
+                              </a>
+                          </p>
+                      </div>
+                      <div class="col-xs-4">
+                          <h4 class="footer">Company Location</h4>
+                          <div class="hline-w"></div>
+                          <p>
+                              Gwanggyo-ro 156, Yeongtong-gu Suwon, Gyeonggi-do, 11th floor of Gwanggyo Business Center<br/>
+                          </p>
+                      </div>
+                  </div><!--/row -->
+                  <div style="margin-top: 50px">
+                      <h4 class="footer">2017 ⓒ CodersHigh</h4>
+                      <p style="text-align: center;">대표이사 윤성관 | 사업자등록번호 740-81-00581</p>
+                  </div>
+              </div><!--/container -->
+           </div><!--/footerwrap -->
+
+
+
+
+
+	<!-- *****************************************************************************************************************
+	 BLOG CONTENT
+	 ***************************************************************************************************************** -->
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/retina-1.1.0.js"></script>
+	<script src="assets/js/jquery.hoverdir.js"></script>
+	<script src="assets/js/jquery.hoverex.min.js"></script>
+	<script src="assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="assets/js/jquery.isotope.min.js"></script>
+  	<script src="assets/js/custom.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
