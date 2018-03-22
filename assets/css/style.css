@@ -575,6 +575,11 @@ a:focus {
 	PAGE CONFIGURATIONS
 ################################################################# */
 /* General Tweaks */
+#KOR {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
 
 #blue {
 	background: #00b3fe;
