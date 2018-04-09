@@ -311,14 +311,31 @@ a:focus {
 	margin-bottom: 100px;
 }
 
+@media (min-width: 651px) {
+	.article h3{
+		color: green;
+		font-size: 36px;
+	}
+	.article p {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 650px) {
+	.article h3{
+		color: green;
+		font-size: 24px;
+	}
+	.article p {
+		font-size: 14px;
+	}
+}
+
 .article h3 {
 	color: green;
 
 }
 
-.article p {
-	text-align:
-}
 
 .shadow {
 	box-shadow: 0px 0px 20px grey;
