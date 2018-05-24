@@ -1,0 +1,37 @@
+.report-subtitle {
+  padding-top: 5rem;
+}
+
+.report-subtitle > p {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  line-height: 4rem;
+  font-weight: normal;
+}
+
+
+.border-left {
+    border-left: 1rem solid #00b3fe;
+    margin-right: 1rem;
+}
+
+.sub-content {
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+  color: #b3b3b3;
+ }
+
+.student-number {
+  font-size: 5rem;
+  line-height: 7rem;
+}
+
+.report-hr {
+
+  margin-top: -2rem;
+  border-bottom: 1.5px solid #384452;
+}
+
+.spacing-lg {
+  margin-top: 10rem;
+}

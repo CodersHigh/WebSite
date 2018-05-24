@@ -946,15 +946,24 @@ a:focus {
 	}
 }
 
+.gotoappstore {
+	height: 38px;
+}
+
 .gotoapp {
 		display: inline-block;
-    border: 1px solid grey;
+    border: 1px solid black;
     border-radius: 6px;
 		padding: 0 15px;
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding-top: 0px;
+		padding-bottom: 0px;
 		height: 38px;
 		line-height: 38px;
+}
+
+.link {
+	position: absolute;
+	top: 72.5%;
 }
 
 .certificate_img{
