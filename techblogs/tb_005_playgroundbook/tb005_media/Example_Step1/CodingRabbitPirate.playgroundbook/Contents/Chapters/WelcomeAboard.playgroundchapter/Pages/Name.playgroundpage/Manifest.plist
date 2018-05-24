@@ -2,19 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Hints</key>
-	<array>
-		<dict>
-			<key>Content</key>
-			<string>Create cradle object from NewtonsCradle type with colors</string>
-		</dict>
-		<dict>
-			<key>Content</key>
-			<string>Change elasticity and resistance for ball&apos;s moving</string>
-		</dict>
-	</array>
 	<key>Name</key>
-	<string>Give Your Name</string>
+	<string>Your Name</string>
 	<key>LiveViewEdgeToEdge</key>
 	<true/>
 	<key>PlaygroundLoggingMode</key>
