@@ -35,3 +35,12 @@
 .spacing-lg {
   margin-top: 10rem;
 }
+
+.video-title {
+  display: block;
+  text-align: center;
+}
+
+.font-weight-normal {
+  font-weight: normal;
+}
