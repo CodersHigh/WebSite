@@ -2,13 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Version</key>
+	<string>1.0</string>
 	<key>Name</key>
-	<string>Your Name</string>
-	<key>LiveViewEdgeToEdge</key>
-	<true/>
-	<key>PlaygroundLoggingMode</key>
-	<string>Normal</string>
-	<key>LiveViewMode</key>
-	<string>VisibleByDefault</string>
+	<string>Beginning</string>
+	<key>Pages</key>
+	<array>
+		<string>Name.playgroundpage</string>
+		<string>Orientation.playgroundpage</string>
+	</array>
 </dict>
 </plist>
