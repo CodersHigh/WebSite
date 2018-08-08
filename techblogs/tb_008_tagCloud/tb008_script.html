@@ -185,12 +185,19 @@
             <img src="tb008_media/screenshot/스크린샷 2018-08-08 오후 6.43.08.png" width="600px" class="imagecenter"><br>
             - .....
             
-            <p class="textcenter">7. 태그와 관련된 배열, 프로젝트와 관련된 배열을 설정합니다. (꼭 태그, 프로젝트가 아니어도 됨)</p><br>
-            <script src="https://gist.github.com/aa9390/a3a32d8cbd1240a215920aa38f819ee0.js"></script>
+            <p class="textcenter">7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </p><br>
+            <script src="https://gist.github.com/aa9390/fdf00a02c2186cb100917cac8962b876.js"></script>
             - 위에서 setCloudTags는 배열 형태를 인자로 받는다고 설명드렸습니다. 이를 위해 태그, 프로젝트에 관련된 배열이 각각 필요합니다. <br>
-            - 각 배열의 0번째 인덱스에는 버튼의 타이틀이, 1번째 인덱스에는 버튼의 그림이 들어가도록 설정하겠습니다. <br>
-            - 타이틀과 이미지를 동시에 불러오도록 하기 위해 AnyObject 성질을 가진 이중 배열로 설정하였습니다.<br>
-            - 시뮬레이터를 돌려본 결과는 다음과 같습니다. <br>
+            
+            
+            <ul>
+            <li>7 : 각 배열에 들어갈 기본 내용은 구름에 보여질 버튼 타이틀입니다. 그렇기 때문에 배열의 타입을 String으로 지정했습니다.
+                <ul><li>배열의 타입을 AnyObject로 설정하면 버튼의 타이틀 뿐 아니라 폰트 크기, 색깔, 배경 그림까지 각각 지정이 가능합니다. 이와 관련된 설명은 아래에 하겠습니다.</li></ul>
+            <li>19 : 배열의 i번째 인덱스를 버튼의 타이틀로 설정합니다. </li>
+            <li>21 : 버튼의 배경 이미지를 6번에서 추가한 이미지로 설정합니다. </li>
+            </ul><br><br>
+            
+            - 태그 배열만 추가한 후 시뮬레이터를 돌려본 결과는 다음과 같습니다. <br>
             <img src="tb008_media/screenshot/Simulator Screen Shot - iPhone X - 2018-08-08 at 19.51.58.png" width="300px" class="imagecenter"><br>
             
             
