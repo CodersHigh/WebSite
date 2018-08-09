@@ -96,7 +96,10 @@
 
     <div class="article">
                 <!-- POST 시작  -->  
-        <p class="imagecenter text-md">본 프로젝트는 서울여자대학교 GURU2 수업 결과물이며, 전체 소스코드는 <a href="https://github.com/ProjectInTheClass/moongaemoongae">여기</a>에서 확인할 수 있습니다. <br>
+        <p class="imagecenter text-md">본 프로젝트는 서울여자대학교 GURU2 수업 결과물입니다.
+            <ul><li><a href="https://github.com/ProjectInTheClass/moongaemoongae">서울여자대학교 GURU2 프로젝트 '졸뽀' 바로가기</a></li>
+            <li><a href="https://github.com/aa9390/cloudtag-For-Website">수업에서 사용한 샘플 코드 바로가기</a></li></ul>
+        
             본 프로젝트는 
             <a href = "https://github.com/apparition47/DBSphereTagCloudSwift"> DBSphereTagCloudSwift</a> 의 외부 라이브러리를 사용했습니다. 
             
@@ -109,9 +112,9 @@
             
             동작 방식은 다음과 같습니다. 
                       <ul>
-          <li>태그 버튼 클릭 시 해당 태그와 관련된 프로젝트 구름이 등장한다.</li>
-          <li>프로젝트 구름 클릭 시 해당 프로젝트로 이동한다.</li>
-          <li>프로젝트 구름이 등장했을 때, 배경 클릭 시 프로젝트 구름이 사라진다.</li>
+          <li>태그 구름 클릭 시 해당 태그와 관련된 세부 구름이 등장한다.</li>
+          <li>세부 구름 클릭 시 세부 구름의 정보가 담긴 새로운 뷰로 이동한다.</li>
+          <li>배경을 클릭하면 등장했던 세부 구름이 사라진다.</li>
           </ul><br> 
         
         왼쪽 예시는 제가 수업에서 구현했던 화면이며, 오른쪽은 이번 수업에서 만들어 볼 프로젝트입니다. (오른쪽에 예시 프로젝트 gif화면 추가) <br>
@@ -119,14 +122,14 @@
 
         <h3>시작하기</h3><br><br>
         
-        ---- 스토리 보드 스크린샷 -----<br>
+        <img src="tb008_media/screenshot/스크린샷 2018-08-09 오후 5.24.10.png" width="600px" class="imagecenter">
         ---- 프로젝트 구조도 사진 -----<br>
 
         <p class="imagecenter text-md">우선 single view app으로 새로운 Xcode 프로젝트를 생성합니다. 이 프로젝트에서는 총 2개의 View Controller들을 사용하겠습니다. 각각의 View Controller들은 다음과 같은 기능을 가지고 있습니다.</p><br>
 
     <div class="margin-lr">
-        <p><b>[메인 화면] : </b>태그 클라우드를 실제로 구현하는 뷰로, (작성중)</p>
-        <p><b>[상세정보 화면] : </b>프로젝트 구름 버튼 클릭 시 이동하는 상세 정보 뷰 입니다. </p>
+        <p><b>[ViewController] : </b>태그 클라우드를 실제로 구현하는 뷰입니다.</p>
+        <p><b>[DetailViewController] : </b>세부 구름 버튼 클릭 시 이동하는 뷰입니다. 중간에 위치한 label에는 클릭 한 세부 구름의 제목이 들어가게 됩니다.</p>
     </div><br><br>
 
         <h3>cocoaPods 추가하기</h3><br><br>
@@ -186,8 +189,10 @@
             - .....
             
             <p class="textcenter">7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </p><br>
-            <script src="https://gist.github.com/aa9390/fdf00a02c2186cb100917cac8962b876.js"></script>
+            <script src="https://gist.github.com/aa9390/3c13332ce872d8b6a8eac011b4a14957.js"></script>
             - 위에서 setCloudTags는 배열 형태를 인자로 받는다고 설명드렸습니다. 이를 위해 태그, 프로젝트에 관련된 배열이 각각 필요합니다. <br>
+            - 태그와 세부 내용이 담긴 배열 두개를 각각 만들어도 되나, 빠르게 설명드리기 위해 tagAndProjectDic와 같이 태그를 key로 한 Dictionary를 선언했습니다. <br>
+            - key를 태그 구름으로, value를 세부 구름으로 쓸 것이기 때문에 value는 문자열이 담긴 배열의 형태로 선언했습니다. 
             
             
             <ul>
@@ -205,13 +210,19 @@
             -- 작성중 -- 
         
             
+            <h3>버튼 클릭 시 상세 구름 등장 애니메이션 구현하기</h3><br><br>
+            <p class="textcenter">1. 상세 구름에 대한 배열 받아오기 </p><br>
+            <script src="https://gist.github.com/aa9390/cdbb88aef2173f234152a72e2cc757ba.js"></script>
+            - 태그에 대한 구름을 tagAndProjectDic의 key값으로 받아왔으니, 이제는 해당 key에 담긴 value값을 상세 구름의 타이틀로 지정할 차례입니다. <br>
+            - btn은 우리가 클릭한 태그 구름입니다. 이 태그 구름의 타이틀을 tagAndProjectDic에서 검색한 후 결과값을 projectArray로 받아줍니다. <br>
             
-            <h4 class="textcenter">버튼 클릭 시 상세 구름 등장 애니메이션 구현하기</h4>
-            -- 작성중 -- 
+            <p class="textcenter">2. 상세 구름 등장 애니메이션 구현하기 </p><br>
+            <script src="https://gist.github.com/aa9390/e1c258c61451b3b6a81ba82ae78a1d6a.js"></script>
+            - 우리가 구현하고 싶은 건, 태그 구름 '주변에' 상세 구름이 등장하는 것입니다. <br>
+            - 작성중...
             
-            
-            <h3>상세 정보 화면 구현하기</h3><br><br>
-            <h3>메인 화면과 상세 정보 화면간 이동 구현하기</h3><br><br>
+            <h4 class="textcenter">상세 정보 화면 구현하기</h4>
+            <h4 class="textcenter">메인 화면과 상세 정보 화면간 이동 구현하기</h4>
             <h3>마치며</h3><br><br>
             
 
