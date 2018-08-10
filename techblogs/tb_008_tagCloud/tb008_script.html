@@ -187,9 +187,9 @@
             - 적절한 이미지를 불러와 Assets폴더에 넣습니다. 
             
             <p class="textcenter">7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </p><br>
-            <script src="https://gist.github.com/aa9390/cd7e6c96f544d65dcf68fa6b1eaac44c.js"></script>
+            <script src="https://gist.github.com/aa9390/2a1c9f8524d05fe6ad6085ec65175c77.js"></script>
             - 위에서 setCloudTags는 배열 형태를 인자로 받는다고 설명드렸습니다. 이를 위해 태그, 프로젝트에 관련된 배열이 각각 필요합니다. <br>
-            - 태그와 세부 내용이 담긴 배열 두개를 각각 만들어도 되나, 빠르게 설명드리기 위해 tagAndProjectDic와 같이 태그를 key로 한 Dictionary를 선언했습니다. <br>
+            - 태그와 세부 내용이 담긴 배열 두개를 각각 만들어도 되나, 빠르게 설명드리기 위해 tagAndDetailDic와 같이 태그를 key로 한 Dictionary를 선언했습니다. <br>
             - key를 태그 구름으로, value를 세부 구름으로 쓸 것이기 때문에 value는 문자열이 담긴 배열의 형태로 선언했습니다. 
             
             
@@ -209,7 +209,7 @@
             
             
             <h4 class="textcenter">버튼의 속성 변경하기</h4>
-        <script src="https://gist.github.com/aa9390/aa1aacad58342537ab9840d4631ceac8.js"></script>
+        <script src="https://gist.github.com/aa9390/37b65da9c984a2ab10b66bcc2c3ab7a6.js"></script>
             - 시각적으로 재미있는 효과를 주기 위해서는 이미지와 컬러가 다채로운게 좋습니다. 우선 2번째 줄에서 UIButton의 타입을 custom으로 설정합니다. <br>
         - 3~5 : 버튼의 타이틀, 색상, 폰트를 설정하는 작업입니다. <br>
         - 7 : 버튼의 배경 이미지를 설정하는 작업입니다. 앞에서 추가했던 구름 이미지의 이름을 named의 값으로 넣어주면 되겠습니다. <br>
@@ -219,22 +219,21 @@
             
             <h3>버튼 클릭 시 상세 구름 등장 애니메이션 구현하기</h3><br><br>
             <p class="textcenter">1. 상세 구름에 대한 배열 받아오기 </p><br>
-            <script src="https://gist.github.com/aa9390/cdbb88aef2173f234152a72e2cc757ba.js"></script>
-            - 태그에 대한 구름을 tagAndProjectDic의 key값으로 받아왔으니, 이제는 해당 key에 담긴 value값을 상세 구름의 타이틀로 지정할 차례입니다. <br>
-            - btn은 우리가 클릭한 태그 구름입니다. 이 태그 구름의 타이틀을 tagAndProjectDic에서 검색한 후 결과값을 projectArray로 받아줍니다. <br>
+            <script src="https://gist.github.com/aa9390/80cad2f7b8d78604a73d8d573c2ec74f.js"></script>
+            - 태그에 대한 구름을 tagAndDetailDic의 key값으로 받아왔으니, 이제는 해당 key에 담긴 value값을 상세 구름의 타이틀로 지정할 차례입니다. <br>
+            - btn은 우리가 클릭한 태그 구름입니다. 이 태그 구름의 타이틀을 tagAndDetailDic에서 검색한 후 결과값을 detailArray로 받아줍니다. <br>
             
-            <p class="textcenter">2. 상세 구름 등장 애니메이션 구현하기 </p><br>
-            <script src="https://gist.github.com/aa9390/e1c258c61451b3b6a81ba82ae78a1d6a.js"></script>
-            - 6 : 구름을 클릭할 때마다 그림이 커지고 작아지는 등의 애니메이션이 적용됨을 보실 수 있습니다. 이는 animate라는 메소드 때문인데, 원형은 <br>
-            <script src="https://gist.github.com/aa9390/b51865425085b297888989cee5f008b5.js"></script>와 같습니다. <a href = "https://developer.apple.com/documentation/uikit/uiview/1622515-animate">참고 링크</a>
+            <p class="textcenter">2. 상세 구름의 애니메이션 구현하기 </p><br>
+            <script src="https://gist.github.com/aa9390/f8fcea5bcb50a570439ef6b66e88b857.js"></script>
+            - 5 : 구름을 클릭할 때마다 그림이 커지고 작아지는 등의 애니메이션이 적용됨을 보실 수 있습니다. 이는 animate라는 메소드 때문인데, 원형은 <br>
+            <script src="https://gist.github.com/aa9390/b51865425085b297888989cee5f008b5.js"></script>와 같습니다. <a href = "https://developer.apple.com/documentation/uikit/uiview/1622515-animate">참고 링크</a><br>
             간단하게 duration은 지연 시간, animations는 우리가 구현할 애니메이션의 내용이라고 보시면 좋을 것 같습니다. <br>
-            - 10 : 상세 구름의 위치를 지정합니다. <br>태그 구름의 위치에서는 frame: CGRect(x: -200, y: -200, width: 1000, height: 1000) 와 같이 x, y값을 직접 지정해 줬었죠? 이와 달리 상세 구름은 태그 구름 '주변에' 등장하도록 할 것이기 때문에 클릭된 태그 구름(btn)의 x, y값이 기준이 되어야 합니다. btn.frame.origin.x, btn.frame.origin.y으로 x, y좌표 값을 구한 후 적절한 값을 지정해 줍니다. <br>
+        - 6~37 : 애니메이션의 내용입니다. <br>
+        - 7 : CGAffineTransform은 이미지의 크기를 변경해주는 메소드입니다. 양수일 경우 x, y에 설정한 값만큼 확대가 되며, 반대일 경우 축소됩니다.  <br>
+            - 9 : 상세 구름의 위치를 지정합니다. <br>태그 구름의 위치에서는 frame: CGRect(x: -200, y: -200, width: 1000, height: 1000) 와 같이 x, y값을 직접 지정해 줬었죠? 이와 달리 상세 구름은 태그 구름 '주변에' 등장하도록 할 것이기 때문에 클릭된 태그 구름(btn)의 x, y값이 기준이 되어야 합니다. btn.frame.origin.x, btn.frame.origin.y으로 x, y좌표 값을 구한 후 적절한 값을 지정해 줍니다. <br>
+        - 33~36 : 상세 구름이 등장을 마쳤을 때 보여질 애니메이션입니다. 이미지의 크기를 원래대로 되돌리고, ((scaleX: 1, y: 1)) 구름들이 다시 움직이게 함을 보실 수 있습니다.
             
-            <p class="textcenter">3. 상세 구름의 속성 지정하기 </p><br>
-            <script src="https://gist.github.com/aa9390/7b10cabb8e769358d7213978d15fdbca.js"></script>
-            - 17 ~ 31 : 태그 구름을 지정한것과 같은 방법으로 상세 구름의 속성을 지정해 줍니다.<br>
-            
-            <p class="textcenter">4. 배경 클릭 시 상세 구름이 사라지도록 구현하기 </p><br>
+            <p class="textcenter">3. 배경 클릭 시 상세 구름이 사라지도록 구현하기 </p><br>
             <script src="https://gist.github.com/aa9390/49c421bc07b543abcd01365dedb35b1f.js"></script>
             - UITapGestureRecognizer는 말 그대로 tap했을 때의 액션을 지정할 수 있는 메소드입니다. gesture라는 변수를 지정하고 tap을 감지했을 때 backgroundPressed라는 메소드를 타겟으로 지정합니다. <br>
             - detailView 입장에서 배경이 되는 tagView에 gesture를 add합니다.<br>
@@ -262,6 +261,7 @@
         -  위에서 상세 구름의 타이틀을 labelText값으로 받았으니, detailLabel의 text값을 labelText으로 대입해 줍니다. 
             
             <h3>마치며</h3><br><br>
+        (내용 추가하기)
             
 
         <p class="textcenter"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
