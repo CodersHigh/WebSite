@@ -523,13 +523,13 @@ a:focus {
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-bottom: 15px;
+	height: 100px;
 	color: white;
 	font-weight: normal;
 }
 .newscontainer {
 	grid-column-gap:40px;
 	padding: 30px;
-
 }
 .newsshadow{
 	 box-shadow: 0px 0px 15px black;
@@ -541,6 +541,13 @@ a:focus {
 }
 .newsimage a:hover {
 	background-color: blue;
+}
+.show-more {
+	width: 100px;
+	height: 70px;
+	color: #ffffff;
+	margin: 0 auto;
+	text-align: center;
 }
 
 
