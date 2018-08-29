@@ -95,21 +95,23 @@
             </div>
 
     <div class="article">
-                <!-- POST 시작  -->  
-        <p class="imagecenter text-md">
-            본 포스팅은 2018년 <a href="https://github.com/ProjectInTheClass/moongaemoongae">서울여자대학교 GURU2 수업 결과물</a>입니다.<br>
-            본 포스팅은 
+                <!-- POST 시작  -->
+        <p>
+            이 글은 2018년 <a href="https://github.com/ProjectInTheClass/moongaemoongae">서울여자대학교 GURU2 수업 결과물</a>을 정리한 글 입니다.<br>
+            <p> 이 글에서는
             <a href = "https://github.com/apparition47/DBSphereTagCloudSwift"> DBSphereTagCloudSwift</a> 의 외부 라이브러리를 사용했습니다. <br><br>
             이번 포스트에서는 위/아래/좌/우로 <b>3d 스크롤</b>이 가능한 <b>태그 클라우드</b>를 구현해 보겠습니다. <br>
-            제가 수업에서 했던 프로젝트는 '졸뽀'라는 이름으로, 선후배의 졸업 작품을 태그로 분류하여 정보를 얻을 수 있게 하는 졸업 프로젝트 서포팅 어플리케이션입니다. 
-            초기에 조원들이 떠올렸던 아이디어는 "'태그'를 구름으로 분류하고, 그 태그를 누르면 관련 프로젝트로 이동했으면 좋겠다"였으며 원래 구현하려고 했던 모습은 3d 스크롤이 아닌 평면 상에서 움직이는 구름의 모습이었습니다.
-            그러나 분류는 어찌 어찌 한다고 해도, 태그를 어떻게 시각화 하느냐가 제일 큰 문제였죠. 좀 더 입체감을 부여해 사용을 했을 때 재밌게 다가왔으면 했습니다. 
+            제가 수업에서 했던 프로젝트는 '졸뽀'라는 이름으로, 선후배의 졸업 작품을 태그로 분류하여 정보를 얻을 수 있게 하는 졸업 프로젝트 서포팅 어플리케이션입니다. </p>
+            <p >초기에 조원들이 떠올렸던 아이디어는</p>
+              <blockquote>"'태그'를 구름으로 분류하고, 그 태그를 누르면 관련 프로젝트로 이동했으면 좋겠다"</blockquote>
+            <p>였으며 원래 구현하려고 했던 모습은 3d 스크롤이 아닌 평면 상에서 움직이는 구름의 모습이었습니다.
+            그러나 분류는 어찌 어찌 한다고 해도, 태그를 어떻게 시각화 하느냐가 제일 큰 문제였죠. 좀 더 입체감을 부여해 사용을 했을 때 재밌게 다가왔으면 했습니다.
             tag, cloud, node...등으로 검색을 했고, 그 중 괜찮은 오픈소스를 커스텀하여 프로젝트에 적용했습니다. 구현 과정이 어렵지 않고, 결과물도 예쁘게 나오기 때문에 비슷한 효과를 원하시는 분들께 추천드리는 오픈소스입니다. <br><br>
-            여기서는 '태그'에 초점을 맞췄지만 실제로 구현하실 때는 태그뿐 아닌 이용자 사진을 넣은 주소록같은 서비스에도 적용할 수 있으실 것 같습니다. <br><br>
-        
+            여기서는 '태그'에 초점을 맞췄지만 실제로 구현하실 때는 태그뿐 아닌 이용자 사진을 넣은 주소록같은 서비스에도 적용할 수 있으실 것 같습니다. </p><br><br>
+
         왼쪽 예시는 제가 수업에서 구현했던 화면이며, 오른쪽은 이번 포스트에서 만들어 볼 프로젝트입니다.<br> <a href = "https://github.com/aa9390/cloudtag-For-Website">(샘플 코드 바로가기)</a><br>
         </p>
-            
+
         <p class="imagecenter text-md">
         <img src="tb008_media/image/zolbbo_gif.gif" width="250px">
         <img src="tb008_media/image/cloud_gif.gif" width="250px"><br><br></p>
@@ -122,14 +124,14 @@
         <img src="tb008_media/image/storyboard.png" width="600px" class="imagecenter">
 
         우리가 만들 프로젝트의 기본적인 동작 방식은 다음과 같습니다. <br>
-    
+
           1. 태그 구름 클릭 시 해당 태그와 관련된 상세 구름이 등장한다.<br>
           2. 상세 구름 클릭 시 상세 구름의 정보가 담긴 새로운 뷰로 이동한다.<br>
           3. 배경을 클릭하면 등장했던 상세 구름이 사라진다.<br><br>
-            
+
             우선 single view app으로 새로운 Xcode 프로젝트를 생성합니다. <br>이 프로젝트에서는 Main.storyboard안에 총 2개의 View Controller들을 생성할 것이며, 각각의 View Controller들은 다음과 같은 기능을 가지고 있습니다.<br><br>
 
-            
+
         <b>[MainViewController] : </b>태그 클라우드를 실제로 구현하는 뷰입니다.<br>
             - tagView : 태그 구름이 보여질 뷰입니다. 뷰에 직접적으로 추가하지 않고, 코드 내에서 동적으로 생성합니다. <br>
             - detailView : 상세 구름이 보여질 뷰입니다. 마찬가지로 코드 내에서 동적으로 생성합니다. <br><br>
@@ -140,17 +142,17 @@
 
         <h3>cocoaPods 추가하기</h3><br>
         <div class="col-lg-12">태그 클라우드를 구현하기 위해서는 cocoaPods(이하 코코아팟)을 추가해야 합니다. 코코아팟 사이트의 설명에 따르면,<br><br>
-            
 
-            cocoaPods는 Swift 및 Objective-C 코코아 프로젝트의 종속성 관리자입니다. <br>28,000 개가 넘는 라이브러리를 가지고 있으며 170 만 개가 넘는 응용 프로그램(앱)에서 사용되고 있습니다.<br>cocoaPods는 프로젝트를 우아하게 확장 할 수 있도록 도와줍니다.<br><br>
-        
-        라고 되어있습니다. 한마디로, <b>외부 라이브러리를 연동할 수 있는 툴</b>입니다. 안드로이드 개발을 해보신 분들은 gradle과 같은 역할을 한다고 생각하시면 될 것 같습니다. 
-        
+
+            <blockquote>cocoaPods는 Swift 및 Objective-C 코코아 프로젝트의 종속성 관리자입니다. <br>28,000 개가 넘는 라이브러리를 가지고 있으며 170 만 개가 넘는 응용 프로그램(앱)에서 사용되고 있습니다.<br>cocoaPods는 프로젝트를 우아하게 확장 할 수 있도록 도와줍니다.<br><br></blockquote>
+
+        라고 되어있습니다. 한마디로, <b>외부 라이브러리를 연동할 수 있는 툴</b>입니다. 안드로이드 개발을 해보신 분들은 gradle과 같은 역할을 한다고 생각하시면 될 것 같습니다.
+
         <br> <br>
         코코아팟 설치를 위해서 터미널을 열고 다음 명령어를 입력합니다. <br>
         <script src="https://gist.github.com/aa9390/6c5723bac0990d990d4d612346382e48.js"></script>
             설치가 끝나셨다면, 본론으로 들어가 보겠습니다. <br> <br><br></div>
-            
+
             <h3>메인 화면 구현하기</h3><br>
 
         <h4>1. DBsphereTagCloudSwift라이브러리를 Podfile에 추가합니다. </h4>
@@ -158,7 +160,7 @@
             <img src="tb008_media/screenshot/스크린샷 2018-08-07 오후 12.38.23.png" width="600px" class="imagecenter"><br>
             - 터미널에서 vi Podfile을 입력 후,  <br>사진과 같이 pod 'DBSphereTagCloudSwift', :git => "https://github.com/apparition47/DBSphereTagCloudSwift.git", :submodules => true 을 입력합니다.<br> <br>
         </div>
-        
+
         <h4>2. 터미널에서 pod install을 입력하여 추가한 라이브러리를 프로젝트에 설치합니다. </h4>
         <img src="tb008_media/image/podInstall.png" width="600px" class="imagecenter"><br>
         <div class="col-lg-12">
@@ -166,10 +168,10 @@
 
         <h4>3. workspace파일을 열고 viewController.swift에 라이브러리를 import 합니다. </h4>
         <img src="tb008_media/screenshot/import_1.png" width="600px" class="imagecenter"><br> <br>
-            
+
         <h4>4. DBSphereView 타입의 tagView, detailView를 각각 선언합니다. </h4>
         <script src="https://gist.github.com/aa9390/4c3fe961bc4c18b72a2f146208446e3a.js"></script><br> <br>
-            
+
         <h4>5. 골격이 되는 코드를 작성합니다. </h4>
         <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/bad8fc99ca507449bc9971af96073398.js"></script>
@@ -179,35 +181,35 @@
             <li>11 : tagView의 크기를 지정합니다. <br> 작업 중인 디바이스의 크기에 맞춰도 되지만, 편의를 위해 디바이스를 꽉 채우고도 남을 사이즈로 작업했습니다.</li>
                     <ul><li>CGRect란? 위치와, 크기를 가진 사각형 모양의 구조체로서 x, y는 기준점이 되는 좌표값, width와 height는 너비, 높이값입니다. <a href="https://stackoverflow.com/questions/30658045/difference-between-cgsize-and-cgrect">[출처:stackoverflow]</a><br>
                         <img src="tb008_media/image/cgrect.png" class="imagecenter"><br></li></ul>
-            <li>12 : UIView의 배열을 array라는 변수로 선언하고, 초기화합니다. 이 배열은 15번째 줄의 setCloudTags()의 매개변수가 됩니다. 
-            <li>15 : tagView에 보여질 클라우드 태그들을 설정하는 작업입니다. <br> 
-               setCloudTags()는 UIView의 배열을 인자로 받기 때문에 array에 들어갈 타입은 버튼 뿐 아니라 label, image 모두 가능합니다. 우리는 구름을 클릭할 수 있도록 할것이기 때문에 버튼을 추가하도록 하겠습니다. 
-                
+            <li>12 : UIView의 배열을 array라는 변수로 선언하고, 초기화합니다. 이 배열은 15번째 줄의 setCloudTags()의 매개변수가 됩니다.
+            <li>15 : tagView에 보여질 클라우드 태그들을 설정하는 작업입니다. <br>
+               setCloudTags()는 UIView의 배열을 인자로 받기 때문에 array에 들어갈 타입은 버튼 뿐 아니라 label, image 모두 가능합니다. 우리는 구름을 클릭할 수 있도록 할것이기 때문에 버튼을 추가하도록 하겠습니다.
+
                 <br>
             <li>16 : view에 tagView를 하위 뷰로 추가하여 우리가 만든 tagView가 보이도록 하는 작업입니다. <br></li>
                 </ul>
             </div><br>
-            
+
             - 기본 준비는 다 되었습니다. 이제 array에 들어갈 버튼만 만들면 되겠죠?
             <br> <br>
         </div>
-        
+
         <h4>6. 버튼에 들어갈 이미지 불러오기 </h4>
         <div class="col-lg-12">
             <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.12.png" width="800px" class="imagecenter"><br>
         <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.17.png" width="800px" class="imagecenter"><br>
-            - 적절한 이미지를 불러와 Assets폴더에 넣습니다. 
-            
+            - 적절한 이미지를 불러와 Assets폴더에 넣습니다.
+
             <h4>7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </h4>
             <script src="https://gist.github.com/aa9390/a13610e54f385043f5ef3528bd2167a8.js"></script>
 <!--
-            - 위에서 setCloudTags는 UIView 타입인 array를 인자로 받는다고 설명드렸습니다. 
+            - 위에서 setCloudTags는 UIView 타입인 array를 인자로 받는다고 설명드렸습니다.
             - 위에서 setCloudTags는 배열 형태를 인자로 받는다고 설명드렸습니다. 이를 위해 태그, 프로젝트에 관련된 배열이 각각 필요합니다. <br>
 -->
             - 태그와 상세 내용이 담긴 배열 두개를 각각 만들어도 되나, 빠르게 설명드리기 위해 tagAndDetailDic와 같이 태그를 key로 한 Dictionary를 선언했습니다. <br>
             - key를 태그 구름으로, value를 상세 구름으로 쓸 것이기 때문에 value는 문자열이 담긴 배열의 형태로 선언했습니다. <br>
 <!--            - 11번째 줄의 array는 -->
-            
+
             <br> <br>
         </div>
 <!--
@@ -218,13 +220,13 @@
             <li>21 : 버튼의 배경 이미지를 6번에서 추가한 이미지로 설정합니다. </li>
             </ul><br><br>
 -->
-            
+
 <!--
             - 태그 배열만 추가한 후 시뮬레이터를 돌려본 결과는 다음과 같습니다. <br>
             <img src="tb008_media/screenshot/Simulator Screen Shot - iPhone X - 2018-08-08 at 20.44.37.png" width="300px" class="imagecenter"><br>
 -->
-            
-            
+
+
             <h4>8. 버튼의 속성 변경하기</h4>
         <script src="https://gist.github.com/aa9390/37b65da9c984a2ab10b66bcc2c3ab7a6.js"></script>
         <div class="col-lg-12">
@@ -240,13 +242,13 @@
             <br> <br><br>
         </div>
         <br>
-            
+
             <h3>버튼 클릭 시 상세 구름 등장 애니메이션 구현하기</h3><br>
         <h4>1. 상세 구름에 대한 배열 받아오기 </h4>
         <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/80cad2f7b8d78604a73d8d573c2ec74f.js"></script>
             - 태그에 대한 구름을 tagAndDetailDic의 key값으로 받아왔으니, 이제는 해당 key에 담긴 value값을 상세 구름의 타이틀로 지정할 차례입니다. <br>
-            - btn은 우리가 클릭한 태그 구름입니다. 이 태그 구름의 타이틀을 tagAndDetailDic에서 검색한 후 결과값을 detailArray로 받아줍니다. 
+            - btn은 우리가 클릭한 태그 구름입니다. 이 태그 구름의 타이틀을 tagAndDetailDic에서 검색한 후 결과값을 detailArray로 받아줍니다.
             <br><br>
         </div>
         <h4>2. 상세 구름의 애니메이션 구현하기 </h4>
@@ -255,7 +257,7 @@
                 <div class="col-lg-12">
                     <ul>
             <li>2 : 클릭한 태그 구름의 애니메이션을 잠시 멈춥니다. <br>
-                애니메이션을 멈추고 움직이게 하는 메소드인 timerStop(), timerStart()를 사용하기 위해 DBSphereView.swift에서 해당 메소드의 접근 지정자를 internel이 아닌 public으로 선언합니다. 
+                애니메이션을 멈추고 움직이게 하는 메소드인 timerStop(), timerStart()를 사용하기 위해 DBSphereView.swift에서 해당 메소드의 접근 지정자를 internel이 아닌 public으로 선언합니다.
                         </li>
             <li>5 : 구름을 클릭할 때마다 그림이 커지고 작아지는 등의 애니메이션이 적용됨을 보실 수 있습니다. 이는 animate라는 메소드 때문인데, 원형은 다음과 같습니다. <a href = "https://developer.apple.com/documentation/uikit/uiview/1622515-animate">참고 링크</a><br>
             <script src="https://gist.github.com/aa9390/b51865425085b297888989cee5f008b5.js"></script>
@@ -268,7 +270,7 @@
                 </div>
                 <br> <br>
         </div>
-            
+
         <h4>3. 배경 클릭 시 상세 구름이 사라지도록 구현하기 </h4>
         <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/49c421bc07b543abcd01365dedb35b1f.js"></script>
@@ -278,7 +280,7 @@
             - backgroundPressed 메소드를 구현합니다. isHidden값을 true로 설정하여 detailView가 보이지 않도록 하면 되겠죠? (아예 사라지도록 하는 방법도 있습니다.)
             <br><br><br>
             </div>
-            
+
             <h3>메인 화면과 상세 정보 화면간 이동 구현하기</h3>
             <h4>1. 레이아웃 구성하기 </h4>
             <div class="col-lg-12">
@@ -286,13 +288,13 @@
         <img src="tb008_media/image/detailLabel.png" width="800px" class="imagecenter"><br>
             - 올바른 값이 넘어왔는지 확인하기 위해서 상세 정보 뷰를 만들어 메인 뷰의 값을 넘겨주도록 하겠습니다. <br>
             - DetailViewController의 Storyboard ID를 "Detail"이라고 설정하고, 레이블을 넣어줍니다. <br>
-        - 레이블의 ID를 detailLabel로 설정하고, MainViewController의 상세 구름의 타이틀을 넘겨받을 변수를 labelText로 선언합니다. 
+        - 레이블의 ID를 detailLabel로 설정하고, MainViewController의 상세 구름의 타이틀을 넘겨받을 변수를 labelText로 선언합니다.
             <br> <br>
         </div>
-            
+
         <h4>2. 상세 구름 클릭 시 화면 전환 구현하기 </h4>
         <div class="col-lg-12">
-            - 위에서 tagPressed()안에 상세 뷰로 전환하는 
+            - 위에서 tagPressed()안에 상세 뷰로 전환하는
             <script src="https://gist.github.com/aa9390/449d12e7ccf9a42321748d6e181be5be.js"></script> 를 썼던 것 기억하시나요? 이제 detailPressed를 정의해 보도록 하겠습니다. <br>
             <script src="https://gist.github.com/aa9390/3b8c3030bfa6dee2fdbe3dedf25142ff.js"></script><div class="col-lg-12">
             <ul>
@@ -304,21 +306,21 @@
             <br> <br>
         </div>
         </div>
-            
-        
+
+
         <h4>3. 넘겨받은 값을 화면에 뿌려주기 </h4>
             <script src="https://gist.github.com/aa9390/95e19e9e209450300e932abd0cbf0152.js"></script><div class="col-lg-12">
-        -  위에서 상세 구름의 타이틀을 labelText값으로 받았으니, detailLabel의 text값을 labelText으로 대입해 줍니다. 
+        -  위에서 상세 구름의 타이틀을 labelText값으로 받았으니, detailLabel의 text값을 labelText으로 대입해 줍니다.
             <br> <br><br>
         </div>
             <br>
             <br>
             <div class="hline"></div>
             <br>
-            
+
             <h3>마치며</h3><br>
         <p class="imagecenter text-md">지금까지 태그 클라우드 구현 과정을 살펴 보았습니다. 앞서 말씀드린 것처럼 커스텀의 방향에 따라 다양한 효과를 낼 수 있을 것이라고 생각합니다. 본 포스트에 대한 질문 혹은 제안 사항이 있으실 경우, 연락 주시면 감사하겠습니다. </p><br><br><br>
-            
+
 
         <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
             <br><br>
