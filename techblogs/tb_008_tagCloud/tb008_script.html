@@ -199,6 +199,7 @@
             <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.12.png" width="800px" class="imagecenter"><br>
         <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.17.png" width="800px" class="imagecenter"><br>
             - 적절한 이미지를 불러와 Assets폴더에 넣습니다.
+            </div>
 
             <h4>7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </h4>
             <script src="https://gist.github.com/aa9390/a13610e54f385043f5ef3528bd2167a8.js"></script>
@@ -209,8 +210,6 @@
             - 태그와 상세 내용이 담긴 배열 두개를 각각 만들어도 되나, 빠르게 설명드리기 위해 tagAndDetailDic와 같이 태그를 key로 한 Dictionary를 선언했습니다. <br>
             - key를 태그 구름으로, value를 상세 구름으로 쓸 것이기 때문에 value는 문자열이 담긴 배열의 형태로 선언했습니다. <br>
 <!--            - 11번째 줄의 array는 -->
-
-            <br> <br>
         </div>
 <!--
             <ul>
@@ -273,9 +272,25 @@
 
         <h4>3. 배경 클릭 시 상세 구름이 사라지도록 구현하기 </h4>
         <div class="col-lg-12">
+            - swift에서 사용자의 제스쳐를 받는 방법은 UIGestureRecognizer를 상속받아 사용하는 것입니다. 
+            <a href = "https://developer.apple.com/documentation/uikit/uigesturerecognizer">참고 링크</a><br>
+            <img src="tb008_media/image/gesture.png" width="350px" class="imagecenter"><br>
+            이름에서 유추할 수 있듯이 우리가 구현할 탭하기(tap)을 포함하여 다양한 동작들이 가능한데요, 간단하게 한번 알아볼까요? <br> 
+            <ul>
+                <li>Tap gesture recognizer : 화면을 두드리는 동작입니다. </li>
+                <li>Swipe gesture recognizer : 상하좌우로 미는 동작입니다.  </li>
+                <li>Pan gesture recognizer : 드래그(drag)동작입니다. </li>
+                <li>Pinch gesture recognizer : 두 손가락을 이용하여 확대 또는 축소를 하는 동작입니다. </li>
+                <li>Rotation gesture recognizer : 두 손가락을 이용하여 회전하는 동작입니다. </li>
+                <li>Screen gesture recognizer : 화면의 가장자리에서 드래그(panning)하는 동작입니다.</li>
+                <li>LongPress gesture recognizer : 길게 누르는 동작입니다.  </li>
+            </ul><br>
+            <blockquote> To make that association you must call the UIView method addGestureRecognizer(_:).</blockquote>
+            - 또한 참고 링크를 보시면 알다시피 GestureRecognizer는 UIView에만 붙일 수 있고, addGestureRecognizer 메서드를 호출하여 사용합니다. <br>
+            - 여기서는 코드 내에서 GestureRecognizer를 구현하도록 하겠습니다. 
+<!--            - 또한 GestureRecognizer도 IBOutlet과 IBAction을 선언할 수 있습니다. -->
             <script src="https://gist.github.com/aa9390/49c421bc07b543abcd01365dedb35b1f.js"></script>
             - UITapGestureRecognizer는 말 그대로 tap했을 때의 액션을 지정할 수 있는 메소드입니다. gesture라는 변수를 지정하고 tap을 감지했을 때 backgroundPressed라는 메소드를 타겟으로 지정합니다. <br>
-            - GestureRecognizer 부연설명....
             - detailView 입장에서 배경이 되는 tagView에 gesture를 add합니다.<br>
             <script src="https://gist.github.com/aa9390/606a93d2d9f4cad2bfa36ebf9d33f640.js"></script>
             - backgroundPressed 메소드를 구현합니다. isHidden값을 true로 설정하여 detailView가 보이지 않도록 하면 되겠죠? self.detailView.removeFromSuperview() 메소드를 이용하면 뷰를 아예 사라지도록 할 수도 있습니다.
