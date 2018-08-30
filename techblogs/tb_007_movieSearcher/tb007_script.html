@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>메시지 익스텐션을 이용한 Calendar-Vot 제작기</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../assets/css/blog.css" rel="stylesheet">
+    <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="../../assets/js/modernizr.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107692655-1');
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="../../index.html" style="margin-left: 30px; font-size: inherit;">홈</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../about.html">소개</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">수강생작품</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+            <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">기술블로그</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">교육블로그</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+	<div id="blue">
+	    <div class="container">
+			<div class="row">
+				<h3>코더스하이 기술블로그</h3>
+
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /blue -->
+
+
+	<!-- *****************************************************************************************************************
+	 BLOG CONTENT
+	 ***************************************************************************************************************** -->
+
+	<div class="container">
+	 	<div class="row">
+
+	 		<!-- SINGLE POST -->
+            <div class="header">
+                <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+                <!-- Blog Post 1 -->
+                <p><img class="img-responsive" src="./tb001_media/calendar-vot.png" width = 600></p>
+                <a href="single-post.html"><h2 class="htitle">메시지 익스텐션을 이용한 Calendar-Vot 제작기</h2></a>
+                <p><csmall>Posted: 2017.3.17</csmall> | <csmall2>By: 염혜리(yhr7518@gmail.com)</csmall2></p>
+            </div>
+
+
+
+
+
+    <div class="article">
+        <h3>1. iMessage Apps</h3><br><br>
+            <p class="text-md imagecenter">iOS10 이상의 메시지 앱에서는 iMessage 앱을 이용하여 메시지를 떠나지 않고 여러 작업을 수행하거나, 다양한 스티커 팩을 이용할 수 있습니다. 또한, 메시지 내에 iMessage 앱과 스티커팩을 다운로드 받을 수 있는 메시지 앱 스토어가 따로 있습니다. 사실 iMessage 앱과 스티커팩은 앱이 아니라 '메시지 익스텐션(Message Extension)입니다.<br></p>
+
+            <img src = "./tb001_media/1-1.jpg" width = 400 class="imagecenter margin-md">
+
+            <p class="text-md imagecenter">메시지 프레임워크(Messages Framework)을 이용하여 메시지 익스텐션을 만들 수 있습니다.<br>
+            메시지앱은 단독으로 개발할 수도 있고, 일반 앱과 연동하여 개발할 수도 있습니다. 대부분의 스티커팩 앱은 메시지 내에만 존재하는 단독 메시지 익스텐션입니다. '에어비앤비' 앱처럼 기존의 앱과 기능이 연동되는 메시지 익스텐션을 제공할 수도 있습니다.<br>
+            메시지 앱스토어에서 'Stick Man' 앱을 다운받으면 메시지 앱 목록에만 나타납니다. 하지만 '에어비앤비' 앱을 다운받으면 메시지 앱 목록 뿐만 아니라 일반적인 '에어비앤비' 앱이 함께 설치된 것을 볼 수 있습니다.(이 글에서는 단독(standalone) iMessage 앱을 개발한 내용 위주로 다루겠습니다.)<br></p>
+
+            <img src = "./tb001_media/1-2.jpg" width = 500 class="imagecenter">
+            <br>
+            <h3> 1-1. Message Extension 만들기<br><br></h3>
+            <b>[새로운 iMessage 앱 만들기]</b><br>
+            <p class="text-md imagecenter">새로운 앱을 만들기 위해서는 'iMessage Application' 프로젝트를 생성해야 합니다. 처음 프로젝트를 생성하면 아래와 같은 화면이 나타납니다.</p><br>
+
+            <img src = "./tb001_media/1-1-1.jpg" width = 600 class="imagecenter"><br><br>
+
+            <p class="textcenter">기본적으로 생성되는 MessagesViewController에서 앱의 사용자 인터페이스를 꾸밀 수 있습니다.</p><br>
+            <img src = "./tb001_media/1-1-2.png" width = 900 class="imagecenter"><br><br>
+
+
+            <b>[기존에 개발된 앱에 메시지 익스텐션 추가하기]</b><br>
+
+            <p class="textcenter">이미 제작한 프로젝트가 존재하고, 메시지 앱을 추가하고 싶으면, iMessage Extension 타겟을 추가하면 됩니다.</p><br>
+            <img src = "./tb001_media/1-1-3.png" width = 700 class="imagecenter"><br><br>
+            <p class="textcenter"> 기존에 개발한 내용(클래스 등)을 메시지 익스텐션에 적용하고 싶을 때, 타겟 멤버십(Target Membership)에 메시지 익스텐션을 추가하면 빌드시에 포함됩니다.</p><br>
+            <img src = "./tb001_media/1-1-4.png" width = 300 class="imagecenter"><br>
+
+
+            <p class="textcenter"><b>아이메시지앱도 시뮬레이터에서 테스트 할 수 있습니다.</b> 시뮬레이터를 작동하면 2명의 가상 인물이 메시지를 주고 받는 형식으로 테스트를 할 수 있습니다.<br></p>
+
+            <img src = "./tb001_media/1-1-5.png" width = 400 class="imagecenter"><br><br>
+
+            <h3>1-2. Message Extension을 위한 Class 알아보기</h3><br><br>
+            <p>iMessage App을 만들기 위해 사용하는 클래스들을 알아보겠습니다. 주로 사용되는 클래스는 MSMessagesAppViewController, MSConversation, MSMessage, 그리고 MSSession이 있습니다.
+            </p>
+
+            <div class="margin-md"><b>1) MSMessagesAppViewController</b><br></div>
+            <p class="text-md imagecenter">
+            이 클래스를 이용하여 앱이 화면에 어떻게 나타날지 구현할 수 있습니다. 기존 iOS 앱의 UIViewController와 같은 역할을 하는 것입니다. 메시지앱의 화면은 presentationStyle에 따라 'compact'와 'expanded'로 구분됩니다. compact는 대화창과 함께 나타나게 되고, expanded는 화면 전체에 나타납니다.<br></p>
+            <img src = "./tb001_media/1-2-1.png" width = 400 class="imagecenter"><br><br>
+
+            <b>2) MSConversation</b><br>
+            <p class="text-md imagecenter">MSConversation클래스를 통해 현재 선택된 대화에서 선택된 메시지, 대화 참여자(uuid) 등에 대한 정보를 얻을 수 있습니다.<br>예를 들어,<br></p>
+            <h4 class="text-md imagecenter" style="margin-bottom: 0px;"><span style="color:#DF01D7">func</span> didStartSending(_ message: <span style="color:#A901DB"> MSMessage</span>, conversation:<span style="color:#A901DB"> MSConversation</span>)</h4><br>
+            <p class="imagecenter text-md"> 이 메서드는 사용자가 send버튼을 누르면 호출되며, 현재 선택된 대화의 정보를 MSConversation 객체가 가지고 있습니다.<br><br><br>
+            </p>
+
+            <b>3) MSMessage</b><br>
+
+            <p class="text-md imagecenter">이 클래스를 통해 메시지 앱에서 생성된 정보를 담고 있으며 상호작용이 가능한 메시지를 생성할 수 있습니다.  MSMessage의 'url' 속성은 인코딩된 메시지 앱에서 발생한 정보가 저장되어 있습니다. 그리고 'layout' 속성은 메시지가 어떤 모양으로 보여질지 결정합니다.
+            </p><br><br><br>
+
+            <b>4) MSSession</b><br>
+            <p class="imagecenter text-md">이 클래스를 통해 메시지의 내용을 업데이트 할 수 있습니다. 예를 들어, A사용자가 투표를 생성하고 전송하면, B사용자가 그 메시지를 선택하여 투표 항목을 선택하고 업데이트된 내용을 다시 전송합니다.<br><br><br></p>
+            <img src = "./tb001_media/1-2-2.jpg" width = 400 class="imagecenter"><br>
+
+            <h3>2. Calendar-Vot 소개</h3><br>
+
+            <p class="imagecenter text-md">'Calendar-Vot'은 Messages framework을 사용하여 개발한 아이메시지 앱(프로토타입)입니다.주요 기능은 투표(날짜 및 장소)를 생성하고 공유하는 것 입니다. 또한 투표 결과를 캘린더에 바로 등록할 수 있습니다.<br><br></p>
+            <img src = "./tb001_media/2-1.jpg" width = 400 class="imagecenter"><br>
+
+            <p style="text-align: right;">
+                <a href="https://github.com/ProjectInTheClass/Calendar-Vot">GitHub 리포지터리</a><br>
+                <a href="https://projectintheclass.github.io/Calendar-Vot">소개 Web Site</a><br>
+                <a href="https://youtu.be/bgT3bJK_bNg">YouTube 프레젠테이션</a>
+            </p>
+
+            <h3>2-1. Messages View Controller:MSMessagesAppViewController</h3><br><br>
+
+
+
+
+
+            <p>Calendar -Vot은 크게 4개의 뷰로 구성되어 있습니다.</p><br><br>
+	        <p><b>1) Start View :</b> 아이메시지 앱 목록에서 Calendar-Vot을 선택했을 때 나타나는 화면입니다.새로운 투표를 생성하거나, 기존 투표 히스토리 목록을 보여주며, Compact 스타일로 보여집니다.<br><br>
+	        <b>2) Add View :</b> 새로운 투표를 등록하는 화면입니다. 투표 생성자는 투표 이름, 날짜와 장소 항목, 투표 옵션 등을 입력합니다.<br><br>
+	        <b>3) Vote View :</b> 투표를 진행하는 화면입니다. 메시지로 전송된 투표를 선택하면 나타나는 화면으로, 투표 항목을 선택하고 결과를 전송합니다.<br><br>
+	        <b>4) Result View : </b>투표 결과를 확인하고 캘린더에 추가하는 화면입니다.</p><br><br>
+            <p>그리고 상황에 따라 이 뷰들을 생성하고, 메시지 전송을 담당하는 것이 <b>MessagesViewContoller 클래스입니다.</b></p>
+            <p>아이메시지 앱을 실행하면 'willBecomeActive' 메서드가 호출되고, 이 안에서 'presentViewController'를 호출하여, 어느 뷰를 생성할지 결정합니다.</p><br>
+
+            <script src="https://gist.github.com/yhr7518/8124ceede0ce68975f91fe002794a334.js"></script><br><script src="https://gist.github.com/yhr7518/3eaea5add26517e146ca1360280bd2cc.js"></script><br>
+
+            <p><b>1) StartView 생성 : </b></p>
+            <p class="textcenter">아이메시지 앱 목록에서 앱을 선택하면 compact 모드로 보여집니다. 이 때는 StartView를 생성합니다. 뷰의 생성은 instantiateViewController를 통해 이루어집니다.</p>
+            <br><br>
+
+            <script src="https://gist.github.com/yhr7518/94fe7db10b79e9a82d07d1e0188c4d2b.js"></script><br>
+
+            <p><b>2) AddView 생성 : </b></p>
+            <p class="text-md imagecenter">startView에서 '새로운 투표 생성' 버튼을 누르면 presentation style이 expanded로 바뀝니다. 이때는 willTransition 메서드가 호출되고, 이 메서드에서 presentViewController를 호출합니다. 지금은 투표 데이터(voteData)가 존재하지 않기 때문에, 선택문 중 'else' 부분에 해당합니다. instantiateAddViewController를 통해 뷰를 생성합니다.</p><br><br>
+
+            <script src="https://gist.github.com/yhr7518/e74feee573445824f98174958deaa7b5.js"></script><br>
+
+            <p><b>3) VoteView 생성 : </b></p>
+            <p class="text-md imagecenter">Vote 클래스 'Created'라는 구조체 변수가 있습니다. 처음 Vote 객체가 생성되면 Created.isCreated = "false"로 초기화됩니다. 새로 생성된 투표를 저장할 때, 'saveData'라는 메서드가 호출되고, 이때 Created.isCreated = "true"가 됩니다. 대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 true일 때, instantiateVoteViewController가 호출되어 VoteView가 생성됩니다. 이 때 생성되는 뷰컨트롤러의 voteData 로 선택된 메시지의 투표 데이터를 넘겨줍니다.</p><br><br>
+
+            <script src="https://gist.github.com/yhr7518/e3e83c146cd03003d7ca381b31d8c836.js"></script><br>
+            <script src="https://gist.github.com/yhr7518/bc0ca3d96b761727aee2ed21c14593b7.js"></script><br>
+            <script src="https://gist.github.com/yhr7518/7f2d7d3af0ed3a131c14397adf3c6ff7.js"></script><br>
+
+            <p><b>4) ResultView 생성 : </b></p>
+            <p class="text-md imagecenter"> 투표 종료 조건이 만족되면 Created.isCreated = "finish"가 됩니다.<br>
+	        대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 finish일 때, instantiateResultViewController가 호출되어 ResultView가 생성됩니다.<br>
+            이 때 생성되는 뷰컨트롤러의 voteData로 선택된 메시지의 투표 데이터를 넘겨주며,SettingVoteResult 메서드를 호출하여 투표 결과를 계산합니다.</p><br><br>
+                    <script src="https://gist.github.com/yhr7518/bcbbd4c130a41d44e475d05fa9239a4c.js"></script><br>
+                </p>
+            <p><b>[참고 - willBecomeActive vs. willTransition]<br></b></p>
+            <p class="textcenter">앱이 비활성화 되어 있을 때, 앱의 메시지를 선택하면 willBecomeActive가 호출됩니다.반면, 하단에 앱이 실행되고 있을 때 메시지를 선택하면 willTransition이 호출됩니다.</p><br>
+
+            <img src = "./tb001_media/2-1-6.jpg" width = 400 class="imagecenter"><br>
+
+            <h3>2-2. Start View</h3><br><br>
+            <p class="textcenter"> Start View는 2개의 프로토타입 셀을 갖는 테이블뷰로 이루어져 있으며, StartViewController에 연결됩니다.</p><br><br>
+
+            <img src ="./tb001_media/2-2-1.png" width = 800 class="imagecenter"><br><br><br>
+
+            <p class="textcenter">UITableView의 'cellForRowAt'은 테이블뷰에 들어갈 내용을 결정합니다.<br> 이 테이블뷰는 2 개의 섹션으로 이루어져있고,  첫번째 섹션에는 VoteView로 연결되는 셀, 두 번째 섹션에는 투표 히스토리를 보여주는 셀이 나타납니다.</p><br>
+
+            <script src="https://gist.github.com/yhr7518/6314eb22f3642f1317df17788d40ef74.js"></script><br>
+            <p class="textcenter">AddVoteCell이 선택되면  델리게이트가 MessagesViewController 내의 메서드를 호출하여 compact 스타일이 었던 앱을 expanded 스타일로 바꿔줍니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/527f007707d0d21ae566d12da9da91fb.js"></script><br>
+            <script src="https://gist.github.com/yhr7518/6a714b6bf84e10d49395c0fe159ed155.js"></script><br><br><br>
+
+            <h3>2-3. Add View</h3><br><br>
+            <p>AddView는 4개의 섹션을 갖는 테이블뷰로 이루어져있습니다.<br></p><br>
+
+            <img src ="./tb001_media/2-3-1.png" width = 800 class="imagecenter"><br><br>
+
+            <p><b>1) Title Cell : </b></p>
+            <p class="imagecenter text-md"> 첫 번째 섹션에 대한 프로토타입 셀로, 1개의 행을 갖습니다. 텍스트필드의 아울렛을 연결하여 입력된 문자열을 임시 변수에 저장합니다.<br>최종 데이터 저장은 Done 버튼이 눌리면 'saveData' 메서드를 호출하여 입력된 모든 데이터를 검사하며 저장 vote 객체에 저장합니다.</p><br><br>
+            <p><b>2) Date Cell : </b></p>
+            <p class="imagecenter text-md"> 두 번째 섹션에서는 날짜 정보를 입력받습니다. 이번에는 커스텀 셀을 이용합니다. 'DateCell' 클래스를 만들어서 기능을 구현합니다.</p><br><br>
+
+            <script src="https://gist.github.com/yhr7518/5de3accb44a76d310e53078df9e04344.js"></script><br>
+
+            <p class="textcenter">Date Cell의 텍스트필드에 액션을 연결하고, 텍스트 필드 편집 시 'showDatePicker' 메서드가 호출됩니다. 이 메서드에서는 입력을 위해 밑에서 올라오는  input view를 커스터마이징 합니다.<br>UIDatePicker와 UIButton을 서브뷰로 만들어 날짜를 입력할 수 있도록 만듭니다.</p><br><br>
+
+            <img src ="./tb001_media/2-3-3.png" width = 1000 class="imagecenter"><br>
+            <script src="https://gist.github.com/yhr7518/06abe28f787af79e7a7a468318999476.js"></script><br>
+
+            <p class="imagecenter text-md">섹션 헤더 부분도 단순 문자열이 아닌 UIView로 구성되어 있습니다. 초기에는 입력할 수 있는 행이 3개 주어지는데, + 버튼을 누르면 행의 개수가 증가되어 새로운 항목을 입력할 수 있습니다.
+
+            <h4 class="imagecenter text-md">func tableView(_ tableView: UITableView, <span style="color:#DF01D7">viewForHeaderInSection</span> section: Int) -> <span style="color:#DF01D7">UIView?</span></h4>
+            <p class="imagecenter text-md"> 위의 메서드를 이용하여 문자열과 버튼으로 이루어진 UIView 헤더를 만듭니다.<br>addTarget을 하여 이 버튼이 눌리면 클래스 내에 addRow_date 메서드를 호출하고, 이 메서드에서 행의 개수를 증가시킵니다.</p><br>
+
+            <script src="https://gist.github.com/yhr7518/5818ea0c382ff5af0d70b60f18162a63.js"></script><br>
+
+            <p><b>3) Location Cell:</b></p>
+            <p class="imagecenter text-md">세 번째 섹션은 Location Cell로, 장소를 입력받는 텍스트 필드를 가집니다.Date Cell과 마찬가지로 헤더가 UIView로 구성되며, + 버튼을 눌러 행의 개수를 추가할 수 있습니다.
+            </p>
+            <p><b>4) Option Cell:</b></p>
+            <p class="imagecenter text-md">네 번째 섹션에서는 투표 옵션을 선택할 수 있습니다.</p>
+            <h4 class="imagecenter text-md">func tableView(_ tableView: UITableView, didSelectRowAt <span style="color:#DF01D7">indexPath</span>: IndexPath)</h4>
+	        <p class="imagecenter text-md">위 메서드를 이용해,  선택된 셀의 index path를 알 수 있습니다.<br>IndexPath.section == 3 (네 번째 섹션:option) 일 때, 셀이 선택되면 셀의 액세서리타입을 체크마크로 변경합니다.<br>
+            특히 '마감기한 설정' 셀(row == 2)이 선택되면 행의 개수를 증가시키고, row == 3 에 Date Cell을 추가하여 날짜를 선택할 수 있게 합니다.</p><br>
+
+            <script src="https://gist.github.com/yhr7518/a7fe06ffb25abe036aa33a393a33551c.js"></script><br>
+            <img src ="./tb001_media/2-3-6.gif" width = 300 class="imagecenter"><br><br>
+
+            <b>5) Done 버튼 : </b>
+            <p class="imagecenter text-md">Done 버튼에 액션을 연결하여, 버튼이 눌리면 saveData 메서드를 호출하고, 테이블뷰의 모든 행을 검사하며 Vote 객체에 정보를 입력된 저장합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/776ef3e793904442b36a4a301bca04be.js"></script><br><br>
+
+            <h3>2-4. Vote View</h3><br><br>
+            <p>Vote View에서는 선택된 메시지 세션의 투표 객체의 정보를 로드하고, 사용자에 의해 선택된 투표 항목의 투표 수를 증가하여 다시 투표 정보를 업데이트 합니다.<br>
+            테이블뷰는 3개의 세션으로 이루어져 있으며, 각각 투표 이름, 날짜항목, 장소항목을 나타냅니다.</p><br>
+
+            <img src ="./tb001_media/2-4-1.png" width = 300 class="imagecenter"><br><br>
+
+            <b>1) Vote Title Cell : </b>
+            <p class="imagecenter text-md">투표 객체를 로드할 때, 저장된 옵션 정보에 따라 '다중선택 가능' 한지 Title Cell에 표시합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/4cefecccb1f9c26068ad532b782907b8.js"></script><br>
+
+            <b>2) Vote Date Cell : </b>
+            <p class="imagecenter text-md">투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.</p><br><br><script src="https://gist.github.com/yhr7518/2b630475d78ad84271154c6a5ed5538f.js"></script><br>
+
+            <p class="imagecenter text-md">셀이 선택되면 득표수를 증가시키고, 체크마크를 표시합니다.<br>dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])</p><br>
+            <script src="https://gist.github.com/yhr7518/0bd3052b3b253d7768442bb5f8160c1e.js"></script><br><br>
+
+            <b>3) Vote Location Cell : </b>
+            <p class="imagecenter text-md">투표 객체 중 장소 정보를 추출하여 세 번째 섹션에 표시합니다. 동작 방식은 Vote Date Cell과 동일합니다.</p><br>
+            <b>4) Done 버튼 : </b>
+            <p class="imagecenter text-md">Done 버튼에 액션을 연결하여, 버튼을 누르면 saveData 메서드를 호출하고  변경된 득표수를 저장합니다.</p><br><br>
+
+
+            <h3>2-5. Result View</h3><br><br>
+            <p>Result View는 투표 종료 조건이 만족되고, 앱의 Present style이 expanded 일 때 생성됩니다.<br>투표 종료 시간은 기본적으로 투표 생성 후 24시간이고, 옵션을 통해 변경할 수도 있습니다.<br>(테스트를 위해 '강제종료' 버튼을 누르면 isCreated == "finish"가 되어 종료 조건을 만족)</p><br>
+            <script src="https://gist.github.com/yhr7518/94054a8b1fb9c1b6e81110d8e18b6379.js"></script><br><script src="https://gist.github.com/yhr7518/9a62859bb72b32f3afc2c9d1459ccda3.js"></script><br>
+
+            <p class="imagecenter text-md">MessagesViewController에서 instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/bd708412382efbd8776ced11c5d703a8.js"></script><br>
+            <p class="textcenter">또한, 저장된 값을 이용해 최종 결과 셀의 배경색을 지정합니다.</p><br><br>
+            <img src ="./tb001_media/2-5-3.png" width = 800 class="imagecenter"><br><br><br>
+
+            <b>[캘린더에 이벤트 생성하기]</b><br>
+            <p class="textcenter">Add Calendar Event 버튼을 누르면 연결된 액션에 의해 아래와 같은 메서드가 실행됩니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/ff588657930651db1c9fe1f104c72025.js"></script><br>
+            <p class="textcenter"> 먼저 캘린더 접근 권한이 있는지 확인합니다. 권한을 얻은 다음, createEvent메서드를 호출합니다.</p><br>
+            <img src ="./tb001_media/2-5-5.png" width = 800 class="imagecenter"><br><br>
+            <p class="textcenter">EKEventStore 클래스를 통해 캘린더에 접근할 수 있습니다. EKEventStore 오브젝트를 생성하여 캘린더에 일정 정보를 설정하고 저장합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/68b99167985792ea20cb8f59c8388107.js"></script><br><br>
+
+            <p class=" textcenter">시뮬레이터에서 앱을 실행하는 중에 캘린더에 들어가면 에러가 발생하므로, 앱을 종료한 후에 캘린더에 들어가면 일정이 등록된 것을 확인할 수 있습니다.</p><br>
+
+            <img src ="./tb001_media/2-5-7.png" width = 300 class="imagecenter"><br><br>
+
+            <h3>3. 메시지에 정보 담아 보내기</h3><br><br>
+            <p>Vote 객체를 통째로 메시지에 담을 수 있으면 좋겠지만, 전달해야하는 정보를 MSMessage 객체에 담아 보내야 합니다. AddView에서 투표를 생성하는 과정을 통해 메시지에 정보를 담는 방법을 보이겠습니다.<br>AddViewController에서 'Done'버튼을 누르면 델리게이트를 통해 아래와 같은 메서드가 실행됩니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/e12fd23ae5205f9e8def2bb43ce97811.js"></script><br><script src="https://gist.github.com/yhr7518/bedbd79700e959d71c7cdb0ebb8849a4.js"></script><br><br>
+            <p class="textcenter">여기서 정보를 MSMessage 객체에 담는 메서드가 composeMessage 입니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/10ae5764fa1b25f6d3f0523c7f706c35.js"></script><br><br>
+
+            <p class="textcenter text-md">queryItems에 투표 정보를 적절한 형태로 저장합니다. 메시지는 정보들을 딕셔너리 배열로 저장하며, name(Key)과 value 는 string입니다. 투표 정보는 숫자, 날짜, 문자열 등 다양한 형태의 정보를 포함하므로, 적절히 변환해야합니다.<br>
+            <script src="https://gist.github.com/yhr7518/79a49def181bbece4eb2e8ca697cf941.js"></script><br><br>
+
+            <p class="textcenter">queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/ce6b304d733ce30946ab108db25969cf.js"></script><br><br>
+
+            <p class="textcenter">메시지를 받으면,  메시지 고유의 URL을 통해 queryItems를 추출합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/745b7c34fbc07e9a6f67f3e9ee5b7063.js"></script><br><br>
+
+            <p class="textcenter">그리고 queryItems의 각 요소를 key 값으로 구분하여 투표 정보를 추출하고 저장합니다.</p><br>
+            <script src="https://gist.github.com/yhr7518/1bdb0a5a7ae0c4178ff7fff969fcf6de.js"></script><br><br>
+
+            <h4 class="textcenter"> 이것으로 메시지 익스텐션을 이용한 Clendar-Vot 제작기를 모두 마치겠습니다. 아래는 시뮬레이터에서 구동한 앱의 실행 동영상입니다.</h4><br><br>
+            <p class="textcenter"><b>Calendar-Vot 실행 화면</b><br><br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bgT3bJK_bNg" frameborder="0" allowfullscreen></iframe>
+            </p>
+
+            <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+            <div class="spacing"></div>
+
+		 		<!--<h6>SHARE:</h6>
+		 		<p class="share">
+		 			<a href="#"><i class="fa fa-twitter"></i></a>
+		 			<a href="#"><i class="fa fa-facebook"></i></a>
+		 			<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			<a href="#"><i class="fa fa-google-plus"></i></a>
+		 		</p>-->
+        </div><!--article-->
+
+			</div><! --/col-lg-8 -->
+
+          <div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = https://codershigh.github.io/WebSite/techblogs/tb_001_calendarvot/tb001_script.html;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = TechBlog_01_CalVot; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://codershigh.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	 </div><! --/container -->
+
+
+
+    <!-- *****************************************************************************************************************
+     FOOTER
+     ***************************************************************************************************************** -->
+    <div id="footerwrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h4 class="footer">회사 소개</h4>
+                    <div class="hline-w"></div>
+                    <p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+                    코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="footer">소셜 네트워크</h4>
+                    <div class="hline-w"></div>
+                    <p>
+                        <a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+                        <a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+                        <img src="../../assets/img/mailchimp.png">
+                        </a>
+                    </p>
+                </div>
+                <div class="col-xs-4">
+                    <h4 class="footer">회사 위치</h4>
+                    <div class="hline-w"></div>
+                    <p>
+                        경기도 수원시 영통구 광교로 156, 광교비즈니스센터 11층<br/>
+                    </p>
+                </div>
+            </div><!--/row -->
+            <div style="margin-top: 50px">
+                <h4 class="footer">2017 ⓒ CodersHigh</h4>
+                <p style="text-align: center;">대표이사 윤성관 | 사업자등록번호 740-81-00581</p>
+            </div>
+        </div><!--/container -->
+     </div><!--/footerwrap -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/retina-1.1.0.js"></script>
+	<script src="../../assets/js/jquery.hoverdir.js"></script>
+	<script src="../../assets/js/jquery.hoverex.min.js"></script>
+	<script src="../../assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="../../assets/js/jquery.isotope.min.js"></script>
+  	<script src="../../assets/js/custom.js"></script>
+
+
+  </body>
+</html>
