@@ -257,7 +257,6 @@
         <h4>2. 상세 구름의 애니메이션 구현하기 </h4>
             <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/8be8c06ece2bfd19248989b8dd8ee4f1.js"></script>
-                <code data-gist-id="8be8c06ece2bfd19248989b8dd8ee4f1" data-gist-line="1-19" data-gist-wrap="softwrap"></code>
                 <div class="col-lg-12">
                     <ul>
             <li>3 : 클릭한 태그 구름의 애니메이션을 잠시 멈춥니다. <br>
@@ -267,9 +266,9 @@
             <script src="https://gist.github.com/aa9390/b51865425085b297888989cee5f008b5.js"></script>
                 간단하게 duration은 지연 시간, animations는 우리가 구현할 애니메이션의 내용이라고 보시면 좋을 것 같습니다. </li><br>
                         <li>6~37 : 애니메이션의 내용입니다. </li>
-                        <li>7 : CGAffineTransform은 이미지의 크기를 변경해주는 메소드입니다. 양수일 경우 x, y에 설정한 값만큼 확대가 되며, 반대일 경우 축소됩니다.  </li>
-            <li>9 : 상세 구름의 위치를 지정합니다. <br>태그 구름의 위치에서는 frame: CGRect(x: -200, y: -200, width: 1000, height: 1000) 와 같이 x, y값을 직접 지정해 줬었죠? 이와 달리 상세 구름은 태그 구름 '주변에' 등장하도록 할 것이기 때문에 클릭된 태그 구름(btn)의 x, y값이 기준이 되어야 합니다. btn.frame.origin.x, btn.frame.origin.y으로 x, y좌표 값을 구한 후 적절한 값을 지정해 줍니다. </li>
-                        <li>33~36 : 상세 구름이 등장을 마쳤을 때 보여질 애니메이션입니다. 이미지의 크기를 원래대로 되돌리고 ((scaleX: 1, y: 1)), timerStart()로 구름들이 다시 움직이게 함을 보실 수 있습니다.</li>
+                        <li>7 : CGAffineTransform 은 이미지의 크기를 변경해주는 메소드입니다. 양수일 경우 x, y에 설정한 값만큼 확대되며, 반대일 경우 축소됩니다.  </li>
+            <li>9 : 상세 구름의 위치를 지정합니다. <br>태그 구름의 위치에서는 frame: CGRect(x: -200, y: -200, width: 1000, height: 1000) 와 같이 x, y 값을 직접 지정해 줬었죠? 이와 달리 상세 구름은 태그 구름 '주변에' 등장하도록 할 것이기 때문에 클릭 된 태그 구름(btn)의 x, y 값이 기준이 되어야 합니다. btn.frame.origin.x, btn.frame.origin.y로 x, y 좌표 값을 구한 후 적절한 값을 지정해 줍니다. </li>
+                        <li>33~36 : 상세 구름이 등장을 마쳤을 때 보일 애니메이션입니다. 이미지의 크기를 원래대로 되돌리고 ((scaleX: 1, y: 1)), timerStart()로 구름이 다시 움직이게 함을 보실 수 있습니다.</li>
                         </ul>
                 </div>
                 <br> <br>
@@ -277,30 +276,30 @@
 
         <h4>3. 배경 클릭 시 상세 구름이 사라지도록 구현하기 </h4>
         <div class="col-lg-12">
-            - 터치 이벤트를 받을 때에는 주로 UIButton을 사용합니다. 그 외 확대 혹은 축소하거나, 길게 눌렀을 때의 이벤트는 어떻게 받을까요?<br>
+            - 터치 이벤트를 받을 때는 주로 UIButton을 사용합니다. 그 외 확대 혹은 축소하거나, 길게 눌렀을 때의 이벤트는 어떻게 받을까요?<br>
             - UIGestureRecognizer를 상속받아 사용하면 다양한 사용자의 제스처를 인식할 수 있습니다. <a href = "https://developer.apple.com/documentation/uikit/uigesturerecognizer">참고 링크</a><br>
-            - 다른 오브젝트와 마찬가지로 오브젝트 라이브러리에서 찾아보실 수 있으며, 동작에 대한 간단한 설명을 드리겠습니다. 
+            - 다른 오브젝트와 마찬가지로 오브젝트 라이브러리에서 찾아보실 수 있으며, 동작에 대한 간단한 설명을 하겠습니다. 
             <img src="tb008_media/image/gesture.png" width="350px" class="imagecenter"><br>
             <ul>
                 <li>Tap gesture recognizer : 화면을 두드리는(tap) 동작입니다. tap의 개수를 조절할 수 있습니다.   </li>
                 <li>Swipe gesture recognizer : 상하좌우로 미는 동작입니다.  </li>
-                <li>Pan gesture recognizer : 드래그(drag)동작입니다. </li>
-                <li>Pinch gesture recognizer : 두 손가락을 이용하여 확대 또는 축소를 하는 동작입니다. </li>
+                <li>Pan gesture recognizer : 드래그(drag) 동작입니다. </li>
+                <li>Pinch gesture recognizer : 두 손가락을 이용하여 확대 또는 축소하는 동작입니다. </li>
                 <li>Rotation gesture recognizer : 두 손가락을 이용하여 회전하는 동작입니다. </li>
                 <li>Screen gesture recognizer : 화면의 가장자리에서 드래그(panning)하는 동작입니다.</li>
                 <li>LongPress gesture recognizer : 길게 누르는 동작입니다.  </li>
             </ul><br>
             <blockquote> To make that association you must call the UIView method addGestureRecognizer(_:).</blockquote>
-            - 설명에 따르면, GestureRecognizer는 UIView에만 연결할 수 있고, addGestureRecognizer 메서드를 호출하여 사용한다고 되어 있습니다. 또한 하나의 UIView에 두 개 이상의 GestureRecognizer를 연결할 수 있습니다. <br>
+            - 설명에 따르면, GestureRecognizer는 UIView에만 연결할 수 있고, addGestureRecognizer 메서드를 호출하여 사용한다고 되어 있습니다. 또한, 하나의 UIView에 두 개 이상의 GestureRecognizer를 연결할 수 있습니다. <br>
             - 여기서는 코드 내에서 GestureRecognizer를 구현하도록 하겠습니다. 
 <!--            - 또한 GestureRecognizer도 IBOutlet과 IBAction을 선언할 수 있습니다. -->
             <script src="https://gist.github.com/aa9390/49c421bc07b543abcd01365dedb35b1f.js"></script>
-            - UITapGestureRecognizer는 말 그대로 tap했을 때의 액션을 지정할 수 있는 메소드입니다. gesture라는 변수를 지정하고 tap을 감지했을 때 backgroundPressed라는 메소드를 타겟으로 지정합니다. <br>
-            - detailView 입장에서 배경이 되는 tagView에 gesture를 add합니다.<br>
+            - UITapGestureRecognizer 는 말 그대로 tap 했을 때의 액션을 지정할 수 있는 메소드입니다. gesture라는 변수를 지정하고 tap을 감지했을 때 backgroundPressed라는 메소드를 타겟으로 지정합니다. <br>
+            - detailView 입장에서 배경이 되는 tagView에 gesture를 add 합니다.<br>
             <script src="https://gist.github.com/aa9390/606a93d2d9f4cad2bfa36ebf9d33f640.js"></script>
             - backgroundPressed 메소드를 구현합니다. isHidden값을 true로 설정하여 detailView가 보이지 않도록 하면 되겠죠? self.detailView.removeFromSuperview() 메소드를 이용하면 뷰를 아예 사라지도록 할 수도 있습니다.
             <br>
-            - 실행 결과는 다음과 같습니다. DBSphereView타입의 tagView를 클릭하면, DBSphereView타입의 detailView가 추가됩니다. <br>
+            - 실행 결과는 다음과 같습니다. DBSphereView 타입의 tagView를 클릭하면, DBSphereView타입의 detailView가 추가됩니다. <br>
             <img src="tb008_media/image/tagNdetailViewDiagram.png" width="600px" class="imagecenter">
             </div>
 
@@ -322,10 +321,10 @@
             <script src="https://gist.github.com/aa9390/449d12e7ccf9a42321748d6e181be5be.js"></script> 를 썼던 것 기억하시나요? 이제 detailPressed를 정의해 보도록 하겠습니다. <br>
             <script src="https://gist.github.com/aa9390/3b8c3030bfa6dee2fdbe3dedf25142ff.js"></script><div class="col-lg-12">
             <ul>
-            <li>2 : 우리가 이동할 DetailViewController는 Main.storyboard 안에 있습니다. Main.storyboard의 값을 알기 위해서 UIStoryboard 타입의 변수를 선언한 후 name의 값을 "Main"으로 지정해 줍니다. <br> 만약에 DetailViewController가 Detail.storyboard안에 있다면 name의 값은 "Detail"이 되겠죠?</li>
-            <li>3 : 어느 스토리보드에 있는지 알았으니, 이제 뷰를 찾기만 하면 되겠습니다. 앞에서 선언한 storyboard의 ID를 instantiateViewController메소드의 인자로 넣어주고, 이를 nextView라는 변수로 선언합니다. nextView는 이제 DetailViewController와 같다고 생각해 주시면 되겠습니다. </li>
+            <li>2 : 우리가 이동할 DetailViewController 는 Main.storyboard 안에 있습니다. Main.storyboard의 값을 알기 위해서 UIStoryboard 타입의 변수를 선언한 후 name의 값을 "Main"으로 지정해 줍니다. <br>만약에 DetailViewController가 Detail.storyboard 안에 있다면 name의 값은 "Detail"이 되겠죠?</li>
+            <li>3 : 어느 스토리보드에 있는지 알았으니, 이제 뷰를 찾기만 하면 되겠습니다. 앞에서 선언한 storyboard의 ID를 instantiateViewController메소드의 인자로 넣어주고, 이를 nextView라는 변수로 선언합니다. nextView는 이제 DetailViewController 와 같다고 생각해 주시면 되겠습니다. </li>
             <li>4 : 상세 뷰에 있는 레이블의 값을 선택한 상세 구름의 타이틀로 넣어주는 작업입니다. </li>
-            <li>6 : 마지막으로 뷰를 전환하는 작업입니다. ViewController는 현재 네비게이션 뷰 컨트롤러에 종속되어 있기 때문에 nextView를 push해 줍니다.</li>
+            <li>6 : 마지막으로 뷰를 전환하는 작업입니다. ViewController는 현재 내비게이션 뷰 컨트롤러에 종속되어 있기 때문에 nextView를 push해 줍니다.</li>
             </ul>
             <br> <br>
         </div>
@@ -334,7 +333,7 @@
 
         <h4>3. 넘겨받은 값을 화면에 뿌려주기 </h4>
             <script src="https://gist.github.com/aa9390/95e19e9e209450300e932abd0cbf0152.js"></script><div class="col-lg-12">
-        -  위에서 상세 구름의 타이틀을 labelText값으로 받았으니, detailLabel의 text값을 labelText으로 대입해 줍니다.
+        - 위에서 상세 구름의 타이틀을 labelText값으로 받았으니, detailLabel의 text 값을 labelText으로 대입해 줍니다.
             <br> <br><br>
         </div>
             <br>
@@ -343,7 +342,7 @@
             <br>
 
             <h3>마치며</h3><br>
-        <p class="imagecenter text-md">지금까지 태그 클라우드 구현 과정을 살펴 보았습니다. 앞서 말씀드린 것처럼 커스텀의 방향에 따라 다양한 효과를 낼 수 있을 것이라고 생각합니다. 본 포스트에 대한 질문 혹은 제안 사항이 있으실 경우, 연락 주시면 감사하겠습니다. </p><br><br><br>
+        <p class="imagecenter text-md">지금까지 태그 클라우드 구현 과정을 살펴보았습니다. 앞서 말씀드린 것처럼 커스텀의 방향에 따라 다양한 효과를 낼 수 있을 것으로 생각합니다. 본 포스트에 대한 질문 혹은 제안 사항이 있으실 경우, 연락 주시기 바랍니다. </p><br><br><br>
 
 
         <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
