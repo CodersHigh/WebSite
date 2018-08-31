@@ -198,10 +198,11 @@
         <div class="col-lg-12">
             <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.12.png" width="800px" class="imagecenter"><br>
         <img src="tb008_media/screenshot/스크린샷 2018-08-10 오후 6.21.17.png" width="800px" class="imagecenter"><br>
-            - 적절한 이미지를 불러와 Assets폴더에 넣습니다.
+            - 적절한 이미지를 불러와 Assets폴더에 넣습니다.<br>
             </div>
 
             <h4>7. 태그 클라우드에 들어갈 배열 설정 후 배열의 크기만큼 tagView에 설정하기 </h4>
+            <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/a13610e54f385043f5ef3528bd2167a8.js"></script>
 <!--
             - 위에서 setCloudTags는 UIView 타입인 array를 인자로 받는다고 설명드렸습니다.
@@ -256,6 +257,7 @@
         <h4>2. 상세 구름의 애니메이션 구현하기 </h4>
             <div class="col-lg-12">
             <script src="https://gist.github.com/aa9390/8be8c06ece2bfd19248989b8dd8ee4f1.js"></script>
+                <code data-gist-id="8be8c06ece2bfd19248989b8dd8ee4f1" data-gist-line="1-19" data-gist-wrap="softwrap"></code>
                 <div class="col-lg-12">
                     <ul>
             <li>3 : 클릭한 태그 구름의 애니메이션을 잠시 멈춥니다. <br>
@@ -297,12 +299,13 @@
             - detailView 입장에서 배경이 되는 tagView에 gesture를 add합니다.<br>
             <script src="https://gist.github.com/aa9390/606a93d2d9f4cad2bfa36ebf9d33f640.js"></script>
             - backgroundPressed 메소드를 구현합니다. isHidden값을 true로 설정하여 detailView가 보이지 않도록 하면 되겠죠? self.detailView.removeFromSuperview() 메소드를 이용하면 뷰를 아예 사라지도록 할 수도 있습니다.
-            <br><br><br>
+            <br>
             - 실행 결과는 다음과 같습니다. DBSphereView타입의 tagView를 클릭하면, DBSphereView타입의 detailView가 추가됩니다. <br>
             <img src="tb008_media/image/tagNdetailViewDiagram.png" width="600px" class="imagecenter">
             </div>
 
-            <h3>메인 화면과 상세 정보 화면간 이동 구현하기</h3>
+            <h3>메인 화면과 상세 정보 화면간 이동 구현하기</h3><br>
+         
             <h4>1. 레이아웃 구성하기 </h4>
             <div class="col-lg-12">
             <img src="tb008_media/image/detailView.png" width="800px" class="imagecenter"><br>
