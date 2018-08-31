@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>메시지 익스텐션을 이용한 Calendar-Vot 제작기</title>
+    <title>네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../../assets/css/bootstrap.css" rel="stylesheet">
@@ -66,6 +66,7 @@
       </div>
     </div>
 
+
 	<!-- *****************************************************************************************************************
 	 BLUE WRAP
 	 ***************************************************************************************************************** -->
@@ -73,7 +74,6 @@
 	    <div class="container">
 			<div class="row">
 				<h3>코더스하이 기술블로그</h3>
-
 			</div><!-- /row -->
 	    </div> <!-- /container -->
 	</div><!-- /blue -->
@@ -85,291 +85,246 @@
 
 	<div class="container">
 	 	<div class="row">
-
 	 		<!-- SINGLE POST -->
-            <div class="header">
-                <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
-                <!-- Blog Post 1 -->
-                <p><img class="img-responsive" src="./tb001_media/calendar-vot.png" width = 600></p>
-                <a href="single-post.html"><h2 class="htitle">메시지 익스텐션을 이용한 Calendar-Vot 제작기</h2></a>
-                <p><csmall>Posted: 2017.3.17</csmall> | <csmall2>By: 염혜리(yhr7518@gmail.com)</csmall2></p>
-            </div>
+	 		<div class="header">
+        <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+
+        <!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+
+		 		<a href="single-post.html"><h2 class="htitle">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기</h2></a>
+		 		<p><csmall>Posted: August 20, 2018.</csmall> | <csmall2>By: Sujin Kim (gfsusan@naver.com)</csmall2></p><br>
+        <img class="img-responsive imagecenter" src="tb007_media/0-0.png" alt="Application Example Image" style='width: 100%; object-fit: contain'/>
+      </div>
 
 
 
+      <div class="article">
+        <!-- POST 시작  -->
+
+        <h3>시작하기에 앞서</h3><br><br>
+          <p class="imagecenter text-md">이번 기술 블로그에서는 <a href="https://developers.naver.com/main/">네이버 개발자 센터</a>에서 제공하는 <strong>네이버 오픈 API</strong>를 사용하는 방법에 대해서 알려드리고자 합니다. 오픈 API란, API 중에서 플랫폼의 기능 또는 콘텐츠를 외부에서 웹 프로토콜(HTTP)로 호출해 사용할 수 있게 개방(open)한 API를 의미합니다. 현재 네이버 오픈 API로 활용할 수 있는 기술에는 네아로(네이버 아이디로 로그인), 지도, 검색이 있으며, Clova의 음성 인식 기술과 음성 합성 기술, 얼굴 인식 기술, Papago의 기계 번역 기술 등이 있습니다.</p><br><br>
 
 
-    <div class="article">
-        <h3>1. iMessage Apps</h3><br><br>
-            <p class="text-md imagecenter">iOS10 이상의 메시지 앱에서는 iMessage 앱을 이용하여 메시지를 떠나지 않고 여러 작업을 수행하거나, 다양한 스티커 팩을 이용할 수 있습니다. 또한, 메시지 내에 iMessage 앱과 스티커팩을 다운로드 받을 수 있는 메시지 앱 스토어가 따로 있습니다. 사실 iMessage 앱과 스티커팩은 앱이 아니라 '메시지 익스텐션(Message Extension)입니다.<br></p>
+        <h3>예제 애플리케이션 소개</h3><br><br>
+          <p class="imagecenter text-md">이번 포스트에서는 <strong>영화 검색 애플리케이션</strong>을 만들 것입니다. 사용자로부터 영화 검색어를 입력받은 후, 네이버 오픈 API 호출을 통해 검색어와 일치하는 영화 정보를 불러와 테이블뷰에 표시합니다. 그리고 원하는 영화를 터치하면 각 영화의 세부 정보를 보여줍니다.</p>
+          <br>
 
-            <img src = "./tb001_media/1-1.jpg" width = 400 class="imagecenter margin-md">
+          <img class="img-responsive imagecenter" src="tb007_media/0-1.png" alt="Application Example Image" style='width: 70%; object-fit: contain'/>
 
-            <p class="text-md imagecenter">메시지 프레임워크(Messages Framework)을 이용하여 메시지 익스텐션을 만들 수 있습니다.<br>
-            메시지앱은 단독으로 개발할 수도 있고, 일반 앱과 연동하여 개발할 수도 있습니다. 대부분의 스티커팩 앱은 메시지 내에만 존재하는 단독 메시지 익스텐션입니다. '에어비앤비' 앱처럼 기존의 앱과 기능이 연동되는 메시지 익스텐션을 제공할 수도 있습니다.<br>
-            메시지 앱스토어에서 'Stick Man' 앱을 다운받으면 메시지 앱 목록에만 나타납니다. 하지만 '에어비앤비' 앱을 다운받으면 메시지 앱 목록 뿐만 아니라 일반적인 '에어비앤비' 앱이 함께 설치된 것을 볼 수 있습니다.(이 글에서는 단독(standalone) iMessage 앱을 개발한 내용 위주로 다루겠습니다.)<br></p>
+          <p class="imagecenter text-md">구현하고자 하는 핵심 기능은 <strong>네이버의 검색 API</strong>를 사용한 영화 검색 기능입니다. 영화 포스터 이미지 다운로드는 <strong>비동기 작업</strong>을 사용해 다운로드 작업을 뒤로 미루고, 포스터 이미지가 모두 다운로드 될 때까지 기다릴 필요 없이 바로 검색 결과를 확인할 수 있도록 테이블 뷰를 구성합니다. 마지막으로, <strong>HTTP Request</strong>를 사용하여 영화의 세부 정보를 보여주는 사파리 뷰를 구성합니다.</p>
+          <br>
+          <br>
 
-            <img src = "./tb001_media/1-2.jpg" width = 500 class="imagecenter">
-            <br>
-            <h3> 1-1. Message Extension 만들기<br><br></h3>
-            <b>[새로운 iMessage 앱 만들기]</b><br>
-            <p class="text-md imagecenter">새로운 앱을 만들기 위해서는 'iMessage Application' 프로젝트를 생성해야 합니다. 처음 프로젝트를 생성하면 아래와 같은 화면이 나타납니다.</p><br>
+        <h2>시작하기</h2>
+        <h3 id="step0">STEP 0. 스타터 프로젝트 다운로드<br><br></h3>
+          <p class="imagecenter text-md">시작하기에 앞서 <a href="https://github.com/gfsusan/NaverAPIExample">GitHub</a>에서 스타터 프로젝트를 다운로드하여 각 단계를 따라가시면 됩니다.
+          프로젝트를 처음부터 만드시고 싶으신 분들은 아래 사진과 같이 UI를 구성하시면 됩니다. 프로젝트를 만드실 때에는 <strong>애플리케이션 이름</strong>과 <strong>애플리케이션 Bundle ID</strong>를 기억해 두었다가 오픈API 신청 시 기입하시기 바랍니다.</p>
+          <br>
 
-            <img src = "./tb001_media/1-1-1.jpg" width = 600 class="imagecenter"><br><br>
-
-            <p class="textcenter">기본적으로 생성되는 MessagesViewController에서 앱의 사용자 인터페이스를 꾸밀 수 있습니다.</p><br>
-            <img src = "./tb001_media/1-1-2.png" width = 900 class="imagecenter"><br><br>
+          <img class="img-responsive imagecenter" src="tb007_media/0-2.png" alt="Application UI" style='width: 70%; object-fit: contain'/>
+          <br><br>
 
 
-            <b>[기존에 개발된 앱에 메시지 익스텐션 추가하기]</b><br>
-
-            <p class="textcenter">이미 제작한 프로젝트가 존재하고, 메시지 앱을 추가하고 싶으면, iMessage Extension 타겟을 추가하면 됩니다.</p><br>
-            <img src = "./tb001_media/1-1-3.png" width = 700 class="imagecenter"><br><br>
-            <p class="textcenter"> 기존에 개발한 내용(클래스 등)을 메시지 익스텐션에 적용하고 싶을 때, 타겟 멤버십(Target Membership)에 메시지 익스텐션을 추가하면 빌드시에 포함됩니다.</p><br>
-            <img src = "./tb001_media/1-1-4.png" width = 300 class="imagecenter"><br>
+        <h3>STEP 1. 네이버 오픈 API</h3><br><br>
 
 
-            <p class="textcenter"><b>아이메시지앱도 시뮬레이터에서 테스트 할 수 있습니다.</b> 시뮬레이터를 작동하면 2명의 가상 인물이 메시지를 주고 받는 형식으로 테스트를 할 수 있습니다.<br></p>
+          <h4>[애플리케이션 등록]</h4><br>
 
-            <img src = "./tb001_media/1-1-5.png" width = 400 class="imagecenter"><br><br>
+            <p class="imagecenter text-md">네이버 오픈 API를 사용하기 위해서는 네이버로부터 <strong>클라이언트 아이디</strong>와 <strong>클라이언트 시크릿</strong>을 발급받아야 합니다. 이는 네이버 오픈API 사용자가 인증된 사용자인지 확인하는 고유한 아이디와 비밀번호로, 네이버 개발자센터의 <strong>애플리케이션 등록</strong> 메뉴에서 <a href="https://developers.naver.com/apps/#/register">애플리케이션을 등록</a>하면 발급되는 값입니다.</p>
 
-            <h3>1-2. Message Extension을 위한 Class 알아보기</h3><br><br>
-            <p>iMessage App을 만들기 위해 사용하는 클래스들을 알아보겠습니다. 주로 사용되는 클래스는 MSMessagesAppViewController, MSConversation, MSMessage, 그리고 MSSession이 있습니다.
-            </p>
+            <img class="img-responsive imagecenter" src="tb007_media/1-1.png" alt="Issue ClientID and ClientSecret" style='width: 70%; object-fit: contain'/>
 
-            <div class="margin-md"><b>1) MSMessagesAppViewController</b><br></div>
-            <p class="text-md imagecenter">
-            이 클래스를 이용하여 앱이 화면에 어떻게 나타날지 구현할 수 있습니다. 기존 iOS 앱의 UIViewController와 같은 역할을 하는 것입니다. 메시지앱의 화면은 presentationStyle에 따라 'compact'와 'expanded'로 구분됩니다. compact는 대화창과 함께 나타나게 되고, expanded는 화면 전체에 나타납니다.<br></p>
-            <img src = "./tb001_media/1-2-1.png" width = 400 class="imagecenter"><br><br>
-
-            <b>2) MSConversation</b><br>
-            <p class="text-md imagecenter">MSConversation클래스를 통해 현재 선택된 대화에서 선택된 메시지, 대화 참여자(uuid) 등에 대한 정보를 얻을 수 있습니다.<br>예를 들어,<br></p>
-            <h4 class="text-md imagecenter" style="margin-bottom: 0px;"><span style="color:#DF01D7">func</span> didStartSending(_ message: <span style="color:#A901DB"> MSMessage</span>, conversation:<span style="color:#A901DB"> MSConversation</span>)</h4><br>
-            <p class="imagecenter text-md"> 이 메서드는 사용자가 send버튼을 누르면 호출되며, 현재 선택된 대화의 정보를 MSConversation 객체가 가지고 있습니다.<br><br><br>
-            </p>
-
-            <b>3) MSMessage</b><br>
-
-            <p class="text-md imagecenter">이 클래스를 통해 메시지 앱에서 생성된 정보를 담고 있으며 상호작용이 가능한 메시지를 생성할 수 있습니다.  MSMessage의 'url' 속성은 인코딩된 메시지 앱에서 발생한 정보가 저장되어 있습니다. 그리고 'layout' 속성은 메시지가 어떤 모양으로 보여질지 결정합니다.
-            </p><br><br><br>
-
-            <b>4) MSSession</b><br>
-            <p class="imagecenter text-md">이 클래스를 통해 메시지의 내용을 업데이트 할 수 있습니다. 예를 들어, A사용자가 투표를 생성하고 전송하면, B사용자가 그 메시지를 선택하여 투표 항목을 선택하고 업데이트된 내용을 다시 전송합니다.<br><br><br></p>
-            <img src = "./tb001_media/1-2-2.jpg" width = 400 class="imagecenter"><br>
-
-            <h3>2. Calendar-Vot 소개</h3><br>
-
-            <p class="imagecenter text-md">'Calendar-Vot'은 Messages framework을 사용하여 개발한 아이메시지 앱(프로토타입)입니다.주요 기능은 투표(날짜 및 장소)를 생성하고 공유하는 것 입니다. 또한 투표 결과를 캘린더에 바로 등록할 수 있습니다.<br><br></p>
-            <img src = "./tb001_media/2-1.jpg" width = 400 class="imagecenter"><br>
-
-            <p style="text-align: right;">
-                <a href="https://github.com/ProjectInTheClass/Calendar-Vot">GitHub 리포지터리</a><br>
-                <a href="https://projectintheclass.github.io/Calendar-Vot">소개 Web Site</a><br>
-                <a href="https://youtu.be/bgT3bJK_bNg">YouTube 프레젠테이션</a>
-            </p>
-
-            <h3>2-1. Messages View Controller:MSMessagesAppViewController</h3><br><br>
-
-
-
-
-
-            <p>Calendar -Vot은 크게 4개의 뷰로 구성되어 있습니다.</p><br><br>
-	        <p><b>1) Start View :</b> 아이메시지 앱 목록에서 Calendar-Vot을 선택했을 때 나타나는 화면입니다.새로운 투표를 생성하거나, 기존 투표 히스토리 목록을 보여주며, Compact 스타일로 보여집니다.<br><br>
-	        <b>2) Add View :</b> 새로운 투표를 등록하는 화면입니다. 투표 생성자는 투표 이름, 날짜와 장소 항목, 투표 옵션 등을 입력합니다.<br><br>
-	        <b>3) Vote View :</b> 투표를 진행하는 화면입니다. 메시지로 전송된 투표를 선택하면 나타나는 화면으로, 투표 항목을 선택하고 결과를 전송합니다.<br><br>
-	        <b>4) Result View : </b>투표 결과를 확인하고 캘린더에 추가하는 화면입니다.</p><br><br>
-            <p>그리고 상황에 따라 이 뷰들을 생성하고, 메시지 전송을 담당하는 것이 <b>MessagesViewContoller 클래스입니다.</b></p>
-            <p>아이메시지 앱을 실행하면 'willBecomeActive' 메서드가 호출되고, 이 안에서 'presentViewController'를 호출하여, 어느 뷰를 생성할지 결정합니다.</p><br>
-
-            <script src="https://gist.github.com/yhr7518/8124ceede0ce68975f91fe002794a334.js"></script><br><script src="https://gist.github.com/yhr7518/3eaea5add26517e146ca1360280bd2cc.js"></script><br>
-
-            <p><b>1) StartView 생성 : </b></p>
-            <p class="textcenter">아이메시지 앱 목록에서 앱을 선택하면 compact 모드로 보여집니다. 이 때는 StartView를 생성합니다. 뷰의 생성은 instantiateViewController를 통해 이루어집니다.</p>
+            <p class="imagecenter text-md">위와 같이 <strong>애플리케이션 이름</strong>을 프로젝트명과 동일하게 작성한 다음, <strong>사용 API</strong>를 <strong>검색</strong>으로 설정합니다. 마지막으로 <strong>비로그인 오픈API 서비스 환경</strong>에서 <strong>iOS 설정</strong>을 추가한 다음, Xcode 프로젝트 생성 시 <strong>애플리케이션의 Bundle ID</strong>를 정확하게 입력합니다.</p>
             <br><br>
 
-            <script src="https://gist.github.com/yhr7518/94fe7db10b79e9a82d07d1e0188c4d2b.js"></script><br>
 
-            <p><b>2) AddView 생성 : </b></p>
-            <p class="text-md imagecenter">startView에서 '새로운 투표 생성' 버튼을 누르면 presentation style이 expanded로 바뀝니다. 이때는 willTransition 메서드가 호출되고, 이 메서드에서 presentViewController를 호출합니다. 지금은 투표 데이터(voteData)가 존재하지 않기 때문에, 선택문 중 'else' 부분에 해당합니다. instantiateAddViewController를 통해 뷰를 생성합니다.</p><br><br>
+          <h4>[클라이언트 아이디와 클라이언트 시크릿]</h4><br>
 
-            <script src="https://gist.github.com/yhr7518/e74feee573445824f98174958deaa7b5.js"></script><br>
+            <p class="imagecenter text-md">애플리케이션 등록을 마치고 나면, <a href="https://developers.naver.com/apps/#/list">내 애플리케이션</a> 항목 아래 등록한 애플리케이션의 목록이 나타납니다. 자신의 애플리케이션명을 클릭하면, 애플리케이션 정보가 나타나며, 자신의 <strong>클라이언트 아이디</strong>와 <strong>클라이언트 시크릿</strong>을 확인할 수 있습니다.</p>
 
-            <p><b>3) VoteView 생성 : </b></p>
-            <p class="text-md imagecenter">Vote 클래스 'Created'라는 구조체 변수가 있습니다. 처음 Vote 객체가 생성되면 Created.isCreated = "false"로 초기화됩니다. 새로 생성된 투표를 저장할 때, 'saveData'라는 메서드가 호출되고, 이때 Created.isCreated = "true"가 됩니다. 대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 true일 때, instantiateVoteViewController가 호출되어 VoteView가 생성됩니다. 이 때 생성되는 뷰컨트롤러의 voteData 로 선택된 메시지의 투표 데이터를 넘겨줍니다.</p><br><br>
+            <img class="img-responsive imagecenter" src="tb007_media/1-2.png" alt="Check CliendID and ClientSecret" style='width: 100%; object-fit: contain'/>
+            <br><br>
 
-            <script src="https://gist.github.com/yhr7518/e3e83c146cd03003d7ca381b31d8c836.js"></script><br>
-            <script src="https://gist.github.com/yhr7518/bc0ca3d96b761727aee2ed21c14593b7.js"></script><br>
-            <script src="https://gist.github.com/yhr7518/7f2d7d3af0ed3a131c14397adf3c6ff7.js"></script><br>
+          <h4>[코드]</h4><br>
 
-            <p><b>4) ResultView 생성 : </b></p>
-            <p class="text-md imagecenter"> 투표 종료 조건이 만족되면 Created.isCreated = "finish"가 됩니다.<br>
-	        대화에서 선택된 메시지의 투표 데이터가 있고, isCreated가 finish일 때, instantiateResultViewController가 호출되어 ResultView가 생성됩니다.<br>
-            이 때 생성되는 뷰컨트롤러의 voteData로 선택된 메시지의 투표 데이터를 넘겨주며,SettingVoteResult 메서드를 호출하여 투표 결과를 계산합니다.</p><br><br>
-                    <script src="https://gist.github.com/yhr7518/bcbbd4c130a41d44e475d05fa9239a4c.js"></script><br>
-                </p>
-            <p><b>[참고 - willBecomeActive vs. willTransition]<br></b></p>
-            <p class="textcenter">앱이 비활성화 되어 있을 때, 앱의 메시지를 선택하면 willBecomeActive가 호출됩니다.반면, 하단에 앱이 실행되고 있을 때 메시지를 선택하면 willTransition이 호출됩니다.</p><br>
+            <p><strong>먼저, <a href="https://github.com/gfsusan/NaverAPIExample/blob/master/NaverAPIExample/NaverAPIExample/Model.swift">Model.swift</a>를 만들어 <code>Movie</code> 클래스를 만들어 줍니다.</strong></p>
+            <br>
 
-            <img src = "./tb001_media/2-1-6.jpg" width = 400 class="imagecenter"><br>
+              <script src="https://gist.github.com/gfsusan/23256d5cd28ad3501aff12702ed5e6df.js"></script>
+              <br>
 
-            <h3>2-2. Start View</h3><br><br>
-            <p class="textcenter"> Start View는 2개의 프로토타입 셀을 갖는 테이블뷰로 이루어져 있으며, StartViewController에 연결됩니다.</p><br><br>
+              <p class="imagecenter text-md">모든 속성은 <code>Movie</code> 객체를 생성한 후에 값을 입력해줄 것이기 때문에, Optional로 처리합니다.</p>
+              <br><br>
 
-            <img src ="./tb001_media/2-2-1.png" width = 800 class="imagecenter"><br><br><br>
+            <p><strong>두 번째는 <a href="https://github.com/gfsusan/NaverAPIExample/blob/master/NaverAPIExample/NaverAPIExample/SearchViewController.swift">SearchViewController.swift</a>입니다.</strong></p>
+            <br>
 
-            <p class="textcenter">UITableView의 'cellForRowAt'은 테이블뷰에 들어갈 내용을 결정합니다.<br> 이 테이블뷰는 2 개의 섹션으로 이루어져있고,  첫번째 섹션에는 VoteView로 연결되는 셀, 두 번째 섹션에는 투표 히스토리를 보여주는 셀이 나타납니다.</p><br>
+              <script src="https://gist.github.com/gfsusan/51d4d20d9598192c06051fd5389c2449.js"></script>
+              <br>
 
-            <script src="https://gist.github.com/yhr7518/6314eb22f3642f1317df17788d40ef74.js"></script><br>
-            <p class="textcenter">AddVoteCell이 선택되면  델리게이트가 MessagesViewController 내의 메서드를 호출하여 compact 스타일이 었던 앱을 expanded 스타일로 바꿔줍니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/527f007707d0d21ae566d12da9da91fb.js"></script><br>
-            <script src="https://gist.github.com/yhr7518/6a714b6bf84e10d49395c0fe159ed155.js"></script><br><br><br>
+              <p class="imagecenter text-md">먼저 <code>SearchVC</code>에서 <code>MoviesTableVC</code>로 향하는 <code>segue</code>를 연결해두고, '검색' 버튼을 눌렀을 때 <code>segue</code>를 실행합니다. <code>prepareForSegue()</code> 메소드에서는 <code>MoviesTableVC</code>의 <code>queryText</code> 필드에 텍스트 필드의 내용을 저장해줌으로써 다음 뷰로 검색어를 넘겨줍니다.  </p>
 
-            <h3>2-3. Add View</h3><br><br>
-            <p>AddView는 4개의 섹션을 갖는 테이블뷰로 이루어져있습니다.<br></p><br>
+              <p class="imagecenter text-md">검색어를 입력 받고 결과를 표시하는 방법으로 뷰에 Search Bar를 만들어 두고  <code>UISearchController</code>를 이용하는 방법이 있습니다. 이 방법을 사용하면 한 개의 뷰에서 검색어를 입력하고 그 결과를 받아올 수 있습니다. 하지만 이번 블로그에서는 네이버 API를 사용하여 HTML 요청을 전송하는 방법에 초점을 맞추기 위해서 검색어를 입력하는 부분과 검색 결과를 출력하는 부분을 분리하였습니다. <code>UISearchController</code>에 대한 정보를 더 얻고 싶으시다면 <a href="https://developer.apple.com/documentation/uikit/uisearchcontroller">Apple Developer</a> 페이지를 참고하시기 바랍니다.</p>
+              <br><br>
 
-            <img src ="./tb001_media/2-3-1.png" width = 800 class="imagecenter"><br><br>
+            <p><strong>세 번째는 <a href="https://github.com/gfsusan/NaverAPIExample/blob/master/NaverAPIExample/NaverAPIExample/MoviesTableViewController.swift">MoviesTableViewController.swift</a>입니다.</strong></p>
+            <br>
 
-            <p><b>1) Title Cell : </b></p>
-            <p class="imagecenter text-md"> 첫 번째 섹션에 대한 프로토타입 셀로, 1개의 행을 갖습니다. 텍스트필드의 아울렛을 연결하여 입력된 문자열을 임시 변수에 저장합니다.<br>최종 데이터 저장은 Done 버튼이 눌리면 'saveData' 메서드를 호출하여 입력된 모든 데이터를 검사하며 저장 vote 객체에 저장합니다.</p><br><br>
-            <p><b>2) Date Cell : </b></p>
-            <p class="imagecenter text-md"> 두 번째 섹션에서는 날짜 정보를 입력받습니다. 이번에는 커스텀 셀을 이용합니다. 'DateCell' 클래스를 만들어서 기능을 구현합니다.</p><br><br>
+              <script src="https://gist.github.com/gfsusan/ab2e5ede16cf9b43878c9e39cc36c015.js"></script>
+              <br>
 
-            <script src="https://gist.github.com/yhr7518/5de3accb44a76d310e53078df9e04344.js"></script><br>
-
-            <p class="textcenter">Date Cell의 텍스트필드에 액션을 연결하고, 텍스트 필드 편집 시 'showDatePicker' 메서드가 호출됩니다. 이 메서드에서는 입력을 위해 밑에서 올라오는  input view를 커스터마이징 합니다.<br>UIDatePicker와 UIButton을 서브뷰로 만들어 날짜를 입력할 수 있도록 만듭니다.</p><br><br>
-
-            <img src ="./tb001_media/2-3-3.png" width = 1000 class="imagecenter"><br>
-            <script src="https://gist.github.com/yhr7518/06abe28f787af79e7a7a468318999476.js"></script><br>
-
-            <p class="imagecenter text-md">섹션 헤더 부분도 단순 문자열이 아닌 UIView로 구성되어 있습니다. 초기에는 입력할 수 있는 행이 3개 주어지는데, + 버튼을 누르면 행의 개수가 증가되어 새로운 항목을 입력할 수 있습니다.
-
-            <h4 class="imagecenter text-md">func tableView(_ tableView: UITableView, <span style="color:#DF01D7">viewForHeaderInSection</span> section: Int) -> <span style="color:#DF01D7">UIView?</span></h4>
-            <p class="imagecenter text-md"> 위의 메서드를 이용하여 문자열과 버튼으로 이루어진 UIView 헤더를 만듭니다.<br>addTarget을 하여 이 버튼이 눌리면 클래스 내에 addRow_date 메서드를 호출하고, 이 메서드에서 행의 개수를 증가시킵니다.</p><br>
-
-            <script src="https://gist.github.com/yhr7518/5818ea0c382ff5af0d70b60f18162a63.js"></script><br>
-
-            <p><b>3) Location Cell:</b></p>
-            <p class="imagecenter text-md">세 번째 섹션은 Location Cell로, 장소를 입력받는 텍스트 필드를 가집니다.Date Cell과 마찬가지로 헤더가 UIView로 구성되며, + 버튼을 눌러 행의 개수를 추가할 수 있습니다.
-            </p>
-            <p><b>4) Option Cell:</b></p>
-            <p class="imagecenter text-md">네 번째 섹션에서는 투표 옵션을 선택할 수 있습니다.</p>
-            <h4 class="imagecenter text-md">func tableView(_ tableView: UITableView, didSelectRowAt <span style="color:#DF01D7">indexPath</span>: IndexPath)</h4>
-	        <p class="imagecenter text-md">위 메서드를 이용해,  선택된 셀의 index path를 알 수 있습니다.<br>IndexPath.section == 3 (네 번째 섹션:option) 일 때, 셀이 선택되면 셀의 액세서리타입을 체크마크로 변경합니다.<br>
-            특히 '마감기한 설정' 셀(row == 2)이 선택되면 행의 개수를 증가시키고, row == 3 에 Date Cell을 추가하여 날짜를 선택할 수 있게 합니다.</p><br>
-
-            <script src="https://gist.github.com/yhr7518/a7fe06ffb25abe036aa33a393a33551c.js"></script><br>
-            <img src ="./tb001_media/2-3-6.gif" width = 300 class="imagecenter"><br><br>
-
-            <b>5) Done 버튼 : </b>
-            <p class="imagecenter text-md">Done 버튼에 액션을 연결하여, 버튼이 눌리면 saveData 메서드를 호출하고, 테이블뷰의 모든 행을 검사하며 Vote 객체에 정보를 입력된 저장합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/776ef3e793904442b36a4a301bca04be.js"></script><br><br>
-
-            <h3>2-4. Vote View</h3><br><br>
-            <p>Vote View에서는 선택된 메시지 세션의 투표 객체의 정보를 로드하고, 사용자에 의해 선택된 투표 항목의 투표 수를 증가하여 다시 투표 정보를 업데이트 합니다.<br>
-            테이블뷰는 3개의 세션으로 이루어져 있으며, 각각 투표 이름, 날짜항목, 장소항목을 나타냅니다.</p><br>
-
-            <img src ="./tb001_media/2-4-1.png" width = 300 class="imagecenter"><br><br>
-
-            <b>1) Vote Title Cell : </b>
-            <p class="imagecenter text-md">투표 객체를 로드할 때, 저장된 옵션 정보에 따라 '다중선택 가능' 한지 Title Cell에 표시합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/4cefecccb1f9c26068ad532b782907b8.js"></script><br>
-
-            <b>2) Vote Date Cell : </b>
-            <p class="imagecenter text-md">투표 객체 중 날짜 정보를 추출(Date 변수를 String으로 변환)하여 두 번째 섹션에 표시합니다. 옵션 정보 중 '선택지 추가 허용'이 true인 경우에는 헤더 영역에 + 버튼이 나타납니다.<br>이 버튼이 눌리면 Add View에서 한 것과 동일한 방식으로 행의 개수가 추가됩니다.<br>새로 추가된 행은 VoteDateCell이 아닌 NewDateCell이며, Add View 의 Date Cell처럼 텍스트 필드를 누르면  input view에 date picker가 나타납니다.</p><br><br><script src="https://gist.github.com/yhr7518/2b630475d78ad84271154c6a5ed5538f.js"></script><br>
-
-            <p class="imagecenter text-md">셀이 선택되면 득표수를 증가시키고, 체크마크를 표시합니다.<br>dateData는 날짜와 득표수를 나타내는 딕셔너리의 배열입니다. (var dateData : [(Date, Int)] = [])</p><br>
-            <script src="https://gist.github.com/yhr7518/0bd3052b3b253d7768442bb5f8160c1e.js"></script><br><br>
-
-            <b>3) Vote Location Cell : </b>
-            <p class="imagecenter text-md">투표 객체 중 장소 정보를 추출하여 세 번째 섹션에 표시합니다. 동작 방식은 Vote Date Cell과 동일합니다.</p><br>
-            <b>4) Done 버튼 : </b>
-            <p class="imagecenter text-md">Done 버튼에 액션을 연결하여, 버튼을 누르면 saveData 메서드를 호출하고  변경된 득표수를 저장합니다.</p><br><br>
+              <p class="imagecenter text-md">우선, 위와  같이 <code>MoviesTableViewController</code>에게 <code>XMLParserDelegate</code> 프로토콜을 적용합니다. <br>
+              다음으로 네이버 개발자 센터에서 발급받은 <strong>클라이언트 아이디</strong>와 <strong>클라이언트 시크릿</strong>을 변수에 저장합니다.<br>
+              <code>strXMLData</code>에는 https://openapi.naver.com 에 요청한 쿼리에 대한 응답인 xml 데이터가 저장됩니다. </p>
+              <br><br>
 
 
-            <h3>2-5. Result View</h3><br><br>
-            <p>Result View는 투표 종료 조건이 만족되고, 앱의 Present style이 expanded 일 때 생성됩니다.<br>투표 종료 시간은 기본적으로 투표 생성 후 24시간이고, 옵션을 통해 변경할 수도 있습니다.<br>(테스트를 위해 '강제종료' 버튼을 누르면 isCreated == "finish"가 되어 종료 조건을 만족)</p><br>
-            <script src="https://gist.github.com/yhr7518/94054a8b1fb9c1b6e81110d8e18b6379.js"></script><br><script src="https://gist.github.com/yhr7518/9a62859bb72b32f3afc2c9d1459ccda3.js"></script><br>
+          <h4>[XML 데이터의 예]</h4><br>
 
-            <p class="imagecenter text-md">MessagesViewController에서 instantiateResultViewController(with vote:Vote) 메서드는 ResultViewController의 SettingVoteResult() 를 호출합니다.<br>SettingVoteResult() 에서는 투표 결과를 비교하며 득표수가 최대인 날짜와 장소를 저장합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/bd708412382efbd8776ced11c5d703a8.js"></script><br>
-            <p class="textcenter">또한, 저장된 값을 이용해 최종 결과 셀의 배경색을 지정합니다.</p><br><br>
-            <img src ="./tb001_media/2-5-3.png" width = 800 class="imagecenter"><br><br><br>
+            <script src="https://gist.github.com/gfsusan/dc7d54bad8540efc303a80786e7bc70c.js"></script>
+            <br>
 
-            <b>[캘린더에 이벤트 생성하기]</b><br>
-            <p class="textcenter">Add Calendar Event 버튼을 누르면 연결된 액션에 의해 아래와 같은 메서드가 실행됩니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/ff588657930651db1c9fe1f104c72025.js"></script><br>
-            <p class="textcenter"> 먼저 캘린더 접근 권한이 있는지 확인합니다. 권한을 얻은 다음, createEvent메서드를 호출합니다.</p><br>
-            <img src ="./tb001_media/2-5-5.png" width = 800 class="imagecenter"><br><br>
-            <p class="textcenter">EKEventStore 클래스를 통해 캘린더에 접근할 수 있습니다. EKEventStore 오브젝트를 생성하여 캘린더에 일정 정보를 설정하고 저장합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/68b99167985792ea20cb8f59c8388107.js"></script><br><br>
+            <p class="imagecenter text-md"><strong>xml 데이터</strong>는 위와 같은 형식으로 이루어져 있습니다. 우리가 주의 깊게 볼 부분은 <code>&lt;item&gt;</code> 태그로 둘러싸여 있는 부분입니다. title, link, subtitle, pubDate, director, actor, userRating 등에 해당하는 내용을 <strong>element</strong>라고 부르며, 각 element는 <code>&lt;title&gt;리틀 포레스트&lt;/title&gt;</code>과 같이 <strong>태그</strong>로 둘러싸여 있습니다. 이제 이 데이터를 Parse(분석, 또는 쪼갬)하여 <code>Movie</code>객체를 생성할 것입니다. <code>currentTag</code>는 현재 tag를 알려주는 변수이고, <code>currentElement</code>은 현재 element에 해당하는 데이터를 저장하게 될 변수입니다. <code>item</code>은 <code>Movie</code>의 객체로, 한 개의 <code>item</code>을 Parsing에 성공하면 하나의 객체가 완성되는 것입니다.</p>
+            <br><br>
 
-            <p class=" textcenter">시뮬레이터에서 앱을 실행하는 중에 캘린더에 들어가면 에러가 발생하므로, 앱을 종료한 후에 캘린더에 들어가면 일정이 등록된 것을 확인할 수 있습니다.</p><br>
 
-            <img src ="./tb001_media/2-5-7.png" width = 300 class="imagecenter"><br><br>
+          <h4>[XML 파서의 종류]</h4><br>
 
-            <h3>3. 메시지에 정보 담아 보내기</h3><br><br>
-            <p>Vote 객체를 통째로 메시지에 담을 수 있으면 좋겠지만, 전달해야하는 정보를 MSMessage 객체에 담아 보내야 합니다. AddView에서 투표를 생성하는 과정을 통해 메시지에 정보를 담는 방법을 보이겠습니다.<br>AddViewController에서 'Done'버튼을 누르면 델리게이트를 통해 아래와 같은 메서드가 실행됩니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/e12fd23ae5205f9e8def2bb43ce97811.js"></script><br><script src="https://gist.github.com/yhr7518/bedbd79700e959d71c7cdb0ebb8849a4.js"></script><br><br>
-            <p class="textcenter">여기서 정보를 MSMessage 객체에 담는 메서드가 composeMessage 입니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/10ae5764fa1b25f6d3f0523c7f706c35.js"></script><br><br>
+            <p>XML 문서 내의 데이터를 읽어내는 XML 파서는 SAX(XML용 간편 API) 타입과 DOM(문서객체모델) 타입이 있습니다.</p><br>
 
-            <p class="textcenter text-md">queryItems에 투표 정보를 적절한 형태로 저장합니다. 메시지는 정보들을 딕셔너리 배열로 저장하며, name(Key)과 value 는 string입니다. 투표 정보는 숫자, 날짜, 문자열 등 다양한 형태의 정보를 포함하므로, 적절히 변환해야합니다.<br>
-            <script src="https://gist.github.com/yhr7518/79a49def181bbece4eb2e8ca697cf941.js"></script><br><br>
+            <h5 class="imagecenter text-md" >1. SAX(Simple API for XML)</h5>
 
-            <p class="textcenter">queryItems 배열에 정보를 저장하고, 다시 메시지를 받았을 때 정보를 추출하기 위해 모든 정보들의 key값을 기억하고 있어야 합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/ce6b304d733ce30946ab108db25969cf.js"></script><br><br>
+              <p class="imagecenter text-md">SAX 타입의 파서는 이름 그대로 간단한 API를 제공하며, 순차적으로 XML 문서의 내용을 파싱합니다. iOS SDK에서 기본적으로 제공되는 클래스인 <code>XMLParser</code>가 SAX 타입의 파서입니다.</p><br>
 
-            <p class="textcenter">메시지를 받으면,  메시지 고유의 URL을 통해 queryItems를 추출합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/745b7c34fbc07e9a6f67f3e9ee5b7063.js"></script><br><br>
+            <h5 class="imagecenter text-md">2. DOM(Document Object Model)</h5>
 
-            <p class="textcenter">그리고 queryItems의 각 요소를 key 값으로 구분하여 투표 정보를 추출하고 저장합니다.</p><br>
-            <script src="https://gist.github.com/yhr7518/1bdb0a5a7ae0c4178ff7fff969fcf6de.js"></script><br><br>
+              <p class="imagecenter text-md">DOM 타입의 파서는 문서 전체를 읽어 메모리에 트리 구조로 올려 놓고 원하는 요소(Element)에 바로 접근할 수 있도록 만든 파서입니다. DOM 타입의 파서는 iPhone SDK의 파운데이션 프레임워크에 없습니다. 따라서 DOM 타입의 파서를 사용하기 위해서는 조금 더 하위 수준의 libxml2를 이용하거나, 외부 라이브러리를 이용해야 합니다.</p><br>
 
-            <h4 class="textcenter"> 이것으로 메시지 익스텐션을 이용한 Clendar-Vot 제작기를 모두 마치겠습니다. 아래는 시뮬레이터에서 구동한 앱의 실행 동영상입니다.</h4><br><br>
-            <p class="textcenter"><b>Calendar-Vot 실행 화면</b><br><br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/bgT3bJK_bNg" frameborder="0" allowfullscreen></iframe>
-            </p>
+            <p>SAX 타입은 XML 데이터를 순차적으로 읽어나가면서 원하는 요소를 걸러내도록 되어 있기 때문에 거추장스럽고 시간은 많이 걸리지만 사용하는 메모리 양은 적은 편이며, DOM 타입은 그 반대로 빠르지만 메모리를 많이 사용합니다. 이번 애플리케이션에서는 적은 메모리를 사용할 수 있도록 SAX 타입의 <code>XMLParser</code>를 사용하도록 하겠습니다.</p>
+            <br><br>
 
-            <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
-            <div class="spacing"></div>
 
-		 		<!--<h6>SHARE:</h6>
+          <h4>[코드]</h4><br>
+
+            <p><strong>MoviesTableViewController의 <code>searchMovies()</code> 메소드</strong></p>
+
+              <script src="https://gist.github.com/gfsusan/af898e9653f7486e30dfc90fb7cc9e6a.js"></script>
+              <br>
+
+              <p class="imagecenter text-md"><strong>10-12</strong>: 요청 텍스트를 담아 <code>url</code>을 생성합니다. Line 10의 코드를 작성하는 이유는 <code>query</code> 문자열 안에 url에 허용되지 않는 문자가 들어있을 때 인코딩을 통해서 HTTP 요청을 보낼 때 문제가 생기지 않도록 하는 것입니다. <br />
+                <strong>14-17</strong>: <code>URLRequest</code>를 생성합니다. URL 요청에는 앞서 발급받은 클라이언트 아이디와 클라이언트 시크릿을 함께 전송합니다. <br />
+                <strong>19-30</strong>: URL Connection <code>Task</code>를 생성합니다. 에러가 있거나, 데이터가 비어있으면 리턴합니다. 그리고 <code>item</code>을 초기화합니다. <br />
+                <strong>42-49</strong>: <code>parse()</code> 메소드를 호출하여 xml parsing을 시작합니다. <code>parse()</code>메소드를 호출하게 되면, <code>parserDidStartElement()</code>, <code>parserFoundCharacters()</code>, <code>parserDidEndElement()</code> 메소드가 차례로 호출됩니다.  </p>
+              <br><br>
+
+
+            <p><strong>MoviesTableViewController의 <code>parserDidStartElement()</code> 메소드</strong></p>
+              <script src="https://gist.github.com/gfsusan/2f8ec094177b78f5e0358eb9f4b12b9f.js"></script>
+              <br>
+
+              <p class="imagecenter text-md">이 메소드는 parser가 시작태그를 발견했을 때 호출됩니다. 태그는 <code>elementName</code>에 매개변수로 주어집니다. 태그가 title, link, image, pubDate, director, actor, 또는 userRating과 일치하면 <code>currentElement</code>를 초기화하고, 첫 번째 태그인 title과 일치하면 새로운 Movie 객체를 생성합니다.</p>
+              <br><br>
+
+
+            <p><strong>MoviesTableViewController의 <code>parserFoundCharacers()</code> 메소드</strong></p>
+              <script src="https://gist.github.com/gfsusan/892098e22153e0e7c86ed7b2d3c66cfa.js"></script>
+              <br>
+
+              <p class="imagecenter text-md">이 메소드는 <code>parserDidStartElement()</code> 다음으로 호출됩니다. 시작 태그를 인식한 후 데이터를 읽었음을 의미하는데, 간단하게 <code>currentElement</code>에 <code>string</code>의 내용을 덧붙여줍니다.</p>
+              <br><br>
+
+
+            <p><strong>MoviesTableViewController의 <code>parserDidEndElement()</code> 메소드</strong></p>
+              <script src="https://gist.github.com/gfsusan/3d7952f74ceb5bc03acea55b0496af43.js"></script>
+              <br>
+
+              <p class="imagecenter text-md">이 메소드는 <code>parserFoundCharaters()</code> 다음으로 호출되며, 끝 태그를 인식했다는 의미입니다. 이 메소드에서는 현재 태그에 해당하는 Movie의 속성을 지정해줍니다. 예를 들어, </title>을 발견했으면 <code>item?.title = currentElement</code>을 해줍니다. Line 3에서 <em>replacingOccurrences</em>를 해주는 것은 검색API에서 검색어와 일치하는 문자열을 볼드체 태그로 감싸서 응답을 주기 때문에 태그를 제거해 주는 작업입니다. <br />
+                <strong>10-14</strong>와 <strong>15-19</strong> 같은 경우에는 다수의 인물을 구분하기 위해 "|" 문자를 구별자로 사용하는데, 문자열의 마지막에 불필요한 "|"를 삭제해주는 작업입니다. <br />
+                <strong>20-25</strong>에는 <code>item</code>을 <code>movies</code> 배열에 추가해주고, 테이블뷰를 새로고침합니다. <code>DispatchQueue.main.async</code>에 대해서는 <strong>STEP 2</strong> 에서 다룹니다.</p>
+              <br><br>
+
+
+        <h3>STEP 2. 비동기 작업</h3><br><br>
+
+
+          <p class="imagecenter text-md">다음은 <strong>비동기 작업</strong>에 대해서 알아봅시다.
+            쇼핑 애플리케이션 사용 경험을 떠올려 보면, 테이블 뷰에 콘텐츠가 로딩된 후, 상품 이미지가 하나 둘 씩 나타나는 것을 보신 적이 있을 것입니다. 이는 웹으로부터 사진을 다운로드하느라 뷰가 늦게 로딩되는 것을 방지하기 위해서, 기본 이미지를 먼저 띄워 놓고, 백그라운드에서 이미지 다운로드가 완료되는 즉시 이미지를 뷰에 나타내는 것입니다. 따라서 비동기 작업 큐(Queue)에 사진 다운로드와 같은 작업을 넣어 두고, 뷰(UI)가 먼저 로딩된 후에 차례로 다운로드 작업을 완료해 나가는 것입니다. <br />
+            이번 단계에서는 <code>MoviesTableVC</code>가 로딩된 이후에 차례로 영화의 포스터 이미지를 다운로드 받아 테이블 뷰에 표시하는 기능을 구현할 것입니다. 우선 <a href="https://github.com/gfsusan/NaverAPIExample/blob/master/NaverAPIExample/NaverAPIExample/Model.swift">Model.swift</a>의 <code>getPosterImage()</code> 메소드를 구현하고, <a href="https://github.com/gfsusan/NaverAPIExample/blob/master/NaverAPIExample/NaverAPIExample/MoviesTableViewController.swift">MoviesTableViewController.swift</a>의 <code>tableView(cellForRowAt)</code> 메소드를 살펴봅시다.</p>
+          <br><br>
+
+
+          <p><strong>Model.swift의 <code>getPosterImage()</code> 메소드</strong></p>
+
+            <script src="https://gist.github.com/gfsusan/cc7358ca33b18650a502794f17ad1f26.js"></script>
+            <br>
+
+            <p class="imagecenter text-md">여기서는 <code>movie</code> 객체의 <code>imageURL</code>이 존재하는지 먼저 확인한 다음, <code>imageURL</code>을 가지고 <code>URL</code> 객체를 생성하여 이를 가지고 이미지 데이터를 불러옵니다. 이미지 데이터를 사용해서 <code>UIImage</code>를 생성하고, <code>self.image</code>에 저장합니다.  </p>
+            <br><br>
+
+
+          <p><strong>MoviesTableViewController.swift의 <code>cellForRowAt()</code> 메소드</strong></p>
+
+            <script src="https://gist.github.com/gfsusan/3ac5e5b6afd9b07eb67289e6bf799196.js"></script>
+            <br>
+
+            <p class="imagecenter text-md"><strong>1-2</strong>: 포스터 이미지를 다운로드하기 위한 비동기 작업 큐를 생성합니다. 큐의 레이블은 "posterImage"로 하겠습니다.
+              <strong>12-13</strong>: <code>image</code>가 이미 존재하면 즉시 이미지를 <code>cell</code>에 나타냅니다. <br />
+              <strong>14-17</strong>: 이미지가 다운로드 되어 있지 않으면, 디폴트 이미지를 <code>cell</code>에 먼저 나타내고 <code>posterImageQueue</code>에 이미지 다운로드 작업을 넣습니다.
+              <strong>18-20</strong>: 이미지 다운로드에 실패했을 경우를 대비하여 <code>thumbImage</code>에 guard를 두어 해당 블럭을 빠져나가도록 합니다.
+              <strong>21-23</strong>: 이미지 다운로드 작업이 완료되면 포스터 이미지를 <code>cell</code>에 나타내는 작업을 <code>main</code> 큐에 넣습니다. 뷰(View) 업데이트 작업은 <code>main</code> 큐에서 하도록 <a href="https://developer.apple.com/documentation/code_diagnostics/main_thread_checker">Apple Developer</a>에 명시되어 있는데, 뷰 업데이트 작업을 메인 큐가 아닌 곳에서 했을 때 뷰가 업데이트 되지 않는 현상, 데이터 결함, 앱 충돌 등의 현상이 발생할 수 있기 때문입니다.</p>
+            <br><br>
+
+
+        <h3>STEP 3. SFSafariViewController 사용</h3><br><br>
+
+
+          <p class="imagecenter text-md">이제 셀을 터치했을 때 영화의 세부정보를 볼 수 있는 사파리 뷰를 구성할 차례입니다.</p>
+          <br>
+
+          <p><strong>MoviesTableViewController.swift</strong></p>
+          <br>
+
+            <script src="https://gist.github.com/gfsusan/a19a3c670da5f1840ac3beab5c596fbb.js"></script>
+            <br>
+
+            <p class="imagecenter text-md"><strong>3</strong>: 해당 인덱스의 <code>movie</code> 객체의 urlString에 해당하는 주소를 가지고 <code>URL</code> 객체를 생성합니다. <br>
+              <strong>4</strong>: <code>SFSafariViewController</code> 객체를 생성합니다. 사파리 뷰에서 영화 내용을 띄울 수 있도록 앞서 만든 <code>URL</code> 객체를 생성자에 기입합니다. <br>
+              <strong>5</strong>: 생성한 사파리 뷰를 Modal로 띄워 줍니다.</p>
+            <br><br>
+
+
+        <h3>마치며</h3><br><br>
+        <p class="imagecenter text-md">지금까지 영화 검색 기능을 제공하는 <strong>네이버 오픈API</strong>에 대해서 살펴보았습니다. 네이버 오픈 API 서버에 Html 요청을 보내어 XML 데이터를 받아오고, 데이터를 분석하는 방법을 배웠습니다.
+          <strong>비동기작업</strong>의 개념을 애플리케이션에 적용하여 사용자 경험을 개선하는 방법도 배웠고, <strong>SFSafariViewController</strong>에 대해서도 간단하게 살펴보았습니다.<br><br>
+
+          네이버 오픈 API는 영화 검색 기능 외에도 네아로(네이버 아이디로 로그인), 지도, 검색 기능 등이 있으며, Clova의 음성 인식 기술과 음성 합성 기술, 얼굴 인식 기술, Papago의 기계 번역 기술 등 다양한 기능 또한 제공합니다. 이번 포스트를 바탕으로 여러분의 애플리케이션을 더욱 더 빛나게 만들어 보시기 바랍니다! <br><br>
+
+          프로젝트 전체 코드는 <a href="https://github.com/gfsusan/NaverAPIExample">GitHub</a>의 NaverAPIExample를 통해 확인하실 수 있습니다. 본 포스트에 대한 제안 사항이나 궁금하신 점이 있다면 포스트 상단의 연락처로 언제든 연락 주시면 감사하겠습니다. :)
+        </p><br><br>
+
+
+        <p>iPhoneSDK 튜토리얼 2, 2012년 4월, 윤성관 고준일) 참조</p><br><br>
+
+
+        <p align="center"><csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall></p>
+		 		<div class="spacing"></div>
+
+        <!--<h6>SHARE:</h6>
 		 		<p class="share">
 		 			<a href="#"><i class="fa fa-twitter"></i></a>
 		 			<a href="#"><i class="fa fa-facebook"></i></a>
 		 			<a href="#"><i class="fa fa-tumblr"></i></a>
 		 			<a href="#"><i class="fa fa-google-plus"></i></a>
 		 		</p>-->
-        </div><!--article-->
+			</div><!-- /col-lg-12 -->
+        </div><!-- /row -->
+	 </div><!-- /container -->
+     </div>
 
-			</div><! --/col-lg-8 -->
-
-          <div id="disqus_thread"></div>
-<script>
-
-
-var disqus_config = function () {
-this.page.url = https://codershigh.github.io/WebSite/techblogs/tb_001_calendarvot/tb001_script.html;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = TechBlog_01_CalVot; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://codershigh.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-	 </div><! --/container -->
-
-
-
-    <!-- *****************************************************************************************************************
-     FOOTER
-     ***************************************************************************************************************** -->
-    <div id="footerwrap">
+   <!-- *****************************************************************************************************************
+ 	 FOOTER
+ 	 ***************************************************************************************************************** -->
+   <div id="footerwrap">
         <div class="container">
             <div class="row">
                 <div class="col-xs-4">
