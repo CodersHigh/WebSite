@@ -1024,8 +1024,13 @@ a:focus {
 	#cwrap .kor-img {
 		margin-top: -5px;
 	}
-}
 
+	
+}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+	width: 100% !important;
+	height: auto !important;
+}
 .hline-blue {
 
 	border-bottom: 2.5px solid #00b3fe;
@@ -1049,3 +1054,5 @@ a:focus {
 .badge-container {
 	padding: 0 0 0 0 !important;
 }
+
+
