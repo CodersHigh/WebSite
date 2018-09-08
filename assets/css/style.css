@@ -1024,13 +1024,12 @@ a:focus {
 	#cwrap .kor-img {
 		margin-top: -5px;
 	}
+}
 
-	
+.fb-page {
+	margin: 10px auto;
 }
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-	width: 100% !important;
-	height: auto !important;
-}
+
 .hline-blue {
 
 	border-bottom: 2.5px solid #00b3fe;
