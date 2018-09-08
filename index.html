@@ -221,16 +221,14 @@
 
 						<h3 style="margin-top: -70px; "> 페이스북 페이지 </h3>
 						<div class="hline-w" style="border-color:white;margin-left: 30%; margin-right: 30%;"></div>
-            <div class="row" style="">
+            <div class="row facebook-container">
               <!-- <div class="fb-page col-md-6 col-xs-12" data-href="https://www.facebook.com/codershighteam" data-tabs="timeline" data-width="500" data-height="439" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codershighteam" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codershighteam">코더스하이 CodersHigh</a></blockquote></div> -->
-              <div class="fb-page col-md-6 col-xs-12" data-href="https://www.facebook.com/codershighteam" data-tabs="timeline" data-width="500" data-height="439" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codershighteam" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codershighteam">코더스하이 CodersHigh</a></blockquote></div>
 							<!-- <div class="fb-group col-md-6 col-xs-12" data-href="https://www.facebook.com/groups/2041128336175840/" data-width="500" data-show-social-context="true" data-show-metadata="true"></div> -->
-							<div class="fb-group col-md-6 col-xs-12" data-href="https://www.facebook.com/groups/2041128336175840/" data-width="500" data-show-social-context="true" data-show-metadata="true"></div>
            </div>
 			</div>
 		</div>
 	</div>
-
+	
 
 
 
@@ -369,6 +367,20 @@
 		setPortfolio();
 	});
 })(jQuery);
+</script>
+<script>
+	var filter = "win16|win32|win64|mac|macintel";
+	if (navigator.platform ) {
+		if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+			console.log("mobile")
+			$('.facebook-container').append("<div class='fb-page col-md-6 col-xs-12' data-href='https://www.facebook.com/codershighteam' data-tabs='timeline' data-width='250' data-height='439' data-small-header='false' data-adapt-container-width='true' data-hide-cover='false' data-show-facepile='true'><blockquote cite='https://www.facebook.com/codershighteam' class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/codershighteam'>코더스하이 CodersHigh</a></blockquote></div><div class='fb-group col-md-6 col-xs-12' data-href='https://www.facebook.com/groups/2041128336175840/' data-width='250' data-show-social-context='true' data-show-metadata='true'></div>")				
+		} else {
+			console.log("desktop")
+			$('.facebook-container').append("<div class='fb-page col-md-6 col-xs-12' data-href='https://www.facebook.com/codershighteam' data-tabs='timeline' data-width='500' data-height='439' data-small-header='false' data-adapt-container-width='true' data-hide-cover='false' data-show-facepile='true'><blockquote cite='https://www.facebook.com/codershighteam' class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/codershighteam'>코더스하이 CodersHigh</a></blockquote></div><div class='fb-group col-md-6 col-xs-12' data-href='https://www.facebook.com/groups/2041128336175840/' data-width='500' data-show-social-context='true' data-show-metadata='true'></div>")
+		}
+	}
+
+	
 </script>
   </body>
 </html>
