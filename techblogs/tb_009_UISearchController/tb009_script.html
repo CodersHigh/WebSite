@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+  <title>UISearchController로 검색 개발하기</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../../assets/css/bootstrap.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../../assets/css/blog.css" rel="stylesheet">
+  <link href="../../assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script src="../../assets/js/modernizr.js"></script>
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-107692655-1');
+  </script>
+</head>
+
+<body>
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand abc" href="index.html"><img src="../../assets/img/codershighLogo.png" class="img-responsive"
+            style="padding-top: 0px;">
+      </div>
+      <div class="navbar-collapse collapse navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="../../index.html" style="margin-left: 30px; font-size: inherit;">홈</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../about.html">소개</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../portfolio.html">수강생작품</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+          <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="../../techblog_list.html">기술블로그</a></li>
+          <li><a style="margin-left: 30px; font-size: inherit;" href="../../edublog_list.html">교육블로그</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+  <!-- *****************************************************************************************************************
+	 BLUE WRAP
+	 ***************************************************************************************************************** -->
+  <div id="blue">
+    <div class="container">
+      <div class="row">
+        <h3>코더스하이 기술블로그</h3>
+      </div><!-- /row -->
+    </div> <!-- /container -->
+  </div><!-- /blue -->
+
+
+  <!-- *****************************************************************************************************************
+	 BLOG CONTENT
+	 ***************************************************************************************************************** -->
+
+  <div class="container">
+    <div class="row">
+      <!-- SINGLE POST -->
+      <div class="header">
+        <p align="center">
+          <csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall>
+        </p>
+
+        <!--<p><img class="img-responsive" src="../../assets/img/post01.jpg"></p>-->
+
+        <a href="single-post.html">
+          <h2 class="htitle">UISearchController로 검색 개발하기</h2>
+        </a>
+        <p>
+          <csmall>Posted: September 13, 2018.</csmall> | <csmall2>By: Quino0627 (dongwook627@gmail.com)</csmall2>
+        </p><br>
+        <img class="img-responsive imagecenter" src="tb009_media/pic001.png" alt="Application Example Image" style='width: 100%; object-fit: contain' />
+      </div>
+
+
+
+      <div class="article">
+        <!-- POST 시작  -->
+
+        <h3>시작하기에 앞서</h3><br><br>
+        <p class="imagecenter text-md">이번 기술 블로그에서는 <code>UISearchController</code>를 이용하여 Search Bar 를 구현하는 방법에대해서
+          알려드리고자 합니다.
+          Search Bar는 여러 데이터들의 모음(collection)에서 검색을 하기 위해 사용되는 인터페이스입니다. 테이블이 있는 대부분의 어플리케이션에는 검색 기능이 있는 것을 보실 수 있습니다.
+          Search Bar를 어플리케이션에 구현할 때의 가이드라인은 <a href="https://developer.apple.com/design/human-interface-guidelines/ios/bars/search-bars/">Search
+            Bars - Human Interface Guidelines</a>에서 확인할 수 있습니다.
+        </p><br><br>
+
+        <h3>IOS 8 이전 - UISearchDisplayController</h3><br><br>
+        <p class="imagecenter text-md">
+          아래 다이어그램은 현재는 deprecated된 UISearchDisplayController class와 관련된 delegate를 정리한 것입니다. <br>
+          <img class="img-responsive imagecenter" src="https://useyourloaf.com/assets/images/2015/UISearchDisplayController.png"
+            alt="Application Example Image" style='width: 60%; object-fit: contain' /> <br>
+          IOS 8 이전에는 search bar를 다룸에 있어서 UISearchDisplayController class와 delegate를 이용하였습니다. 유저가 검색을 활성화하면
+          search display controller가 기존의 내용 위에 search result view를 보여주는 방식으로 동작하였고, 현재 이 방법은 더이상 추천되지 않습니다.
+        </p>
+
+        <h2>IOS 8이후</h2>
+        <h3>새로 등장한 UISearchController<br><br></h3>
+        <p class="imagecenter text-md">
+          2014년 WWDC에서 애플은 검색과 관련된 새로운 클래스를 소개합니다. <a href="https://developer.apple.com/videos/play/wwdc2014/228/">관련
+            정보 - A Look Inside Presentation Controllers</a><br><br>
+          <img class="img-responsive imagecenter" src="https://useyourloaf.com/assets/images/2015/UISearchController.png"
+            alt="Application Example Image" style='width: 70%; object-fit: contain' /> <br>
+          UISearchDisplayController가 UISearchController로 변경되었습니다. UISearchDisplayDelegate를
+          UISearchControllerDelegate가 대체하면서 간단해진 것을 볼 수 있습니다. 또한 새로운 프로토콜이 등장합니다.
+
+          <br><br>
+          일단은, 아래에서 이전 클래스와 무엇이 달라졌는지 살펴보겠습니다.
+
+
+        </p>
+        <h3>UISearchDisplayController와의 비교<br><br></h3>
+        <p class="imagecenter text-md">
+
+          Apple은 기존의 UISearchDisplayController에서 업데이트된 UISearchController를 ios8과 함께 제공하였습니다.
+          이 두 가지 방법은 모두 controller와 함께 delegate, property, search bar를 제공하지만, 몇 가지의 주요한 차이점이 있습니다.
+          우선, Controller의 차이점을 살펴볼 수 있습니다. 새로운 UISearchController는 기존에 UISearchDisplayController에 존재하였던 UITableView
+          속성들을 제거하였습니다. 그리고 검색 결과가 어떻게 표시될지를 UISearchResultsUpdating protocol를 이용하여 제어하게 하였습니다.이 방법은 우리에게
+          UICollectionView 를 이용하여 결과를 제공하게 하는 등의
+          유연성을 제공합니다.
+
+          <br><br>
+          <strong>위 문단을 그림으로 추가 설명하면 좋을 것 같습니다.</strong>
+          <br><br>
+          다음으로 Delegate를 비교할 수 있습니다. 기존의 UISearchDisplayDelegate과 새로운 UISearchControllerDelegate 모두 검색을 시작할 때와 종료할 때의
+          메소드를 제공하지만, UISearchControllerDelegate에서는 present, dismiss 메소드가 오직 searchController가 자동으로 present 혹은 dismiss될
+          때만 실행됩니다. 또한 Delegate에서도 UITableView와 관련된 메소드들이 삭제되었습니다. 또한 UISearchResultsUpdating이라는 새로운 프로토콜이 등장하였습니다.
+          <br><br>
+          <strong>위 문단을 그림으로 추가 설명하면 좋을 것 같습니다.</strong>
+          <br><br>
+
+
+        </p>
+        <h3>delagate의 이해<br><br></h3>
+        <p class="imagecenter text-md">
+          새롭게 나타난 대리자들에 대해 자세히 알아보면서, UISearchBarDelegate도 함께 살펴보겠습니다.(UISearchBarDelegate는 이전과 동일합니다.)
+        </p>
+        <h4>[UISearchResultsUpdating]</h4><br>
+        <p class="imagecenter text-md">
+          <strong>UISearchResultsUpdating 프로토콜은 search bar에 입력되는 정보에 따라 검색 결과를 업데이트합니다. </strong> <br>
+          <code>searchController.searchResultsUpdater = self</code>와 같은 식으로 검색 결과를 업데이트할 때 이용할 뷰 컨트롤러를 선택할 수 있습니다.
+          이 프로토콜은 한 개의 메소드를 가지고 있습니다. updateSearchResults(for: UISearchController) 메소드는 search bar의 내부를 변경시키거나 search
+          bar가 첫 번째 responder가 되는 경우에 호출됩니다. 이 함수 내부에 검색 키워드에 따른 검색 결과를 업데이트하는 로직을 작성할 수 있습니다.
+        </p><br>
+
+        <h4>[UISearchBarDelegate]</h4><br>
+        <p class="imagecenter text-md">
+
+          Apple은 기존의 UISearchDisplayController에서 업데이트된 UISearchController를 ios8과 함께 제공하였습니다.
+          이 두 가지 방법은 모두 controller와 함께 delegate, property, search bar를 제공하지만, 몇 가지의 주요한 차이점이 있습니다.
+          우선, Controller의 차이점을 살펴볼 수 있습니다. 새로운 UISearchController는 기존에 UISearchDisplayController에 존재하였던 UITableView
+          속성들을 제거하였습니다. 그리고 검색 결과가 어떻게 표시될지를 UISearchResultsUpdating protocol를 이용하여 제어하게 하였습니다.이 방법은 우리에게
+          UICollectionView 를 이용하여 결과를 제공하게 하는 등의
+          유연성을 제공합니다.
+        </p><br>
+        <h4>[UISearchControllerDelegate]</h4><br>
+        <p class="imagecenter text-md">
+
+          Apple은 기존의 UISearchDisplayController에서 업데이트된 UISearchController를 ios8과 함께 제공하였습니다.
+          이 두 가지 방법은 모두 controller와 함께 delegate, property, search bar를 제공하지만, 몇 가지의 주요한 차이점이 있습니다.
+          우선, Controller의 차이점을 살펴볼 수 있습니다. 새로운 UISearchController는 기존에 UISearchDisplayController에 존재하였던 UITableView
+          속성들을 제거하였습니다. 그리고 검색 결과가 어떻게 표시될지를 UISearchResultsUpdating protocol를 이용하여 제어하게 하였습니다.이 방법은 우리에게
+          UICollectionView 를 이용하여 결과를 제공하게 하는 등의
+          유연성을 제공합니다.
+        </p>
+        <br>
+        <br>
+
+
+        <h2>시작하기</h2>
+
+
+
+        <h3>STEP 1. SetUp</h3><br><br>
+        <h4>[Setup Interface Builder]</h4><br>
+        <p class="imagecenter text-md">
+          다음과 같이 Table View Controller를 만들고 initial View Controller로 설정합니다. <br>
+          <img class="img-responsive imagecenter" src="tb009_media/pic002.png" alt="Application Example Image" style='width: 100%; object-fit: contain' />
+        </p>
+        <br>
+        <h4>[Setup Data]</h4><br>
+
+        <p class="imagecenter text-md">Search Bar를 사용하기 위해서는 우선적으로 <strong>검색할 데이터 집합</strong>이 있어야 합니다. 일단 SearchBar
+          저장소 안에 새로운 저장소를 만들고, 그 안에 새로운 <strong>cocoa
+            touch class</strong>파일을<code>NSObject</code>를 상속받아 생성합니다. 사실 아무 클래스도 상속받지 않은 채 모델 클래스를 만들어도 괜찮습니다. 하지만
+          NSObject를 상속하면 Foundation Framework를 사용할 수 있기에 일반적으로 상속합니다. 그 안에 다음과 같이 <code>Data</code> 클래스를
+          작성합니다. 우리는 굉장히 간단한 데이터 클래스를 만들었습니다. 이 클래스는 두 개의 프로퍼티를 가지고 있습니다. 추후 cell의 textlabel에 나타나질 main 프로퍼티와 search
+          bar에 scope를 설정한다면 사용될 열거형 타입의 detail 프로퍼티가 그것입니다.
+
+          <script src="https://gist.github.com/quino0627/68723b566c4d987621887f422a4b0735.js"></script>
+          <br>
+
+          <p class="imagecenter text-md">작성한 클래스의 인스턴스들을 추후 테이블에 나타낼 수 있도록 <code>deviceArray</code>에 추가하여 줍니다. <code>currentDeviceArray</code>는
+            Search Bar를 이용하여 검색할 때 나타날 수 있도록 필터링 된 데이터를 저장하는 배열입니다. </p>
+
+
+          <br>
+          <script src="https://gist.github.com/quino0627/cbe2fb8b994b46de8bac3665be1c4404.js"></script> <br>
+
+          <h4>[Setup SearchController]</h4><br>
+
+          <p class="imagecenter text-md">UISearchController는 스토리보드에서 작업하는 라이브러리를 제공하지 않습니다. 우리는 programmatical하게
+            Search Bar를 만들 수 있습니다.
+            다음 과정은 Search Bar의 속성을 설정하고 <code>navigationItem</code>에 이를 추가하는 과정입니다. 여기서 주목할 수 있는 <code>UISearchController</code>의
+            특징은
+            결과를 표시하는 <code>viewController</code>를 설정할 수 있다는 것입니다. <code>UISearchController(searchResultsController: resultsController)</code>
+            에서 <code>resultsController</code>
+            가 결과를 표시할 <code>viewController</code>입니다. 나머지 코드는 주석으로 설명을 해 두었습니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/46fcd124991d9e6d6e23e441af487fc8.js"></script>
+
+          <br>
+          <h4>[Setup ResultController]</h4><br>
+
+          <p class="imagecenter text-md">이제 해야할 것은 검색 결과를 띄울 <code>viewController</code>를 세팅하는 것입니다. 테이블 뷰의 <code>delegate</code>를
+            <code>self</code>로 초기화하여 <code>View Controller</code>에서 테이블 대리자를 함께 다루도록 하겠습니다.</p>
+          <script src="https://gist.github.com/quino0627/47a2c0c82f6250c0ea12680b8df4f9e1.js"></script>
+
+          <br>
+
+          <h3>STEP 2. Implement UISearchResultsUpdating and UISearchBarDelegate</h3><br><br>
+
+          <h4>[filtering function 구현]</h4><br>
+          <p class="imagecenter text-md">검색 delegate를 구현함에 있어서 실질적으로 검색 기능을 가능하게 하는 logic을 작성하는 과정입니다. textfield에 입력된
+            text와 선택되어있는 scope를 인자로 받는 함수를 작성합니다.
+            기본적으로 이 함수는 filer 메소드를 이용하여 <code>deviceArray</code>을 filtering하여 <code>currentDeviceArray</code>에 데이터를
+            저장하는 역할을 합니다.
+            우선 Scope를 확인하여 각각 데이터의 회사명이 현재 선택된 Scope와 일치하는지, 혹은 Scope가 'ALL'로 설정되어있는지 확인합니다. 그런 다음 검색 창의 텍스트를 확인하여
+            데이터를 적절하게 필터링합니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/9550d10f6513529e0856ee8178ea8b79.js"></script>
+          <br>
+          <h4>[Delagate 구현]</h4><br>
+          <p class="imagecenter text-md">
+            <code>searchBar(_:selectedScope:)</code> 함수는 사용자가 Scope를 수정하였을 때 실행되고, <code>updateSearchResults(searchController:)</code>는
+            사용자가 textfield에 글자를 입력할 때 마다 실행됩니다.
+            앞서 작성한 <code>filterForText(_:scope:)</code> 를 이용하여 Delegate를 구현할 수 있습니다.
+          </p>
+
+
+
+          <script src="https://gist.github.com/quino0627/0da4d3a48e275a187d6dbc34b8fbaf29.js"></script>
+          <br>
+          <h3>STEP 3. Table에 결과 보여주기</h3><br>
+          <p class="imagecenter text-md">
+            테이블의 Delegate를 구현하여 검색 결과를 출력하는 것을 구현해야합니다. <code>View Controller.tableView</code>와 <code>resultsController.tableView</code>의
+            delegate를 모두 <code>self</code>로 초기화하였기 때문에
+            이 클래스 파일 안에서 두 테이블을 모두 제어할 수 있습니다. <code>View Controller.tableView</code>일 경우 <code>DeviceArray</code>로부터
+            데이터를 가져오고, <code>resultsController.tableView</code>의 경우 <code>currentDeviceArray</code>로부터 데이터를 가져오는
+            코드입니다. 검색 결과일 때의 tableView가 다른 viewController이라는 것을 확실히 하기 위해서 cell height을 다르게 두었습니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/8030cbe145987280ecee370c1717e38c.js"></script>
+          <br>
+          <h3>마치며</h3><br><br>
+          <p class="imagecenter text-md">지금까지 Search Bar를 <code>UISearchController</code>을 이용하여 구현하는 방법에 대해서 살펴보았습니다.
+            위 방법을 이용하면 기본적인 검색 기능을 갖춘 어플리케이션을 개발할 수 있습니다.
+            프로젝트 전체 코드는 <a href="https://github.com/quino0627" target="_blank">GitHub profile</a>의 <a href="https://github.com/quino0627/SearchBar"
+              target="_blank">SearchBar Repository</a>를 통해 확인하실 수
+            있습니다. 실행 동영상은 다음과 같습니다.
+          </p>
+          <video controls style="display:block; margin: 0 auto; width: 200px" src="tb009_media/video001.mp4"></video>
+          <br>
+
+          <p align="center">
+            <csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall>
+          </p>
+          <div class="spacing"></div>
+
+          <!--<h6>SHARE:</h6>
+		 		<p class="share">
+		 			<a href="#"><i class="fa fa-twitter"></i></a>
+		 			<a href="#"><i class="fa fa-facebook"></i></a>
+		 			<a href="#"><i class="fa fa-tumblr"></i></a>
+		 			<a href="#"><i class="fa fa-google-plus"></i></a>
+		 		</p>-->
+      </div><!-- /col-lg-12 -->
+    </div><!-- /row -->
+  </div><!-- /container -->
+  </div>
+
+  <!-- *****************************************************************************************************************
+ 	 FOOTER
+ 	 ***************************************************************************************************************** -->
+  <div id="footerwrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <h4 class="footer">회사 소개</h4>
+          <div class="hline-w"></div>
+          <p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+            코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
+        </div>
+        <div class="col-xs-4">
+          <h4 class="footer">소셜 네트워크</h4>
+          <div class="hline-w"></div>
+          <p>
+            <a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+            <a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+              <img src="../../assets/img/mailchimp.png">
+            </a>
+          </p>
+        </div>
+        <div class="col-xs-4">
+          <h4 class="footer">회사 위치</h4>
+          <div class="hline-w"></div>
+          <p>
+            경기도 수원시 영통구 광교로 156, 광교비즈니스센터 11층<br />
+          </p>
+        </div>
+      </div>
+      <!--/row -->
+      <div style="margin-top: 50px">
+        <h4 class="footer">2017 ⓒ CodersHigh</h4>
+        <p style="text-align: center;">대표이사 윤성관 | 사업자등록번호 740-81-00581</p>
+      </div>
+    </div>
+    <!--/container -->
+  </div>
+  <!--/footerwrap -->
+
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/retina-1.1.0.js"></script>
+  <script src="../../assets/js/jquery.hoverdir.js"></script>
+  <script src="../../assets/js/jquery.hoverex.min.js"></script>
+  <script src="../../assets/js/jquery.prettyPhoto.js"></script>
+  <script src="../../assets/js/jquery.isotope.min.js"></script>
+  <script src="../../assets/js/custom.js"></script>
+
+
+</body>
+
+</html>
