@@ -111,14 +111,15 @@
         <!-- POST 시작  -->
 
         <h3>시작하기에 앞서</h3><br><br>
-        <p class="imagecenter text-md">이번 기술 블로그에서는 <code>UISearchController</code>를 이용하여 Search Bar 를 구현하는 방법에대해서
-          알려드리고자 합니다.
-          Search Bar는 여러 데이터들의 모음(collection)에서 검색을 하기 위해 사용되는 인터페이스입니다. 테이블이 있는 대부분의 어플리케이션에는 검색 기능이 있는 것을 보실 수 있습니다.
+        <p class="imagecenter text-md">이번 기술 블로그에서는 <code>UISearchController</code>를 이용하여 Search Bar 를 개발하는 방법을 알려드리고자
+          합니다.Search Bar는 여러 데이터들의 모음(collection)에서 검색을 하기 위해 사용되는 인터페이스입니다. 테이블이 있는 대부분의 어플리케이션에는 검색 기능이 있는 것을 볼 수
+          있습니다. ios8 이전과 이후로 search bar API가 업데이트되었습니다. 본 블로그에서는 바뀐 API의 차이점에 대해 알아본 후 새로운 API를 이용하여 search bar를 구현하여 볼
+          것입니다.
           Search Bar를 어플리케이션에 구현할 때의 가이드라인은 <a href="https://developer.apple.com/design/human-interface-guidelines/ios/bars/search-bars/">Search
             Bars - Human Interface Guidelines</a>에서 확인할 수 있습니다.
         </p><br><br>
-
-        <h3>IOS 8 이전 - UISearchDisplayController</h3><br><br>
+        <h2>IOS 8 이전</h2>
+        <h3>UISearchDisplayController</h3><br><br>
         <p class="imagecenter text-md">
           아래 다이어그램은 현재는 deprecated된 UISearchDisplayController class와 관련된 delegate를 정리한 것입니다. <br>
           <img class="img-responsive imagecenter" src="https://useyourloaf.com/assets/images/2015/UISearchDisplayController.png"
@@ -176,34 +177,38 @@
           bar가 첫 번째 responder가 되는 경우에 호출됩니다. 이 함수 내부에 검색 키워드에 따른 검색 결과를 업데이트하는 로직을 작성할 수 있습니다.
         </p><br>
 
-        <h4>[UISearchBarDelegate]</h4><br>
-        <p class="imagecenter text-md">
-
-          Apple은 기존의 UISearchDisplayController에서 업데이트된 UISearchController를 ios8과 함께 제공하였습니다.
-          이 두 가지 방법은 모두 controller와 함께 delegate, property, search bar를 제공하지만, 몇 가지의 주요한 차이점이 있습니다.
-          우선, Controller의 차이점을 살펴볼 수 있습니다. 새로운 UISearchController는 기존에 UISearchDisplayController에 존재하였던 UITableView
-          속성들을 제거하였습니다. 그리고 검색 결과가 어떻게 표시될지를 UISearchResultsUpdating protocol를 이용하여 제어하게 하였습니다.이 방법은 우리에게
-          UICollectionView 를 이용하여 결과를 제공하게 하는 등의
-          유연성을 제공합니다.
-        </p><br>
         <h4>[UISearchControllerDelegate]</h4><br>
         <p class="imagecenter text-md">
-
-          Apple은 기존의 UISearchDisplayController에서 업데이트된 UISearchController를 ios8과 함께 제공하였습니다.
-          이 두 가지 방법은 모두 controller와 함께 delegate, property, search bar를 제공하지만, 몇 가지의 주요한 차이점이 있습니다.
-          우선, Controller의 차이점을 살펴볼 수 있습니다. 새로운 UISearchController는 기존에 UISearchDisplayController에 존재하였던 UITableView
-          속성들을 제거하였습니다. 그리고 검색 결과가 어떻게 표시될지를 UISearchResultsUpdating protocol를 이용하여 제어하게 하였습니다.이 방법은 우리에게
-          UICollectionView 를 이용하여 결과를 제공하게 하는 등의
-          유연성을 제공합니다.
+          <strong>UISearchControllerDelegate는 search controller가 present되거나 dismiss될 때의 메소드를 제공합니다.</strong> <br>
+          <code>searchController.delegate = self</code>처럼 선언할 수 있습니다.
         </p>
         <br>
+        <h4>[UISearchBarDelegate]</h4><br>
+        <p class="imagecenter text-md">
+          <strong>UISearchBarDelegate 프로토콜은 search bar에 대한 선택적인 메소드를 제공하여 이것을 더 기능적으로 동작하게 만들 수 있습니다.</strong>
+          Editing Text의 시작과 종료, Clicking Buttons, Scope Button 등에 대한 정보를 제공합니다. <br>
+          <code>UISearchBarController.searchBar.delegate = self</code>와 같은 식으로 선언합니다. 예를 들어, 우리는 이 대리자를 이용하여 scope가
+          변화되었을 때의 기능을 추가해줄 수 있습니다. 세부적인 기능은 아래와 같습니다. <br>
+          <img class="img-responsive imagecenter" src="tb009_media/uisearchbardelegate.png" alt="Application Example Image"
+            style='width: 60%; object-fit: contain' />
+        </p>
         <br>
+        <h3>UISearchContainerViewController<br><br></h3>
+        <p class="imagecenter text-md">
+          <a href="https://developer.apple.com/documentation/uikit/uisearchcontainerviewcontroller">UISearchContainerViewController</a>과
+          관련한 애플의 개발 가이드라인을 보게 되면 search controller 객체를 네비게이션 컨트롤러의 스택에 push 하거나, 다른 container view controller의 child로
+          사용하지 말라고 하고 있습니다. 그렇게 사용하고자 할 때 이 클래스의 인스턴스에 search controller을 담아서 사용할 수 있습니다.
+        </p>
+        <br><br><br><br>
 
+        <h2>시작하기</h2> <br>
+        <p class="imagecenter text-md">
+          이제부터 UISearchController을 이용하여 searchBar를 구현하겠습니다. 우선 기본적인 검색을 만든 후 scope를 추가한 검색까지 구현해 볼 것입니다. 각각의 예제 파일은 <a
+            href="https://github.com/quino0627/searchbar-2">Basic Search Repository</a>와 <a href="https://github.com/quino0627/searchbar-2/tree/scope">Search
+            with scope Repository</a>에서 확인할 수 있습니다.
+        </p>
 
-        <h2>시작하기</h2>
-
-
-
+        <br>
         <h3>STEP 1. SetUp</h3><br><br>
         <h4>[Setup Interface Builder]</h4><br>
         <p class="imagecenter text-md">
@@ -217,8 +222,8 @@
           저장소 안에 새로운 저장소를 만들고, 그 안에 새로운 <strong>cocoa
             touch class</strong>파일을<code>NSObject</code>를 상속받아 생성합니다. 사실 아무 클래스도 상속받지 않은 채 모델 클래스를 만들어도 괜찮습니다. 하지만
           NSObject를 상속하면 Foundation Framework를 사용할 수 있기에 일반적으로 상속합니다. 그 안에 다음과 같이 <code>Data</code> 클래스를
-          작성합니다. 우리는 굉장히 간단한 데이터 클래스를 만들었습니다. 이 클래스는 두 개의 프로퍼티를 가지고 있습니다. 추후 cell의 textlabel에 나타나질 main 프로퍼티와 search
-          bar에 scope를 설정한다면 사용될 열거형 타입의 detail 프로퍼티가 그것입니다.
+          작성합니다. 우리는 굉장히 간단한 데이터 클래스를 만들었습니다. 이 클래스는 두 개의 프로퍼티를 가지고 있습니다. 추후 cell의 textlabel에 나타나질 main 프로퍼티와 scope 설정에
+          사용될 열거형 타입의 detail 프로퍼티가 그것입니다.
 
           <script src="https://gist.github.com/quino0627/68723b566c4d987621887f422a4b0735.js"></script>
           <br>
@@ -227,79 +232,82 @@
             Search Bar를 이용하여 검색할 때 나타날 수 있도록 필터링 된 데이터를 저장하는 배열입니다. </p>
 
 
-          <br>
-          <script src="https://gist.github.com/quino0627/cbe2fb8b994b46de8bac3665be1c4404.js"></script> <br>
-
           <h4>[Setup SearchController]</h4><br>
 
-          <p class="imagecenter text-md">UISearchController는 스토리보드에서 작업하는 라이브러리를 제공하지 않습니다. 우리는 programmatical하게
-            Search Bar를 만들 수 있습니다.
-            다음 과정은 Search Bar의 속성을 설정하고 <code>navigationItem</code>에 이를 추가하는 과정입니다. 여기서 주목할 수 있는 <code>UISearchController</code>의
-            특징은
-            결과를 표시하는 <code>viewController</code>를 설정할 수 있다는 것입니다. <code>UISearchController(searchResultsController: resultsController)</code>
-            에서 <code>resultsController</code>
-            가 결과를 표시할 <code>viewController</code>입니다. 나머지 코드는 주석으로 설명을 해 두었습니다.
+          <p class="imagecenter text-md">
+            <img class="img-responsive imagecenter" src="tb009_media/displaycontroller.png" alt="Application Example Image"
+              style='width: 60%; object-fit: contain' /> <br> 이전에는
+            UISearchDisplayController를 인터페이스 빌더에서 작업할 수 있었습니다. 이것은
+            UISearchBar과 UISearchDisplayController과 몇몇 delegate를 설정해서 search bar를 구현하게 도와주었습니다. 하지만 UISearchController는
+            인터페이스 빌더에서 만드는 것을 지원하지 않습니다. 그래서 이것은 code로 작업하여야 합니다. 우선, UISearchController과 결과를 표시할 Result View
+            Controller를 선언하고 초기화합니다.
           </p>
           <script src="https://gist.github.com/quino0627/46fcd124991d9e6d6e23e441af487fc8.js"></script>
-
+          <p class="imagecenter text-md">
+            이제 search bar과 관련된 대리자를 연결해 주어야 합니다. viewDidLoad 함수에 다음을 추가합니다. searchResultsController로 resultVC를 설정합니다.
+            테이블뷰에 searchBar를 추가합니다. 그리고 대리자를 연결합니다. 본 프로젝트에서는 대리자를 모두 self로 설정해 주었습니다. resultVC로 해주어도 무방합니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/a7c8ffcbe06c7968ffa30da50e61719d.js"></script>
           <br>
           <h4>[Setup ResultController]</h4><br>
 
-          <p class="imagecenter text-md">이제 해야할 것은 검색 결과를 띄울 <code>viewController</code>를 세팅하는 것입니다. 테이블 뷰의 <code>delegate</code>를
-            <code>self</code>로 초기화하여 <code>View Controller</code>에서 테이블 대리자를 함께 다루도록 하겠습니다.</p>
-          <script src="https://gist.github.com/quino0627/47a2c0c82f6250c0ea12680b8df4f9e1.js"></script>
+          <p class="imagecenter text-md">이제 해야할 것은 검색 결과를 띄울 <code>result ViewController</code>를 세팅하는 것입니다. 테이블 뷰의
+            <code>delegate</code>를
+            <code>self</code>로 설정하여 <code>TableViewController</code>에서 테이블 대리자를 함께 다루도록 하겠습니다. viewDidLoad에 다음을
+             추가합니다.
+            <script src="https://gist.github.com/quino0627/47a2c0c82f6250c0ea12680b8df4f9e1.js"></script>
+          </p>
 
           <br>
 
-          <h3>STEP 2. Implement UISearchResultsUpdating and UISearchBarDelegate</h3><br><br>
+          <h3>STEP 2. Implement delegate</h3><br><br>
 
-          <h4>[filtering function 구현]</h4><br>
-          <p class="imagecenter text-md">검색 delegate를 구현함에 있어서 실질적으로 검색 기능을 가능하게 하는 logic을 작성하는 과정입니다. textfield에 입력된
-            text와 선택되어있는 scope를 인자로 받는 함수를 작성합니다.
-            기본적으로 이 함수는 filer 메소드를 이용하여 <code>deviceArray</code>을 filtering하여 <code>currentDeviceArray</code>에 데이터를
-            저장하는 역할을 합니다.
-            우선 Scope를 확인하여 각각 데이터의 회사명이 현재 선택된 Scope와 일치하는지, 혹은 Scope가 'ALL'로 설정되어있는지 확인합니다. 그런 다음 검색 창의 텍스트를 확인하여
-            데이터를 적절하게 필터링합니다.
+          <h4>[UISearchResultsUpdating]</h4><br>
+          <p class="imagecenter text-md">검색 delegate를 구현함에 있어서 실질적으로 검색 기능을 가능하게 하는 logic을 작성하는 과정입니다.
           </p>
-          <script src="https://gist.github.com/quino0627/9550d10f6513529e0856ee8178ea8b79.js"></script>
-          <br>
-          <h4>[Delagate 구현]</h4><br>
-          <p class="imagecenter text-md">
-            <code>searchBar(_:selectedScope:)</code> 함수는 사용자가 Scope를 수정하였을 때 실행되고, <code>updateSearchResults(searchController:)</code>는
-            사용자가 textfield에 글자를 입력할 때 마다 실행됩니다.
-            앞서 작성한 <code>filterForText(_:scope:)</code> 를 이용하여 Delegate를 구현할 수 있습니다.
-          </p>
-
-
-
           <script src="https://gist.github.com/quino0627/0da4d3a48e275a187d6dbc34b8fbaf29.js"></script>
+
+          <br>
           <br>
           <h3>STEP 3. Table에 결과 보여주기</h3><br>
           <p class="imagecenter text-md">
             테이블의 Delegate를 구현하여 검색 결과를 출력하는 것을 구현해야합니다. <code>View Controller.tableView</code>와 <code>resultsController.tableView</code>의
-            delegate를 모두 <code>self</code>로 초기화하였기 때문에
-            이 클래스 파일 안에서 두 테이블을 모두 제어할 수 있습니다. <code>View Controller.tableView</code>일 경우 <code>DeviceArray</code>로부터
-            데이터를 가져오고, <code>resultsController.tableView</code>의 경우 <code>currentDeviceArray</code>로부터 데이터를 가져오는
-            코드입니다. 검색 결과일 때의 tableView가 다른 viewController이라는 것을 확실히 하기 위해서 cell height을 다르게 두었습니다.
+            delegate를 모두 <code>self</code>로 초기화하였기 때문에 이 클래스 파일 안에서 두 테이블을 모두 제어할 수 있습니다. 삼항연산자를 이용하여 간단하게 tableView에
+            따라 출력 결과를 조절할 수 있습니다.
           </p>
           <script src="https://gist.github.com/quino0627/8030cbe145987280ecee370c1717e38c.js"></script>
           <br>
-          <h3>마치며</h3><br><br>
-          <p class="imagecenter text-md">지금까지 Search Bar를 <code>UISearchController</code>을 이용하여 구현하는 방법에 대해서 살펴보았습니다.
+
+          <h3>추가</h3> <br>
+          <p class="imagecenter text-md">
+            지금까지 기본적인 Search Bar의 구현해 보았습니다. 지금부터는 Search Bar를 커스터마이즈 하는 것 중 많이 사용되는 범위 설정에 대해 추가적으로 구현해 보겠습니다. 앞서 잠시
+            언급하였지만, UISearchBarDelegate를 이용하면 Scope의 범위가 바뀔 때 결과 값을 업데이트할 수 있습니다.
+          </p>
+          <h4>[Scope 표시]</h4><br>
+          <p class="imagecenter text-md">
+            func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) 는 scope의 선택이
+            바뀌었을 때 알려주는 함수입니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/bf1e0834a3df42e7b1c3a91dc3e25a10.js"></script>
+
+          <h4>[테이블 업데이트]</h4><br>
+          <p class="imagecenter text-md">
+            각 데이터의 scope에 해당하는 정보를 cell에 추가로 나타나게 하기 위해 cell style을 subtitle으로 변경해 주고, detailTextLabel에 값을 나타내도록 수정해
+            줍니다.
+          </p>
+          <script src="https://gist.github.com/quino0627/61c59249f8a9928ccd54656e014a2684.js"></script>
+          <h2>마치며</h2><br><br>
+          <p class="imagecenter text-md">지금까지 <code>UISearchController</code>을 이용하여 Search Bar를 개발하는 방법에 대해서 살펴보았습니다.
             위 방법을 이용하면 기본적인 검색 기능을 갖춘 어플리케이션을 개발할 수 있습니다.
-            프로젝트 전체 코드는 <a href="https://github.com/quino0627" target="_blank">GitHub profile</a>의 <a href="https://github.com/quino0627/SearchBar"
-              target="_blank">SearchBar Repository</a>를 통해 확인하실 수
-            있습니다. 실행 동영상은 다음과 같습니다.
-          </p>
-          <video controls style="display:block; margin: 0 auto; width: 200px" src="tb009_media/video001.mp4"></video>
-          <br>
+            프로젝트 전체 코드는 <a href="https://github.com/quino0627/searchbar-2">Github repository</a>에서 확인하실 수 있습니다. 본 포스트에
+            대한 제안 사항이나 궁금하신 점이 있다면 언제든지 연락 주세요.
 
-          <p align="center">
-            <csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall>
-          </p>
-          <div class="spacing"></div>
+            <p align="center">
+              <csmall>이 글의 저작권은 글쓴이에게 있으며, 배포는 코더스하이가 합니다.</csmall>
+            </p>
+            <div class="spacing"></div>
 
-          <!--<h6>SHARE:</h6>
+            <!--<h6>SHARE:</h6>
 		 		<p class="share">
 		 			<a href="#"><i class="fa fa-twitter"></i></a>
 		 			<a href="#"><i class="fa fa-facebook"></i></a>
