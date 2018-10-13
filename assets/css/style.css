@@ -1051,7 +1051,17 @@ a:focus {
 }
 
 .image-caption {
+	display: inline;
 	color: #999;
 	font-style: italic;
 	margin: 10px 0 20px;
+}
+
+.writer-wrapper > .img {
+	display: block;
+	border-radius: 50%;
+}
+
+.writer-wrapper > .apple-logo {
+	display: block;
 }

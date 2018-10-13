@@ -3,7 +3,7 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 ._*
-
+.vscode/
 
 ## Build generated
 build/
@@ -23,6 +23,7 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
+
 
 ## Obj-C/Swift specific
 *.hmap
