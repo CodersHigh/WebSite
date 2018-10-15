@@ -67,3 +67,11 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+assets/img/report-appscreen/cau_18_02/.DS_Store
+assets/img/report-appscreen/.DS_Store
+assets/img/.DS_Store
+assets/.DS_Store
+*/.DS_Store
+.DS_Store
+

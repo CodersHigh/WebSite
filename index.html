@@ -200,7 +200,10 @@
 	 			<p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
         <p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
         <p><a href="techblogs/tb_004_firebaseTimeline/tb004_script.html">Firebase를 이용하여 Timeline만들기 by 박병욱</a></p>
-        <p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
+				<p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
+				<p><a href="techblogs/tb_007_movieSearcher/tb007_script.html">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기 by 김수진</a></p>
+				<p><a href="techblogs/tb_008_tagCloud/tb008_script.html">3d 스크롤이 가능한 태그 클라우드 만들기 by 김소연</a></p>
+
 	 			</div>
 	 		</div>
       <div class="col-md-6">
@@ -215,15 +218,15 @@
 	 </div><!--/container -->
 
 
-	<div id="newswrap" style="height: 600px;">
+	<div id="newswrap">
 		<div class="container mtb">
 			<div class="row" style="text-align: center;">
 
 						<h3 style="margin-top: -70px; "> 페이스북 페이지 </h3>
 						<div class="hline-w" style="border-color:white;margin-left: 30%; margin-right: 30%;"></div>
-            <div class="row">
-              <div class="fb-page col-md-6 col-xs-12" data-href="https://www.facebook.com/codershighteam" data-tabs="timeline" data-width="500" data-height="439" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codershighteam" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codershighteam">코더스하이 CodersHigh</a></blockquote></div>
-							<div class="fb-group col-md-6 col-xs-12" data-href="https://www.facebook.com/groups/2041128336175840/" data-width="500" data-show-social-context="true" data-show-metadata="true"></div>
+            <div class="row facebook-container" style="display: unset; text-align: center;">
+              <!-- <div class="fb-page col-md-6 col-xs-12" data-href="https://www.facebook.com/codershighteam" data-tabs="timeline" data-width="500" data-height="439" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/codershighteam" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/codershighteam">코더스하이 CodersHigh</a></blockquote></div> -->
+							<!-- <div class="fb-group col-md-6 col-xs-12" data-href="https://www.facebook.com/groups/2041128336175840/" data-width="500" data-show-social-context="true" data-show-metadata="true"></div> -->
            </div>
 			</div>
 		</div>
@@ -261,7 +264,7 @@
 		 			<h4 class="footer">회사 위치</h4>
 		 			<div class="hline-w"></div>
 		 			<p>
-		 				경기도 수원시 영통구 광교로 156, 광교비즈니스센터 11층<br/>
+		 				서울시 강남구 논현로127길 13-3 태림빌딩 3층<br/>
 		 			</p>
 		 		</div>
 		 	</div><!--/row -->
@@ -367,6 +370,20 @@
 		setPortfolio();
 	});
 })(jQuery);
+</script>
+<script>
+	var filter = "win16|win32|win64|mac|macintel";
+	if (navigator.platform ) {
+		if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
+			console.log("mobile")
+			$('.facebook-container').append("<div class='fb-page col-md-6 col-xs-12' data-href='https://www.facebook.com/codershighteam' data-tabs='timeline' data-width='300' data-height='439' data-small-header='false' data-adapt-container-width='true' data-hide-cover='false' data-show-facepile='true'><blockquote cite='https://www.facebook.com/codershighteam' class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/codershighteam'>코더스하이 CodersHigh</a></blockquote></div><div class='fb-group col-md-6 col-xs-12' data-href='https://www.facebook.com/groups/2041128336175840/' data-width='300' data-show-social-context='true' data-show-metadata='true'></div>")
+		} else {
+			console.log("desktop")
+			$('.facebook-container').append("<div class='fb-page col-md-6 col-xs-12' data-href='https://www.facebook.com/codershighteam' data-tabs='timeline' data-width='500' data-height='439' data-small-header='false' data-adapt-container-width='true' data-hide-cover='false' data-show-facepile='true'><blockquote cite='https://www.facebook.com/codershighteam' class='fb-xfbml-parse-ignore'><a href='https://www.facebook.com/codershighteam'>코더스하이 CodersHigh</a></blockquote></div><div class='fb-group col-md-6 col-xs-12' data-href='https://www.facebook.com/groups/2041128336175840/' data-width='500' data-show-social-context='true' data-show-metadata='true'></div>")
+		}
+	}
+
+
 </script>
   </body>
 </html>

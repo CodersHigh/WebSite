@@ -1024,6 +1024,17 @@ a:focus {
 	#cwrap .kor-img {
 		margin-top: -5px;
 	}
+
+
+}
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+
+}
+
+
+.fb-page {
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 .hline-blue {
@@ -1034,6 +1045,7 @@ a:focus {
 
 }
 
+
 .track-img {
 	width: 150px;
 	height: auto;
@@ -1042,6 +1054,7 @@ a:focus {
 	margin-bottom: 50px;
 }
 
+
 .badge-img {
 	width:20%;
 }
@@ -1049,6 +1062,7 @@ a:focus {
 .badge-container {
 	padding: 0 0 0 0 !important;
 }
+
 
 .image-caption {
 	display: inline;
@@ -1065,3 +1079,4 @@ a:focus {
 .writer-wrapper > .apple-logo {
 	display: block;
 }
+
