@@ -1045,6 +1045,16 @@ a:focus {
 
 }
 
+
+.track-img {
+	width: 150px;
+	height: auto;
+	z-index: 2;
+	margin-top: -70px;
+	margin-bottom: 50px;
+}
+
+
 .badge-img {
 	width:20%;
 }
@@ -1052,3 +1062,21 @@ a:focus {
 .badge-container {
 	padding: 0 0 0 0 !important;
 }
+
+
+.image-caption {
+	display: inline;
+	color: #999;
+	font-style: italic;
+	margin: 10px 0 20px;
+}
+
+.writer-wrapper > .img {
+	display: block;
+	border-radius: 50%;
+}
+
+.writer-wrapper > .apple-logo {
+	display: block;
+}
+
