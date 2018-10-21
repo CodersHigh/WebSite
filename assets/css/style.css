@@ -1080,12 +1080,12 @@ a:focus {
 	display: block;
 }
 
-.iframe-width-100 > iframe {
+.iframe-width-100 > iframe, video {
 	width: 100%;
 }
 
 @media (max-width: 767px) {
-  .iframe-width-100 > iframe {
+  .iframe-width-100 > iframe, video {
     height: 300px;
   }
 }
