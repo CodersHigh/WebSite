@@ -1,5 +1,3 @@
-var dataURL = '../assets/studentsData/2016_ku_winter.json';
-
 <!--  아래는 수정 금지  -->
 
 Vue.component('student-outcome', {
@@ -41,7 +39,7 @@ Vue.component('student-outcome', {
       },
   mounted() {
     var self = this
-    $.getJSON(dataURL, function(data) {
+    $.getJSON('../assets/studentsData/studentsOutcomes.json', function(data) {
       self.studentsOutcomes = data.university;
     });
   }
