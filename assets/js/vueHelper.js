@@ -1,8 +1,7 @@
-var dataURL = '../assets/studentsData/2016_ku_winter.json';
-
 <!--  아래는 수정 금지  -->
 
 Vue.component('student-outcome', {
+  props: ['university'],
   template: '\
   <div id="background-1">\
     <div class="container" v-for="value in studentsOutcomes">\
@@ -40,8 +39,8 @@ Vue.component('student-outcome', {
       },
   mounted() {
     var self = this
-    $.getJSON(dataURL, function(data) {
-      self.studentsOutcomes = data.studentsOutcomes;
+    $.getJSON('../assets/studentsData/studentsOutcomes.json', function(data) {
+      self.studentsOutcomes = data.university;
     });
   }
 })
