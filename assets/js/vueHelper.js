@@ -38,7 +38,6 @@ Vue.component('student-outcome', {
             }
       },
   mounted() {
-
     this.studentsOutcomes = universityData[this.university];
   }
 })
