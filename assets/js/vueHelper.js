@@ -3,7 +3,7 @@
 Vue.component('student-outcome', {
   props: ['university'],
   template: '\
-  <div id="background-1">\
+  <div id="background">\
     <div class="container" v-for="value in studentsOutcomes">\
       <div class="row article">\
         <div class="col-md-3 col-xs-6 spacing">\
@@ -38,19 +38,7 @@ Vue.component('student-outcome', {
             }
       },
   mounted() {
-<<<<<<< HEAD
-    var self = this
-    $.getJSON(dataURL, function(data) {
-      self.studentsOutcomes = data.university;
-    });
-||||||| merged common ancestors
-    var self = this
-    $.getJSON(dataURL, function(data) {
-      self.studentsOutcomes = data.studentsOutcomes;
-    });
-=======
     this.studentsOutcomes = universityData[this.university];
->>>>>>> newbranch
   }
 })
 
