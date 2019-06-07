@@ -29,6 +29,9 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
@@ -42,6 +45,7 @@
   </head>
 
   <body>
+    <div id="root">
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -192,216 +196,18 @@
 
 
 <!-- 교육 결과물 -->
-<div id="background-grey">
-    <div class="container">
-      <div class="centered">
-        <h3 class="report-subtitle">교육 결과</h3>
-      </div>
-      <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-              <img src="../assets/img/report-appscreen/snu_17_02/01.png">
-            </div>
-            <div class="col-md-3 col-xs-6 spacing">
-              <div class=" bottom-space">
-                <h2 class="appTitle">DayFeel</h2>
-                <p class="appComment">
-                  나 자신에 대해서 잘 알고 있나요?<br>
-                  감정기록 일기장을 통해 나를 이해해보세요.
-                </p>
-                <h4>김은지</h4>
-                </div>
-           </div>
-           <div class="col-md-6 col-xs-12 spacing video-title">
-             <h4>발표 영상</h4><br />
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/rSjonWGdGds?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-             <div>
-               <a href="https://projectintheclass.github.io/DayFeel/">
-                 <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-               </a>
-             </div>
-           </div>
-     </div><!-- row -->
+<div id="D1EEFF">
+ <div class="container">
+   <div class="centered">
+     <h3 class="mb">교육 결과</h3>
    </div>
- </div>
+   <div class="row">
 
- <div id="background-white">
-    <div class="container">
-      <div class="row article">
+     <student-outcome university = '2017_snu_fall'></student-outcome>
 
-        <div class="col-md-3 col-xs-6 spacing">
-          <img src="../assets/img/report-appscreen/snu_17_02/02.png" class="shadow">
-        </div>
-        <div class="col-md-3 col-xs-6 spacing">
-          <div class=" bottom-space">
-            <h2 class="appTitle margin-none">Sound Diary</h2>
-            <p class="appComment">
-              사진첩이나 일기앱처럼 녹음된 사운드를 날짜/태그단위로 플레이하며 추억을 곱씹을 수 있게 하는 앱입니다.
-            </p>
-            <h4>정윤지</h4>
-            </div>
-       </div>
-       <div class="col-md-6 col-xs-12 spacing video-title">
-         <h4 class="margin-none">발표 영상</h4><br />
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/I6CZmlK7HKQ?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-         <div>
-           <a href="https://projectintheclass.github.io/SoundDiary/" target="_blank">
-             <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-           </a>
-         </div>
-       </div>
-     </div><!-- row -->
    </div>
-  </div>
-
-  <div id="background-grey">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/snu_17_02/03.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">StudyBookPlanner</h2>
-              <p class="appComment">
-                  STUDY BOOK PLANNER에 현재 공부 중인 학습서를 등록하고 목표일을 설정하면 학습서의 목차를 기준으로 진행상황을 기록할 수 있습니다. 또한 목표일까지 학습을 완료하려면 어느 정도의 페이스로 공부를 해야하는지 알려드립니다.
-              </p>
-              <h4>황도정</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/TjDmxS5vlSE?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-           <div>
-             <a href="https://projectintheclass.github.io/StudyBookPlanner" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div><!--/container -->
-  </div><!--/service -->
-
- <div id="background-white">
-   <div class="container">
-     <div class="row article">
-
-       <div class="col-md-3 col-xs-6 spacing">
-         <img src="../assets/img/report-appscreen/snu_17_02/04.png" class="">
-       </div>
-       <div class="col-md-3 col-xs-6 spacing">
-         <div class=" bottom-space">
-           <h2 class="appTitle margin-none">Vacancy</h2>
-           <p class="appComment">
-              미식가 드라이버를 위한 식당 및 주차공간 예약 도우미
-            </p>
-           <h4></h4>
-           </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/Lme-NoNZcEo?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/Vacancy/" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
-
-
-
-<div id="background-grey">
-    <div class="container">
-      <div class="row article">
-
-        <div class="col-md-3 col-xs-6 spacing">
-          <img src="../assets/img/report-appscreen/snu_17_02/05.png" class="shadow">
-        </div>
-        <div class="col-md-3 col-xs-6 spacing">
-          <div class=" bottom-space">
-            <h2 class="appTitle margin-none">Hey</h2>
-            <p class="appComment">
-                Local Notification Service
-            </p>
-            <h4>김태현</h4>
-            </div>
-       </div>
-       <div class="col-md-6 col-xs-12 spacing video-title">
-         <h4 class="margin-none">발표 영상</h4><br />
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/k9gIWSpaF88?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-         <div>
-           <a href="https://projectintheclass.github.io/HEY/" target="_blank">
-             <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-           </a>
-         </div>
-       </div>
-     </div><!-- row -->
-   </div><!--/container -->
-   </div><!--/service -->
-
-<div id="background-white">
-<div class="container">
- <div class="row article">
-
-   <div class="col-md-3 col-xs-6 spacing">
-     <img src="../assets/img/report-appscreen/snu_17_02/06.png" class="shadow">
-   </div>
-   <div class="col-md-3 col-xs-6 spacing">
-     <div class=" bottom-space">
-       <h2 class="appTitle margin-none">NaggingScheduler</h2>
-       <p class="appComment">
-          랜덤한 시간에 알람을 보내 잡담에서 일로 돌려보내주는 스케쥴러
-       </p>
-       <h4>석민창</h4>
-       </div>
-  </div>
-  <div class="col-xs-6 spacing video-title">
-    <h4 class="margin-none">발표 영상</h4><br />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/4Y8wFzxHduk?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-    <div>
-      <a href="https://projectintheclass.github.io/NaggingScheduler" target="_blank">
-        <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-      </a>
-    </div>
-  </div>
-</div><!-- row -->
-</div><!--/container -->
+ </div><!--/container -->
 </div><!--/service -->
-
-<div id="background-grey">
-<div class="container">
-  <div class="row article">
-
-    <div class="col-md-3 col-xs-6 spacing">
-      <img src="../assets/img/report-appscreen/snu_17_02/07.png" class="shadow">
-    </div>
-    <div class="col-md-3 col-xs-6 spacing">
-      <div class=" bottom-space">
-        <h2 class="appTitle margin-none">Shanoti</h2>
-        <p class="appComment">
-          공우리 대학의 모든 정보를
-          Shanoti 로 손쉽게
-          관리하세요
-        </p>
-        <h4>김기현</h4>
-        </div>
-   </div>
-   <div class="col-xs-6 spacing video-title">
-     <h4 class="margin-none">발표 영상</h4><br />
-     <iframe width="560" height="315" src="https://www.youtube.com/embed/PGSmNc3Ei9c?list=PLBjx8AiS7qA2rLOY-2q4-Cthq8NvW3HyZ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-     <div>
-       <a href="https://projectintheclass.github.io/Shanoti" target="_blank">
-         <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-       </a>
-     </div>
-   </div>
- </div><!-- row -->
-</div>
-</div>
 
 
 
@@ -456,6 +262,6 @@
   	<script src="../assets/js/jquery.isotope.min.js"></script>
   	<script src="../assets/js/custom.js"></script>
 
-
+  </div>
   </body>
 </html>

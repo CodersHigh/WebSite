@@ -28,7 +28,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
@@ -208,273 +210,20 @@
 
 
 <!-- 교육 결과물 -->
+<div id="root">
+
+
     <div id="background-grey">
       <div class="container">
         <div class="centered">
           <h3 class="report-subtitle">교육 결과</h3>
         </div>
         <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_19_01/01.jpg" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">SketchWord</h2>
-              <p class="appComment">
-                간단한 캐치마인드게임을 어플로 해보자
-              </p>
-              <h4>배경빈, 정진혁, 손희덕</h4>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 spacing video-title">
-            <h4 class="margin-none">발표 영상</h4><br />
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zoi-rPAUneE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <div>
-              <a href="https://itunes.apple.com/kr/app/sketchword/id1453309917?mt=8" target="_blank">
-                <img src="../assets/img/app-store.png" class="gotoapp" style="padding: 5px 20px;" />
-              </a>
-              <a href="https://projectintheclass.github.io/iOS_Heads_Up/." target="_blank">
-                <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-              </a>
-            </div>
-          </div>
+          <student-outcome university = '2019_cau_winter'></student-outcome>
         </div><!-- row -->
-      </div>
-    </div>
-
-   <div id="background-white">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_19_01/02.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">편한Calendar</h2>
-              <p class="appComment">
-                여러 일정입력을 위한 조작을 줄여주고 이를 피드백해주는 어플
-              </p>
-              <h4>박정훈, 윤종원, 이지나</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/PActdaWm9Ec" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           <div>
-             <a href="https://projectintheclass.github.io/convenient_calendar/" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div>
-    </div>
-
-    <div id="background-grey">
-        <div class="container">
-          <div class="row article">
-
-            <div class="col-md-3 col-xs-6 spacing">
-              <img src="../assets/img/report-appscreen/cau_19_01/03.png" class="shadow">
-            </div>
-            <div class="col-md-3 col-xs-6 spacing">
-              <div class=" bottom-space">
-                <h2 class="appTitle margin-none">EYEhealth</h2>
-                <p class="appComment">
-                  콘텍트렌즈 착용자를 위한 렌즈착용 권장시간 알람 앱
-                </p>
-                <h4>김혜성, 임재확, 조혜진</h4>
-                </div>
-           </div>
-           <div class="col-md-6 col-xs-12 spacing video-title">
-             <h4 class="margin-none">발표 영상</h4><br />
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/YBojEyf_GXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-             <div>
-               <a href="https://projectintheclass.github.io/EYEhealth/" target="_blank">
-                 <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-               </a>
-             </div>
-           </div>
-         </div><!-- row -->
-       </div><!--/container -->
+      </div><!--/container -->
     </div><!--/service -->
-
-   <div id="background-white">
-     <div class="container">
-       <div class="row article">
-
-         <div class="col-md-3 col-xs-6 spacing">
-           <img src="../assets/img/report-appscreen/cau_19_01/04.png" class="shadow">
-         </div>
-         <div class="col-md-3 col-xs-6 spacing">
-           <div class=" bottom-space">
-             <h2 class="appTitle margin-none">버블 메모(BubbleMemo)</h2>
-             <p class="appComment">메모에서부터 오는 감각적인 경험을 가능하게 하는 앱</p>
-             <h4>고안나, 이혜미, 조예진</h4>
-             </div>
-        </div>
-        <div class="col-md-6 col-xs-12 spacing video-title">
-          <h4 class="margin-none">발표 영상</h4><br />
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/POG0OzV0tqE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <div>
-            <a href="https://projectintheclass.github.io/BubbleMemo/" target="_blank">
-              <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-            </a>
-          </div>
-        </div>
-      </div><!-- row -->
-    </div>
-  </div>
-
-
-
-  <div id="background-grey">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_19_01/05.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">전국 ATM</h2>
-              <p class="appComment">
-                전국의 ATM을 수수료와 함께 지도에 나타내는 앱
-              </p>
-              <h4>윤진, 이지호, 홍재우</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/b5WA3GQofJw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-           <div>
-             <a href="https://itunes.apple.com/kr/app/전국-atm-찾기/id1454131770?mt=8" target="_blank">
-               <img src="../assets/img/app-store.png" class="gotoapp" style="padding: 5px 20px;" />
-             </a>
-             <a href="https://projectintheclass.github.io/jeonguk_ATM/" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div><!--/container -->
-     </div><!--/service -->
-
-<div id="background-white">
- <div class="container">
-   <div class="row article">
-
-     <div class="col-md-3 col-xs-6 spacing">
-
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class=" bottom-space">
-         <h2 class="appTitle margin-none">인생적금</h2>
-         <p class="appComment">
-           한장, 두장 찍을 때는 잘 모르겠지만,<br>
-           적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .
-         </p>
-         <h4>박세연, 박준영, 이민지</h4>
-         </div>
-    </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-      <h4 class="margin-none">발표 영상</h4><br />
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/F4EkTb5-EXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div>
-        <a href="https://projectintheclass.github.io/life-deposit/" target="_blank">
-          <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-        </a>
-      </div>
-    </div>
-  </div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/cau_19_01/07.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">미니약국</h2>
-          <p class="appComment">
-            약 먹는 시간을 알려주는 어플리케이션, 미니약국
-          </p>
-          <h4>서보민, 안웅기, 이지우</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/jnm_ygQXK4A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <div>
-         <a href="https://projectintheclass.github.io/mini-pharmacy/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
-   </div><!-- row -->
- </div>
 </div>
-
-<div id="background-grey">
-    <div class="container">
-      <div class="row article">
-
-        <div class="col-md-3 col-xs-6 spacing">
-
-        </div>
-        <div class="col-md-3 col-xs-6 spacing">
-          <div class=" bottom-space">
-            <h2 class="appTitle margin-none">노트픽</h2>
-            <p class="appComment">
-              캡처한 사진의 용도를 쉽게 기억할 수 있게 키워드와 함께 저장하는 앱
-            </p>
-            <h4>김응엽, 이소희, 최윤</h4>
-            </div>
-       </div>
-       <div class="col-md-6 col-xs-12 spacing video-title">
-         <h4 class="margin-none">발표 영상</h4><br />
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/DIDRgopUvik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-         <div>
-           <a href="https://projectintheclass.github.io/notepic/" target="_blank">
-             <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-           </a>
-         </div>
-       </div>
-     </div><!-- row -->
-   </div><!--/container -->
-   </div><!--/service -->
-
-<div id="background-white">
-<div class="container">
- <div class="row article">
-
-   <div class="col-md-3 col-xs-6 spacing">
-     <img src="../assets/img/report-appscreen/cau_19_01/09.png" class="shadow">
-   </div>
-   <div class="col-md-3 col-xs-6 spacing">
-     <div class=" bottom-space">
-       <h2 class="appTitle margin-none">거꾸로 레시피</h2>
-       <p class="appComment">
-         자취생의 냉장고 속 재료로 조합할 수 있는 <br>
-         적절한 음식의 레시피와 재료들의 수명을 알려 주는 앱
-       </p>
-       <h4>손재형, 이채운, 최기수</h4>
-       </div>
-  </div>
-   <div class="col-md-6 col-xs-12 spacing video-title">
-    <h4 class="margin-none">발표 영상</h4><br />
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/RzrtIUk4EQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-</div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
 
    <!-- *****************************************************************************************************************
    FOOTER

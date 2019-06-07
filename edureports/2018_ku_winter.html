@@ -28,6 +28,20 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+  <script src="../assets/js/retina-1.1.0.js"></script>
+  <script src="../assets/js/jquery.hoverdir.js"></script>
+  <script src="../assets/js/jquery.hoverex.min.js"></script>
+  <script src="../assets/js/jquery.prettyPhoto.js"></script>
+    <script src="../assets/js/jquery.isotope.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
 
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
@@ -42,7 +56,7 @@
   </head>
 
   <body>
-
+    <div id="root">
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
@@ -196,270 +210,10 @@
     <div class="centered">
       <h3 class="report-subtitle">교육 결과</h3>
     </div>
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/09.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">GA Z A</h2>
-          <p class="appComment">
-            여행과 사진을 사랑하는 사람을 위한,<br>
-            간단하게 여행을 포스팅하여 지도상에서 확인할 수 있는 앱
-          </p>
-          <h4>이가은 전신영 김경린</h4>
-          </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vvakY1WjmM4?list=PLBjx8AiS7qA3Jw9c736zvT4t7dL43zpFu"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-        <div>
-          <a href="https://kawai6214.wixsite.com/GAZZA/" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
+    <student-outcome university = '2018_ku_winter'></student-outcome>
   </div>
 </div>
 
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/07.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">Record What You Want</h2>
-          <p class="appComment">
-              수업 내용을 녹음하는 학생들을 위한, 한 번의 터치로 수업 자료 각 포인트에 녹음을 할 수 있게 해주는, 복습을 더 편하게 할 수 있는 앱.
-          </p>
-          <h4>김현석 엄현호 이태훈</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/bPU-FZ7ukpM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/Lecture_Record/" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div><!--/container -->
-</div><!--/service -->
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/02.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">KUnet</h2>
-          <p class="appComment">
-            증강현실을 이용하여 고려대학교 내 한국인과 외국인 학생들의 활발한 교류를 돕는 맞춤형 매칭앱
-          <h4>김재영 서정민 김미리암</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fPGflvPKo0w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/KUnet" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
-
-
-<div id="background-white">
-  <div class="container">
-    <div class="centered">
-      <h3 class="report-subtitle">교육 결과</h3>
-    </div>
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/01.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">잠자기5분전</h2>
-          <p class="appComment">
-            감수성이 풍부한 당신만을 위한 감성 생태계
-            </p>
-          <h4>김보경 최원미 주승원</h4>
-          </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/t_uXl9q_Z8o"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-        <div>
-          <a href="https://kawai6214.wixsite.com/5minutes" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/06.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">C - Lib</h2>
-          <p class="appComment">
-              다양한 패션 스타일을 구사하고 싶거나 소유하고 있는 의류를 활용하고 싶은 사람을 위한 공유 플랫폼.
-          </p>
-          <h4>임채현 배상엽</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DVR8_ijsMgw" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/Sharing-Clothes" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
-
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/03.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">문문</h2>
-          <p class="appComment">
-            당신의 삶에 영감을 불어넣을 365개의 질문!<br>
-            각자의 멋진 대답으로 삶을 기록하고 공유할 수 있는 앱
-          </p>
-          <h4>성인규 주호강 최용진</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/duad_W0o3t0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/QandA" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div><!--/container -->
-</div><!--/service -->
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/04.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">TODAY</h2>
-          <p class="appComment">
-              사용자 맞춤 명언앱입니다. 위젯으로 사용자가 원하는 명언을 보여줍니다. 상태설정을 통해 자신이 원하는 명언을 받을 수 있습니다.
-          </p>
-          <h4>임민진 신승우 윤진용</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/ohaguY3t1PM" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/TODAY" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/05.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">OSORI</h2>
-          <p class="appComment">
-              결정장애가 있는 당신을 위한 맛집부터 메뉴까지 추천해주는 리뷰 어플
-          </p>
-          <h4>엄세웅 이경연 오주희</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/fJUfvpZ6E6Q" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/OSORI/" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div><!--/container -->
-</div><!--/service -->
-
-
-
-
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/ku_18_01/08.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">Out Of House</h2>
-          <p class="appComment">
-          일정에 늦지 않도록
-          집에서 나갈 시간을 계산해주는 알람 앱
-          </p>
-          <h4>노지윤 고지윤</h4>
-        </div>
-      </div>
-      <div class="col-md-6 col-xs-12 spacing video-title">
-        <h4 class="margin-none">발표 영상</h4><br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KxR66PxJP_c" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-        <div>
-          <a href="https://projectintheclass.github.io/OOH" target="_blank">
-            <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-          </a>
-        </div>
-      </div>
-    </div><!-- row -->
-  </div>
-</div>
 
 
 
@@ -501,19 +255,6 @@
     </div><!--/container -->
    </div><!--/footerwrap -->
 
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-	<script src="../assets/js/retina-1.1.0.js"></script>
-	<script src="../assets/js/jquery.hoverdir.js"></script>
-	<script src="../assets/js/jquery.hoverex.min.js"></script>
-	<script src="../assets/js/jquery.prettyPhoto.js"></script>
-  	<script src="../assets/js/jquery.isotope.min.js"></script>
-  	<script src="../assets/js/custom.js"></script>
-
-
+  </div>
   </body>
 </html>

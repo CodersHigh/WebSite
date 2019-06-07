@@ -1,5 +1,3 @@
-var dataURL = '../assets/studentsData/2016_ku_winter.json';
-
 <!--  아래는 수정 금지  -->
 
 Vue.component('student-outcome', {
@@ -22,7 +20,7 @@ Vue.component('student-outcome', {
            <h4 class="margin-none">발표 영상</h4><br />\
            <iframe width="560" height="315" v-bind:src="value.youTubeAddress" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\
            <div>\
-             <a v-show="value.appStoreAddress != null" :href="value.appStoreAddress" target="">\
+             <a v-show="value.appStoreAddress != null" :href="value.appStoreAddress" target="_blank">\
                <img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />\
              </a>\
              <a v-show="value.website != null" :href="value.website" target="_blank">\
@@ -40,14 +38,25 @@ Vue.component('student-outcome', {
             }
       },
   mounted() {
+<<<<<<< HEAD
     var self = this
     $.getJSON(dataURL, function(data) {
       self.studentsOutcomes = data.university;
     });
+||||||| merged common ancestors
+    var self = this
+    $.getJSON(dataURL, function(data) {
+      self.studentsOutcomes = data.studentsOutcomes;
+    });
+=======
+    this.studentsOutcomes = universityData[this.university];
+>>>>>>> newbranch
   }
 })
 
-// 루트 인스턴스 생성
-new Vue({
-  el: '#root'
-})
+
+window.onload = function() {
+    new Vue({
+      el: '#root'
+    })
+}
