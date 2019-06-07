@@ -28,7 +28,9 @@ ss<!DOCTYPE html>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
@@ -192,6 +194,7 @@ ss<!DOCTYPE html>
 
 <!-- 교육 결과물 -->
 
+<div id="root">
 
 <div id="background-grey">
  <div class="container">
@@ -199,129 +202,11 @@ ss<!DOCTYPE html>
      <h3 class="report-subtitle">교육 결과</h3>
    </div>
    <div class="row article">
-     <div class="col-md-3 col-xs-6 spacing">
-       <img src="../assets/img/report-appscreen/dgu_19_01/1.png" class="shadow">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class=" bottom-space">
-         <h2 class="appTitle margin-none">동국아 졸업하자</h2>
-         <p class="appComment">
-          졸업요건 정보제공/계획관리 앱
-         </p>
-         <h4>유현지, 육지수, 김효서</h4>
-         </div>
-    </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-      <h4 class="margin-none">발표 영상</h4><br />
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/JJY5sWZlvx8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div>
-        <a href="https://itunes.apple.com/kr/app//id1452125551?mt=8" target="_blank">
-          <img src="../assets/img/app-store.png" class="gotoapp" style="padding: 5px 20px;" />
-        </a>
-        <a href="https://projectintheclass.github.io/DonggukGraduation/" target="_blank">
-          <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-        </a>
-      </div>
-    </div>
-  </div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/dgu_19_01/2.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">Movie Planet</h2>
-          <p class="appComment">
-            영화 마니아들을 위해 사용자의 <br>
-            영화 관람 이력과 작성 평론을 관리해 주는 앱
-          </p>
-          <h4>박민주, 박지호, 조인택</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/Ct7PdTHW-sg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <div>
-         <a href="https://itunes.apple.com/kr/app/movieplanet/id1452124136?mt=8" target="_blank">
-           <img src="../assets/img/app-store.png" class="gotoapp" style="padding: 5px 20px;" />
-         </a>
-         <a href="https://projectintheclass.github.io/MovieDialog/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
+     <student-outcome university = '2019_dgu_winter'></student-outcome>
    </div><!-- row -->
  </div>
 </div>
-
-<div id="background-grey">
- <div class="container">
-   <div class="row article">
-     <div class="col-md-3 col-xs-6 spacing">
-       <img src="../assets/img/report-appscreen/dgu_19_01/3.png" class="shadow">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class=" bottom-space">
-         <h2 class="appTitle margin-none">이거모향</h2>
-         <p class="appComment">
-          향수를 잘 모르는 사람을 위한 분위기별 향수 추천 앱
-         </p>
-         <h4>임성환, 조봉민, 유선경</h4>
-         </div>
-    </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-      <h4 class="margin-none">발표 영상</h4><br />
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/FCYB4HuR4dc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div>
-        <a href="https://projectintheclass.github.io/WTS/" target="_blank">
-          <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-        </a>
-      </div>
-    </div>
-  </div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/dgu_19_01/4.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">코동포동</h2>
-          <p class="appComment">
-            동국대학교 학생들을 위해 <br>
-            학교 근처 음식점들을 <br>
-            카테고리별로 분류하여 정보를 제공하는 앱
-          </p>
-          <h4>이민주, 정유나, 박재현</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/BnbTprFI-Z0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-       <div>
-         <a href="https://itunes.apple.com/kr/app/코동포동/id1453124118?mt=8" target="_blank">
-           <img src="../assets/img/app-store.png" class="gotoapp" style="padding: 5px 20px;" />
-         </a>
-         <a href="https://github.com/ProjectInTheClass/kdpd" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
-   </div><!-- row -->
- </div>
 </div>
-
    <!-- *****************************************************************************************************************
    FOOTER
    ***************************************************************************************************************** -->

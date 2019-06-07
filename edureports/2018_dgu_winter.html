@@ -28,7 +28,9 @@ ss<!DOCTYPE html>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
@@ -192,199 +194,18 @@ ss<!DOCTYPE html>
 
 <!-- 교육 결과물 -->
 
-
+<div id="root">
 <div id="background-grey">
  <div class="container">
    <div class="centered">
      <h3 class="report-subtitle">교육 결과</h3>
    </div>
    <div class="row article">
-     <div class="col-md-3 col-xs-6 spacing">
-       <img src="../assets/img/report-appscreen/dgu_18_01/05.png" class="shadow">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class=" bottom-space">
-         <h2 class="appTitle margin-none">원샷톡</h2>
-         <p class="appComment">
-          여러 명에게 한번에 메시지를 전송하고 싶었던 사용자들을 위한
-          다수의 개인톡을 보낼 수 있도록 해주는 앱
-         </p>
-         <h4>박신원 박지용 이다훈</h4>
-         </div>
-    </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-      <h4 class="margin-none">발표 영상</h4><br />
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/pkltcxtA03w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-      <div>
-        <a href="https://itunes.apple.com/us/app/%EC%9B%90%EC%83%B7%ED%86%A1/id1350334218?mt=8" target="_blank">
-          <img src="../assets/img/apple-store.png" class="gotoapp" style="padding: 5px 20px;" />
-        </a>
-        <a href="https://projectintheclass.github.io/OneshotTalk/" target="_blank">
-          <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-        </a>
-      </div>
-    </div>
-  </div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/dgu_18_01/06.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">PillingTime</h2>
-          <p class="appComment">
-            약을 복용하는 사람들을 위한
-            시간을 등록하면 해당시간에 약을 복용할 수 있도록 알려주는 알람 앱
-          </p>
-          <h4>김승주 신유리 이해준</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/9hZ865UkV10" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-       <div>
-         <a href="https://itunes.apple.com/us/app/%ED%95%84%EB%A7%81%ED%83%80%EC%9E%84/id1350330770?mt=8" target="_blank">
-           <img src="../assets/img/apple-store.png" class="gotoapp" style="padding: 5px 20px;" />
-         </a>
-         <a href="https://projectintheclass.github.io/PillingTime/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
-   </div><!-- row -->
- </div>
-</div>
-
-
-     <div id="background-grey">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/dgu_18_01/01.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">도리니티</h2>
-              <p class="appComment">
-                3D모델 교육을 위한 앱
-              </p>
-              <h4>김민수 김성탁 김지수</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/1bBU9ReBk3E"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-           <div>
-             <a href="https://itunes.apple.com/us/app/%EB%8F%84%EB%A6%AC%EB%8B%88%ED%8B%B0/id1350340428?mt=8" target="">
-<img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />
-             </a>
-             <a href="https://projectintheclass.github.io/dorinity/" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div>
-   </div>
-
-   <div id="background-white">
-     <div class="container">
-       <div class="row article">
-
-         <div class="col-md-3 col-xs-6 spacing">
-           <img src="../assets/img/report-appscreen/dgu_18_01/02.png" class="shadow">
-         </div>
-         <div class="col-md-3 col-xs-6 spacing">
-           <div class=" bottom-space">
-             <h2 class="appTitle margin-none">맛집go</h2>
-             <p class="appComment">증강현실을 이용하여
-                현장에서 맛집을 찾는 사람들을 위해
-                사용자 주변의 맛집 상세 정보를 보여주는 앱</p>
-             <h4>김성수 이기혁 한효병</h4>
-             </div>
-        </div>
-        <div class="col-md-6 col-xs-12 spacing video-title">
-          <h4 class="margin-none">발표 영상</h4><br />
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/IVPQwdd2_tI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-          <div>
-            <a href="https://projectintheclass.github.io/MJARProject/" target="_blank">
-              <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-            </a>
-          </div>
-        </div>
-      </div><!-- row -->
-    </div>
-  </div>
-
-
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/dgu_18_01/04.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">스포팅</h2>
-          <p class="appComment">
-            편리한 운동 소모임 관리, SPORTING
-            축구, 야구, 수영 등 원하는 종목에 참여해 보세요
-            Sporting은 원하는 시간 원하는 종목의 운동 모임을 관리합니다
-          </p>
-          <h4>조중현 최한나 한승연</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/81qy6hpiwQY" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-       <div>
-         <a href="https://projectintheclass.github.io/Sporting/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
-   </div><!-- row -->
- </div>
-</div>
-
-<div id="background-white">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/dgu_18_01/03.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">사과장터</h2>
-          <p class="appComment">
-            중고 애플제품을 구매 또는 판매하고자 하는 사람들을 위한 마켓 앱
-          </p>
-          <h4>강경남 박현민 추정호</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/TSIv-5x660w" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-       <div>
-         <a href="https://projectintheclass.github.io/AppleMarket/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
+     <student-outcome university = '2018_dgu_winter'></student-outcome>
    </div><!-- row -->
  </div><!--/container -->
 </div><!--/service -->
-
+</div>
 
 
    <!-- *****************************************************************************************************************

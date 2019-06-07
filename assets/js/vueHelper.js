@@ -20,7 +20,7 @@ Vue.component('student-outcome', {
            <h4 class="margin-none">발표 영상</h4><br />\
            <iframe width="560" height="315" v-bind:src="value.youTubeAddress" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>\
            <div>\
-             <a v-show="value.appStoreAddress != null" :href="value.appStoreAddress" target="">\
+             <a v-show="value.appStoreAddress != null" :href="value.appStoreAddress" target="_blank">\
                <img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />\
              </a>\
              <a v-show="value.website != null" :href="value.website" target="_blank">\
@@ -38,14 +38,13 @@ Vue.component('student-outcome', {
             }
       },
   mounted() {
-    var self = this
-    $.getJSON('../assets/studentsData/studentsOutcomes.json', function(data) {
-      self.studentsOutcomes = data.university;
-    });
+    this.studentsOutcomes = universityData[this.university];
   }
 })
 
-// 루트 인스턴스 생성
-new Vue({
-  el: '#root'
-})
+
+window.onload = function() {
+    new Vue({
+      el: '#root'
+    })
+}

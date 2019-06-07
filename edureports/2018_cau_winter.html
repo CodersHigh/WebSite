@@ -28,7 +28,9 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
     <script src="../assets/js/modernizr.js"></script>
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
@@ -208,222 +210,17 @@
 
 
 <!-- 교육 결과물 -->
+<div id="root">
     <div id="background-grey">
       <div class="container">
         <div class="centered">
           <h3 class="report-subtitle">교육 결과</h3>
         </div>
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_18_02/01.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">총무다</h2>
-              <p class="appComment">
-                모든 학교 총무들을 위한 예산관리 APP!
-              </p>
-              <h4>강민경 오태일 장준혁</h4>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 spacing video-title">
-            <h4 class="margin-none">발표 영상</h4><br />
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Udt5JecZF9o"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-            <div>
-              <a href="https://projectintheclass.github.io/chongmuda/" target="_blank">
-                <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-              </a>
-            </div>
-          </div>
-        </div><!-- row -->
-      </div>
-    </div>
-
-   <div id="background-white">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_18_01/04.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">ForYou</h2>
-              <p class="appComment">
-                온라인 쇼핑을 주로 하는 20~30대 청년들을 위한 의류 3D 피팅 및 구매 어플리케이션
-                Style, Preference and 3D Model for You
-              </p>
-              <h4>배준하 이종수 조혁만</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/b8HopTvKU_E" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-           <div>
-             <a href="https://projectintheclass.github.io/ForYou/" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div>
-    </div>
-
-    <div id="background-grey">
-        <div class="container">
-          <div class="row article">
-
-            <div class="col-md-3 col-xs-6 spacing">
-              <img src="../assets/img/report-appscreen/cau_18_01/03.png" class="shadow">
-            </div>
-            <div class="col-md-3 col-xs-6 spacing">
-              <div class=" bottom-space">
-                <h2 class="appTitle margin-none">OURSNAP</h2>
-                <p class="appComment">
-                  특별한 순간을 화보처럼 간직하고싶은 분들을 위한
-                  원하는 컨셉과 느낌의 사진을 찍어주는
-                  사진작가와 스튜디오를 찾아주는 앱
-                </p>
-                <h4>노수린 이윤주 김형준</h4>
-                </div>
-           </div>
-           <div class="col-md-6 col-xs-12 spacing video-title">
-             <h4 class="margin-none">발표 영상</h4><br />
-             <iframe width="560" height="315" src="https://www.youtube.com/embed/MNOXz3Lmy0g" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-             <div>
-               <a href="https://projectintheclass.github.io/OURSNAPS/" target="_blank">
-                 <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-               </a>
-             </div>
-           </div>
-         </div><!-- row -->
-       </div><!--/container -->
-    </div><!--/service -->
-
-   <div id="background-white">
-     <div class="container">
-       <div class="row article">
-
-         <div class="col-md-3 col-xs-6 spacing">
-           <img src="../assets/img/report-appscreen/cau_18_01/02.png" class="shadow">
-         </div>
-         <div class="col-md-3 col-xs-6 spacing">
-           <div class=" bottom-space">
-             <h2 class="appTitle margin-none">모으다</h2>
-             <p class="appComment">책을 좋아하는 사람들을 위한, 책 속 문장을 남길 수 있는 기능을 가진 앱</p>
-             <h4>김수진 이예주</h4>
-             </div>
-        </div>
-        <div class="col-md-6 col-xs-12 spacing video-title">
-          <h4 class="margin-none">발표 영상</h4><br />
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/V6rgTDeOfwI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-          <div>
-            <a href="https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8" target="
-            ">
-  <img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />
-            </a>
-            <a href="https://projectintheclass.github.io/Mouda/" target="_blank">
-              <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-            </a>
-          </div>
-        </div>
-      </div><!-- row -->
-    </div>
-  </div>
-
-
-
-  <div id="background-grey">
-      <div class="container">
-        <div class="row article">
-
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/report-appscreen/cau_18_01/07.png" class="shadow">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle margin-none">TeamWork</h2>
-              <p class="appComment">
-                세계인이 함께하는 올림픽이 있다면<br>
-                우리에겐 동료와 함께할 수 있는 '팀워크'가 있습니다.
-              </p>
-              <h4>이재준 편해윤 표경훈</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4 class="margin-none">발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/HTLU-XUCZIg?list=PLBjx8AiS7qA3Pn8YOT6gojXrHG3hXTGoI" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-           <div>
-             <a href="https://projectintheclass.github.io/TeamWork2018/" target="_blank">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
-     </div><!--/container -->
-     </div><!--/service -->
-
-<div id="background-white">
- <div class="container">
-   <div class="row article">
-
-     <div class="col-md-3 col-xs-6 spacing">
-       <img src="../assets/img/report-appscreen/cau_18_01/05.png" class="shadow">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class=" bottom-space">
-         <h2 class="appTitle margin-none">BestBefore</h2>
-         <p class="appComment">
-           소형가구를 위한, 냉장고 관리가 어려운 사람을 위한,
-           유통기한 알림 어플
-         </p>
-         <h4>류효광 홍세정 옥재현</h4>
-         </div>
-    </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-      <h4 class="margin-none">발표 영상</h4><br />
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/OG6i7-KDB44" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-      <div>
-        <a href="https://projectintheclass.github.io/bestbefore/" target="_blank">
-          <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-        </a>
-      </div>
-    </div>
-  </div><!-- row -->
-</div><!--/container -->
-</div><!--/service -->
-
-<div id="background-grey">
-  <div class="container">
-    <div class="row article">
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="../assets/img/report-appscreen/cau_18_01/06.png" class="shadow">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class=" bottom-space">
-          <h2 class="appTitle margin-none">기숙사알리미</h2>
-          <p class="appComment">
-            공지사항부터 생활정보까지, 모든 것을 한 눈에
-          </p>
-          <h4>안재형 한진 강제순</h4>
-          </div>
-     </div>
-     <div class="col-md-6 col-xs-12 spacing video-title">
-       <h4 class="margin-none">발표 영상</h4><br />
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/CmXXqvfjHbg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-       <div>
-         <a href="https://itunes.apple.com/kr/app/%EC%A4%91%EC%95%99%EB%8C%80%EA%B8%B0%EC%88%99%EC%82%AC%EC%95%8C%EB%A6%AC%EB%AF%B8/id1363880842?mt=8" target="_blank">
-           <img src="../assets/img/apple-store.png" class="gotoapp" style="padding: 5px 20px;" />
-         </a>
-         <a href="https://projectintheclass.github.io/CAUDormitory/" target="_blank">
-           <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-         </a>
-       </div>
-     </div>
+        <div class="row">
+          <student-outcome university = '2018_cau_winter'></student-outcome>
    </div><!-- row -->
  </div>
+</div>
 </div>
 
 
