@@ -1770,5 +1770,88 @@ var universityData = {
    "appStoreAddress": "https://itunes.apple.com/kr/app/코동포동/id1453124118?mt=8",
    "website": "https://github.com/ProjectInTheClass/kdpd"
  }
+],
+"2019_ysu_spring": [
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/01.png",
+   "appTitle": "TwoGo",
+   "appComment": "TwoGo is a delivery application for users who want to share the cost of a meal without having to pay extra to reach the minimum price",
+   "students": "seungpil Hyun",
+   "youTubeAddress": "https://www.youtube.com/embed/JINAGZS3ToM",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/TwoGo/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/02.png",
+   "appTitle": "Memoment",
+   "appComment": "Memoment is an application for users who want to\nwrite reviews of movie, performance, and exhibition.",
+   "students": "Philian Choi",
+   "youTubeAddress": "https://www.youtube.com/embed/7hX4slvBx5g",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Memoment/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/03.png",
+   "appTitle": "Coffee Book",
+   "appComment": "An App to collect Recipe & write recipe, and look friend's favorite coffee\n\n",
+   "students": "Soohyun Yoon\n",
+   "youTubeAddress": "https://www.youtube.com/embed/7jIHV12mELQ",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/CoffeeBook/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/04.png",
+   "appTitle": "Survey",
+   "appComment": "This app is a platform for surveys; users can get more respondents, easily create & answer the surveys, and are ensured reward for answering the surveys.",
+   "students": "dyneee",
+   "youTubeAddress": "https://www.youtube.com/embed/Y343qCDZ89g",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Survey/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/05.png",
+   "appTitle": "Semester Diary",
+   "appComment": "Semester Diary allows students to manage assignments by each deadline. The user can keep track on the progress of each assignment by organizing everyday schedule..",
+   "students": "Hyun Jung Oh",
+   "youTubeAddress": "https://www.youtube.com/embed/ClxnmpitjHE",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/SemesterDiary/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/06.png",
+   "appTitle": "Cheat Diet",
+   "appComment": "A diet app for sweet toothed’s cheat days. \nInforms users of desert calories and a workout that complies with cheat day: hours of sleep required to burn it off.\n\n",
+   "students": "Jooyeon Shon",
+   "youTubeAddress": "https://www.youtube.com/embed/6XPIrYaUaW4",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/ultimatesleepdiet/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/07.png",
+   "appTitle": "MyInterview",
+   "appComment": "MyInterview is an application for job applicants who have to practice for job interviews; it asks popular interview questions to its users so that users can do unlimited mock interviews. The differentiator is that it is a voice-activated app that interacts with the user using basic artificial intelligence to give a more realistic mock interview experience.",
+   "students": "Chiwon Lee",
+   "youTubeAddress": "https://www.youtube.com/embed/bEweBERctjo",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/MyInterview/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/08.png",
+   "appTitle": "OutFit Weather",
+   "appComment": "An app mainly focus on weather forecast that can help people easily make decision about their daily outfits depending on the weather conditions.",
+   "students": "selinazzzan",
+   "youTubeAddress": "https://www.youtube.com/embed/39k2pu_qFkA",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Outfit-Weather/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/ysu_19_01/09.png",
+   "appTitle": "QuotesPlease",
+   "appComment": "Quotesplease is an application that provides daily commuters with a chance to freshen up their minds with quotes from books, movies, lyrics, and poems.",
+   "students": "jaecom",
+   "youTubeAddress": "https://www.youtube.com/embed/EggWov6Mq2Y",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/QuotesPlease/"
+ }
 ]
 }
