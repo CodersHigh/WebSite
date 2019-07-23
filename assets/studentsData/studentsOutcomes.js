@@ -1853,5 +1853,78 @@ var universityData = {
    "앱스토어링크?": "",
    "홈페이지링크?": "https://projectintheclass.github.io/QuotesPlease/"
  }
+], "2019_hyu_spring":[
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/01.png",
+   "appTitle": "안주나요",
+   "appComment": "이 시대의 결정장애들을 위한, 날씨 기반 안주 추천 앱",
+   "students": "송연종, 안재은, 윤세령",
+   "youTubeAddress": "https://www.youtube.com/embed/NLVtbWNPiLU",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Anjunayo/docs/index.html"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/02.png",
+   "appTitle": "AboutHanyang",
+   "appComment": "AboutHanyang은 한양대 내의 시설 정보를 공유하고 의견을 나누는 앱입니다.",
+   "students": "김태형, 이성주, 정재윤",
+   "youTubeAddress": "https://www.youtube.com/embed/51AC4AyospE",
+   "앱스토어링크?": "https://apps.apple.com/kr/app/about-hanyang/id1469853999",
+   "홈페이지링크?": ""
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/03.png",
+   "appTitle": "체크홈",
+   "appComment": "집을 처음으로 구하는 사람이 신경써야 하는 사항을 배우고 확인할 수 있는 체크리스트 앱",
+   "students": "김범수, 강재원, 고태영",
+   "youTubeAddress": "https://www.youtube.com/embed/Mmk1ezsSjCI",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/CheckHome/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/04.png",
+   "appTitle": "IFFY",
+   "appComment": "답이 정해지지 않은 질문\n당신에게 IFFY를 선물합니다.",
+   "students": "김영수, 이봉석, 이승재",
+   "youTubeAddress": "https://www.youtube.com/embed/kbgRqqqJwBY",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Iffy-iOSApplication/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/05.png",
+   "appTitle": "Latte",
+   "appComment": "커플을 위한 채팅앱",
+   "students": "Nam Hyebin, Lee Hyunji, Sim Sangyong",
+   "youTubeAddress": "https://www.youtube.com/embed/pjiu97W7XFI",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/Messenger-for-Couple/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/06.png",
+   "appTitle": "MinZzengE",
+   "appComment": "민쯩이는 당신이 지갑에서 신분증을 꺼낼 수고를 덜어줍니다.",
+   "students": "김정모, 김효일, 최성인",
+   "youTubeAddress": "https://www.youtube.com/embed/_h4c24Bd6p0",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/MinZzeungE/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/07.png",
+   "appTitle": "Hanyang Smart Order",
+   "appComment": "한양대학교 교내 카페 주문 결제 / 쿠폰 관리 어플리케이션",
+   "students": "전하영, 최준호, 정서운",
+   "youTubeAddress": "https://www.youtube.com/embed/F-LaJpYToKw",
+   "앱스토어링크?": "https://apps.apple.com/ru/app/한양-스마트오더/id1470195139",
+   "홈페이지링크?": "https://projectintheclass.github.io/QueueOrder/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/snu_19_01/08.png",
+   "appTitle": "UniAlarmee",
+   "appComment": "매일 학교 홈페이지에서 과제를 확인하느라 지친 당신을 위한 한양대학교 블랙보드 사이트 공지, 과제 리스트 불러오기 어플리케이션",
+   "students": "서윤희, 최예찬, 한다진",
+   "youTubeAddress": "https://www.youtube.com/embed/QTDXY4F6BTY",
+   "앱스토어링크?": "",
+   "홈페이지링크?": "https://projectintheclass.github.io/UniAlarmeeProject/"
+ }
 ]
 }
