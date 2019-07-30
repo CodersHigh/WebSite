@@ -1691,7 +1691,7 @@ var universityData = {
    "appScreen": "../assets/img/report-appscreen/ysu_19_01/01.png",
    "appTitle": "TwoGo",
    "appComment": "TwoGo is a delivery application for users who want to share the cost of a meal without having to pay extra to reach the minimum price",
-   "students": "seungpil Hyun",
+   "students": "Seungpil Hyun",
    "youTubeAddress": "https://www.youtube.com/embed/JINAGZS3ToM",
     "website": "https://projectintheclass.github.io/TwoGo/"
  },
