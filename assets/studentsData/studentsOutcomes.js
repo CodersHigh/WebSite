@@ -1677,8 +1677,7 @@ var universityData = {
    "appStoreAddress": "https://itunes.apple.com/kr/app/코동포동/id1453124118?mt=8",
    "website": "https://github.com/ProjectInTheClass/kdpd"
  }
-],
-"2019_ysu_spring": [
+], "2019_ysu_spring": [
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/04.png",
     "appTitle": "Survey",
