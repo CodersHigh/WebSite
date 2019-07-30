@@ -1584,28 +1584,12 @@ var universityData = {
    "website": "https://projectintheclass.github.io/iOS_Heads_Up/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/02.png",
-   "appTitle": "편한Calendar",
-   "appComment": "여러 일정입력을 위한 조작을 줄여주고 이를 피드백해주는 어플",
-   "students": "박정훈 윤종원 이지나",
-   "youTubeAddress": "https://www.youtube.com/embed/PActdaWm9Ec",
-    "website": "https://projectintheclass.github.io/convenient_calendar/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/03.png",
-   "appTitle": "EYEhealth",
-   "appComment": "콘텍트렌즈 착용자를 위한 렌즈착용 권장시간 알람 앱",
-   "students": "김혜성 임재확 조혜진",
-   "youTubeAddress": "https://www.youtube.com/embed/YBojEyf_GXo",
-    "website": "https://projectintheclass.github.io/EYEhealth/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/04.png",
-   "appTitle": "버블 메모(BubbleMemo)",
-   "appComment": "메모에서부터 오는 감각적인 경험을 가능하게 하는 앱",
-   "students": "고안나 이혜미 조예진",
-   "youTubeAddress": "https://www.youtube.com/embed/POG0OzV0tqE",
-    "website": "https://projectintheclass.github.io/BubbleMemo/"
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/09.png",
+   "appTitle": "거꾸로 레시피",
+   "appComment": "자취생의 냉장고 속 재료로 조합할 수 있는 적절한 음식의 레시피와 재료들의 수명을 알려 주는 앱",
+   "students": "손재형 이채운 최기수",
+   "youTubeAddress": "https://www.youtube.com/embed/RzrtIUk4EQg",
+    "website": ""
  },
  {
    "appScreen": "../assets/img/report-appscreen/cau_19_01/05.png",
@@ -1617,12 +1601,12 @@ var universityData = {
    "website": "https://projectintheclass.github.io/jeonguk_ATM/"
  },
  {
-   "appScreen": "",
-   "appTitle": "인생적금",
-   "appComment": "한장, 두장 찍을 때는 잘 모르겠지만, 적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .",
-   "students": "박세연 박준영 이민지",
-   "youTubeAddress": "https://www.youtube.com/embed/F4EkTb5-EXs",
-    "website": "https://projectintheclass.github.io/life-deposit/"
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/02.png",
+   "appTitle": "편한Calendar",
+   "appComment": "여러 일정입력을 위한 조작을 줄여주고 이를 피드백해주는 어플",
+   "students": "박정훈 윤종원 이지나",
+   "youTubeAddress": "https://www.youtube.com/embed/PActdaWm9Ec",
+    "website": "https://projectintheclass.github.io/convenient_calendar/"
  },
  {
    "appScreen": "../assets/img/report-appscreen/cau_19_01/07.png",
@@ -1633,20 +1617,28 @@ var universityData = {
     "website": "https://projectintheclass.github.io/mini-pharmacy/"
  },
  {
-   "appScreen": "",
-   "appTitle": "노트픽",
-   "appComment": "캡처한 사진의 용도를 쉽게 기억할 수 있게 키워드와 함께 저장하는 앱",
-   "students": "김응엽 이소희 최윤",
-   "youTubeAddress": "https://www.youtube.com/embed/DIDRgopUvik",
-    "website": "https://projectintheclass.github.io/notepic/"
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/04.png",
+   "appTitle": "버블 메모(BubbleMemo)",
+   "appComment": "메모에서부터 오는 감각적인 경험을 가능하게 하는 앱",
+   "students": "고안나 이혜미 조예진",
+   "youTubeAddress": "https://www.youtube.com/embed/POG0OzV0tqE",
+    "website": "https://projectintheclass.github.io/BubbleMemo/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/09.png",
-   "appTitle": "거꾸로 레시피",
-   "appComment": "자취생의 냉장고 속 재료로 조합할 수 있는 적절한 음식의 레시피와 재료들의 수명을 알려 주는 앱",
-   "students": "손재형 이채운 최기수",
-   "youTubeAddress": "https://www.youtube.com/embed/RzrtIUk4EQg",
-    "website": ""
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/10.png",
+   "appTitle": "인생적금",
+   "appComment": "한장, 두장 찍을 때는 잘 모르겠지만, 적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .",
+   "students": "박세연 박준영 이민지",
+   "youTubeAddress": "https://www.youtube.com/embed/F4EkTb5-EXs",
+    "website": "https://projectintheclass.github.io/life-deposit/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/03.png",
+   "appTitle": "EYEhealth",
+   "appComment": "콘텍트렌즈 착용자를 위한 렌즈착용 권장시간 알람 앱",
+   "students": "김혜성 임재확 조혜진",
+   "youTubeAddress": "https://www.youtube.com/embed/YBojEyf_GXo",
+    "website": "https://projectintheclass.github.io/EYEhealth/"
  }
 ],
   "2019_dgu_winter": [
