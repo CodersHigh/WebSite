@@ -144,6 +144,7 @@ var universityData = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "2016_snu_spring": [
 {
   "appScreen": "",
@@ -3184,7 +3185,920 @@ var universityData = {
 		"website": ""
 	}
 =======
+||||||| f53561e... 교육 결과물 자동화
+"2016_snu_spring": [
+{
+  "appScreen": "",
+  "appTitle": "길찾샤",
+  "appComment": "",
+  "students": "백영준",
+  "youTubeAddress": "https://www.youtube.com/embed/YZx-aKbSCwA",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Recipedia",
+  "appComment": "",
+  "students": "현유지",
+  "youTubeAddress": "https://www.youtube.com/embed/EaXgwTpXNOo",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Teamate",
+  "appComment": "",
+  "students": "이유진",
+  "youTubeAddress": "https://www.youtube.com/embed/GAP7Fvgh7yY",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "실험시럼",
+  "appComment": "",
+  "students": "도홍일",
+  "youTubeAddress": "https://www.youtube.com/embed/BoqFSu7UE40",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Lookcast",
+  "appComment": "",
+  "students": "구연재",
+  "youTubeAddress": "https://www.youtube.com/embed/Y9qAHPi0sxQ",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Bookrap",
+  "appComment": "",
+  "students": "강민구",
+  "youTubeAddress": "https://www.youtube.com/embed/Vt3ihpbVKCM",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "GetItCheap",
+  "appComment": "",
+  "students": "유슬기",
+  "youTubeAddress": "https://www.youtube.com/embed/H1qFt872i7w",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "GrandsPhoto",
+  "appComment": "",
+  "students": "김승현",
+  "youTubeAddress": "https://www.youtube.com/embed/31c8X7cskl4",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "TravelLog",
+  "appComment": "",
+  "students": "조원희",
+  "youTubeAddress": "https://www.youtube.com/embed/Ngd2-p3n7ao",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "매일운동",
+  "appComment": "",
+  "students": "김주영",
+  "youTubeAddress": "https://www.youtube.com/embed/NZvzFF6u064",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "PhotoAny",
+  "appComment": "",
+  "students": "황도증",
+  "youTubeAddress": "https://www.youtube.com/embed/nw4YqTMcY9g",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Clute",
+  "appComment": "",
+  "students": "이현정",
+  "youTubeAddress": "https://www.youtube.com/embed/U4Ub8unRgmA",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "66HabitMaker",
+  "appComment": "",
+  "students": "서연",
+  "youTubeAddress": "https://www.youtube.com/embed/LkwZpsgj8uA",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "Moaju",
+  "appComment": "",
+  "students": "김정환",
+  "youTubeAddress": "https://www.youtube.com/embed/vELTUkZgQpw",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "EZLOL",
+  "appComment": "",
+  "students": "최현석",
+  "youTubeAddress": "https://www.youtube.com/embed/B3i0lGTImXQ",
+  "appStoreAddress": "",
+  "website": ""
+}
+],
+"2016_ku_summer":	[
+{
+  "appScreen": "",
+  "appTitle": "ThirstyTraveler",
+  "appComment": "",
+  "students": "",
+  "youTubeAddress": "https://www.youtube.com/embed/3f6c-3YR_bY",
+  "appStoreAddress": "",
+  "website": "https://projectintheclass.github.io/ThirstyTraveler/"
+},
+{
+  "appScreen": "",
+  "appTitle": "Travelr",
+  "appComment": "",
+  "students": "",
+  "youTubeAddress": "https://www.youtube.com/embed/eM3MelsQ1fg",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "DewDate",
+  "appComment": "",
+  "students": "",
+  "youTubeAddress": "https://www.youtube.com/embed/3djEWL6PoJU",
+  "appStoreAddress": "",
+  "website": ""
+},
+{
+  "appScreen": "",
+  "appTitle": "TimerPlanner",
+  "appComment": "",
+  "students": "",
+  "youTubeAddress": "https://www.youtube.com/embed/XL6GLgIICRA",
+  "appStoreAddress": "",
+  "website": "https://projectintheclass.github.io/TimerStudy2/"
+},
+{
+  "appScreen": "",
+  "appTitle": "KUSpace",
+  "appComment": "",
+  "students": "",
+  "youTubeAddress": "https://www.youtube.com/embed/JeTYjgXA4fI",
+  "appStoreAddress": "",
+  "website": "https://projectintheclass.github.io/KUSpace/"
+}
+],
+"2016_dgu_fall": [
+	{
+		"appScreen": "",
+		"appTitle": "CalendarVot",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/L_2avDz-KRA",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Calendar-Vot/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "PinSwift",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Vv-IfKtOj7s",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "사다리",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/abQSFLRuGC4",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2016_ysu_fall": [
+  {
+		"appScreen": "",
+		"appTitle": "DoIt_IID",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/REkBgY74hTc",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "SchedulePet",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/c2oW13OFEg0",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Clear",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/WErUASt24fo",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "TheCooTour_IID",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/82MlzBzhYiw",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Commit2U_IID",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/cHLFOO9QPsw",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2016_hyu_fall": [
+	{
+		"appScreen": "",
+		"appTitle": "Fruit",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Fk0pwa2z0kE",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Fruit/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "GameRecommender",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/SMTsCkHoMTI",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/GameRecommender/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "GamsungDiary",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/zlrfcUR7jNw",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Gamsung/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "BigPicture",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/8iKvfBW2w6o",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/TheBigPicture/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Sue4U",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/vN1z-nUk91w",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Sue4U/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "맛집",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/NbfNXsLBIFs",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/MatZyp/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "YogiPC",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/GIZ6sWPNl6k",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/YogiPC/#"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Noti",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/f3irFMOF1xQ",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Noti/"
+	}
+],
+"2016_snu_fall": [
+  {
+		"appScreen": "",
+		"appTitle": "Zipple",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/jYnAFGDr49g",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/zipple/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Idle Timer",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/zorsXBlSKcg",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/IdleTimer/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "MAL",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/jhcdnKtPb6I",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/MinApp/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "엄마오늘비와",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/SIZqe8zoR0o",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/weatherForecast/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "ExpCatcher",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Ji_5afb4eAI",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+=======
+>>>>>>> parent of f53561e... 교육 결과물 자동화
 "2017_cau_winter": [
+<<<<<<< HEAD
+ {
+   "appScreen": "../assets/img/portfolio/radioScreen.png",
+   "appTitle": "영어 라디오 PRO",
+   "appComment": "영어 라디오 PRO - News & Talk'는 영어권 국가의 토크, 뉴스 위주의 라디오 채널을 모아놓은 간편한 라디오 앱입니다.",
+   "students": "권병수",
+   "youTubeAddress": "https://www.youtube.com/embed/gS69MRKi-s4",
+   "appStoreAddress": "",
+   "website": ""
+ },
+ {
+   "appScreen": "../assets/img/portfolio/day1Screen.png",
+   "appTitle": "1월 1일",
+   "appComment": "당신의 목표 달성을 위하여",
+   "students": "오형민 유준상",
+   "youTubeAddress": "",
+   "appStoreAddress": "https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-ㅅㄷㄱ%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8",
+   "website": ""
+ },
+ {
+   "appScreen": "../assets/img/portfolio/booknoteScreen.png",
+   "appTitle": "BookNotes",
+   "appComment": "독서 노트는 책을 읽고 자신의 생각을 정리할 수 있는 앱입니다.",
+   "students": "신길용",
+   "youTubeAddress": "https://www.youtube.com/embed/mAz1SX3yTv4",
+   "appStoreAddress": "",
+   "website": ""
+ }
+>>>>>>> parent of f53561e... 교육 결과물 자동화
+||||||| f53561e... 교육 결과물 자동화
+	{
+		"appScreen": "",
+		"appTitle": "Roomagery",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/nmYHZjBn5aM",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Roomagery/"
+	},
+	{
+		"appScreen": "../assets/img/portfolio/radioScreen.png",
+		"appTitle": "영어 라디오 PRO",
+		"appComment": "'영어 라디오 PRO - News & Talk'는 영어권 국가의 토크, 뉴스 위주의 라디오 채널을 모아놓은 간편한 라디오 앱입니다.",
+		"students": " 권병수.",
+		"youTubeAddress": "https://www.youtube.com/embed/gS69MRKi-s4",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "../assets/img/portfolio/booknoteScreen.png",
+		"appTitle": "BookNotes",
+		"appComment": "독서 노트는 책을 읽고 자신의 생각을 정리할 수 있는 앱입니다.",
+		"students": "신길용",
+		"youTubeAddress": "https://www.youtube.com/embed/mAz1SX3yTv4",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Memories",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/ZddK_nURi34",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Memories/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "SeizeTheDay",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/8wFHh1WJjNw",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/SeizeTheDay/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "TravelRecorder",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/gmk1Im1qQpU",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Review/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Campuddy",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/4bwYbk2LUPE",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Campuddy/"
+	}
+],
+"2017_ku_winter": [
+	{
+		"appScreen": "",
+		"appTitle": "Coupon4U",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/4fo8imzTIWU",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Coupon4U/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "JanuaryFirst",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/YZSjCZoDPj8",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "KUMap",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/ecgyKhyj7JA",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/KUMap/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "JiPangE",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/6SnFTJKMS0c",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/JiPangE/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Scrapper",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/7vY53YXscEo",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/scrapper/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "SleepStudy",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/6h7zbUE-sn0",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Refrigrator",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/y-w9jjQKR8k",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/Refrigerator/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "dDAnd",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/9ZRsZaWYo38",
+		"appStoreAddress": "",
+		"website": "https://projectintheclass.github.io/dAEnd/"
+	},
+	{
+		"appScreen": "",
+		"appTitle": "시간이없다",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/tFGl8SCCuhc",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2017_ysu_spring": [
+	{
+		"appScreen": "",
+		"appTitle": "Nag",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/pTzQT1ofakc",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Connect",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/gOX1kw9hDlk",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Yopply",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/ijP5SqfuYcg",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Family Schedule Sharing",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/7lchjZNvbNI",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Fan app",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/bLkwlOcUDGo",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2017_snu_spring": [
+	{
+		"appScreen": "",
+		"appTitle": "공샤",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/GAfTqbLUABQ",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "타임어택",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/gH_WIto6EWc",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Quickway",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/8wU8Ls4jaxY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Boarding Spot",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/33m-ACH5zRY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "양도천국",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Q_WsbdsCNhY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Check 한자",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/sbvk_3dTwsg",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Font Scanner",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/6Ek2HPu9-VA",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Appslock",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/W3gcMj4Qj20",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2017_hyu_spring": [
+	{
+		"appScreen": "",
+		"appTitle": "Materbot",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/z-mj-GoZ_kY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "HYU TT",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/nZmL1mT9_Ko",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Recipick",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/UYsMCEzXlVw",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "HyLionPost",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Qxs8z-dEVwY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "HYU JOKBO",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/yrlXhO96sIU",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "몸 쪽 꽉찬 공",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/HGxDbGDxJTY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "First Aid",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/Ln9oiVnchjk",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Blade & Soul의 공략을 한 손에",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/xcLWFSuPJCw",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Lol App",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/cHGyQ1cReDI",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Tribucket",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/ynU21dY3HJs",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Password Manager",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/gvW7OL3PvYM",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2017_cau_summer": [
+{
+		"appScreen": "",
+		"appTitle": "PetD",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/ZfHJH0RvoO8",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "PlanTree",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/l0yYUNda69w",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "Sider",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/7pP0kJrSFIg",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "PTManager",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/yIEkoc4bTrU",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "PDFNote",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/qb0rQ1szd6Y",
+		"appStoreAddress": "",
+		"website": ""
+	}
+],
+"2017_ku_summer": [
+	{
+		"appScreen": "",
+		"appTitle": "Bingon612",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/MHSgo6I1Pec",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "CODACO",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "KUMO",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/YGdA1QWViW8",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "별일",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/dw6seoGyj2M",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "읽다",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/RBVcRojblwU",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "정신차려",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/8usSV82aXGw",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "다다다",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/HyICKgoMRek",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "BookTogether",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/lBowm2rnFVY",
+		"appStoreAddress": "",
+		"website": ""
+	},
+	{
+		"appScreen": "",
+		"appTitle": "도라가구",
+		"appComment": "",
+		"students": "",
+		"youTubeAddress": "https://www.youtube.com/embed/poLb0orSaJo",
+		"appStoreAddress": "",
+		"website": ""
+	}
+=======
  {
    "appScreen": "../assets/img/portfolio/radioScreen.png",
    "appTitle": "영어 라디오 PRO",
