@@ -1652,7 +1652,7 @@ var universityData = {
 ],
   "2019_cau_winter": [
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/01.jpg",
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/01.png",
    "appTitle": "SketchWord",
    "appComment": "간단한 캐치마인드게임을 어플로 해보자",
    "students": "배경빈 정진혁 손희덕",
@@ -1662,33 +1662,13 @@ var universityData = {
  },
  {
    "appScreen": "../assets/img/report-appscreen/cau_19_01/02.png",
-   "appTitle": "편한Calendar",
-   "appComment": "여러 일정입력을 위한 조작을 줄여주고 이를 피드백해주는 어플",
-   "students": "박정훈 윤종원 이지나",
-   "youTubeAddress": "https://www.youtube.com/embed/PActdaWm9Ec",
-   "appStoreAddress": "",
-   "website": "https://projectintheclass.github.io/convenient_calendar/"
+   "appTitle": "거꾸로 레시피",
+   "appComment": "자취생의 냉장고 속 재료로 조합할 수 있는 적절한 음식의 레시피와 재료들의 수명을 알려 주는 앱",
+   "students": "손재형 이채운 최기수",
+   "youTubeAddress": "https://www.youtube.com/embed/RzrtIUk4EQg"
  },
  {
    "appScreen": "../assets/img/report-appscreen/cau_19_01/03.png",
-   "appTitle": "EYEhealth",
-   "appComment": "콘텍트렌즈 착용자를 위한 렌즈착용 권장시간 알람 앱",
-   "students": "김혜성 임재확 조혜진",
-   "youTubeAddress": "https://www.youtube.com/embed/YBojEyf_GXo",
-   "appStoreAddress": "",
-   "website": "https://projectintheclass.github.io/EYEhealth/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/04.png",
-   "appTitle": "버블 메모(BubbleMemo)",
-   "appComment": "메모에서부터 오는 감각적인 경험을 가능하게 하는 앱",
-   "students": "고안나 이혜미 조예진",
-   "youTubeAddress": "https://www.youtube.com/embed/POG0OzV0tqE",
-   "appStoreAddress": "",
-   "website": "https://projectintheclass.github.io/BubbleMemo/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/05.png",
    "appTitle": "전국 ATM",
    "appComment": "전국의 ATM을 수수료와 함께 지도에 나타내는 앱",
    "students": "윤진 이지호 홍재우",
@@ -1697,40 +1677,45 @@ var universityData = {
    "website": "https://projectintheclass.github.io/jeonguk_ATM/"
  },
  {
-   "appScreen": "",
-   "appTitle": "인생적금",
-   "appComment": "한장, 두장 찍을 때는 잘 모르겠지만, 적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .",
-   "students": "박세연 박준영 이민지",
-   "youTubeAddress": "https://www.youtube.com/embed/F4EkTb5-EXs",
-   "appStoreAddress": "",
-   "website": "https://projectintheclass.github.io/life-deposit/"
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/04.png",
+   "appTitle": "편한Calendar",
+   "appComment": "여러 일정입력을 위한 조작을 줄여주고 이를 피드백해주는 어플",
+   "students": "박정훈 윤종원 이지나",
+   "youTubeAddress": "https://www.youtube.com/embed/PActdaWm9Ec",
+   "website": "https://projectintheclass.github.io/convenient_calendar/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/07.png",
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/05.png",
    "appTitle": "미니약국",
    "appComment": "약 먹는 시간을 알려주는 어플리케이션, 미니약국",
    "students": "서보민 안웅기 이지우",
    "youTubeAddress": "https://www.youtube.com/embed/jnm_ygQXK4A",
-   "appStoreAddress": "",
+   "appStoreAddress": "https://apps.apple.com/kr/app/미니약국/id1469902368",
    "website": "https://projectintheclass.github.io/mini-pharmacy/"
  },
  {
-   "appScreen": "",
-   "appTitle": "노트픽",
-   "appComment": "캡처한 사진의 용도를 쉽게 기억할 수 있게 키워드와 함께 저장하는 앱",
-   "students": "김응엽 이소희 최윤",
-   "youTubeAddress": "https://www.youtube.com/embed/DIDRgopUvik",
-   "appStoreAddress": "",
-   "website": "https://projectintheclass.github.io/notepic/"
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/06.png",
+   "appTitle": "버블 메모(BubbleMemo)",
+   "appComment": "메모에서부터 오는 감각적인 경험을 가능하게 하는 앱",
+   "students": "고안나 이혜미 조예진",
+   "youTubeAddress": "https://www.youtube.com/embed/POG0OzV0tqE",
+   "website": "https://projectintheclass.github.io/BubbleMemo/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/09.png",
-   "appTitle": "거꾸로 레시피",
-   "appComment": "자취생의 냉장고 속 재료로 조합할 수 있는 적절한 음식의 레시피와 재료들의 수명을 알려 주는 앱",
-   "students": "손재형 이채운 최기수",
-   "youTubeAddress": "https://www.youtube.com/embed/RzrtIUk4EQg",
-   "appStoreAddress": "",
-   "website": ""
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/07.png",
+   "appTitle": "인생적금",
+   "appComment": "한장, 두장 찍을 때는 잘 모르겠지만, 적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .",
+   "students": "박세연 박준영 이민지",
+   "youTubeAddress": "https://www.youtube.com/embed/F4EkTb5-EXs",
+   "website": "https://projectintheclass.github.io/life-deposit/"
+ },
+ {
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/08.png",
+   "appTitle": "EYEhealth",
+   "appComment": "콘텍트렌즈 착용자를 위한 렌즈착용 권장시간 알람 앱",
+   "students": "김혜성 임재확 조혜진",
+   "youTubeAddress": "https://www.youtube.com/embed/YBojEyf_GXo",
+   "website": "https://projectintheclass.github.io/EYEhealth/"
  }
 ],
   "2019_dgu_winter": [
@@ -1778,7 +1763,6 @@ var universityData = {
     "appComment": "This app is a platform for surveys; users can get more respondents, easily create & answer the surveys, and are ensured reward for answering the surveys.",
     "students": "Da In Kim",
     "youTubeAddress": "https://www.youtube.com/embed/Y343qCDZ89g",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/Survey/"
   },
   {
@@ -1787,7 +1771,6 @@ var universityData = {
     "appComment": "MyInterview is an application for job applicants who have to practice for job interviews; it asks popular interview questions to its users so that users can do unlimited mock interviews. The differentiator is that it is a voice-activated app that interacts with the user using basic artificial intelligence to give a more realistic mock interview experience.",
     "students": "Chiwon Lee",
     "youTubeAddress": "https://www.youtube.com/embed/bEweBERctjo",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/MyInterview/"
   },
   {
@@ -1796,7 +1779,6 @@ var universityData = {
     "appComment": "Memoment is an application for users who want to\nwrite reviews of movie, performance, and exhibition.",
     "students": "Philian Choi",
     "youTubeAddress": "https://www.youtube.com/embed/7hX4slvBx5g",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/Memoment/"
   },
   {
@@ -1805,7 +1787,6 @@ var universityData = {
     "appComment": "Semester Diary allows students to manage assignments by each deadline. The user can keep track on the progress of each assignment by organizing everyday schedule..",
     "students": "Hyun Jung Oh",
     "youTubeAddress": "https://www.youtube.com/embed/ClxnmpitjHE",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/SemesterDiary/"
   },
   {
@@ -1814,7 +1795,6 @@ var universityData = {
     "appComment": "Quotesplease is an application that provides daily commuters with a chance to freshen up their minds with quotes from books, movies, lyrics, and poems.",
     "students": "Jaeyoon Lee",
     "youTubeAddress": "https://www.youtube.com/embed/EggWov6Mq2Y",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/QuotesPlease/"
   },
   {
@@ -1823,7 +1803,6 @@ var universityData = {
     "appComment": "A diet app for sweet toothed’s cheat days. \nInforms users of desert calories and a workout that complies with cheat day: hours of sleep required to burn it off.\n\n",
     "students": "Jooyeon Shon",
     "youTubeAddress": "https://www.youtube.com/embed/6XPIrYaUaW4",
-    "appStoreAddress": "",
     "website": "https://projectintheclass.github.io/ultimatesleepdiet/"
   },
  {
@@ -1832,7 +1811,6 @@ var universityData = {
    "appComment": "TwoGo is a delivery application for users who want to share the cost of a meal without having to pay extra to reach the minimum price",
    "students": "Seungpil Hyun",
    "youTubeAddress": "https://www.youtube.com/embed/JINAGZS3ToM",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/TwoGo/"
  },
  {
@@ -1841,7 +1819,6 @@ var universityData = {
    "appComment": "An App to collect Recipe & write recipe, and look friend's favorite coffee\n\n",
    "students": "Soohyun Yoon",
    "youTubeAddress": "https://www.youtube.com/embed/7jIHV12mELQ",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/CoffeeBook/"
  },
  {
@@ -1850,7 +1827,6 @@ var universityData = {
    "appComment": "An app mainly focus on weather forecast that can help people easily make decision about their daily outfits depending on the weather conditions.",
    "students": "selinazzzan",
    "youTubeAddress": "https://www.youtube.com/embed/39k2pu_qFkA",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/Outfit-Weather/"
  }
 ], "2019_hyu_spring":[
