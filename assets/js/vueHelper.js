@@ -7,7 +7,7 @@ Vue.component('student-outcome', {
     <div class="container" v-for="value in studentsOutcomes">\
       <div class="row article">\
         <div class="col-md-3 col-xs-6 spacing">\
-          <img class="shadow img-fluid" :src="value.appScreen">\
+          <img class="img-fluid" :src="value.appScreen">\
         </div>\
         <div class="col-md-3 col-xs-6 spacing">\
           <div class=" bottom-space">\
