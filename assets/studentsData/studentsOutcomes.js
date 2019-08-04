@@ -1778,8 +1778,8 @@ var universityData = {
     "appComment": "This app is a platform for surveys; users can get more respondents, easily create & answer the surveys, and are ensured reward for answering the surveys.",
     "students": "Da In Kim",
     "youTubeAddress": "https://www.youtube.com/embed/Y343qCDZ89g",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/Survey/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/Survey/"
   },
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/07.png",
@@ -1787,8 +1787,8 @@ var universityData = {
     "appComment": "MyInterview is an application for job applicants who have to practice for job interviews; it asks popular interview questions to its users so that users can do unlimited mock interviews. The differentiator is that it is a voice-activated app that interacts with the user using basic artificial intelligence to give a more realistic mock interview experience.",
     "students": "Chiwon Lee",
     "youTubeAddress": "https://www.youtube.com/embed/bEweBERctjo",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/MyInterview/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/MyInterview/"
   },
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/02.png",
@@ -1796,8 +1796,8 @@ var universityData = {
     "appComment": "Memoment is an application for users who want to\nwrite reviews of movie, performance, and exhibition.",
     "students": "Philian Choi",
     "youTubeAddress": "https://www.youtube.com/embed/7hX4slvBx5g",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/Memoment/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/Memoment/"
   },
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/05.png",
@@ -1805,8 +1805,8 @@ var universityData = {
     "appComment": "Semester Diary allows students to manage assignments by each deadline. The user can keep track on the progress of each assignment by organizing everyday schedule..",
     "students": "Hyun Jung Oh",
     "youTubeAddress": "https://www.youtube.com/embed/ClxnmpitjHE",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/SemesterDiary/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/SemesterDiary/"
   },
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/09.png",
@@ -1814,8 +1814,8 @@ var universityData = {
     "appComment": "Quotesplease is an application that provides daily commuters with a chance to freshen up their minds with quotes from books, movies, lyrics, and poems.",
     "students": "Jaeyoon Lee",
     "youTubeAddress": "https://www.youtube.com/embed/EggWov6Mq2Y",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/QuotesPlease/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/QuotesPlease/"
   },
   {
     "appScreen": "../assets/img/report-appscreen/ysu_19_01/06.png",
@@ -1823,8 +1823,8 @@ var universityData = {
     "appComment": "A diet app for sweet toothed’s cheat days. \nInforms users of desert calories and a workout that complies with cheat day: hours of sleep required to burn it off.\n\n",
     "students": "Jooyeon Shon",
     "youTubeAddress": "https://www.youtube.com/embed/6XPIrYaUaW4",
-    "앱스토어링크?": "",
-    "홈페이지링크?": "https://projectintheclass.github.io/ultimatesleepdiet/"
+    "appStoreAddress": "",
+    "website": "https://projectintheclass.github.io/ultimatesleepdiet/"
   },
  {
    "appScreen": "../assets/img/report-appscreen/ysu_19_01/01.png",
@@ -1832,8 +1832,8 @@ var universityData = {
    "appComment": "TwoGo is a delivery application for users who want to share the cost of a meal without having to pay extra to reach the minimum price",
    "students": "Seungpil Hyun",
    "youTubeAddress": "https://www.youtube.com/embed/JINAGZS3ToM",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/TwoGo/"
+   "appStoreAddress": "",
+   "website": "https://projectintheclass.github.io/TwoGo/"
  },
  {
    "appScreen": "../assets/img/report-appscreen/ysu_19_01/03.png",
@@ -1841,8 +1841,8 @@ var universityData = {
    "appComment": "An App to collect Recipe & write recipe, and look friend's favorite coffee\n\n",
    "students": "Soohyun Yoon",
    "youTubeAddress": "https://www.youtube.com/embed/7jIHV12mELQ",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/CoffeeBook/"
+   "appStoreAddress": "",
+   "website": "https://projectintheclass.github.io/CoffeeBook/"
  },
  {
    "appScreen": "../assets/img/report-appscreen/ysu_19_01/08.png",
@@ -1850,81 +1850,74 @@ var universityData = {
    "appComment": "An app mainly focus on weather forecast that can help people easily make decision about their daily outfits depending on the weather conditions.",
    "students": "selinazzzan",
    "youTubeAddress": "https://www.youtube.com/embed/39k2pu_qFkA",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/Outfit-Weather/"
+   "appStoreAddress": "",
+   "website": "https://projectintheclass.github.io/Outfit-Weather/"
  }
 ], "2019_hyu_spring":[
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_19_01/01.png",
+    "appTitle": "MinZzengE",
+    "appComment": "민쯩이는 당신이 지갑에서 신분증을 꺼낼 수고를 덜어줍니다.",
+    "students": "김정모, 김효일, 최성인",
+    "youTubeAddress": "https://www.youtube.com/embed/_h4c24Bd6p0",
+    "website": "https://projectintheclass.github.io/MinZzeungE/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_19_01/02.png",
+    "appTitle": "Hanyang Smart Order",
+    "appComment": "한양대학교 교내 카페 주문 결제 / 쿠폰 관리 어플리케이션",
+    "students": "전하영, 최준호, 정서운",
+    "youTubeAddress": "https://www.youtube.com/embed/F-LaJpYToKw",
+    "appStoreAddress": "https://apps.apple.com/ru/app/한양-스마트오더/id1470195139",
+    "website": "https://projectintheclass.github.io/QueueOrder/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_19_01/03.png",
+    "appTitle": "UniAlarmee",
+    "appComment": "매일 학교 홈페이지에서 과제를 확인하느라 지친 당신을 위한 한양대학교 블랙보드 사이트 공지, 과제 리스트 불러오기 어플리케이션",
+    "students": "서윤희, 최예찬, 한다진",
+    "youTubeAddress": "https://www.youtube.com/embed/QTDXY4F6BTY",
+    "website": "https://projectintheclass.github.io/UniAlarmeeProject/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_19_01/04.png",
+    "appTitle": "IFFY",
+    "appComment": "답이 정해지지 않은 질문\n당신에게 IFFY를 선물합니다.",
+    "students": "김영수, 이봉석, 이승재",
+    "youTubeAddress": "https://www.youtube.com/embed/kbgRqqqJwBY",
+    "website": "https://projectintheclass.github.io/Iffy-iOSApplication/"
+  },
  {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/01.png",
+   "appScreen": "../assets/img/report-appscreen/hyu_19_01/05.png",
    "appTitle": "안주나요",
    "appComment": "이 시대의 결정장애들을 위한, 날씨 기반 안주 추천 앱",
    "students": "송연종, 안재은, 윤세령",
    "youTubeAddress": "https://www.youtube.com/embed/NLVtbWNPiLU",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/Anjunayo/docs/index.html"
+   "website": "https://projectintheclass.github.io/Anjunayo/docs/index.html"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/02.png",
+   "appScreen": "../assets/img/report-appscreen/hyu_19_01/06.png",
    "appTitle": "AboutHanyang",
    "appComment": "AboutHanyang은 한양대 내의 시설 정보를 공유하고 의견을 나누는 앱입니다.",
    "students": "김태형, 이성주, 정재윤",
    "youTubeAddress": "https://www.youtube.com/embed/51AC4AyospE",
-   "앱스토어링크?": "https://apps.apple.com/kr/app/about-hanyang/id1469853999",
-   "홈페이지링크?": ""
+   "appStoreAddress": "https://apps.apple.com/kr/app/about-hanyang/id1469853999"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/03.png",
-   "appTitle": "체크홈",
-   "appComment": "집을 처음으로 구하는 사람이 신경써야 하는 사항을 배우고 확인할 수 있는 체크리스트 앱",
-   "students": "김범수, 강재원, 고태영",
-   "youTubeAddress": "https://www.youtube.com/embed/Mmk1ezsSjCI",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/CheckHome/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/04.png",
-   "appTitle": "IFFY",
-   "appComment": "답이 정해지지 않은 질문\n당신에게 IFFY를 선물합니다.",
-   "students": "김영수, 이봉석, 이승재",
-   "youTubeAddress": "https://www.youtube.com/embed/kbgRqqqJwBY",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/Iffy-iOSApplication/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/05.png",
+   "appScreen": "../assets/img/report-appscreen/hyu_19_01/07.png",
    "appTitle": "Latte",
    "appComment": "커플을 위한 채팅앱",
    "students": "Nam Hyebin, Lee Hyunji, Sim Sangyong",
    "youTubeAddress": "https://www.youtube.com/embed/pjiu97W7XFI",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/Messenger-for-Couple/"
+   "website": "https://projectintheclass.github.io/Messenger-for-Couple/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/06.png",
-   "appTitle": "MinZzengE",
-   "appComment": "민쯩이는 당신이 지갑에서 신분증을 꺼낼 수고를 덜어줍니다.",
-   "students": "김정모, 김효일, 최성인",
-   "youTubeAddress": "https://www.youtube.com/embed/_h4c24Bd6p0",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/MinZzeungE/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/07.png",
-   "appTitle": "Hanyang Smart Order",
-   "appComment": "한양대학교 교내 카페 주문 결제 / 쿠폰 관리 어플리케이션",
-   "students": "전하영, 최준호, 정서운",
-   "youTubeAddress": "https://www.youtube.com/embed/F-LaJpYToKw",
-   "앱스토어링크?": "https://apps.apple.com/ru/app/한양-스마트오더/id1470195139",
-   "홈페이지링크?": "https://projectintheclass.github.io/QueueOrder/"
- },
- {
-   "appScreen": "../assets/img/report-appscreen/snu_19_01/08.png",
-   "appTitle": "UniAlarmee",
-   "appComment": "매일 학교 홈페이지에서 과제를 확인하느라 지친 당신을 위한 한양대학교 블랙보드 사이트 공지, 과제 리스트 불러오기 어플리케이션",
-   "students": "서윤희, 최예찬, 한다진",
-   "youTubeAddress": "https://www.youtube.com/embed/QTDXY4F6BTY",
-   "앱스토어링크?": "",
-   "홈페이지링크?": "https://projectintheclass.github.io/UniAlarmeeProject/"
+   "appScreen": "../assets/img/report-appscreen/hyu_19_01/08.png",
+   "appTitle": "체크홈",
+   "appComment": "집을 처음으로 구하는 사람이 신경써야 하는 사항을 배우고 확인할 수 있는 체크리스트 앱",
+   "students": "김범수, 강재원, 고태영",
+   "youTubeAddress": "https://www.youtube.com/embed/Mmk1ezsSjCI",
+   "website": "https://projectintheclass.github.io/CheckHome/"
  }
 ]
 }
