@@ -1702,7 +1702,7 @@ var universityData = {
    "website": "https://projectintheclass.github.io/BubbleMemo/"
  },
  {
-   "appScreen": "../assets/img/report-appscreen/cau_19_01/07.png",
+   "appScreen": "../assets/img/report-appscreen/cau_19_01/09.png",
    "appTitle": "인생적금",
    "appComment": "한장, 두장 찍을 때는 잘 모르겠지만, 적금이 만기되었을 때 생기는 인생이 담긴 영상 과 뿌듯함 .",
    "students": "박세연 박준영 이민지",
