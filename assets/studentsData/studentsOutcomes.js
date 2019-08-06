@@ -1583,7 +1583,6 @@ var universityData = {
    "appComment": "아르바이트생을 위한 시급계산 및 정보제공 앱입니다.",
    "students": "정다연 정소연 한명지",
    "youTubeAddress": "https://www.youtube.com/embed/epHsZa06WGo",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/AlbaGo/"
  },
  {
@@ -1592,7 +1591,6 @@ var universityData = {
    "appComment": "지치고 힘든, 불안한 당신을 위한 6종의 피젯토이가 한 앱에!",
    "students": "박서현 고경표 고호윤",
    "youTubeAddress": "https://www.youtube.com/embed/cX6GtOAQJ2g",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/GGuk/"
  },
  {
@@ -1601,7 +1599,6 @@ var universityData = {
    "appComment": "모임의 마무리를 깔끔하게 지어주는 더치페이 App",
    "students": "우민지 정지현 한진희",
    "youTubeAddress": "https://www.youtube.com/embed/iKUJfSrh6vI",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/nBreadBakeryProject/"
  },
  {
@@ -1610,7 +1607,6 @@ var universityData = {
    "appComment": "영어 회화 도우미 App",
    "students": "마주한 배소연 이두호",
    "youTubeAddress": "https://www.youtube.com/embed/a2vNYJk9kbM",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/ForDreamer/"
  },
  {
@@ -1619,7 +1615,6 @@ var universityData = {
    "appComment": "키워드와 문장으로 당신의 공부를 도와줍니다.",
    "students": "곽하늘 오재현 임창성",
    "youTubeAddress": "https://www.youtube.com/embed/RGv6RqEdbBs",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/Armgi/"
  },
  {
@@ -1628,7 +1623,6 @@ var universityData = {
    "appComment": "사용자가 수정 및 직접 그리고 쓸 수 있는 다이어리앱",
    "students": "김도익 안홍석 이서라",
    "youTubeAddress": "https://www.youtube.com/embed/SoyasxQYNyQ",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/Noty/"
  },
  {
@@ -1637,7 +1631,6 @@ var universityData = {
    "appComment": "폴더를 통해 쉽게 분류하고 진짜 메모할 수 있는 음성메모어플리케이션",
    "students": "안예림 이규백 이상민",
    "youTubeAddress": "https://www.youtube.com/embed/b7jOUbAwLug",
-   "appStoreAddress": "",
    "website": "https://projectintheclass.github.io/Aplus/"
  },
  {
@@ -1844,7 +1837,7 @@ var universityData = {
     "appComment": "한양대학교 교내 카페 주문 결제 / 쿠폰 관리 어플리케이션",
     "students": "전하영, 최준호, 정서운",
     "youTubeAddress": "https://www.youtube.com/embed/F-LaJpYToKw",
-    "appStoreAddress": "https://apps.apple.com/ru/app/한양-스마트오더/id1470195139",
+    "appStoreAddress": "https://apps.apple.com/kr/app/한양-스마트오더/id1470195139",
     "website": "https://projectintheclass.github.io/QueueOrder/"
   },
   {
