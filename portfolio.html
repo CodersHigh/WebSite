@@ -12,13 +12,19 @@
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/edureport.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
+
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
+<!-- Vue -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="assets/studentsData/studentsOutcomesForCards.js"></script>
+  <script src="assets/js/vueCard.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -78,14 +84,16 @@
           <div class="col align-self-center">
             <img src="assets/img/appstore.jpg" height="64" width="64">
           </div>
-          <p>
-            <font size= 1.25rem face="">
-              앱스토어에 등록된<br>
-              수강생들의 작품들
-            </font>
-          </p>
-
+          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 앱스토어에 등록된<br /> <br />수강생들의 작품들</h3>
 				</div>
+        <div class="">
+
+        </div>
+        <div class="">
+          <p>7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
+            모두가 세상을 바꿀 수는 없지만 바꿀 수 있는 기회는 가져야 한다고 생각합니다.<br>
+            여러분안에 있는 창조의 열정을 발현해 보세요.</p>
+        </div>
 				<!--<div class="col-lg-8 col-lg-offset-2 himg">
 					<img src="assets/img/browser.png" class="img-responsive">
 				</div>-->
@@ -96,191 +104,19 @@
 	<!-- *****************************************************************************************************************
 	 SERVICES
 	 ***************************************************************************************************************** -->
-	 <div id="D1EEFF">
-	 	<div class="container">
- 			<div class="row">
-
-
-        <div class="col-md-3 col-xs-6 spacing">
-          <img src="assets/img/portfolio/day1Screen.png">
+   <div id="root">
+     <div id="background-grey">
+      <div class="container">
+        <div class="centered">
+          <p style=" color: #949494">Student Products</p>
+          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 수강생들의 작품들</h3>
         </div>
-        <div class="col-md-3 col-xs-6 spacing">
-          <div class="leftmargin bottom-space">
-            <img src="assets/img/portfolio/day1App.png" class="appIcon">
-            <h2 class="appTitle">1월 1일</h2>
-            <p class="appComment">당신의 목표 달성을 위하여</p>
-            <h4>오형민 유준상</h4>
-            <p>고려대학교 2017 겨울</p>
-            <a href="https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8">
-              <img src="assets/img/goToAppStore.png" class="gotoapp" />
-            </a>
-          </div>
-       </div>
-
-
-
-
-       <div class="col-md-3 col-xs-6 spacing  verticalline">
-         <img src="assets/img/portfolio/radioScreen.png">
-       </div>
-       <div class="col-md-3 col-xs-6 spacing ">
-         <div class="leftmargin bottom-space">
-           <img src="assets/img/portfolio/radioApp.png" class="appIcon">
-           <h2 class="appTitle">영어 라디오 PRO</h2>
-           <p class="appComment">
-               '영어 라디오 PRO - News & Talk'는
-               영어권 국가의 토크, 뉴스 위주의 라디오 채널을
-               모아놓은 간편한 라디오 앱입니다.
-           </p>
-           <h4>권병수</h4>
-           <p>중앙대학교 2017 겨울</p>
-           <a href="https://itunes.apple.com/kr/app/%EC%98%81%EC%96%B4-%EB%9D%BC%EB%94%94%EC%98%A4-pro-%EB%89%B4%EC%8A%A4-%ED%86%A0%ED%81%AC/id1217141104?mt=8">
-             <img src="assets/img/goToAppStore.png" class="gotoapp" />
-           </a>
-         </div>
-       </div>
-
-
-       <div class="col-md-3 col-xs-6 spacing">
-         <img src="assets/img/portfolio/booknoteScreen.png">
-       </div>
-       <div class="col-md-3 col-xs-6 spacing">
-         <div class="leftmargin bottom-space">
-           <img src="assets/img/portfolio/booknoteApp.png" class="appIcon">
-           <h2 class="appTitle">BookNotes</h2>
-           <p class="appComment">
-              독서 노트는 책을 읽고 자신의 생각을
-              정리할 수 있는 앱입니다.
-           </p>
-           <h4>신길용</h4>
-           <p>중앙대학교 2017 겨울</p>
-           <a href="https://itunes.apple.com/kr/app/booknotes-%EB%8F%85%EC%84%9C-%EB%85%B8%ED%8A%B8/id1228643968?mt=8">
-             <img src="assets/img/goToAppStore.png" class="gotoapp" />
-           </a>
-         </div>
+        <div class="row article">
+            <student-card university ='studentsDataForCards'></student-card>
+        </div><!-- row -->
       </div>
-
-      <div class="col-md-3 col-xs-6 spacing verticalline">
-        <img src="assets/img/portfolio/itScreen.png">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class="leftmargin bottom-space">
-          <img src="assets/img/portfolio/itApp.png" class="appIcon">
-          <h2 class="appTitle">책잇!</h2>
-          <p class="appComment">고려대학교 전공책 직거래 서비스</p>
-          <h4>김형민</h4>
-          <p>고려대학교 2017 겨울</p>
-          <a href="https://itunes.apple.com/kr/app/%EC%B1%85%EC%9E%87/id1147259241?mt=8">
-            <img src="assets/img/goToAppStore.png" class="gotoapp" />
-          </a>
-        </div>
-      </div>
-
-
-
-      <div class="col-md-3 col-xs-6 spacing">
-        <img src="assets/img/portfolio/pillingTimeScreen.png" class="appScreen">
-      </div>
-      <div class="col-md-3 col-xs-6 spacing">
-        <div class="leftmargin bottom-space">
-          <img src="assets/img/portfolio/pillingTimeApp.png" class="appIcon">
-          <h2 class="appTitle">필링타임</h2>
-          <p class="appComment">
-             약복용을 자꾸 잊는다면,<br />
-             간편한 pilling time을 사용해보세요.<br />
-             이 앱은 약 복용을 도와주는 알람앱입니다.
-          </p>
-          <h4>김승주 이해준 신유리</h4>
-          <p>동국대학교 2018 겨울</p>
-          <a href="https://itunes.apple.com/us/app/%ED%95%84%EB%A7%81%ED%83%80%EC%9E%84/id1350330770?mt=8">
-            <img src="assets/img/goToAppStore.png" class="gotoapp" />
-          </a>
-        </div>
      </div>
-
-     <div class="col-md-3 col-xs-6 spacing verticalline">
-       <img src="assets/img/portfolio/oneShotTalkScreen.png" class="appScreen">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class="leftmargin bottom-space">
-         <img src="assets/img/portfolio/oneShotTalkApp.png" class="appIcon">
-         <h2 class="appTitle">원샷톡</h2>
-         <p class="appComment">'원샷톡(OneshotTalk)'은 한 번의 ‘터치’로 여러 명에게 동시에 같은 메세지를 보낼 수 있는 앱입니다.</p>
-         <h4>박지용 이다훈 박신원</h4>
-         <p>동국대학교 2018 겨울</p>
-         <a href="https://itunes.apple.com/us/app/%EC%9B%90%EC%83%B7%ED%86%A1/id1350334218?mt=8">
-           <img src="assets/img/goToAppStore.png" class="gotoapp" />
-         </a>
-       </div>
-     </div>
-
-
-
-     <div class="col-md-9 col-xs-6 spacing">
-       <img src="assets/img/portfolio/dorinityScreen.png">
-     </div>
-     <div class="col-md-3 col-xs-6 spacing">
-       <div class="leftmargin bottom-space">
-         <img src="assets/img/portfolio/dorinityApp.png" class="appIcon">
-         <h2 class="appTitle">도리니티</h2>
-         <p class="appComment">
-            아이들이 도형 전개도 위에 그림을 그리면 입체도형 상 해당 위치에 따라 그려진다. 재미있게 그림을 그리며 입체도형 상 공간지각 능력을 기를 수 있다.
-         </p>
-         <h4>김민수 김성탁 김지수</h4>
-         <p>동국대학교 2018 겨울</p>
-         <a href="https://itunes.apple.com/us/app/%EB%8F%84%EB%A6%AC%EB%8B%88%ED%8B%B0/id1350340428?mt=8">
-           <img src="assets/img/goToAppStore.png" class="gotoapp" />
-         </a>
-       </div>
-    </div>
-
-
-
-    <div class="col-md-3 col-xs-6 spacing">
-      <img src="assets/img/portfolio/moudaScreen.png" class="appScreen">
-    </div>
-    <div class="col-md-3 col-xs-6 spacing">
-      <div class="leftmargin bottom-space">
-        <img src="assets/img/portfolio/moudaApp.png" class="appIcon">
-        <h2 class="appTitle">모으다</h2>
-        <p class="appComment">
-          북노트 앱 모으다(Mouda) 속에서 간직하고 싶은 책 속의 한 문장을 기록하세요.<br />
-          자신만의 공간에서 여러분의 생각이나 감정을 자유롭게 표현해보세요.
-        </p>
-        <h4>김수진 안태욱 이예주</h4>
-        <p>중앙대학교 2018 겨울</p>
-        <a href="https://itunes.apple.com/kr/app/%EB%AA%A8%EC%9C%BC%EB%8B%A4/id1363878962?mt=8">
-          <img src="assets/img/goToAppStore.png" class="gotoapp" />
-        </a>
-      </div>
-    </div>
-
-    <div class="col-md-3 col-xs-6 spacing verticalline">
-     <img src="assets/img/portfolio/CAUDormitoryScreen.png" class="appScreen">
-    </div>
-    <div class="col-md-3 col-xs-6 spacing">
-     <div class="leftmargin bottom-space">
-       <img src="assets/img/portfolio/CAUDormitoryApp.png" class="appIcon">
-       <h2 class="appTitle">기숙사알리미</h2>
-       <p class="appComment">중앙대학교 기숙사의 여러 공지를 한 곳에 모아서 볼 수 있는 앱 입니다.</p>
-       <h4>안재형 한진수 강제순</h4>
-       <p>중앙대학교 2018 겨울</p>
-       <a href="https://itunes.apple.com/kr/app/%EC%A4%91%EC%95%99%EB%8C%80%EA%B8%B0%EC%88%99%EC%82%AC%EC%95%8C%EB%A6%AC%EB%AF%B8/id1363880842?mt=8">
-         <img src="assets/img/goToAppStore.png" class="gotoapp" />
-       </a>
-     </div>
-    </div>
-
-
-
-
-	 		</div>
-	 	</div><!--/container -->
-	 </div><!--/service -->
-
-
-
-
+   </div>
 
 
 
@@ -336,89 +172,5 @@
 	<script src="assets/js/jquery.prettyPhoto.js"></script>
   	<script src="assets/js/jquery.isotope.min.js"></script>
   	<script src="assets/js/custom.js"></script>
-
-
-    <script>
-// Portfolio
-(function($) {
-	"use strict";
-	var $container = $('.portfolio'),
-		$items = $container.find('.portfolio-item'),
-		portfolioLayout = 'fitRows';
-
-		if( $container.hasClass('portfolio-centered') ) {
-			portfolioLayout = 'masonry';
-		}
-
-		$container.isotope({
-			filter: '*',
-			animationEngine: 'best-available',
-			layoutMode: portfolioLayout,
-			animationOptions: {
-			duration: 750,
-			easing: 'linear',
-			queue: false
-		},
-		masonry: {
-		}
-		}, refreshWaypoints());
-
-		function refreshWaypoints() {
-			setTimeout(function() {
-			}, 1000);
-		}
-
-		$('nav.portfolio-filter ul a').on('click', function() {
-				var selector = $(this).attr('data-filter');
-				$container.isotope({ filter: selector }, refreshWaypoints());
-				$('nav.portfolio-filter ul a').removeClass('active');
-				$(this).addClass('active');
-				return false;
-		});
-
-		function getColumnNumber() {
-			var winWidth = $(window).width(),
-			columnNumber = 1;
-
-			if (winWidth > 1200) {
-				columnNumber = 5;
-			} else if (winWidth > 950) {
-				columnNumber = 4;
-			} else if (winWidth > 600) {
-				columnNumber = 3;
-			} else if (winWidth > 400) {
-				columnNumber = 2;
-			} else if (winWidth > 250) {
-				columnNumber = 1;
-			}
-				return columnNumber;
-			}
-
-			function setColumns() {
-				var winWidth = $(window).width(),
-				columnNumber = getColumnNumber(),
-				itemWidth = Math.floor(winWidth / columnNumber);
-
-				$container.find('.portfolio-item').each(function() {
-					$(this).css( {
-					width : itemWidth + 'px'
-				});
-			});
-		}
-
-		function setPortfolio() {
-			setColumns();
-			$container.isotope('reLayout');
-		}
-
-		$container.imagesLoaded(function () {
-			setPortfolio();
-		});
-
-		$(window).on('resize', function () {
-		setPortfolio();
-	});
-})(jQuery);
-</script>
   </body>
 </html>
