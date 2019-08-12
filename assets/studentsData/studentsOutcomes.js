@@ -838,7 +838,7 @@ var universityData = {
 	{
 		"appScreen": "",
 		"appTitle": "Bingon612",
-		"appComment": "'어린왕자' 속의 장미를 모티브로 만든, 빈곤한 젊은층을 위한 단순 실용 가계부 앱 어린왕자가 떠나서 Bingon612가 된 B612 행성에서 장미를 돌봐주세요!",
+		"appComment": "어린왕자 속의 장미를 모티브로 만든, 빈곤한 젊은층을 위한 단순 실용 가계부 앱 어린왕자가 떠나서 Bingon612가 된 B612 행성에서 장미를 돌봐주세요!",
 		"students": "엄수림 황서진 이다인",
 		"youTubeAddress": "https://www.youtube.com/embed/MHSgo6I1Pec",
     "website": "https://projectintheclass.github.io/Bingon612/"
@@ -846,8 +846,7 @@ var universityData = {
 	{
 		"appScreen": "",
 		"appTitle": "CODACO",
-		"appComment": "해시태그 검색, 스마트한 코스 계획, 마음에 쏙 드는 추천 코스, 오랜 추억도 어제같이 만들어 주는 추억 탭 그리고 이 모든 기능을 감싸는 간결한 디자인까지. 체계적이고 빠르게 데이트를 계획하는 기능들로 가득한 C O D A C O.
-행복한 데이트를 위한 완벽한 파트너입니다.",
+		"appComment": "",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
     "website": "https://projectintheclass.github.io/Codaco/"
@@ -857,32 +856,28 @@ var universityData = {
 		"appTitle": "KUMO",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/YGdA1QWViW8",
-
+		"youTubeAddress": "https://www.youtube.com/embed/YGdA1QWViW8"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "별일",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/dw6seoGyj2M",
-
+		"youTubeAddress": "https://www.youtube.com/embed/dw6seoGyj2M"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "읽다",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/RBVcRojblwU",
-
+		"youTubeAddress": "https://www.youtube.com/embed/RBVcRojblwU"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "정신차려",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/8usSV82aXGw",
-
+		"youTubeAddress": "https://www.youtube.com/embed/8usSV82aXGw"
 	},
 	{
 		"appScreen": "",
@@ -904,8 +899,7 @@ var universityData = {
 		"appTitle": "도라가구",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/poLb0orSaJo",
-
+		"youTubeAddress": "https://www.youtube.com/embed/poLb0orSaJo"
 	}
 ],
 "2017_snu_fall": [
