@@ -846,7 +846,8 @@ var universityData = {
 	{
 		"appScreen": "",
 		"appTitle": "CODACO",
-		"appComment": "",
+		"appComment": "해시태그 검색, 스마트한 코스 계획, 마음에 쏙 드는 추천 코스, 오랜 추억도 어제같이 만들어 주는 추억 탭 그리고 이 모든 기능을 감싸는 간결한 디자인까지. 체계적이고 빠르게 데이트를 계획하는 기능들로 가득한 C O D A C O.
+행복한 데이트를 위한 완벽한 파트너입니다.",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
     "website": "https://projectintheclass.github.io/Codaco/"
@@ -1722,5 +1723,46 @@ var universityData = {
    "youTubeAddress": "https://www.youtube.com/embed/Mmk1ezsSjCI",
    "website": "https://projectintheclass.github.io/CheckHome/"
  }
+], "2019_kwu_summer" : [
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/01.jpg",
+    "appTitle": "여~행님",
+    "appComment": "뚜벅이 여행자를 위한, 대중교통만을 이용하여 \n여행을 즐길 수 있도록 도와주는 어플리케이션",
+    "students": "김진구, 전정준, 최세린",
+    "youTubeAddress": "https://www.youtube.com/embed/1r0FFDm_d2I",
+    "website": "https://projectintheclass.github.io/Ayo-Bro/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/02.jpg",
+    "appTitle": "한강flex",
+    "appComment": "한강 공원에 대해\n새롭게 알아보세요!\n심플한 기능, 필요한 것만 담았다",
+    "students": "신준형, 최현목",
+    "youTubeAddress": "https://www.youtube.com/embed/R-lnhy6mFRo",
+    "website": "https://projectintheclass.github.io/HanRiverFlex/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/03.jpg",
+    "appTitle": "알바할일",
+    "appComment": "누르기만 해, 우리가 다 관리해줄게알바생과 관리자의 고민을 해결해드립니다.",
+    "students": "최유림, 전효희, 엄태현",
+    "youTubeAddress": "https://www.youtube.com/embed/ve6pIlwuQT4",
+    "website": "https://projectintheclass.github.io/Parttime_Job/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/04.jpg",
+    "appTitle": "HiMoveIt",
+    "appComment": "사진 전문가가 아니더라도 손쉽게 시네마 그래프 콘텐츠를 만들 수 있는 애플리케이션",
+    "students": "정재완, 오성수, 강경훈",
+    "youTubeAddress": "",
+    "website": "https://projectintheclass.github.io/HiMoveIt/."
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/05.jpg",
+    "appTitle": "학생Check",
+    "appComment": "학원 강사분들 에게 편리한 학생 관리를 지원하는 애플리케이션",
+    "students": "강지현, 이주혁, 정연희",
+    "youTubeAddress": "https://www.youtube.com/embed/j3BJwkXkkVo",
+    "website": "https://projectintheclass.github.io/CheckStudent/"
+  }
 ]
 }
