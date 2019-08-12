@@ -32,6 +32,6 @@ Vue.component('student-card', {
 
 window.onload = function() {
     new Vue({
-      el: '#root'
+      el: '#root1'
     })
 }

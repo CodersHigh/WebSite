@@ -1,5 +1,5 @@
 var universityData = {
-  "2016_ku_winter": [
+"2016_ku_winter": [
  {
    "appScreen": "",
    "appTitle": "Golden Time",
@@ -1656,7 +1656,8 @@ var universityData = {
    "students": "selinazzzan",
    "youTubeAddress": "https://www.youtube.com/embed/39k2pu_qFkA",
    "website": "https://projectintheclass.github.io/Outfit-Weather/"
- }],
+ }
+],
 "2019_hyu_spring": [
   {
     "appScreen": "../assets/img/report-appscreen/hyu_19_01/01.png",
