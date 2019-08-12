@@ -1232,7 +1232,7 @@ var universityData = {
    "appScreen": "../assets/img/report-appscreen/hyu_18_01/06.png",
    "appTitle": "유리구두",
    "appComment": "당신에게 딱 맞는 유리구두를 찾아주기 위한 신발 정보 공유 & 사이즈 추천 어플리케이션",
-   "students": "김예지",
+   "students": "김예지 윤성관 이재훈",
    "youTubeAddress": "https://www.youtube.com/embed/VdOB_V0ksRE?list=PLBjx8AiS7qA0rtzpNCfKu_e54Kmd-A50D",
       "website": "https://projectintheclass.github.io/Glass"
  },
