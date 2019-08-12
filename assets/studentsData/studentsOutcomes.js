@@ -1,5 +1,5 @@
 var universityData = {
-"2016_ku_winter": [
+  "2016_ku_winter": [
  {
    "appScreen": "",
    "appTitle": "Golden Time",
