@@ -838,10 +838,10 @@ var universityData = {
 	{
 		"appScreen": "",
 		"appTitle": "Bingon612",
-		"appComment": "",
-		"students": "",
+		"appComment": "'어린왕자' 속의 장미를 모티브로 만든, 빈곤한 젊은층을 위한 단순 실용 가계부 앱 어린왕자가 떠나서 Bingon612가 된 B612 행성에서 장미를 돌봐주세요!",
+		"students": "엄수림 황서진 이다인",
 		"youTubeAddress": "https://www.youtube.com/embed/MHSgo6I1Pec",
-
+    "website": "https://projectintheclass.github.io/Bingon612/"
 	},
 	{
 		"appScreen": "",
@@ -849,7 +849,7 @@ var universityData = {
 		"appComment": "",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
-
+    "website": "https://projectintheclass.github.io/Codaco/"
 	},
 	{
 		"appScreen": "",
@@ -946,7 +946,7 @@ var universityData = {
    "appComment": "Local Notification Service",
    "students": "김태현",
    "youTubeAddress": "https://www.youtube.com/embed/k9gIWSpaF88",
-      "website": "https://projectintheclass.github.io/HEY/"
+   "website": "https://projectintheclass.github.io/HEY/"
  },
  {
    "appScreen": "../assets/img/report-appscreen/snu_17_02/06.png",
