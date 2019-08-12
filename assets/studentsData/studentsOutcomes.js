@@ -1722,12 +1722,11 @@ var universityData = {
    "students": "김범수, 강재원, 고태영",
    "youTubeAddress": "https://www.youtube.com/embed/Mmk1ezsSjCI",
    "website": "https://projectintheclass.github.io/CheckHome/"
- }
-], "2019_kwu_summer" : [
+ }, "2019_kwu_summer": [
   {
     "appScreen": "../assets/img/report-appscreen/kwu_19_01/01.jpg",
     "appTitle": "여~행님",
-    "appComment": "뚜벅이 여행자를 위한, 대중교통만을 이용하여 \n여행을 즐길 수 있도록 도와주는 어플리케이션",
+    "appComment": "뚜벅이 여행자를 위한, 대중교통만을 이용하여 여행을 즐길 수 있도록 도와주는 어플리케이션",
     "students": "김진구, 전정준, 최세린",
     "youTubeAddress": "https://www.youtube.com/embed/1r0FFDm_d2I",
     "website": "https://projectintheclass.github.io/Ayo-Bro/"
@@ -1735,7 +1734,7 @@ var universityData = {
   {
     "appScreen": "../assets/img/report-appscreen/kwu_19_01/02.jpg",
     "appTitle": "한강flex",
-    "appComment": "한강 공원에 대해\n새롭게 알아보세요!\n심플한 기능, 필요한 것만 담았다",
+    "appComment": "한강 공원에 대해 새롭게 알아보세요! 심플한 기능, 필요한 것만 담았다",
     "students": "신준형, 최현목",
     "youTubeAddress": "https://www.youtube.com/embed/R-lnhy6mFRo",
     "website": "https://projectintheclass.github.io/HanRiverFlex/"
