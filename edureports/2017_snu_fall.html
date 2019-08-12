@@ -45,7 +45,6 @@
   </head>
 
   <body>
-    <div id="root">
 
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -196,18 +195,18 @@
 
 
 <!-- 교육 결과물 -->
-<div id="D1EEFF">
- <div class="container">
-   <div class="centered">
-     <h3 class="mb">교육 결과</h3>
-   </div>
-   <div class="row">
-
-     <student-outcome university = '2017_snu_fall'></student-outcome>
-
-   </div>
- </div><!--/container -->
-</div><!--/service -->
+<div id="root">
+<div id="background-grey">
+  <div class="container">
+    <div class="centered">
+      <h3 class="report-subtitle">교육 결과</h3>
+    </div>
+    <div class="row article">
+      <student-outcome university = '2017_snu_fall'></student-outcome>
+    </div><!-- row -->
+  </div>
+</div>
+</div>
 
 
 
@@ -262,6 +261,5 @@
   	<script src="../assets/js/jquery.isotope.min.js"></script>
   	<script src="../assets/js/custom.js"></script>
 
-  </div>
   </body>
 </html>
