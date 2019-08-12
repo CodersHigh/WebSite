@@ -290,7 +290,7 @@ var universityData = {
 ],
 "2016_dgu_fall": [
 	{
-		"appScreen": "../assets/img/report-appscreen/dgu_16_01/01.jpg",
+		"appScreen": "../assets/img/report-appscreen/dgu_16_01/01.png",
 		"appTitle": "CalendarVot",
 		"appComment": "투표를 통한 모임 일정 관리 iMessage App",
 		"students": "염혜리 좌정우",
