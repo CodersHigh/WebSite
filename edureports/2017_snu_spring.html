@@ -20,6 +20,11 @@
 
     <link rel="stylesheet" type="text/css" href="../css/custom.css">
 
+    <!-- vue -->
+    <script src="https://unpkg.com/vue"></script>
+    <script src="../assets/studentsData/studentsOutcomes.js"></script>
+    <script src="../assets/js/vueHelper.js"></script>
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -215,100 +220,18 @@
 
 
 <!-- 교육 결과물 -->
-     <div id="D1EEFF">
-      <div class="container">
-        <div class="centered">
-          <h3 class="mb">교육 결과</h3>
-        </div>
-        <div class="row">
+<div id="D1EEFF">
+ <div class="container">
+   <div class="centered">
+     <h3 class="mb">교육 결과</h3>
+   </div>
+   <div class="row">
 
-          <div class="col-md-3 col-xs-6 spacing">
-            <img src="../assets/img/portfolio/radioScreen.png">
-          </div>
-          <div class="col-md-3 col-xs-6 spacing">
-            <div class=" bottom-space">
-              <h2 class="appTitle">영어 라디오 PRO</h2>
-              <p class="appComment">
-                  '영어 라디오 PRO - News & Talk'는
-                  영어권 국가의 토크, 뉴스 위주의 라디오 채널을
-                  모아놓은 간편한 라디오 앱입니다.
-              </p>
-              <h4>권병수</h4>
-              </div>
-         </div>
-         <div class="col-md-6 col-xs-12 spacing video-title">
-           <h4>발표 영상</h4><br />
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/gS69MRKi-s4?list=PLBjx8AiS7qA0xwmBhDreS2wPQ6xE_Hl3Y"  style="margin-bottom:20px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>
-           <div>
-             <a href="https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8">
-<img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />
-             </a>
-             <a href="https://projectintheclass.github.io/Mouda/">
-               <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-             </a>
-           </div>
-         </div>
-       </div><!-- row -->
+     <student-outcome university = '2017_snu_spring'></student-outcome>
 
-       <div class="row">
-
-         <div class="col-md-3 col-xs-6 spacing">
-           <img src="../assets/img/portfolio/day1Screen.png">
-         </div>
-         <div class="col-md-3 col-xs-6 spacing">
-           <div class=" bottom-space">
-             <h2 class="appTitle">1월 1일</h2>
-             <p class="appComment">당신의 목표 달성을 위하여</p>
-             <h4>오형민 유준상</h4>
-             </div>
-        </div>
-        <div class="col-md-6 col-xs-12 spacing video-title">
-          <h4>발표 영상</h4><br />
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Udt5JecZF9o" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-          <div>
-            <a href="https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8">
-  <img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />
-            </a>
-            <a href="https://projectintheclass.github.io/Mouda/">
-              <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-            </a>
-          </div>
-        </div>
-      </div><!-- row -->
-
-      <div class="row">
-
-        <div class="col-md-3 col-xs-6 spacing">
-          <img src="../assets/img/portfolio/booknoteScreen.png">
-        </div>
-        <div class="col-md-3 col-xs-6 spacing">
-          <div class=" bottom-space">
-            <h2 class="appTitle">BookNotes</h2>
-            <p class="appComment">
-               독서 노트는 책을 읽고 자신의 생각을
-               정리할 수 있는 앱입니다.
-            </p>
-            <h4>신길용</h4>
-            </div>
-       </div>
-       <div class="col-md-6 col-xs-12 spacing video-title">
-         <h4>발표 영상</h4><br />
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/mAz1SX3yTv4?list=PLBjx8AiS7qA0xwmBhDreS2wPQ6xE_Hl3Y" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen="" style="margin-bottom:20px;"></iframe>
-         <div>
-           <a href="https://itunes.apple.com/kr/app/1%EC%9B%94-1%EC%9D%BC-%EB%AA%A9%ED%91%9C-%EA%B4%80%EB%A6%AC-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/id1218696438?mt=8">
- <img src="../assets/img/app-store.png" class="" style="padding: 5px 0.5px; height: 48px;" />
-           </a>
-           <a href="https://projectintheclass.github.io/Mouda/">
-             <img src="../assets/img/websitelink.png" class="gotoapp" style="padding: 7px 22px;"/>
-           </a>
-         </div>
-       </div>
-     </div><!-- row -->
-
-
-
-      </div><!--/container -->
-     </div><!--/service -->
+   </div>
+ </div><!--/container -->
+</div><!--/service -->
 
 
 
