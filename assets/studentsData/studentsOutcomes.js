@@ -290,10 +290,10 @@ var universityData = {
 ],
 "2016_dgu_fall": [
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/dgu_16_01/01.jpg",
 		"appTitle": "CalendarVot",
-		"appComment": "",
-		"students": "",
+		"appComment": "투표를 통한 모임 일정 관리 iMessage App",
+		"students": "염혜리 좌정우",
 		"youTubeAddress": "https://www.youtube.com/embed/L_2avDz-KRA",
 		"website": "https://projectintheclass.github.io/Calendar-Vot/"
 	},
@@ -302,14 +302,14 @@ var universityData = {
 		"appTitle": "PinSwift",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/Vv-IfKtOj7s",
+		"youTubeAddress": "https://www.youtube.com/embed/Vv-IfKtOj7s"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "사다리",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/abQSFLRuGC4",
+		"youTubeAddress": "https://www.youtube.com/embed/abQSFLRuGC4"
 	}
 ],
 "2016_ysu_fall": [
@@ -1244,12 +1244,12 @@ var universityData = {
       "website": "https://projectintheclass.github.io/Emogi"
  },
  {
-   "appScreen": "",
+   "appScreen": "../assets/img/report-appscreen/hyu_18_01/14.png",
    "appTitle": "TriPlanner",
    "appComment": "편리한 여행 플래너 앱",
    "students": "이재영 이종욱 장휘수",
    "youTubeAddress": "https://www.youtube.com/embed/MKYetiJr818?list=PLBjx8AiS7qA0rtzpNCfKu_e54Kmd-A50D",
-      "website": ""
+   "website": "https://projectintheclass.github.io/TriPlanner/"
  },
  {
    "appScreen": "../assets/img/report-appscreen/hyu_18_01/07.png",
