@@ -250,9 +250,9 @@ var universityData = {
 ],
 "2016_ku_summer":	[
 {
-  "appScreen": "",
+  "appScreen": "../assets/img/report-appscreen/ku_16_01/01.jpg",
   "appTitle": "ThirstyTraveler",
-  "appComment": "",
+  "appComment": "convenient guiding light for wandering beer addicts",
   "students": "",
   "youTubeAddress": "https://www.youtube.com/embed/3f6c-3YR_bY",
     "website": "https://projectintheclass.github.io/ThirstyTraveler/"
@@ -356,102 +356,102 @@ var universityData = {
 ],
 "2016_hyu_fall": [
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/01.png",
 		"appTitle": "Fruit",
-		"appComment": "",
-		"students": "",
+		"appComment": "A+를 받고싶은 대학생을 위한 어플리케이션",
+		"students": "박정진 박소희 오소연",
 		"youTubeAddress": "https://www.youtube.com/embed/Fk0pwa2z0kE",
 		"website": "https://projectintheclass.github.io/Fruit/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/02.png",
 		"appTitle": "GameRecommender",
-		"appComment": "",
-		"students": "",
+		"appComment": "7개의 랜덤 게임카드들을 User에게 소개해주고 User는 해당 게임카드들에 대한 별점을 매기게 되며 이 결과를 토대로 앱에서 User가 원할만한 게임카드를 추천해 주는 시스템",
+		"students": "고석원 서상원",
 		"youTubeAddress": "https://www.youtube.com/embed/SMTsCkHoMTI",
 		"website": "https://projectintheclass.github.io/GameRecommender/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/03.png",
 		"appTitle": "GamsungDiary",
-		"appComment": "",
-		"students": "",
+		"appComment": "일상에 지친 현대인을 위한 감정 기록 다이어리",
+		"students": "손서희 이지영 김태향",
 		"youTubeAddress": "https://www.youtube.com/embed/zlrfcUR7jNw",
 		"website": "https://projectintheclass.github.io/Gamsung/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/04.png",
 		"appTitle": "BigPicture",
-		"appComment": "",
-		"students": "",
+		"appComment": "The Big Picture makes it easy to manage your tasks.",
+		"students": "함치헌 구경호 정승철",
 		"youTubeAddress": "https://www.youtube.com/embed/8iKvfBW2w6o",
 		"website": "https://projectintheclass.github.io/TheBigPicture/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/05.png",
 		"appTitle": "Sue4U",
-		"appComment": "",
-		"students": "",
+		"appComment": "“고소를 하고 싶어하는 사람들” 을 위한 “손쉽게 고소할 수 있는” “대리고소 매칭” 앱",
+		"students": "changhee1 hobeoung dizzymon2",
 		"youTubeAddress": "https://www.youtube.com/embed/vN1z-nUk91w",
 		"website": "https://projectintheclass.github.io/Sue4U/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/06.png",
 		"appTitle": "맛집",
-		"appComment": "",
-		"students": "",
+		"appComment": "양심없는 이중 메뉴판은 이제 그만",
+		"students": "강준모 박경원 이재훈",
 		"youTubeAddress": "https://www.youtube.com/embed/NbfNXsLBIFs",
 		"website": "https://projectintheclass.github.io/MatZyp/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/07.png",
 		"appTitle": "YogiPC",
-		"appComment": "",
-		"students": "",
+		"appComment": "친구들과 함께 게임하고 싶을 때 PC방 자리를 찾는 수고를 덜어주는 앱",
+		"students": "ryj0902 kcross4 binDongKim",
 		"youTubeAddress": "https://www.youtube.com/embed/GIZ6sWPNl6k",
 		"website": "https://projectintheclass.github.io/YogiPC/#"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/hyu_16_02/08.png",
 		"appTitle": "Noti",
-		"appComment": "",
-		"students": "",
+		"appComment": "Noti를 통해 새로운 형태의 메세지 앱 경험을 할 수 있습니다.",
+		"students": "이채원 이하용 황정보",
 		"youTubeAddress": "https://www.youtube.com/embed/f3irFMOF1xQ",
 		"website": "https://projectintheclass.github.io/Noti/"
 	}
 ],
 "2016_snu_fall": [
   {
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/snu_16_02/01.png",
 		"appTitle": "Zipple",
-		"appComment": "",
-		"students": "",
+		"appComment": "잊고 있던 아날로그 감성 디지털 시대에도 간직하세요 집사람 사진첩과 함께",
+		"students": "thinkBAEK",
 		"youTubeAddress": "https://www.youtube.com/embed/jYnAFGDr49g",
 		"website": "https://projectintheclass.github.io/zipple/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/snu_16_02/02.png",
 		"appTitle": "Idle Timer",
-		"appComment": "",
-		"students": "",
+		"appComment": "집중을 도와주는 타이머 + Idle 게임 핸드폰 사용을 멈추고 자신의 일에 집중하세요. 그리고, 게임을 즐기세요",
+		"students": "한상훈",
 		"youTubeAddress": "https://www.youtube.com/embed/zorsXBlSKcg",
-				"website": "https://projectintheclass.github.io/IdleTimer/"
+    "website": "https://projectintheclass.github.io/IdleTimer/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/snu_16_02/03.png",
 		"appTitle": "MAL",
-		"appComment": "",
-		"students": "",
+		"appComment": "INTERACTIVE APP FOR IOS DEVICES",
+		"students": "김민아",
 		"youTubeAddress": "https://www.youtube.com/embed/jhcdnKtPb6I",
-				"website": "https://projectintheclass.github.io/MinApp/"
+    "website": "https://projectintheclass.github.io/MinApp/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/snu_16_02/04.png",
 		"appTitle": "엄마오늘비와",
-		"appComment": "",
-		"students": "",
+		"appComment": "매일매일 날씨를 확인하기는 귀찮은 사람들을 위해 어제 날씨와 오늘 날씨를 비교해 큰 차이가 있을 때에만 알림을 보내주는 날씨 앱",
+		"students": "KIMJYoung",
 		"youTubeAddress": "https://www.youtube.com/embed/SIZqe8zoR0o",
-				"website": "https://projectintheclass.github.io/weatherForecast/"
+		"website": "https://projectintheclass.github.io/weatherForecast/"
 	},
 	{
 		"appScreen": "",
@@ -459,7 +459,6 @@ var universityData = {
 		"appComment": "",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/Ji_5afb4eAI",
-
 	}
 ],
 "2017_cau_winter": [
@@ -469,7 +468,7 @@ var universityData = {
 		"appComment": "",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/nmYHZjBn5aM",
-				"website": "https://projectintheclass.github.io/Roomagery/"
+    "website": "https://projectintheclass.github.io/Roomagery/"
 	},
 	{
 		"appScreen": "../assets/img/portfolio/radioScreen.png",
@@ -522,68 +521,66 @@ var universityData = {
 ],
 "2017_ku_winter": [
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/ku_17_02/01.png",
 		"appTitle": "Coupon4U",
-		"appComment": "",
-		"students": "",
+		"appComment": "당신을 위한 쿠폰 관리 앱",
+		"students": "Hyunsub Kim dan1002 terryps",
 		"youTubeAddress": "https://www.youtube.com/embed/4fo8imzTIWU",
-				"website": "https://projectintheclass.github.io/Coupon4U/"
+    "website": "https://projectintheclass.github.io/Coupon4U/"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "JanuaryFirst",
 		"appComment": "",
 		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/YZSjCZoDPj8",
-
+		"youTubeAddress": "https://www.youtube.com/embed/YZSjCZoDPj8"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/ku_17_02/03.png",
 		"appTitle": "KUMap",
-		"appComment": "",
-		"students": "",
+		"appComment": "고려대학교 구성원들을 위한 위치기반 정보공유 앱",
+		"students": "Kiyou Kim",
 		"youTubeAddress": "https://www.youtube.com/embed/ecgyKhyj7JA",
-				"website": "https://projectintheclass.github.io/KUMap/"
+		"website": "https://projectintheclass.github.io/KUMap/"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "JiPangE",
-		"appComment": "",
-		"students": "",
+		"appComment": "나를 위한 최고의 산책로 찾기",
+		"students": "eatyourmeat ksh3172",
 		"youTubeAddress": "https://www.youtube.com/embed/6SnFTJKMS0c",
-				"website": "https://projectintheclass.github.io/JiPangE/"
+		"website": "https://projectintheclass.github.io/JiPangE/"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "Scrapper",
-		"appComment": "",
-		"students": "",
+		"appComment": "온라인에서 유용한 페이지를 카테고리별로 분류, 저장하여 자신이 원할 때 볼 수 있는 앱",
+		"students": "이영서 조일근 차준엽",
 		"youTubeAddress": "https://www.youtube.com/embed/7vY53YXscEo",
-				"website": "https://projectintheclass.github.io/scrapper/"
+		"website": "https://projectintheclass.github.io/scrapper/"
 	},
 	{
 		"appScreen": "",
 		"appTitle": "SleepStudy",
 		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/6h7zbUE-sn0",
-
+		"students": "alpaca purification irishev iany12",
+		"youTubeAddress": "https://www.youtube.com/embed/6h7zbUE-sn0"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/ku_17_02/07.png",
 		"appTitle": "Refrigrator",
-		"appComment": "",
-		"students": "",
+		"appComment": "남은 음식들, 유통기한이 임박한 음식들로 새롭고 간단한 요리를 탄생시켜 보세요.",
+		"students": "seoyeonyoon MinSeobi",
 		"youTubeAddress": "https://www.youtube.com/embed/y-w9jjQKR8k",
-				"website": "https://projectintheclass.github.io/Refrigerator/"
+    "website": "https://projectintheclass.github.io/Refrigerator/"
 	},
 	{
-		"appScreen": "",
+		"appScreen": "../assets/img/report-appscreen/ku_17_02/08.png",
 		"appTitle": "dDAnd",
-		"appComment": "",
-		"students": "",
+		"appComment": "'딴드(dAEnd)'는 사진에 필터를 씌워 사용자의 앨범 내부에 저장하고 다른 연결 프로그램을 통해 공유할 수 있는 어플리케이션이다.",
+		"students": "korea160210 minjujeong",
 		"youTubeAddress": "https://www.youtube.com/embed/9ZRsZaWYo38",
-				"website": "https://projectintheclass.github.io/dAEnd/"
+		"website": "https://projectintheclass.github.io/dAEnd/"
 	},
 	{
 		"appScreen": "",
@@ -591,316 +588,321 @@ var universityData = {
 		"appComment": "",
 		"students": "",
 		"youTubeAddress": "https://www.youtube.com/embed/tFGl8SCCuhc",
-
 	}
 ],
 "2017_ysu_spring": [
-	{
-		"appScreen": "",
-		"appTitle": "Nag",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/pTzQT1ofakc",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Connect",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/gOX1kw9hDlk",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Yopply",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/ijP5SqfuYcg",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Family Schedule Sharing",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/7lchjZNvbNI",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Fan app",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/bLkwlOcUDGo",
-
-	}
+  {
+    "appScreen": "../assets/img/report-appscreen/ysu_17_01/01.png",
+    "appTitle": "Nag",
+    "appComment": "랜덤한 시간에 알람을 보내 잡담에서 일로 돌려보내주는 스케쥴러",
+    "students": "smc219 ape0108792",
+    "youTubeAddress": "https://www.youtube.com/embed/pTzQT1ofakc",
+    "website": "https://projectintheclass.github.io/NaggingScheduler/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Connect",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/gOX1kw9hDlk",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Yopply",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/ijP5SqfuYcg",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Family Schedule Sharing",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/7lchjZNvbNI",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Fan app",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/bLkwlOcUDGo",
+    "website": ""
+  }
 ],
 "2017_snu_spring": [
-	{
-		"appScreen": "",
-		"appTitle": "공샤",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/GAfTqbLUABQ",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "타임어택",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/gH_WIto6EWc",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Quickway",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/8wU8Ls4jaxY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Boarding Spot",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/33m-ACH5zRY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "양도천국",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/Q_WsbdsCNhY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Check 한자",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/sbvk_3dTwsg",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Font Scanner",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/6Ek2HPu9-VA",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Appslock",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/W3gcMj4Qj20",
-
-	}
+  {
+    "appScreen": "../assets/img/report-appscreen/snu_17_01/01.png",
+    "appTitle": "공샤",
+    "appComment": "우리 대학의 모든 정보를 \nShanoti 로 손쉽게 \n관리하세요",
+    "students": "gompu123 smc219",
+    "youTubeAddress": "https://www.youtube.com/embed/GAfTqbLUABQ",
+    "website": "https://projectintheclass.github.io/Shanoti/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "타임어택",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/gH_WIto6EWc",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Quickway",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/8wU8Ls4jaxY",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Boarding Spot",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/33m-ACH5zRY",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "양도천국",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/Q_WsbdsCNhY",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Check 한자",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/sbvk_3dTwsg",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Font Scanner",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/6Ek2HPu9-VA",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Appslock",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/W3gcMj4Qj20",
+    "website": ""
+  }
 ],
 "2017_hyu_spring": [
-	{
-		"appScreen": "",
-		"appTitle": "Materbot",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/z-mj-GoZ_kY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "HYU TT",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/nZmL1mT9_Ko",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Recipick",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/UYsMCEzXlVw",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "HyLionPost",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/Qxs8z-dEVwY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "HYU JOKBO",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/yrlXhO96sIU",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "몸 쪽 꽉찬 공",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/HGxDbGDxJTY",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "First Aid",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/Ln9oiVnchjk",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Blade & Soul의 공략을 한 손에",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/xcLWFSuPJCw",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Lol App",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/cHGyQ1cReDI",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Tribucket",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/ynU21dY3HJs",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Password Manager",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/gvW7OL3PvYM",
-
-	}
+  {
+    "appScreen": "",
+    "appTitle": "Materbot",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/z-mj-GoZ_kY",
+    "website": ""
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_17_01/02.png",
+    "appTitle": "HYU TT",
+    "appComment": "시간표 만들기부터 과목별 메모까지,\n가장 쉽고 빠른 대학생 필수 시간표 어플리케이션",
+    "students": "tlsqlfhdnsdl nayong isaac56",
+    "youTubeAddress": "https://www.youtube.com/embed/nZmL1mT9_Ko",
+    "website": "https://projectintheclass.github.io/HYU-TT/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Recipick",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/UYsMCEzXlVw",
+    "website": ""
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_17_01/04.png",
+    "appTitle": "HyLionPost",
+    "appComment": "*.hanyang.ac.kr에 올라오는 유용한 정보들을 수집해서 사용자에게 알려주는 App",
+    "students": "이영식 정선욱 박선하",
+    "youTubeAddress": "https://www.youtube.com/embed/Qxs8z-dEVwY",
+    "website": "https://projectintheclass.github.io/HyLionPost/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_17_01/05.png",
+    "appTitle": "HYU JOKBO",
+    "appComment": "한양대학교\n실시간 족보 공유 IOS 앱",
+    "students": "신지원 박병욱 박한솔",
+    "youTubeAddress": "https://www.youtube.com/embed/yrlXhO96sIU",
+    "website": "https://projectintheclass.github.io/HyuJokbo/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "몸 쪽 꽉찬 공",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/HGxDbGDxJTY",
+    "website": ""
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_17_01/07.png",
+    "appTitle": "First Aid",
+    "appComment": "전국의 대학생들이 함께 만드는 우리들의 솔루션",
+    "students": "허주환, 김명진, 김기황",
+    "youTubeAddress": "https://www.youtube.com/embed/Ln9oiVnchjk",
+    "website": "https://projectintheclass.github.io/firstAid/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Blade & Soul의 공략을 한 손에",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/xcLWFSuPJCw",
+    "website": ""
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Lol App",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/cHGyQ1cReDI",
+    "website": ""
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/hyu_17_01/10.png",
+    "appTitle": "Tribucket",
+    "appComment": "모든 여행을 내 손으로 설계하는 앱.",
+    "students": "장휘수 이재영 이종욱",
+    "youTubeAddress": "https://www.youtube.com/embed/ynU21dY3HJs",
+    "website": "https://projectintheclass.github.io/TriPlanner/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "Password Manager",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/gvW7OL3PvYM",
+    "website": ""
+  }
 ],
 "2017_cau_summer": [
-{
-		"appScreen": "",
-		"appTitle": "PetD",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/ZfHJH0RvoO8",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "PlanTree",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/l0yYUNda69w",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "Sider",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/7pP0kJrSFIg",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "PTManager",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/yIEkoc4bTrU",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "PDFNote",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/qb0rQ1szd6Y",
-
-	}
+  {
+    "appScreen": "",
+    "appTitle": "PetD",
+    "appComment": "하나의 어플리케이션, 모두의 어플리케이션",
+    "students": "조민정 이대직 신형재",
+    "youTubeAddress": "https://www.youtube.com/embed/ZfHJH0RvoO8",
+    "website": "https://projectintheclass.github.io/petd/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/cau_17_01/02.jpg",
+    "appTitle": "PlanTree",
+    "appComment": "You can plan easy 'Your ToDoList'\nOpen New World of ToDoList Plan Tree",
+    "students": "jungdaye JungSonga cherrypach",
+    "youTubeAddress": "https://www.youtube.com/embed/l0yYUNda69w",
+    "website": "https://projectintheclass.github.io/plan-tree/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/cau_17_01/03.png",
+    "appTitle": "Sider",
+    "appComment": "일상 속 고구마처럼 답답했던 점들을\n사이다처럼 속 시원하게 말할 수 있는\n대학생들의 자유로운 소통의 장입니다.",
+    "students": "namjimin DahyeDarling",
+    "youTubeAddress": "https://www.youtube.com/embed/7pP0kJrSFIg",
+    "website": "https://projectintheclass.github.io/siderplease/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/cau_17_01/04.png",
+    "appTitle": "PTManager",
+    "appComment": "트레이너분들 회원 관리 어떻게 하시나요?",
+    "students": "최원종, 김은지",
+    "youTubeAddress": "https://www.youtube.com/embed/yIEkoc4bTrU",
+    "website": "https://projectintheclass.github.io/ptmanager/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "PDFNote",
+    "appComment": "Free, Easy and Safe pdf note application which makes us free from paper books.",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/qb0rQ1szd6Y",
+    "website": "https://projectintheclass.github.io/pdf/"
+  }
 ],
 "2017_ku_summer": [
-	{
-		"appScreen": "",
-		"appTitle": "Bingon612",
-		"appComment": "어린왕자 속의 장미를 모티브로 만든, 빈곤한 젊은층을 위한 단순 실용 가계부 앱 어린왕자가 떠나서 Bingon612가 된 B612 행성에서 장미를 돌봐주세요!",
-		"students": "엄수림 황서진 이다인",
-		"youTubeAddress": "https://www.youtube.com/embed/MHSgo6I1Pec",
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/01.png",
+    "appTitle": "Bingon612",
+    "appComment": "어린왕자' 속의 장미를 모티브로 만든, 빈곤한 젊은층을 위한 단순 실용 가계부 앱",
+    "students": "엄수림 황서진 이다인",
+    "youTubeAddress": "https://www.youtube.com/embed/MHSgo6I1Pec",
     "website": "https://projectintheclass.github.io/Bingon612/"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "CODACO",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/02.png",
+    "appTitle": "CODACO",
+    "appComment": "C O D A C O 의 해시태그 검색은 당신이 원하는 것이 무엇일지 미리 예상하고 묻기도 전에 먼저 제안해 한층 더 빠른 결과를 얻도록 도와줍니다.",
+    "students": "aln00 dan1002 vetajung kukukuni",
+    "youTubeAddress": "https://www.youtube.com/embed/8LPRPnGI5zY",
     "website": "https://projectintheclass.github.io/Codaco/"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "KUMO",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/YGdA1QWViW8"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "별일",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/dw6seoGyj2M"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "읽다",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/RBVcRojblwU"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "정신차려",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/8usSV82aXGw"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "다다다",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/HyICKgoMRek",
-
-	},
-	{
-		"appScreen": "",
-		"appTitle": "BookTogether",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/lBowm2rnFVY"
-	},
-	{
-		"appScreen": "",
-		"appTitle": "도라가구",
-		"appComment": "",
-		"students": "",
-		"youTubeAddress": "https://www.youtube.com/embed/poLb0orSaJo"
-	}
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/03.png",
+    "appTitle": "KUMO",
+    "appComment": "유일한 고려대학교 소모임 플랫폼",
+    "students": "강준우 한송림 임연재",
+    "youTubeAddress": "https://www.youtube.com/embed/YGdA1QWViW8",
+    "website": "https://projectintheclass.github.io/KUMO/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/04.png",
+    "appTitle": "별일",
+    "appComment": "고려대생들을 위한 P2P 심부름 서비스앱",
+    "students": "문은서 고희경 김소희",
+    "youTubeAddress": "https://www.youtube.com/embed/dw6seoGyj2M",
+    "website": "https://projectintheclass.github.io/beWithMe/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/05.png",
+    "appTitle": "읽다",
+    "appComment": "당신이 읽은 소중한 책, 그리고 구절을 기록해보세요.",
+    "students": "kuccc hwaaang 100g1 hannRiver",
+    "youTubeAddress": "https://www.youtube.com/embed/RBVcRojblwU",
+    "website": "https://projectintheclass.github.io/READ/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/06.png",
+    "appTitle": "정신차려",
+    "appComment": "지하철에서 내릴 역을 지나칠 '당신'을 위한.",
+    "students": "이재택 이종호 김세준",
+    "youTubeAddress": "https://www.youtube.com/embed/8usSV82aXGw",
+    "website": "https://projectintheclass.github.io/subway-alarm/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/07.png",
+    "appTitle": "다다다",
+    "appComment": "다같이 다이어트 다이어리",
+    "students": "dnwnsdldi PARKINJoChang YeonYEONG vivid950",
+    "youTubeAddress": "https://www.youtube.com/embed/HyICKgoMRek",
+    "website": "https://projectintheclass.github.io/Dietor/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/ku_17_01/08.jpg",
+    "appTitle": "BookTogether",
+    "appComment": "자신의 독서기록을 서재로 남기는 동시에, 친구들과 책을 추천하고 추천받는 애플리케이션",
+    "students": "최수정 김동엽 이아영",
+    "youTubeAddress": "https://www.youtube.com/embed/lBowm2rnFVY",
+    "website": "https://projectintheclass.github.io/BookTogether/"
+  },
+  {
+    "appScreen": "",
+    "appTitle": "도라가구",
+    "appComment": "",
+    "students": "",
+    "youTubeAddress": "https://www.youtube.com/embed/poLb0orSaJo",
+    "website": ""
+  }
 ],
 "2017_snu_fall": [
 {
