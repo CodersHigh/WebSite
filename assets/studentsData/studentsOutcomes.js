@@ -1751,7 +1751,7 @@ var universityData = {
     "appTitle": "HiMoveIt",
     "appComment": "사진 전문가가 아니더라도 손쉽게 시네마 그래프 콘텐츠를 만들 수 있는 애플리케이션",
     "students": "정재완, 오성수, 강경훈",
-    "youTubeAddress": "",
+    "youTubeAddress": "https://www.youtube.com/embed/xZ8Cp7iZ8i8",
     "website": "https://projectintheclass.github.io/HiMoveIt/."
   },
   {
