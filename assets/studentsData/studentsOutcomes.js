@@ -1723,22 +1723,6 @@ var universityData = {
 ],
 "2019_kwu_summer": [
   {
-    "appScreen": "../assets/img/report-appscreen/kwu_19_01/01.jpg",
-    "appTitle": "여~행님",
-    "appComment": "뚜벅이 여행자를 위한, 대중교통만을 이용하여 여행을 즐길 수 있도록 도와주는 어플리케이션",
-    "students": "김진구, 전정준, 최세린",
-    "youTubeAddress": "https://www.youtube.com/embed/1r0FFDm_d2I",
-    "website": "https://projectintheclass.github.io/Ayo-Bro/"
-  },
-  {
-    "appScreen": "../assets/img/report-appscreen/kwu_19_01/02.jpg",
-    "appTitle": "한강flex",
-    "appComment": "한강 공원에 대해 새롭게 알아보세요! 심플한 기능, 필요한 것만 담았다",
-    "students": "신준형, 최현목",
-    "youTubeAddress": "https://www.youtube.com/embed/R-lnhy6mFRo",
-    "website": "https://projectintheclass.github.io/HanRiverFlex/"
-  },
-  {
     "appScreen": "../assets/img/report-appscreen/kwu_19_01/03.jpg",
     "appTitle": "알바할일",
     "appComment": "누르기만 해, 우리가 다 관리해줄게알바생과 관리자의 고민을 해결해드립니다.",
@@ -1755,12 +1739,28 @@ var universityData = {
     "website": "https://projectintheclass.github.io/HiMoveIt/."
   },
   {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/01.jpg",
+    "appTitle": "여~행님",
+    "appComment": "뚜벅이 여행자를 위한, 대중교통만을 이용하여 여행을 즐길 수 있도록 도와주는 어플리케이션",
+    "students": "김진구, 전정준, 최세린",
+    "youTubeAddress": "https://www.youtube.com/embed/1r0FFDm_d2I",
+    "website": "https://projectintheclass.github.io/Ayo-Bro/"
+  },
+  {
     "appScreen": "../assets/img/report-appscreen/kwu_19_01/05.jpg",
     "appTitle": "학생Check",
     "appComment": "학원 강사분들 에게 편리한 학생 관리를 지원하는 애플리케이션",
     "students": "강지현, 이주혁, 정연희",
     "youTubeAddress": "https://www.youtube.com/embed/j3BJwkXkkVo",
     "website": "https://projectintheclass.github.io/CheckStudent/"
+  },
+  {
+    "appScreen": "../assets/img/report-appscreen/kwu_19_01/02.jpg",
+    "appTitle": "한강flex",
+    "appComment": "한강 공원에 대해 새롭게 알아보세요! 심플한 기능, 필요한 것만 담았다",
+    "students": "신준형, 최현목",
+    "youTubeAddress": "https://www.youtube.com/embed/R-lnhy6mFRo",
+    "website": "https://projectintheclass.github.io/HanRiverFlex/"
   }
 ]
 }
