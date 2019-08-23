@@ -1,0 +1,113 @@
+.btn-round {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  top: 25px;
+  left: 25px;
+  overflow: hidden;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: black;
+}
+.close::before {
+  transform: rotate(0deg);
+}
+.close::after {
+  transform: rotate(90deg);
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes plusButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -135deg);
+    transform: rotate3d(0, 0, 1, -135deg);
+    background-color: white;
+  }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color: white;
+  }
+}
+@keyframes plusButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 135deg);
+    transform: rotate3d(0, 0, 1, 135deg);
+    background-color: white;
+  }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color: white;
+  }
+}
+.plusButton {
+  -webkit-animation-name: plusButton;
+  animation-name: plusButton;
+}
+
+@-webkit-keyframes closeButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color: white;
+  }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 135deg);
+    transform: rotate3d(0, 0, 1, 135deg);
+    background-color: white;
+  }
+}
+@keyframes closeButton {
+  from {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: none;
+    transform: none;
+    background-color: white;
+  }
+  to {
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, 135deg);
+    transform: rotate3d(0, 0, 1, 135deg);
+    background-color: white;
+  }
+}
+.closeButton {
+  -webkit-animation-name: closeButton;
+  animation-name: closeButton;
+}

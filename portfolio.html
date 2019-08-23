@@ -20,11 +20,12 @@
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" href="assets/css/buttonCSS.css">
 
 <!-- Vue -->
   <script src="https://unpkg.com/vue"></script>
-  <script src="assets/studentsData/studentsOutcomesForCards.js"></script>
-  <script src="assets/js/vueCard.js"></script>
+  <script src="assets/js/studentsAppstoreOutcomeBlock.js"></script>
+  <script src="assets/studentsData/studentsOutcomesForAppstore.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,7 +47,19 @@
       gtag('config', 'UA-107692655-1');
     </script>
   </head>
+  <style>
+    .appIcon {
+      height: 185px;
+      width: 100%;
+      object-fit: contain;
+    }
 
+    .screenImage {
+      height: 450px;
+      width: 100%;
+      object-fit: contain;
+    }
+  </style>
   <body>
 
     <!-- Fixed navbar -->
@@ -84,13 +97,10 @@
           <div class="col align-self-center">
             <img src="assets/img/appstore.jpg" height="64" width="64">
           </div>
-          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 앱스토어에 등록된<br /> <br />수강생들의 작품들</h3>
+          <h3 class="report-subtitle" style="margin-bottom: 10px;"> 앱스토어에 등록된<br />수강생들의 작품들</h3>
 				</div>
-        <div class="">
-
-        </div>
-        <div class="">
-          <p>7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
+        <div>
+          <p style="font-size: 1.5rem">7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
             모두가 세상을 바꿀 수는 없지만 바꿀 수 있는 기회는 가져야 한다고 생각합니다.<br>
             여러분안에 있는 창조의 열정을 발현해 보세요.</p>
         </div>
@@ -104,24 +114,18 @@
 	<!-- *****************************************************************************************************************
 	 SERVICES
 	 ***************************************************************************************************************** -->
-   <div id="root1">
+   <div id="root">
      <div id="background-grey">
       <div class="container">
         <div class="centered">
           <p style=" color: #949494">Student Products</p>
           <h4 class="report-subtitle" style="margin-bottom: 10px;"> 수강생들의 작품들</h3>
         </div>
-        <div class="row article">
-            <student-card university ='studentsDataForCards'></student-card>
-        </div><!-- row -->
+        <!-- <student-outcome-appstore data="studentsOutcomesForAppstore"></student-outcome-appstore> -->
       </div>
-     </div>
-   </div>
-
-
-
-
-
+    </div>
+  </div>
+  <div class="btn-round"> </div>
 
 	<!-- *****************************************************************************************************************
 	 FOOTER
