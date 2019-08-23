@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Home | CodersHigh</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/edureport.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+<!-- Vue -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="assets/studentsData/studentsOutcomesForAppstore.js"></script>
+  <script src="assets/js/studentsAppstoreOutcomeBlock.js"></script>
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="assets/js/modernizr.js"></script>
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-107692655-1');
+    </script>
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand abc" href="index.html"><img src="assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
+        </div>
+        <div class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html" style="margin-left: 30px;font-size: inherit;">홈</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./about.html">소개</a></li>
+            <li class="active"><a style="margin-left: 30px; font-size: inherit;" href="./portfolio.html">수강생작품</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="mailto:codershigh@lingostar.co.kr?subject=CodersHigh%20웹사이트를%20통해%20연락드립니다">문의</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./techblog_list.html">기술블로그</a></li>
+            <li><a style="margin-left: 30px; font-size: inherit;" href="./edublog_list.html">교육블로그</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- *****************************************************************************************************************
+	 HEADERWRAP
+	 ***************************************************************************************************************** -->
+	<div id="whiteheaderwrap">
+	    <div class="container">
+			<div class="row">
+				<div class="centered spacing">
+          <div class="col align-self-center">
+            <img src="assets/img/appstore.jpg" height="64" width="64">
+          </div>
+          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 앱스토어에 등록된<br /> <br />수강생들의 작품들</h3>
+				</div>
+        <div class="">
+
+        </div>
+        <div class="">
+          <p>7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
+            모두가 세상을 바꿀 수는 없지만 바꿀 수 있는 기회는 가져야 한다고 생각합니다.<br>
+            여러분안에 있는 창조의 열정을 발현해 보세요.</p>
+        </div>
+				<!--<div class="col-lg-8 col-lg-offset-2 himg">
+					<img src="assets/img/browser.png" class="img-responsive">
+				</div>-->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /headerwrap -->
+
+	<!-- *****************************************************************************************************************
+	 SERVICES
+	 ***************************************************************************************************************** -->
+   <div id="root1">
+     <div id="background-grey">
+      <div class="container">
+        <div class="centered">
+          <p style=" color: #949494">Student Products</p>
+          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 수강생들의 작품들</h3>
+        </div>
+        <div class="row article">
+            <student-outcome-appstore university="studentsOutcomesForAppstore"></student-outcome-appstore>
+        </div><!-- row -->
+      </div>
+     </div>
+   </div>
+
+   <div class="container centered">
+     <div class="col-md-3 col-xs-12">
+       <img src="assets/img/mailchimp.png" class="rounded">
+     </div>
+     <div class="col-md-9 col-xs-12">
+       <h4 class="appTitle text-left"> 술케쥴 </h4>
+       <p class="appComment text-left">아직도 대첵없이 술마시니? 난 술케줄로 관리해!</p>
+       <h4 class="text-left">공대호 임규헌 조준오</h4>
+       <div align="align="left" style="border:1px solid red"">
+         <img src="assets/img/app-store.png" class="rounded float-left" style="padding: 5px 0.5px; height: 48px;" />
+       </div>
+       <a class="appComment download" href="assets/redesignResources/ysu_19_01/06.jpg" target="_blank">Poster Image <img src="assets/css/images/download.svg"></a>
+     </div>
+   </div>
+     <div class="container centered" style="margin-bottom: 80px;">
+       <div class="col-md-4 col-xs-12" style="margin-bottom: 100px;">
+         <div class="card" style="margin-right: 50px;margin-left: 50px;">
+           <div class="card-body">
+             <h4 class="appTitle margin-none"></h4>
+             <p class="appComment" style=" color: #949494"></p>
+             <p class="card-text"></p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+
+
+
+
+
+
+
+	<!-- *****************************************************************************************************************
+	 FOOTER
+	 ***************************************************************************************************************** -->
+	<div id="footerwrap">
+	 	<div class="container">
+		 	<div class="row">
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">회사 소개</h4>
+		 			<div class="hline-w"></div>
+		 			<p>코더스하이는 iOS/macOS 교육 콘텐츠 제작 그룹입니다.</br>
+		 			코더들이 짜릿한 즐거움을 느끼도록 하는 것이 우리의 목표입니다.</p>
+		 		</div>
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">소셜 네트워크</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				<a href="https://www.facebook.com/codershighteam/"><i class="fa fa-facebook"></i></a>
+						<a href="http://us3.campaign-archive1.com/home/?u=0823b2402b36f258c57c2d2d4&id=e066983150">
+						<img src="assets/img/mailchimp.png">
+						</a>
+		 			</p>
+		 		</div>
+		 		<div class="col-xs-4">
+		 			<h4 class="footer">회사 위치</h4>
+		 			<div class="hline-w"></div>
+		 			<p>
+		 				서울시 강남구 논현로127길 13-3 태림빌딩 3층<br/>
+		 			</p>
+		 		</div>
+		 	</div><!--/row -->
+		 	<div style="margin-top: 50px">
+				<h4 class="footer">2017 ⓒ CodersHigh</h4>
+				<p style="text-align: center;">대표이사 윤성관 | 사업자등록번호 740-81-00581</p>
+			</div>
+	 	</div><!--/container -->
+	 </div><!--/footerwrap -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/retina-1.1.0.js"></script>
+	<script src="assets/js/jquery.hoverdir.js"></script>
+	<script src="assets/js/jquery.hoverex.min.js"></script>
+	<script src="assets/js/jquery.prettyPhoto.js"></script>
+  	<script src="assets/js/jquery.isotope.min.js"></script>
+  	<script src="assets/js/custom.js"></script>
+  </body>
+</html>
