@@ -9,11 +9,10 @@ var universityData = {
       "youTubeAddress": "https://www.youtube.com/embed/51AC4AyospE",
       "website": "https://www.naver.com",
       "appScreen01": "assets/img/report-appscreen/hyu_19_01/06.png",
-      "appScreen02": "assets/img/report-appscreen/hyu_19_01/06.png",
-      "appScreen03": "assets/img/report-appscreen/hyu_19_01/06.png",
-      "appScreen04": "assets/img/report-appscreen/hyu_19_01/06.png",
-      "cardNewsAddress": "https://www.naver.com",
-      "cardNewsImage": "assets/img/report-appStore/01/cardNews01.png"
+      "appScreen02": "assets/img/test.png",
+      "appScreen03": "assets/img/test.png",
+      "appScreen04": "assets/img/test.png",
+      "cardNewsAddress": "https://www.naver.com"
     },
     {
       "appIcon": "assets/img/report-appStore/01/appIcon.png",
@@ -27,8 +26,7 @@ var universityData = {
       "appScreen02": "assets/img/report-appscreen/hyu_19_01/06.png",
       "appScreen03": "assets/img/report-appscreen/hyu_19_01/06.png",
       "appScreen04": "assets/img/report-appscreen/hyu_19_01/06.png",
-      "cardNewsAddress": "https://www.naver.com",
-      "cardNewsImage": "assets/img/report-appStore/01/cardNews01.png"
+      "cardNewsAddress": "https://www.naver.com"
     }
 ]
 }
