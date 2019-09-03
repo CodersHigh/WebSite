@@ -45,11 +45,11 @@ Vue.component('student-outcome-appstore', {
       <div class="col-md-12 col-xs-12">\
         <h4 class="appTitle margin-none"> iPhone 스크린샷 </h4>\
       </div>\
-      <div class="row centered imageAlignment">\
+      <div class="row centered">\
         <div class="col-md-3 col-xs-12">\
-          <img class="screenImage " :src="value.appScreen01">\
+          <img class="screenImage shadow" :src="value.appScreen01">\
         </div>\
-        <div class="col-md-9 col-sm-12" style="margin-top: 80px;">\
+        <div class="col-md-9 col-sm-12">\
           <div class="col-md-4 col-xs-12">\
             <img class="sideScreenImage shadow" :src="value.appScreen02">\
           </div>\

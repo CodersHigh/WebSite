@@ -8,7 +8,7 @@ var universityData = {
       "appStoreAddress": "https://apps.apple.com/kr/app/about-hanyang/id1469853999",
       "youTubeAddress": "https://www.youtube.com/embed/51AC4AyospE",
       "website": "https://www.naver.com",
-      "appScreen01": "assets/img/report-appscreen/hyu_19_01/06.png",
+      "appScreen01": "assets/img/test.png",
       "appScreen02": "assets/img/test.png",
       "appScreen03": "assets/img/test.png",
       "appScreen04": "assets/img/test.png",
