@@ -30,10 +30,10 @@ Vue.component('student-outcome-appstore', {
             <a :href="value.website" target="_blank" style="margin-right: 20px;font-size: 14px;">\
               개발자 웹사이트 <img src="assets/img/report-appstore/01/arrow.svg" style="height: 12px;">\
             </a>\
-            <a v-bind:src="value.youTubeAddress" target="_blank" style="margin-right: 20px;font-size: 14px;">\
+            <a :href="value.youTubeAddress" target="_blank" style="margin-right: 20px;font-size: 14px;">\
               발표 영상 <img src="assets/img/report-appstore/01/arrow.svg" style="height: 12px;">\
             </a>\
-            <a v-bind:src="value.youTubeAddress" target="_blank" style="font-size: 14px;">\
+            <a v-show="value.cardNewsAddress != null"  :href="value.cardNewsAddress" target="_blank" style="font-size: 14px;">\
               관련 링크 <img src="assets/img/report-appstore/01/arrow.svg" style="height: 12px;">\
             </a>\
           </div>\
