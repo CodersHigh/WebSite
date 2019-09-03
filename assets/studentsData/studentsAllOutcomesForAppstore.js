@@ -162,6 +162,76 @@ var universityData = {
       "appScreen02": "assets/img/appStoreImage/2019_cau_winter/02/02.jpg",
       "appScreen03": "assets/img/appStoreImage/2019_cau_winter/02/03.jpg",
       "appScreen04": "assets/img/appStoreImage/2019_cau_winter/02/04.jpg"
+    },
+    {
+      "reportTitle": "2018 1학기 한양대학교 공과대학 컴퓨터/SW 전공",
+      "reportAddress": "edureports/2018_hyu_spring.html",
+      "appIcon": "assets/img/appStoreImage/2018_hyu_spring/02/appIcon.png",
+      "appTitle": "위시리스트",
+      "appComment": "가지고 싶은 물건을 사려고 돈을 모았던 적, 그러다가 생각 없이 한 지출로 꿈이 멀어진 적이 있나요? Wish List와 함께 효율적이고 편리하게 돈을 관리해보세요. Wish List는 편리하고 직관적인 저축 관리 어플리케이션입니다.",
+      "students": "김병주 박근태 이준호",
+      "appStoreAddress": "https://itunes.apple.com/us/app/wishlisthy/id1420501007?ls=1&mt=8",
+      "youTubeAddress": "https://www.youtube.com/embed/AKyS17yLipU?list=PLBjx8AiS7qA0rtzpNCfKu_e54Kmd-A50D",
+      "website": "https://projectintheclass.github.io/Wish_List",
+      "appScreen01": "assets/img/appStoreImage/2018_hyu_spring/02/01.jpg",
+      "appScreen02": "assets/img/appStoreImage/2018_hyu_spring/02/02.jpg",
+      "appScreen03": "assets/img/appStoreImage/2018_hyu_spring/02/03.jpg",
+      "appScreen04": "assets/img/appStoreImage/2018_hyu_spring/02/04.jpg"
+    },
+    {
+      "reportTitle": "2019 겨울방학 동국대학교 iOS 특강",
+      "reportAddress": "edureports/2018_dgu_winter.html",
+      "appIcon": "assets/img/appStoreImage/2019_dgu_winter/01/appIcon.png",
+      "appTitle": "동국아 졸업하자",
+      "appComment": "졸업요건 정보제공/계획관리 앱",
+      "students": "유현지 육지수 김효서",
+      "appStoreAddress": "https://itunes.apple.com/kr/app//id1452125551?mt=8",
+      "youTubeAddress": "https://www.youtube.com/embed/JJY5sWZlvx8",
+      "website": "https://projectintheclass.github.io/DonggukGraduation/",
+      "appScreen01": "assets/img/appStoreImage/2019_dgu_winter/01/01.jpg",
+      "appScreen02": "assets/img/appStoreImage/2019_dgu_winter/01/02.jpg",
+      "appScreen03": "assets/img/appStoreImage/2019_dgu_winter/01/03.jpg"
+    },
+    {
+      "reportTitle": "2019 겨울방학 동국대학교 iOS 특강",
+      "reportAddress": "edureports/2018_dgu_winter.html",
+      "appIcon": "assets/img/appStoreImage/2019_dgu_winter/03/appIcon.png",
+      "appTitle": "코동포동",
+      "appComment": "동국대학교 학생들을 위해 학교 근처 음식점들을 카테고리별로 분류하여 정보를 제공하는 앱",
+      "students": "이민주 정유나 박재현",
+      "appStoreAddress": "https://itunes.apple.com/kr/app/코동포동/id1453124118?mt=8",
+      "youTubeAddress": "https://www.youtube.com/embed/BnbTprFI-Z0",
+      "website": "https://github.com/ProjectInTheClass/kdpd",
+      "appScreen01": "assets/img/appStoreImage/2019_dgu_winter/03/01.jpg",
+      "appScreen02": "assets/img/appStoreImage/2019_dgu_winter/03/02.jpg",
+      "appScreen03": "assets/img/appStoreImage/2019_dgu_winter/03/03.jpg"
+    },
+    {
+      "reportTitle": "2019 겨울방학 동국대학교 iOS 특강",
+      "reportAddress": "edureports/2018_dgu_winter.html",
+      "appIcon": "assets/img/appStoreImage/2019_dgu_winter/02/appIcon.png",
+      "appTitle": "Movie Planet",
+      "appComment": "영화 마니아들을 위해 사용자의 영화 관람 이력과 작성 평론을 관리해 주는 앱",
+      "students": "박민주 박지호 조인택",
+      "appStoreAddress": "https://itunes.apple.com/kr/app/movieplanet/id1452124136?mt=8",
+      "youTubeAddress": "https://www.youtube.com/embed/Ct7PdTHW-sg",
+      "website": "https://projectintheclass.github.io/MovieDialog/",
+      "appScreen01": "assets/img/appStoreImage/2019_dgu_winter/02/01.jpg",
+      "appScreen02": "assets/img/appStoreImage/2019_dgu_winter/02/02.jpg",
+      "appScreen03": "assets/img/appStoreImage/2019_dgu_winter/02/03.jpg"
+    },
+    {
+      "reportTitle": "2019 1학기 한양대학교 공과대학 컴퓨터/SW 전공",
+      "reportAddress": "edureports/2019_hyu_spring.html",
+      "appIcon": "assets/img/appStoreImage/2019_hyu_spring/02/appIcon.png",
+      "appTitle": "AboutHanyang",
+      "appComment": "AboutHanyang은 한양대 내의 시설 정보를 공유하고 의견을 나누는 앱입니다.",
+      "students": "김태형, 이성주, 정재윤",
+      "appStoreAddress": "https://apps.apple.com/kr/app/about-hanyang/id1469853999",
+      "youTubeAddress": "https://www.youtube.com/embed/51AC4AyospE",
+      "appScreen01": "assets/img/appStoreImage/2019_hyu_spring/02/01.jpg",
+      "appScreen02": "assets/img/appStoreImage/2019_hyu_spring/02/02.jpg",
+      "appScreen03": "assets/img/appStoreImage/2019_hyu_spring/02/03.jpg"
     }
 ]
 }

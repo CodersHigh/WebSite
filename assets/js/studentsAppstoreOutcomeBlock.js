@@ -27,6 +27,8 @@ Vue.component('student-outcome-appstore', {
             </a>\
           </div>\
           <div class="col-md-9 col-xs-12 text-right">\
+            <a :href="value.reportAddress" target="_blank" style="margin-right: 20px; font-size: 14px;">\
+            {{value.reportTitle}} <img src="assets/img/report-appstore/01/arrow.svg" style="height: 12px;"></a>\
             <a :href="value.website" target="_blank" style="margin-right: 20px;font-size: 14px;">\
               개발자 웹사이트 <img src="assets/img/report-appstore/01/arrow.svg" style="height: 12px;">\
             </a>\
