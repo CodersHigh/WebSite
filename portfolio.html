@@ -6,25 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
 
     <title>Home | CodersHigh</title>
 
     <!-- Bootstrap core CSS -->
     <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
     <!-- Custom styles for this template -->
 
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap1.css">
     <link rel="stylesheet" href="assets/css/edureport.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!-- Vue -->
   <script src="https://unpkg.com/vue"></script>
@@ -60,40 +55,42 @@
         display: inline-block;
         vertical-align: text-bottom;
       }
-      @media (max-width: 992px) {
-        .wrapper {
-          width: 100%;
-        }
+      .wrapper{
+        width:70%;
+      }
+      @media(max-width:992px){
+       .wrapper{
+        width:100%;
+      }
       }
       .panel-heading {
         padding: 0;
-        border: 0;
+      	border:0;
       }
-      .panel-title > a,
-      .panel-title > a:active {
-        display: block;
-        padding: 15px;
-        color: #555;
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        word-spacing: 3px;
-        text-decoration: none;
+      .panel-title>a, .panel-title>a:active{
+      	display:block;
+      	padding:15px;
+        color:#555;
+        font-size:16px;
+        font-weight:bold;
+      	text-transform:uppercase;
+      	letter-spacing:1px;
+        word-spacing:3px;
+      	text-decoration:none;
       }
-      .panel-heading a:before {
-        font-family: "Glyphicons Halflings";
-        content: "\e114";
-        float: right;
-        transition: all 0.5s;
+      .panel-heading  a:before {
+         font-family: 'Glyphicons Halflings';
+         content: "\e114";
+         float: right;
+         transition: all 0.5s;
       }
       .panel-heading.active a:before {
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        transform: rotate(180deg);
+      	-webkit-transform: rotate(180deg);
+      	-moz-transform: rotate(180deg);
+      	transform: rotate(180deg);
       }
     </style>
-    <script src="assets/js/modernizr.js"></script>
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
 
@@ -165,7 +162,7 @@
       </div>
     </div>
     <div class="container centered">
-      <a href="portfolioMore.html"><button type="button" class="btn btn-info btn-lg" style="margin-top: 20px;width: 222px;height: 52px;">수강생들 결과물 더보기</button></a>
+      <a href="portfolioMore.html"><button type="button" class="btn btn-lg" style="margin-top: 20px;width: 222px;height: 52px;background-color: #384452;color:white">수강생들 결과물 더보기</button></a>
     </div>
     <div id="background-white" style="padding-top: 50px;">
       <div class="container" style="padding-left: 0px;padding-right: 0px;">
@@ -176,7 +173,7 @@
           <div class="panel panel-default">
             <div class="panel-heading active" role="tab" id="headingOne">
               <h4 class="panel-title">
-                <a class="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <a class="expanded" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   2019년 교육보고서
                 </a>
               </h4>
@@ -255,7 +252,6 @@
         </div>
       </div>
     </div>
-
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
@@ -297,23 +293,16 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/bootstrap.min.js"></script>
-	  <script src="assets/js/retina-1.1.0.js"></script>
-  	<script src="assets/js/custom.js"></script>
-    <script type="text/javascript">
-      console.log($)
-      $(".panel-collapse").on("show.bs.collapse", function() {
-        console.log('SHOW');
-        $(this)
-          .siblings(".panel-heading")
-          .addClass("active");
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $('.panel-collapse').on('show.bs.collapse', function () {
+       $(this).siblings('.panel-heading').addClass('active');
       });
 
-      $(".panel-collapse").on("hide.bs.collapse", function() {
-        console.log('HIDE');
-        $(this)
-          .siblings(".panel-heading")
-          .removeClass("active");
+      $('.panel-collapse').on('hide.bs.collapse', function () {
+       $(this).siblings('.panel-heading').removeClass('active');
       });
     </script>
   </body>
