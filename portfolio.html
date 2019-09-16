@@ -6,25 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
 
     <title>Home | CodersHigh</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/edureport.css" rel="stylesheet">
+    <!-- <link href="assets/css/bootstrap.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 
     <!-- Custom styles for this template -->
 
     <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link rel="stylesheet" href="assets/css/bootstrap1.css">
+    <link rel="stylesheet" href="assets/css/edureport.css">
 
 <!-- Vue -->
   <script src="https://unpkg.com/vue"></script>
-  <script src="assets/studentsData/studentsOutcomesForCards.js"></script>
-  <script src="assets/js/vueCard.js"></script>
+  <script src="assets/js/studentsAppstoreOutcomeBlock.js"></script>
+  <script src="assets/studentsData/studentsOutcomesForAppstore.js"></script>
+
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -35,16 +36,64 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="assets/js/modernizr.js"></script>
+    <style>
+      .appIcon {
+        height: 100%;
+        width: 100%;
+        max-width: 195px;
+        object-fit: contain;
+      }
+      .screenImage {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+      }
+      .sideScreenImage {
+        height: 75%;
+        width: 75%;
+        object-fit: contain;
+        display: inline-block;
+        vertical-align: text-bottom;
+      }
+      .wrapper{
+        width:70%;
+      }
+      @media(max-width:992px){
+       .wrapper{
+        width:100%;
+      }
+      }
+      .panel-heading {
+        padding: 0;
+      	border:0;
+      }
+      .panel-title>a, .panel-title>a:active{
+      	display:block;
+      	padding:15px;
+        color:#555;
+        font-size:16px;
+        font-weight:bold;
+      	text-transform:uppercase;
+      	letter-spacing:1px;
+        word-spacing:3px;
+      	text-decoration:none;
+      }
+      .panel-heading  a:before {
+         font-family: 'Glyphicons Halflings';
+         content: "\e114";
+         float: right;
+         transition: all 0.5s;
+      }
+      .panel-heading.active a:before {
+      	-webkit-transform: rotate(180deg);
+      	-moz-transform: rotate(180deg);
+      	transform: rotate(180deg);
+      }
+    </style>
+
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107692655-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-107692655-1');
-    </script>
   </head>
 
   <body>
@@ -61,7 +110,7 @@
           </button>
         <a class="navbar-brand abc" href="index.html"><img src="assets/img/codershighLogo.png" class="img-responsive" style="padding-top: 0px;">
         </div>
-        <div class="navbar-collapse collapse navbar-right">
+        <div class="navbar-collapse collapse navbar-right" style="font-size:14px">
           <ul class="nav navbar-nav">
             <li><a href="index.html" style="margin-left: 30px;font-size: inherit;">홈</a></li>
             <li><a style="margin-left: 30px; font-size: inherit;" href="./about.html">소개</a></li>
@@ -80,17 +129,14 @@
 	<div id="whiteheaderwrap">
 	    <div class="container">
 			<div class="row">
-				<div class="centered spacing">
+				<div class="centered spacing" style="margin-top: 10px; margin-bottom: 10px;">
           <div class="col align-self-center">
             <img src="assets/img/appstore.jpg" height="64" width="64">
           </div>
-          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 앱스토어에 등록된<br /> <br />수강생들의 작품들</h3>
+          <h3 class="report-subtitle" style="margin-bottom: 10px;margin-top: 10px;"> 앱스토어에 등록된<br />수강생들의 작품들</h3>
 				</div>
-        <div class="">
-
-        </div>
-        <div class="">
-          <p>7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
+        <div>
+          <p style="font-size: 1.5rem;margin-bottom: 20px;">7주라는 기간 동안 여러분은 놀라운 결과물을 만들어 낼 수도 있습니다. <br>
             모두가 세상을 바꿀 수는 없지만 바꿀 수 있는 기회는 가져야 한다고 생각합니다.<br>
             여러분안에 있는 창조의 열정을 발현해 보세요.</p>
         </div>
@@ -104,25 +150,108 @@
 	<!-- *****************************************************************************************************************
 	 SERVICES
 	 ***************************************************************************************************************** -->
-   <div id="root1">
-     <div id="background-grey">
+   <div id="root">
+     <div id="background-grey" style="padding-top: 20px;padding-bottom: 0px;">
       <div class="container">
         <div class="centered">
-          <p style=" color: #949494">Student Products</p>
-          <h4 class="report-subtitle" style="margin-bottom: 10px;"> 수강생들의 작품들</h3>
+          <p style=" color: #949494; opacity: 0.3;margin-bottom: 5px;">Student Products</p>
+          <h3 class="report-subtitle" style="margin-bottom: 10px;margin-top: 0px;"> 수강생들의 작품들</h3>
         </div>
-        <div class="row article">
-            <student-card university ='studentsDataForCards'></student-card>
-        </div><!-- row -->
+        <student-outcome-appstore data="studentsOutcomesForAppstore"></student-outcome-appstore>
+        </div>
       </div>
-     </div>
-   </div>
-
-
-
-
-
-
+    </div>
+    <div class="container centered">
+      <a href="portfolioMore.html"><button type="button" class="btn btn-lg" style="margin-top: 20px;width: 222px;height: 52px;background-color: #384452;color:white">수강생들 결과물 더보기</button></a>
+    </div>
+    <div id="background-white" style="padding-top: 50px;">
+      <div class="container" style="padding-left: 0px;padding-right: 0px;">
+        <div class="centered">
+          <h3 class="report-subtitle" style="margin-bottom: 50px;"> 코더스하이 교육결과 보고서</h3>
+        </div>
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading active" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a class="expanded" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  2019년 교육보고서
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body">
+                <p>2019 여름방학 서강대학교 iOS 특강 (To be updated)</p>
+                <p><a href="./edureports/2019_kwu_summer.html">2019 여름방학 광운대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2019_ysu_spring.html">2019 1학기 연세대학교 UIC IID 학과</a></p>
+                <p><a href="./edureports/2019_hyu_spring.html">2019 1학기 한양대학교 공과대학 컴퓨터/SW 전공</a></p>
+                <p><a href="./edureports/2019_cau_winter.html">2019 겨울방학 중앙대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2018_dgu_winter.html">2019 겨울방학 동국대학교 iOS 특강</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  2018년 교육보고서
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body">
+                <p><a href="./edureports/2018_cau_summer.html">2018 여름방학 중앙대 iOS 특강</a></p>
+                <p><a href="./edureports/2018_ku_summer.html">2018 여름방학 고려대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2018_swu_summer.html">2018 여름방학 서울여대 iOS 특강</a></p>
+                <p><a href="./edureports/2018_hyu_spring.html">2018 1학기 한양대학교 공과대학 컴퓨터/SW 전공</a></p>
+                <p><a href="./edureports/2018_cau_winter.html">2018 겨울방학 중앙대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2018_ku_winter.html">2018 겨울방학 고려대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2018_dgu_winter.html">2018 겨울방학 동국대학교 iOS 특강</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  2017년 교육보고서
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <p><a href="./edureports/2017_snu_fall.html">2017 2학기 서울대학교 정보문화학과</a></p>
+                <p><a href="./edureports/2017_ku_summer.html">2017 여름방학 고려대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2017_cau_summer.html">2017 여름방학 중앙대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2017_hyu_spring.html">2017 1학기 한양대학교 공과대학 컴퓨터/SW 전공</a></p>
+                <p><a href="./edureports/2017_snu_spring.html">2017 1학기 서울대학교 정보문화학과</a></p>
+                <p><a href="./edureports/2017_ysu_spring.html">2017 1학기 연세대학교 UIC IID 학과</a></p>
+                <p><a href="./edureports/2017_ku_winter.html">2017 겨울방학 고려대학교 iOS 특강</a></p>
+                <p><a href="./edureports/2017_cau_winter.html">2017 겨울방학 중앙대학교 iOS 특강</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                  2016년 교육보고서
+                </a>
+              </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body">
+                <p><a href="./edureports/2016_snu_fall.html">2016 2학기 서울대학교 정보문화학과</a></p>
+                <p><a href="./edureports/2016_hyu_fall.html">2016 2학기 한양대학교 공과대학 컴퓨터/SW 전공</a></p>
+                <p><a href="./edureports/2016_ysu_fall.html">2016 2학기 연세대학교 UIC IID 학과</a></p>
+                <p><a href="./edureports/2016_dgu_fall.html">2016 2학기 동국대학교 멀티미디어학과</a></p>
+                <p><a href="./edureports/2016_snu_spring.html">2016 1학기 서울대학교 정보문화학과</a></p>
+                <p><a href="./edureports/2016_ku_winter.html">2016 겨울방학 고려대학교 iOS 특강</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 	<!-- *****************************************************************************************************************
 	 FOOTER
 	 ***************************************************************************************************************** -->
@@ -164,13 +293,17 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/retina-1.1.0.js"></script>
-	<script src="assets/js/jquery.hoverdir.js"></script>
-	<script src="assets/js/jquery.hoverex.min.js"></script>
-	<script src="assets/js/jquery.prettyPhoto.js"></script>
-  	<script src="assets/js/jquery.isotope.min.js"></script>
-  	<script src="assets/js/custom.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      $('.panel-collapse').on('show.bs.collapse', function () {
+       $(this).siblings('.panel-heading').addClass('active');
+      });
+
+      $('.panel-collapse').on('hide.bs.collapse', function () {
+       $(this).siblings('.panel-heading').removeClass('active');
+      });
+    </script>
   </body>
 </html>
