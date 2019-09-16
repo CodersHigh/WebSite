@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
 
     <title>Home | CodersHigh</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+
+    <!-- Custom styles for this template -->
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap1.css">
+    <link rel="stylesheet" href="assets/css/edureport.css">
 
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
 
+
+  <!-- vue -->
+  <script src="https://unpkg.com/vue"></script>
+  <script src="assets/js/vueCard.js"></script>
+  <script src="assets/studentsData/studentsOutcomesForCards.js"></script>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -110,10 +120,16 @@
 	    </div> <!-- /container -->
 	</div><!-- /headerwrap -->
 
+  <div id="root">
+    <student-card cardNews="studentsDataForCards"></student-card>
+  </div>
+
+
+
 	<!-- *****************************************************************************************************************
 	 SERVICES
 	 ***************************************************************************************************************** -->
-	 <div id="service">
+	 <div id="service" style="margin-top: 40px;margin-bottom: 40px;">
 	 	<div class="container">
  			<div class="row centered">
         <div class="col-md-4 col-xs-12">
@@ -150,8 +166,11 @@
 	 MIDDLE CONTENT
 	 ***************************************************************************************************************** -->
 
-	<div class="container mtb">
-	 	<div class="row">
+	<div class="container">
+	 	<div id="background-"class="row">
+      <div class="col-md-6">
+        alksdfjalksfjalk
+      </div>
       <div class="col-md-6">
 	 			<h3 style="font-size: 36px;">교육 결과물</h3>
 	 			<div class="hline"></div>
@@ -192,29 +211,31 @@
         <p><a href="https://www.youtube.com/playlist?list=PLBjx8AiS7qA2P2w7kvZ-VLh4Bb6nUQqbm">2016 겨울방학 고려대학교 iOS 특강</a></p> -->
 	 		</div>
 	 		</div>
-	 		<div class="col-md-6">
-	 			<h3 style="font-size: 36px;">기술 블로그</h3>
-	 			<div class="hline"></div>
-	 				<div class="blogcontent">
-	 					<p><a href="techblogs/tb_009_UISearchController/tb009_script.html">UISearchController로 검색 개발하기 by 송동욱</a></p>
-	 					<p><a href="techblogs/tb_008_tagCloud/tb008_script.html">3d 스크롤이 가능한 태그 클라우드 만들기 by 김소연</a></p>
-	 					<p><a href="techblogs/tb_007_movieSearcher/tb007_script.html">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기 by 김수진</a></p>
-	 					<p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
-	 					<p><a href="techblogs/tb_004_firebaseTimeline/tb004_script.html">Firebase를 이용하여 Timeline만들기 by 박병욱</a></p>
-						<p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
-						<p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
-			 			<p><a href="techblogs/tb_001_calendarvot/tb001_script.html">메시지 익스텐션을 이용한 Calendar-Vot 제작기 by 염혜리</a></p>
-	 			</div>
-	 		</div>
-      <div class="col-md-6">
-	 			<h3 style="font-size: 36px;">교육 블로그</h3>
-	 			<div class="hline"></div>
-	 				<div class="blogcontent">
-	 					<p><a href="edublogs/eb_003_ade_flashback/eb003_script.html">회고 : 지금까지의 인스티튜트들 by 윤성관</a></p>
-	 					<p><a href="edublogs/eb_002_ade_austin/eb002_script.html">ADE Global Institute 2018 Austin을 다녀와서 by 윤성관</a></p>
-	 					<p><a href="edublogs/eb_001_chc005review/eb001_script.html">코더스하이 커리큘럼 회의 리뷰 by 윤성관</a></p>
-	 			</div>
-	 		</div>
+      <div class="row">
+        <div class="col-md-6">
+  	 			<h3 style="font-size: 36px;">기술 블로그</h3>
+  	 			<div class="hline"></div>
+  	 				<div class="blogcontent">
+  	 					<p><a href="techblogs/tb_009_UISearchController/tb009_script.html">UISearchController로 검색 개발하기 by 송동욱</a></p>
+  	 					<p><a href="techblogs/tb_008_tagCloud/tb008_script.html">3d 스크롤이 가능한 태그 클라우드 만들기 by 김소연</a></p>
+  	 					<p><a href="techblogs/tb_007_movieSearcher/tb007_script.html">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기 by 김수진</a></p>
+  	 					<p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
+  	 					<p><a href="techblogs/tb_004_firebaseTimeline/tb004_script.html">Firebase를 이용하여 Timeline만들기 by 박병욱</a></p>
+  						<p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
+  						<p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
+  			 			<p><a href="techblogs/tb_001_calendarvot/tb001_script.html">메시지 익스텐션을 이용한 Calendar-Vot 제작기 by 염혜리</a></p>
+  	 			</div>
+  	 		</div>
+        <div class="col-md-6">
+  	 			<h3 style="font-size: 36px;">교육 블로그</h3>
+  	 			<div class="hline"></div>
+  	 				<div class="blogcontent">
+  	 					<p><a href="edublogs/eb_003_ade_flashback/eb003_script.html">회고 : 지금까지의 인스티튜트들 by 윤성관</a></p>
+  	 					<p><a href="edublogs/eb_002_ade_austin/eb002_script.html">ADE Global Institute 2018 Austin을 다녀와서 by 윤성관</a></p>
+  	 					<p><a href="edublogs/eb_001_chc005review/eb001_script.html">코더스하이 커리큘럼 회의 리뷰 by 윤성관</a></p>
+  	 			</div>
+  	 		</div>
+      </div>
 	 	</div><!--/row -->
 	 </div><!--/container -->
 
@@ -280,18 +301,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="assets/js/retina-1.1.0.js"></script>
 	<script src="assets/js/jquery.hoverdir.js"></script>
 	<script src="assets/js/jquery.hoverex.min.js"></script>
 	<script src="assets/js/jquery.prettyPhoto.js"></script>
-  	<script src="assets/js/jquery.isotope.min.js"></script>
-  	<script src="assets/js/custom.js"></script>
-
-    <!-- VueJS CDN -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.9/vue.js"></script>
-
 
     <script>
 // Portfolio

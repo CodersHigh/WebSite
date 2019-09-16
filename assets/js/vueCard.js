@@ -1,22 +1,24 @@
 <!--  아래는 수정 금지  -->
 
 Vue.component('student-card', {
-  props: ['university'],
   template: '\
-  <div>\
-    <div class="container centered" style="margin-bottom: 80px;">\
-      <div class="col-md-4 col-xs-12" style="margin-bottom: 100px;" v-for="value in studentsOutcomes">\
-        <div class="card" style="margin-right: 50px;margin-left: 50px;">\
-          <img class="card-img-top" :src="value.appScreen">\
+  <div id="background-grey" style="padding-top: 40px;padding-bottom: 60px;">\
+  <div class="container">\
+    <div class="row">\
+      <div class="col-md-4 col-xm-12" v-for="value in studentsOutcomes">\
+        <div class="card hover12 hover01" style="margin-right: 10px;margin-left: 10px;">\
+          <figure><img class="card-img-top" :src="value.appScreen" style="cursor:pointer;"></figure>\
           <div class="card-body">\
             <h4 class="appTitle margin-none">{{value.appTitle}}</h4>\
-            <p class="appComment" style=" color: #949494">{{value.appComment}}</p>\
+            <p class="appComment" style=" color: #949494">{{value.appComment1}}</p>\
+            <p class="appComment" style=" color: #949494">{{value.appComment2}}</p>\
             <p class="card-text">{{value.students}}</p>\
-            <a :href="value.website" target="_blank" class="btn btn-primary">자세히 보기</a>\
+            <a :href="value.website" class="btn btn-primary">자세히 보기</a>\
           </div>\
         </div>\
       </div>\
     </div>\
+  </div>\
   </div>\
   ',
   data() {
@@ -25,13 +27,13 @@ Vue.component('student-card', {
             }
       },
   mounted() {
-    this.studentsOutcomes = universityData[this.university];
+    this.studentsOutcomes = cardnews;
   }
 })
 
 
 window.onload = function() {
     new Vue({
-      el: '#root1'
+      el: '#root'
     })
 }
