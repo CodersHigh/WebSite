@@ -22,7 +22,14 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
+    <style>
+    .carousel-indicators li {
+        background-color: #F7F7F7;
+      }
+      .carousel-indicators .active {
+        background-color: #0091ff;
+      }
+    </style>
 
   <!-- vue -->
   <script src="https://unpkg.com/vue"></script>
@@ -167,19 +174,11 @@
 	 ***************************************************************************************************************** -->
 
 	<div class="container">
-	 	<div id="background-"class="row">
+	 	<div class="row">
       <div class="col-md-6">
-<<<<<<< Updated upstream
         <h3 style="font-size: 36px;">수강생들 결과물</h3>
 	 			<div class="hline"></div>
-        <div id="carouselExampleIndicators" class="carousel slide text-center" data-ride="carousel" style="display:block; width:400px;">
-||||||| merged common ancestors
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-=======
-        <h3 style="font-size: 36px;">수강생들 결과물</h3>
-	 			<div class="hline"></div>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
->>>>>>> Stashed changes
+        <div id="carouselExampleIndicators" class="carousel slide text-center" data-ride="carousel" style="display:block;">
           <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -187,13 +186,19 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block w-80" src="assets/img/news/cardNews/01.jpg" alt="First slide">
+              <a href="portfolio.html">
+                <img class="d-block w-100" src="assets/img/carousel/item1.jpg" alt="First slide">
+              </a>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-80" src="assets/img/news/cardNews/02.jpg" alt="Second slide">
+              <a href="portfolio.html">
+                <img class="d-block w-100" src="assets/img/carousel/item2.jpg" alt="Second slide">
+              </a>
             </div>
             <div class="carousel-item">
-              <img class="d-block w-80" src="assets/img/news/cardNews/03.jpg" alt="Third slide">
+              <a href="portfolio.html">
+                <img class="d-block w-100" src="assets/img/carousel/item3.jpg" alt="Third slide">
+              </a>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -246,32 +251,33 @@
         <p><a href="https://www.youtube.com/playlist?list=PLBjx8AiS7qA2P2w7kvZ-VLh4Bb6nUQqbm">2016 겨울방학 고려대학교 iOS 특강</a></p> -->
 	 		</div>
 	 		</div>
-      <div class="row">
-        <div class="col-md-6">
-  	 			<h3 style="font-size: 36px;">기술 블로그</h3>
-  	 			<div class="hline"></div>
-  	 				<div class="blogcontent">
-  	 					<p><a href="techblogs/tb_009_UISearchController/tb009_script.html">UISearchController로 검색 개발하기 by 송동욱</a></p>
-  	 					<p><a href="techblogs/tb_008_tagCloud/tb008_script.html">3d 스크롤이 가능한 태그 클라우드 만들기 by 김소연</a></p>
-  	 					<p><a href="techblogs/tb_007_movieSearcher/tb007_script.html">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기 by 김수진</a></p>
-  	 					<p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
-  	 					<p><a href="techblogs/tb_004_firebaseTimeline/tb004_script.html">Firebase를 이용하여 Timeline만들기 by 박병욱</a></p>
-  						<p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
-  						<p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
-  			 			<p><a href="techblogs/tb_001_calendarvot/tb001_script.html">메시지 익스텐션을 이용한 Calendar-Vot 제작기 by 염혜리</a></p>
-  	 			</div>
-  	 		</div>
-        <div class="col-md-6">
-  	 			<h3 style="font-size: 36px;">교육 블로그</h3>
-  	 			<div class="hline"></div>
-  	 				<div class="blogcontent">
-  	 					<p><a href="edublogs/eb_003_ade_flashback/eb003_script.html">회고 : 지금까지의 인스티튜트들 by 윤성관</a></p>
-  	 					<p><a href="edublogs/eb_002_ade_austin/eb002_script.html">ADE Global Institute 2018 Austin을 다녀와서 by 윤성관</a></p>
-  	 					<p><a href="edublogs/eb_001_chc005review/eb001_script.html">코더스하이 커리큘럼 회의 리뷰 by 윤성관</a></p>
-  	 			</div>
-  	 		</div>
-      </div>
 	 	</div><!--/row -->
+    <div class="row">
+      <div class="col-md-6">
+        <h3 style="font-size: 36px;">기술 블로그</h3>
+        <div class="hline"></div>
+          <div class="blogcontent">
+            <p><a href="techblogs/tb_010_IBMDevDay/tb0010_script.html">TJBot IBM Dev Day by 윤성관</a></p>
+            <p><a href="techblogs/tb_009_UISearchController/tb009_script.html">UISearchController로 검색 개발하기 by 송동욱</a></p>
+            <p><a href="techblogs/tb_008_tagCloud/tb008_script.html">3d 스크롤이 가능한 태그 클라우드 만들기 by 김소연</a></p>
+            <p><a href="techblogs/tb_007_movieSearcher/tb007_script.html">네이버 오픈 API를 이용한 영화 검색 애플리케이션 만들기 by 김수진</a></p>
+            <p><a href="techblogs/tb_005_playgroundbook/tb005_script.html">플레이그라운드 북 만들기 by 윤성관</a></p>
+            <p><a href="techblogs/tb_004_firebaseTimeline/tb004_script.html">Firebase를 이용하여 Timeline만들기 by 박병욱</a></p>
+            <p><a href="techblogs/tb_003_firebaseChat/tb003_script.html">Firebase를 이용하여 채팅창 만들기 by 박현수</a></p>
+            <p><a href="techblogs/tb_002_replykit/tb002_script.html">ReplayKit을 이용해 여행 떠나기 by 유준영</a></p>
+
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3 style="font-size: 36px;">교육 블로그</h3>
+        <div class="hline"></div>
+          <div class="blogcontent">
+            <p><a href="edublogs/eb_003_ade_flashback/eb003_script.html">회고 : 지금까지의 인스티튜트들 by 윤성관</a></p>
+            <p><a href="edublogs/eb_002_ade_austin/eb002_script.html">ADE Global Institute 2018 Austin을 다녀와서 by 윤성관</a></p>
+            <p><a href="edublogs/eb_001_chc005review/eb001_script.html">코더스하이 커리큘럼 회의 리뷰 by 윤성관</a></p>
+        </div>
+      </div>
+    </div>
 	 </div><!--/container -->
 
 
