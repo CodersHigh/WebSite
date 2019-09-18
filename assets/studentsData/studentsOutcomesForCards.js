@@ -17,7 +17,6 @@ var cardnews = [
       "appScreen": "assets/img/news/cardNews/03.jpg",
       "appTitle": "코더스하이 덕분에 삼성전자 취업!",
       "appComment1": "현)삼성전자 앱 개발부",
-      "appComment2": "전)코더스하이 하이파이버 1호",
       "students": "염혜리",
       "website": "https://www.facebook.com/codershighteam/posts/1249197898616211"
     }
