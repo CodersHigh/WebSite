@@ -10,8 +10,7 @@ Vue.component('student-card', {
           <figure><img class="card-img-top" :src="value.appScreen" style="cursor:pointer;"></figure>\
           <div class="card-body">\
             <h4 class="appTitle margin-none">{{value.appTitle}}</h4>\
-            <p class="appComment" style=" color: #949494">{{value.appComment1}}</p>\
-            <p class="appComment" style=" color: #949494">{{value.appComment2}}</p>\
+            <p class="appComment" style=" color: #949494">{{value.appComment1}}</br>{{value.appComment2}}</p>\
             <p class="card-text">{{value.students}}</p>\
             <a :href="value.website" class="btn btn-primary">자세히 보기</a>\
           </div>\
