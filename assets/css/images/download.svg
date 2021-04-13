@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55 (78076) - https://sketchapp.com -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-3" transform="translate(1.000000, 1.000000)" stroke="#0079C9" stroke-width="0.87">
+            <circle id="Oval" cx="8" cy="8" r="8"></circle>
+            <g id="Group-2" transform="translate(4.444444, 2.666667)" stroke-linecap="square">
+                <path d="M3.7037037,4.72862423e-31 L3.7037037,9.59078935" id="Line"></path>
+                <g id="Group" transform="translate(3.703704, 6.666667) rotate(-45.000000) translate(-3.703704, -6.666667) translate(1.185185, 4.000000)">
+                    <path d="M0.296296296,1.34739956e-13 L0.296296296,4.70190046" id="Line-Copy"></path>
+                    <path d="M2.64724653,2.46386458 L2.64724653,7.16576505" id="Line-Copy-2" transform="translate(2.647247, 4.814815) rotate(-90.000000) translate(-2.647247, -4.814815) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

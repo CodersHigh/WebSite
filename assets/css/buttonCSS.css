@@ -1,0 +1,53 @@
+.closed .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+}
+.closed .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(-90deg);
+  opacity: 1;
+}
+
+.opened .vertical {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+}
+.opened .horizontal {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.circle-plus {
+  height: 4em;
+  width: 4em;
+  font-size: 1em;
+  opacity: .7;
+}
+
+.circle-plus .circle {
+  position: relative;
+  width: 2.55em;
+  height: 2.5em;
+}
+
+.circle-plus .circle .horizontal {
+  position: absolute;
+  background-color: black;
+  width: 30px;
+  height: 2px;
+  left: 50%;
+  margin-left: -15px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.circle-plus .circle .vertical {
+  position: absolute;
+  background-color: black;
+  width: 2px;
+  height: 30px;
+  left: 50%;
+  margin-left: -1px;
+  top: 50%;
+  margin-top: -15px;
+}
